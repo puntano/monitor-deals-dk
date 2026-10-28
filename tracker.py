@@ -899,7 +899,7 @@ def write_report(ctx, new_reviews):
     try:
         r_rem = subprocess.run(["git", "remote"], cwd=BASE, capture_output=True, text=True)
         if r_rem.stdout.strip():
-            subprocess.run(["git", "add", "index.html", "public/", "reports/", "data/offers_history.csv"], cwd=BASE, capture_output=True)
+            subprocess.run(["git", "add", "index.html", "public/", "reports/", "data/offers_history.csv", "candidates.json", "categories/"], cwd=BASE, capture_output=True)
             subprocess.run(["git", "commit", "-m", f"Auto-update deals {RUN_DATE}"], cwd=BASE, capture_output=True)
             r_push = subprocess.run(["git", "push"], cwd=BASE, capture_output=True, text=True)
             if r_push.returncode == 0:
