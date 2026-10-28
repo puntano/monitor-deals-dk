@@ -16,6 +16,7 @@ Uso:
 """
 import argparse
 import csv
+import glob
 import json
 import os
 import re
@@ -91,6 +92,40 @@ def log(msg):
 def load_json(name):
     with open(os.path.join(BASE, name), encoding="utf-8") as f:
         return json.load(f)
+
+
+def load_candidates():
+    cat_dir = os.path.join(BASE, "categories")
+    if os.path.isdir(cat_dir):
+        cat_files = glob.glob(os.path.join(cat_dir, "*.json"))
+        if cat_files:
+            combined = {
+                "models": [],
+                "discovery_queries": [],
+                "discovery_ignore_ids": []
+            }
+            for cf in sorted(cat_files):
+                try:
+                    with open(cf, encoding="utf-8") as f:
+                        cdata = json.load(f)
+                        cat_id = cdata.get("category_id") or os.path.splitext(os.path.basename(cf))[0]
+                        cat_name = cdata.get("category_name") or cat_id.capitalize()
+                        for m in cdata.get("models", []):
+                            m.setdefault("category", cat_id)
+                            m.setdefault("category_name", cat_name)
+                            combined["models"].append(m)
+                        combined["discovery_queries"].extend(cdata.get("discovery_queries", []))
+                        combined["discovery_ignore_ids"].extend(cdata.get("discovery_ignore_ids", []))
+                except Exception as e:
+                    log(f"Error cargando categoria {cf}: {e}")
+            combined["discovery_queries"] = list(dict.fromkeys(combined["discovery_queries"]))
+            combined["discovery_ignore_ids"] = list(dict.fromkeys(combined["discovery_ignore_ids"]))
+            return combined
+    data = load_json("candidates.json")
+    for m in data.get("models", []):
+        m.setdefault("category", "monitors")
+        m.setdefault("category_name", "Monitores 4K")
+    return data
 
 
 CFG = load_json("config.json")
@@ -515,10 +550,13 @@ def evaluate_alerts(ctx):
         m, b = res["model"], res["best"]
         if not res["pr_ok"]:
             continue
+        cat = m.get("category", "monitors")
+        cat_badge = "[GPU] " if cat == "gpus" else ("[PC] " if cat == "desktops" else "[Monitor] ")
+        short_n = m["name"].split("(")[0].strip()
         # Oferta A/B (objetivo alcanzado / excelente)
         if b and res["grade"] in ("A", "B"):
             msg, link = build_deal_message(res, "precio objetivo/oferta")
-            title = f"[{res['grade']}] {m['name'].split('(')[0].strip()} {fmt_dkk(b['total'])} @ {b['merchant']}"
+            title = f"{cat_badge}[{res['grade']}] {short_n} {fmt_dkk(b['total'])} @ {b['merchant']}"
             maybe_alert(ctx, f"deal|{key}", "DEAL", key, b["price"], title, msg,
                         priority=5 if res["grade"] == "A" else 4, click=link)
         else:
@@ -528,7 +566,7 @@ def evaluate_alerts(ctx):
         if (b and not ctx.first_run and m["tier"] != "not_recommended" and res["ref_min"]
                 and b["price"] < res["ref_min"] * 0.99 and res["grade"] not in ("A", "B")):
             msg, link = build_deal_message(res, "nuevo minimo del periodo observado")
-            title = f"Minimo ~3 meses: {m['name'].split('(')[0].strip()} {fmt_dkk(b['total'])}"
+            title = f"{cat_badge}Mínimo ~3m: {short_n} {fmt_dkk(b['total'])}"
             maybe_alert(ctx, f"low|{key}", "LOW", key, b["price"], title, msg, priority=3, click=link)
         # Anomalias de precio (posible error): solo informativas
         for o in res["anomalies"]:
@@ -843,7 +881,7 @@ def main():
         run_id = cur.lastrowid
         con.commit()
         ctx = Ctx(con, run_id, a.dry_run)
-        cand = load_json("candidates.json")
+        cand = load_candidates()
         log(f"Inicio run {run_id} ({'dry-run' if a.dry_run else 'normal'}), primer run: {ctx.first_run}")
         for m in cand["models"]:
             try:

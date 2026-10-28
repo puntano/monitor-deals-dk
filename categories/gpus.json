@@ -1,0 +1,162 @@
+{
+  "category_id": "gpus",
+  "category_name": "Tarjetas Gráficas",
+  "category_icon": "cpu-chip",
+  "description": "GPUs para gaming 4K 120-240Hz, IA y desarrollo (NVIDIA RTX 50/40 y AMD Radeon)",
+  "models": [
+    {
+      "key": "gpu-rtx-5080",
+      "name": "NVIDIA GeForce RTX 5080 16GB GDDR7 (Blackwell, DP 2.1 UHBR20)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5080"
+      ],
+      "exclude_tokens": [
+        "5070",
+        "5090",
+        "PC",
+        "DESKTOP"
+      ],
+      "pricerunner": [
+        "/pl/37-3393491435/Grafikkort/Gigabyte-GeForce-RTX-5080-Windforce-OC-SFF-HDMI-3xDP-16GB-Sammenlign-Priser",
+        "/pl/37-3393153365/Grafikkort/ASUS-ROG-Astral-GeForce-RTX-5080-OC-Edition-2xHDMI-3xDP-16GB-Sammenlign-Priser",
+        "/pl/37-3393664977/Grafikkort/ASUS-GeForce-RTX-5080-Prime-OC-HDMI-3-x-DP-16GB-GDDR7-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 9500,
+      "excellent_price": 8900,
+      "burnin_warranty": "3 anos garantia de fabricante. Puerto DisplayPort 2.1 UHBR20 nativo.",
+      "reviews": [
+        "https://www.techpowerup.com/review/"
+      ],
+      "review_summary": "Arquitectura Blackwell de nueva generacion con memoria GDDR7 y soporte DisplayPort 2.1 UHBR20 nativo sin necesidad de DSC. Rendimiento 4K soberbio para pantallas 240Hz.",
+      "pros": "DisplayPort 2.1 UHBR20 nativo (ideal para 4K 240Hz sin compresion), memoria GDDR7 ultra rapida, aceleracion IA Blackwell",
+      "cons": "Precio de lanzamiento elevado, requiere fuente ATX 3.0 de al menos 850W-1000W"
+    },
+    {
+      "key": "gpu-rtx-5070-ti",
+      "name": "NVIDIA GeForce RTX 5070 Ti 16GB GDDR7 (Blackwell, DP 2.1)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5070 Ti",
+        "5070Ti"
+      ],
+      "exclude_tokens": [
+        "5080",
+        "5090",
+        "PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3451098859/Grafikkort/ASUS-ProArt-GeForce-RTX-5070-Ti-OC-Sammenlign-Priser",
+        "/pl/37-3472717017/Grafikkort/Palit-Microsystems-VGA-PCIE16-RTX5070TI-16GB-Grafikkort-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 7500,
+      "excellent_price": 6900,
+      "burnin_warranty": "3 anos garantia de fabricante. Arquitectura Blackwell 16GB.",
+      "reviews": [],
+      "review_summary": "Gama alta accesible Blackwell con 16GB GDDR7. Gran salto de eficiencia y soporte DisplayPort 2.1.",
+      "pros": "16GB GDDR7, DP 2.1 nativo, menor consumo que la 5080, excelente valor relativo",
+      "cons": "Disponibilidad inicial en tiendas nordicas"
+    },
+    {
+      "key": "gpu-rtx-4080-super",
+      "name": "NVIDIA GeForce RTX 4080 SUPER 16GB (Ada Lovelace, DLSS 3.5, 320W)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "4080 SUPER",
+        "4080SUPER"
+      ],
+      "exclude_tokens": [
+        "4090",
+        "4070",
+        "LAPTOP",
+        "PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3204629634/Grafikkort/Gigabyte-GeForce-RTX-4080-Gaming-OC-HDMI-3xDP-16GB-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 7600,
+      "excellent_price": 7200,
+      "burnin_warranty": "3 anos garantia de fabricante (ASUS/Gigabyte/MSI).",
+      "reviews": [
+        "https://www.techpowerup.com/review/nvidia-geforce-rtx-4080-super-founders-edition/"
+      ],
+      "review_summary": "Referencia consolidada para 4K con Ray Tracing y DLSS 3 Frame Generation. 16GB GDDR6X, bus 256 bits.",
+      "pros": "Potencia masiva para 4K nativo/DLSS Calidad, eficiencia energetica de Ada Lovelace, DLSS 3.5 Ray Reconstruction",
+      "cons": "DisplayPort 1.4a con DSC (no DP 2.1), requiere conector 12VHPWR y chasis de >31cm"
+    },
+    {
+      "key": "gpu-rtx-4070-ti-super",
+      "name": "NVIDIA GeForce RTX 4070 Ti SUPER 16GB (Ada Lovelace, 285W)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "4070 Ti SUPER",
+        "4070Ti SUPER"
+      ],
+      "exclude_tokens": [
+        "4070 SUPER",
+        "4080",
+        "LAPTOP",
+        "PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3204530474/Grafikkort/ASUS-TUF-Gaming-GeForce-RTX-4070-Ti-OC-2xHDMI-3xDP-12GB-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 6300,
+      "excellent_price": 5900,
+      "burnin_warranty": "3 anos garantia estandar.",
+      "reviews": [
+        "https://www.techpowerup.com/review/asus-geforce-rtx-4070-ti-super-tuf/"
+      ],
+      "review_summary": "Punto de entrada ideal a 16GB VRAM en NVIDIA con chip AD103 y bus de 256 bits.",
+      "pros": "16GB VRAM, consume solo 285W (compatible con fuentes de 750W de calidad), DLSS 3 Frame Gen",
+      "cons": "~18% menor rendimiento que 4080 Super en 4K"
+    },
+    {
+      "key": "gpu-rx-7900-xtx",
+      "name": "AMD Radeon RX 7900 XTX 24GB (RDNA 3, DisplayPort 2.1 nativo)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "7900 XTX",
+        "7900XTX"
+      ],
+      "exclude_tokens": [
+        "7900 XT",
+        "7900 GRE",
+        "PC"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 7200,
+      "excellent_price": 6800,
+      "burnin_warranty": "2-3 anos garantia fabricante.",
+      "reviews": [
+        "https://www.techpowerup.com/review/amd-radeon-rx-7900-xtx/"
+      ],
+      "review_summary": "Monstruo de rasterizacion con 24GB de VRAM y DP 2.1. Muy atractiva para inferencia local de IA y LLMs grandes.",
+      "pros": "24GB VRAM masiva (ideal para LLMs locales como DeepSeek/Llama sin saturar memoria), DP 2.1 integrado",
+      "cons": "Menor rendimiento en Ray Tracing intensivo, carece de DLSS (usa FSR)"
+    }
+  ],
+  "discovery_queries": [
+    "RTX 5080",
+    "RTX 5070 Ti",
+    "RTX 4080 Super",
+    "RTX 4070 Ti Super",
+    "RX 7900 XTX"
+  ],
+  "discovery_ignore_ids": []
+}

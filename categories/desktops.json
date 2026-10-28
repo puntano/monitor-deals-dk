@@ -1,0 +1,111 @@
+{
+  "category_id": "desktops",
+  "category_name": "Equipos Completos",
+  "category_icon": "computer-desktop",
+  "description": "PCs de sobremesa prebuilt y configuraciones completas de ensambladores daneses (MM-Vision, SharkGaming, Proshop DUTZO, Komplett)",
+  "models": [
+    {
+      "key": "pc-sharkgaming-5080",
+      "name": "SharkGaming RGBeast 5080 (Ryzen 7 9800X3D / RTX 5080 / 32GB DDR5 / 2TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "RGBeast",
+        "5080"
+      ],
+      "exclude_tokens": [
+        "4060"
+      ],
+      "pricerunner": [
+        "/pl/223-3544823012/Stationaere-computere/Shark-Gaming-RGBeast-5080-Gaming-PC-AMD-Ryzen-7-9800X3D-16-GB-2-TB-SSD-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 22000,
+      "excellent_price": 20500,
+      "burnin_warranty": "2 anos garantia danesa y reklamationsret completa SharkGaming.",
+      "reviews": [],
+      "review_summary": "Configuracion de ensueno para 4K 240Hz: el mejor CPU para gaming y programacion (Ryzen 7 9800X3D AM5) junto con la RTX 5080 de 16GB GDDR7.",
+      "pros": "Rendimiento extremo sin cuellos de botella, arquitectura AM5 moderna con soporte futuro, DP 2.1 nativo",
+      "cons": "Inversion alta"
+    },
+    {
+      "key": "pc-mm-vision-predator",
+      "name": "MM-Vision Predator Gaming PC (High-End Serie 992352 / Vision Beast)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Predator",
+        "MM-Vision"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-5244095/Stationaere-computere/MM-Vision-Predator-gaming-%28992352%29-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 17500,
+      "excellent_price": 16000,
+      "burnin_warranty": "2 anos de garantia danesa total y soporte directo MM-Vision.",
+      "reviews": [],
+      "review_summary": "MM-Vision es el ensamblador mas reputado de Dinamarca. Montaje limpio, refrigeracion silenciosa y componentes de primera marca estandar (facil de ampliar).",
+      "pros": "Garantia y soporte directo en Dinamarca, sin piezas propietarias, silencioso",
+      "cons": "Plazo de envio de 2-4 dias laborables por montaje y test de estabilidad"
+    },
+    {
+      "key": "pc-dutzo-frostfire",
+      "name": "Proshop DUTZO Gaming Frostfire / Wildfire (Ryzen 7 / RTX Serie 40/50)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "DUTZO",
+        "Frostfire",
+        "Wildfire"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-3547202497/Stationaere-computere/Dutzo-Gaming-Frostfire-Sammenlign-Priser",
+        "/pl/223-3557786396/Stationaere-computere/Dutzo-Gaming-Wildfire-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 14900,
+      "excellent_price": 13900,
+      "burnin_warranty": "2 anos de garantia Proshop con devolucion rapida en DK.",
+      "reviews": [],
+      "review_summary": "Linea de PCs ensamblados por Proshop en Dinamarca. Componentes Corsair, Asus y Kingston con excelente relacion precio/rendimiento.",
+      "pros": "Envio rapido desde almacen Proshop en Aarhus, muy competitivo en precio",
+      "cons": "Configuraciones cerradas con menor margen de personalizacion en la web"
+    },
+    {
+      "key": "pc-mm-vision-ryzen-pro",
+      "name": "MM-Vision Ryzen Pro Gamer (AMD Ryzen 7 + RTX 4070 Ti / 4080 / 5070)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Ryzen Pro Gamer",
+        "Ryzen Gamer"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-4717586/Stationaere-computere/MM-Vision-Ryzen-Pro-Gamer-%28992331%29-Sammenlign-Priser",
+        "/pl/223-4832027/Stationaere-computere/MM-Vision-Ryzen-Gamer-%28992102%29-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 13500,
+      "excellent_price": 12500,
+      "burnin_warranty": "2 anos garantia MM-Vision.",
+      "reviews": [],
+      "review_summary": "Gama media-alta de MM-Vision. Optima para renovar por completo el sistema con una inversion contenida.",
+      "pros": "Excelente balance calidad/precio, plataforma AM5 con DDR5",
+      "cons": "Requiere seleccionar version con 32GB de RAM si viene con 16GB base"
+    }
+  ],
+  "discovery_queries": [
+    "DUTZO Gaming",
+    "Vision Gaming",
+    "SharkGaming"
+  ],
+  "discovery_ignore_ids": []
+}

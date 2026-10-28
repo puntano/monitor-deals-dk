@@ -1,5 +1,5 @@
 {
-  "_comment": "Candidatos seguidos. target_price = precio objetivo (DKK, incl. moms, coste total con envio). tier: top | alternative | watch | not_recommended. Los modelos 'not_recommended' se siguen pero nunca reciben clasificacion A/B. Ver README.md para la justificacion.",
+  "_comment": "Candidatos consolidados multi-categoria (Monitores, GPUs, Desktops). Administrables individualmente en categories/*.json.",
   "models": [
     {
       "key": "msi-mpg-321urx",
@@ -28,7 +28,9 @@
       ],
       "review_summary": "RTINGS/TFTCentral: QD-OLED 3a gen, texto claramente mejor que generaciones previas gracias a ~140 PPI (algo de fringing visible en bordes de alto contraste). RTINGS: input lag muy bajo y VRR flicker mejor que muchos OLED rivales.",
       "pros": "KVM + USB-C 90 W, sin ventilador, 3 anos burn-in, DP 1.4 DSC compatible con RTX 2080 Super a 4K 240 Hz",
-      "cons": "Brillo full-screen bajo (ABL tipico OLED), negros con tinte en habitaciones luminosas (sin polarizador), fringing leve"
+      "cons": "Brillo full-screen bajo (ABL tipico OLED), negros con tinte en habitaciones luminosas (sin polarizador), fringing leve",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "dell-aw3225qf",
@@ -53,7 +55,9 @@
       ],
       "review_summary": "Reviewed por RTINGS y TFTCentral. Mismo tipo de panel QD-OLED 3a gen que los planos; curvatura 1700R.",
       "pros": "Mejor garantia/servicio de reemplazo, Dolby Vision, precio actual competitivo",
-      "cons": "Curvo (menos ideal para codigo/CAD), ventilador interno, sin KVM ni entrada USB-C"
+      "cons": "Curvo (menos ideal para codigo/CAD), ventilador interno, sin KVM ni entrada USB-C",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "asus-pg32ucdp",
@@ -77,7 +81,9 @@
       ],
       "review_summary": "Reviewed por RTINGS. WOLED con subpixel RGWB y acabado mate: negros se mantienen en luz ambiente; modo dual 1080p 480 Hz util para shooters con GPU modesta.",
       "pros": "Modo 480 Hz para shooters con RTX 2080 Super, mate sin negros morados, KVM + USB-C 90 W, 3 anos burn-in",
-      "cons": "Subpixel RGWB: texto algo menos nitido que IPS; colores en alto brillo algo menos saturados que QD-OLED"
+      "cons": "Subpixel RGWB: texto algo menos nitido que IPS; colores en alto brillo algo menos saturados que QD-OLED",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "asus-pg32ucdmz",
@@ -103,7 +109,9 @@
       ],
       "review_summary": "Reviewed por RTINGS (modelo PG32UCDM). Mismo panel QD-OLED que MSI 321URX; RTINGS indica que el MSI gestiona mejor el VRR flicker.",
       "pros": "KVM + USB-C 90 W, sensor de proximidad, sin ventilador",
-      "cons": "Normalmente mas caro que el MSI con el mismo panel"
+      "cons": "Normalmente mas caro que el MSI con el mismo panel",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "gigabyte-fo32u2p",
@@ -128,7 +136,9 @@
       ],
       "review_summary": "Reviewed por RTINGS y TFTCentral. Mismo panel QD-OLED; diferencial: DisplayPort 2.1 UHBR20 (solo util con GPU futura compatible).",
       "pros": "DP 2.1 sin DSC para GPU futura, KVM, USB-C 65 W, sin ventilador",
-      "cons": "La ventaja DP 2.1 no aporta nada con la RTX 2080 Super"
+      "cons": "La ventaja DP 2.1 no aporta nada con la RTX 2080 Super",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "gigabyte-fo32u2",
@@ -152,7 +162,9 @@
       "reviews": [],
       "review_summary": "Sin review propia verificada (la de RTINGS/TFTCentral es del FO32U2P; no se extrapola).",
       "pros": "Mismo tipo de panel que el FO32U2P, mas barato en teoria",
-      "cons": "Sin review independiente verificada del modelo exacto; USB-C 18 W"
+      "cons": "Sin review independiente verificada del modelo exacto; USB-C 18 W",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "samsung-g80sd",
@@ -183,7 +195,9 @@
       ],
       "review_summary": "Reviewed por RTINGS. QD-OLED con acabado mate 'Glare Free' (menos reflejos, ligera textura).",
       "pros": "Acabado mate util en oficina luminosa, sin ventilador",
-      "cons": "Sin USB-C ni KVM, Smart TV OS innecesario, garantia burn-in no verificada"
+      "cons": "Sin USB-C ni KVM, Smart TV OS innecesario, garantia burn-in no verificada",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "samsung-g81sf",
@@ -208,7 +222,9 @@
       "reviews": [],
       "review_summary": "No se encontro review de RTINGS/TFTCentral verificada del modelo exacto (URL RTINGS probada: 404). No se extrapola del G80SD.",
       "pros": "Precio bajo para 4K 240 Hz QD-OLED",
-      "cons": "Sin reviews independientes verificadas; garantia no verificada"
+      "cons": "Sin reviews independientes verificadas; garantia no verificada",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "msi-mag-321up",
@@ -232,7 +248,9 @@
       "reviews": [],
       "review_summary": "Sin review RTINGS/TFTCentral verificada del modelo exacto (RTINGS: 404). 165 Hz es suficiente para la RTX 2080 Super a 4K.",
       "pros": "Mas barato; 165 Hz realista para tu GPU",
-      "cons": "Sin KVM ni USB-C de carga util; sin reviews verificadas"
+      "cons": "Sin KVM ni USB-C de carga util; sin reviews verificadas",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "samsung-g73sh",
@@ -255,7 +273,9 @@
       "reviews": [],
       "review_summary": "El 'Odyssey OLED G7 32\"' existe (G73SH). Sin reviews independientes verificadas.",
       "pros": "OLED 4K mas barato del seguimiento",
-      "cons": "Sin reviews verificadas; tipo de panel/coating no confirmado por pruebas independientes"
+      "cons": "Sin reviews verificadas; tipo de panel/coating no confirmado por pruebas independientes",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "samsung-g70d",
@@ -282,7 +302,9 @@
       ],
       "review_summary": "Solo existe review RTINGS del predecesor G70B; no se extrapola al G70D.",
       "pros": "Cero burn-in, texto RGB nitido, barato",
-      "cons": "Contraste IPS ~1000:1, HDR muy limitado, review del modelo exacto no verificada"
+      "cons": "Contraste IPS ~1000:1, HDR muy limitado, review del modelo exacto no verificada",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "samsung-neo-g7",
@@ -306,7 +328,9 @@
       ],
       "review_summary": "Reviewed por RTINGS. HDR brillante sin burn-in, pero curva 1000R agresiva y VA.",
       "pros": "Alto brillo HDR, sin burn-in",
-      "cons": "Curva 1000R poco apta para codigo; precio actual muy por encima de su minimo de 3 meses"
+      "cons": "Curva 1000R poco apta para codigo; precio actual muy por encima de su minimo de 3 meses",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "asus-pg32ucdm3",
@@ -328,7 +352,9 @@
       "reviews": [],
       "review_summary": "Sin review independiente verificada (RTINGS: 404).",
       "pros": "Version mas nueva",
-      "cons": "~3.000-4.000 DKK mas caro que el PG32UCDMZ/MSI sin mejora probada"
+      "cons": "~3.000-4.000 DKK mas caro que el PG32UCDMZ/MSI sin mejora probada",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     },
     {
       "key": "lg-32gs95",
@@ -351,7 +377,252 @@
       ],
       "review_summary": "Reviewed por RTINGS y TFTCentral (32GS95UE). Panel WOLED similar al PG32UCDP.",
       "pros": "Modo 480 Hz",
-      "cons": "Garantia burn-in no verificada en DK, sin USB-C/KVM, mas caro hoy que el PG32UCDP"
+      "cons": "Garantia burn-in no verificada en DK, sin USB-C/KVM, mas caro hoy que el PG32UCDP",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "gpu-rtx-5080",
+      "name": "NVIDIA GeForce RTX 5080 16GB GDDR7 (Blackwell, DP 2.1 UHBR20)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5080"
+      ],
+      "exclude_tokens": [
+        "5070",
+        "5090",
+        "PC",
+        "DESKTOP"
+      ],
+      "pricerunner": [
+        "/pl/37-3393491435/Grafikkort/Gigabyte-GeForce-RTX-5080-Windforce-OC-SFF-HDMI-3xDP-16GB-Sammenlign-Priser",
+        "/pl/37-3393153365/Grafikkort/ASUS-ROG-Astral-GeForce-RTX-5080-OC-Edition-2xHDMI-3xDP-16GB-Sammenlign-Priser",
+        "/pl/37-3393664977/Grafikkort/ASUS-GeForce-RTX-5080-Prime-OC-HDMI-3-x-DP-16GB-GDDR7-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 9500,
+      "excellent_price": 8900,
+      "burnin_warranty": "3 anos garantia de fabricante. Puerto DisplayPort 2.1 UHBR20 nativo.",
+      "reviews": [
+        "https://www.techpowerup.com/review/"
+      ],
+      "review_summary": "Arquitectura Blackwell de nueva generacion con memoria GDDR7 y soporte DisplayPort 2.1 UHBR20 nativo sin necesidad de DSC. Rendimiento 4K soberbio para pantallas 240Hz.",
+      "pros": "DisplayPort 2.1 UHBR20 nativo (ideal para 4K 240Hz sin compresion), memoria GDDR7 ultra rapida, aceleracion IA Blackwell",
+      "cons": "Precio de lanzamiento elevado, requiere fuente ATX 3.0 de al menos 850W-1000W"
+    },
+    {
+      "key": "gpu-rtx-5070-ti",
+      "name": "NVIDIA GeForce RTX 5070 Ti 16GB GDDR7 (Blackwell, DP 2.1)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5070 Ti",
+        "5070Ti"
+      ],
+      "exclude_tokens": [
+        "5080",
+        "5090",
+        "PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3451098859/Grafikkort/ASUS-ProArt-GeForce-RTX-5070-Ti-OC-Sammenlign-Priser",
+        "/pl/37-3472717017/Grafikkort/Palit-Microsystems-VGA-PCIE16-RTX5070TI-16GB-Grafikkort-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 7500,
+      "excellent_price": 6900,
+      "burnin_warranty": "3 anos garantia de fabricante. Arquitectura Blackwell 16GB.",
+      "reviews": [],
+      "review_summary": "Gama alta accesible Blackwell con 16GB GDDR7. Gran salto de eficiencia y soporte DisplayPort 2.1.",
+      "pros": "16GB GDDR7, DP 2.1 nativo, menor consumo que la 5080, excelente valor relativo",
+      "cons": "Disponibilidad inicial en tiendas nordicas"
+    },
+    {
+      "key": "gpu-rtx-4080-super",
+      "name": "NVIDIA GeForce RTX 4080 SUPER 16GB (Ada Lovelace, DLSS 3.5, 320W)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "4080 SUPER",
+        "4080SUPER"
+      ],
+      "exclude_tokens": [
+        "4090",
+        "4070",
+        "LAPTOP",
+        "PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3204629634/Grafikkort/Gigabyte-GeForce-RTX-4080-Gaming-OC-HDMI-3xDP-16GB-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 7600,
+      "excellent_price": 7200,
+      "burnin_warranty": "3 anos garantia de fabricante (ASUS/Gigabyte/MSI).",
+      "reviews": [
+        "https://www.techpowerup.com/review/nvidia-geforce-rtx-4080-super-founders-edition/"
+      ],
+      "review_summary": "Referencia consolidada para 4K con Ray Tracing y DLSS 3 Frame Generation. 16GB GDDR6X, bus 256 bits.",
+      "pros": "Potencia masiva para 4K nativo/DLSS Calidad, eficiencia energetica de Ada Lovelace, DLSS 3.5 Ray Reconstruction",
+      "cons": "DisplayPort 1.4a con DSC (no DP 2.1), requiere conector 12VHPWR y chasis de >31cm"
+    },
+    {
+      "key": "gpu-rtx-4070-ti-super",
+      "name": "NVIDIA GeForce RTX 4070 Ti SUPER 16GB (Ada Lovelace, 285W)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "4070 Ti SUPER",
+        "4070Ti SUPER"
+      ],
+      "exclude_tokens": [
+        "4070 SUPER",
+        "4080",
+        "LAPTOP",
+        "PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3204530474/Grafikkort/ASUS-TUF-Gaming-GeForce-RTX-4070-Ti-OC-2xHDMI-3xDP-12GB-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 6300,
+      "excellent_price": 5900,
+      "burnin_warranty": "3 anos garantia estandar.",
+      "reviews": [
+        "https://www.techpowerup.com/review/asus-geforce-rtx-4070-ti-super-tuf/"
+      ],
+      "review_summary": "Punto de entrada ideal a 16GB VRAM en NVIDIA con chip AD103 y bus de 256 bits.",
+      "pros": "16GB VRAM, consume solo 285W (compatible con fuentes de 750W de calidad), DLSS 3 Frame Gen",
+      "cons": "~18% menor rendimiento que 4080 Super en 4K"
+    },
+    {
+      "key": "gpu-rx-7900-xtx",
+      "name": "AMD Radeon RX 7900 XTX 24GB (RDNA 3, DisplayPort 2.1 nativo)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "7900 XTX",
+        "7900XTX"
+      ],
+      "exclude_tokens": [
+        "7900 XT",
+        "7900 GRE",
+        "PC"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 7200,
+      "excellent_price": 6800,
+      "burnin_warranty": "2-3 anos garantia fabricante.",
+      "reviews": [
+        "https://www.techpowerup.com/review/amd-radeon-rx-7900-xtx/"
+      ],
+      "review_summary": "Monstruo de rasterizacion con 24GB de VRAM y DP 2.1. Muy atractiva para inferencia local de IA y LLMs grandes.",
+      "pros": "24GB VRAM masiva (ideal para LLMs locales como DeepSeek/Llama sin saturar memoria), DP 2.1 integrado",
+      "cons": "Menor rendimiento en Ray Tracing intensivo, carece de DLSS (usa FSR)"
+    },
+    {
+      "key": "pc-sharkgaming-5080",
+      "name": "SharkGaming RGBeast 5080 (Ryzen 7 9800X3D / RTX 5080 / 32GB DDR5 / 2TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "RGBeast",
+        "5080"
+      ],
+      "exclude_tokens": [
+        "4060"
+      ],
+      "pricerunner": [
+        "/pl/223-3544823012/Stationaere-computere/Shark-Gaming-RGBeast-5080-Gaming-PC-AMD-Ryzen-7-9800X3D-16-GB-2-TB-SSD-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 22000,
+      "excellent_price": 20500,
+      "burnin_warranty": "2 anos garantia danesa y reklamationsret completa SharkGaming.",
+      "reviews": [],
+      "review_summary": "Configuracion de ensueno para 4K 240Hz: el mejor CPU para gaming y programacion (Ryzen 7 9800X3D AM5) junto con la RTX 5080 de 16GB GDDR7.",
+      "pros": "Rendimiento extremo sin cuellos de botella, arquitectura AM5 moderna con soporte futuro, DP 2.1 nativo",
+      "cons": "Inversion alta"
+    },
+    {
+      "key": "pc-mm-vision-predator",
+      "name": "MM-Vision Predator Gaming PC (High-End Serie 992352 / Vision Beast)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Predator",
+        "MM-Vision"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-5244095/Stationaere-computere/MM-Vision-Predator-gaming-%28992352%29-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 17500,
+      "excellent_price": 16000,
+      "burnin_warranty": "2 anos de garantia danesa total y soporte directo MM-Vision.",
+      "reviews": [],
+      "review_summary": "MM-Vision es el ensamblador mas reputado de Dinamarca. Montaje limpio, refrigeracion silenciosa y componentes de primera marca estandar (facil de ampliar).",
+      "pros": "Garantia y soporte directo en Dinamarca, sin piezas propietarias, silencioso",
+      "cons": "Plazo de envio de 2-4 dias laborables por montaje y test de estabilidad"
+    },
+    {
+      "key": "pc-dutzo-frostfire",
+      "name": "Proshop DUTZO Gaming Frostfire / Wildfire (Ryzen 7 / RTX Serie 40/50)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "DUTZO",
+        "Frostfire",
+        "Wildfire"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-3547202497/Stationaere-computere/Dutzo-Gaming-Frostfire-Sammenlign-Priser",
+        "/pl/223-3557786396/Stationaere-computere/Dutzo-Gaming-Wildfire-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 14900,
+      "excellent_price": 13900,
+      "burnin_warranty": "2 anos de garantia Proshop con devolucion rapida en DK.",
+      "reviews": [],
+      "review_summary": "Linea de PCs ensamblados por Proshop en Dinamarca. Componentes Corsair, Asus y Kingston con excelente relacion precio/rendimiento.",
+      "pros": "Envio rapido desde almacen Proshop en Aarhus, muy competitivo en precio",
+      "cons": "Configuraciones cerradas con menor margen de personalizacion en la web"
+    },
+    {
+      "key": "pc-mm-vision-ryzen-pro",
+      "name": "MM-Vision Ryzen Pro Gamer (AMD Ryzen 7 + RTX 4070 Ti / 4080 / 5070)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Ryzen Pro Gamer",
+        "Ryzen Gamer"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-4717586/Stationaere-computere/MM-Vision-Ryzen-Pro-Gamer-%28992331%29-Sammenlign-Priser",
+        "/pl/223-4832027/Stationaere-computere/MM-Vision-Ryzen-Gamer-%28992102%29-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 13500,
+      "excellent_price": 12500,
+      "burnin_warranty": "2 anos garantia MM-Vision.",
+      "reviews": [],
+      "review_summary": "Gama media-alta de MM-Vision. Optima para renovar por completo el sistema con una inversion contenida.",
+      "pros": "Excelente balance calidad/precio, plataforma AM5 con DDR5",
+      "cons": "Requiere seleccionar version con 32GB de RAM si viene con 16GB base"
     }
   ],
   "discovery_queries": [
@@ -359,8 +630,15 @@
     "QD-OLED 32 4K",
     "OLED 31.5 4K",
     "32 4K OLED gaming skaerm",
-    "WOLED 32 4K"
+    "WOLED 32 4K",
+    "RTX 5080",
+    "RTX 5070 Ti",
+    "RTX 4080 Super",
+    "RTX 4070 Ti Super",
+    "RX 7900 XTX",
+    "DUTZO Gaming",
+    "Vision Gaming",
+    "SharkGaming"
   ],
-  "discovery_ignore_ids": [],
-  "_comment_discovery": "En la primera ejecucion todos los productos encontrados por discovery_queries se registran como linea base sin alertar; despues solo se alertan productos nuevos."
+  "discovery_ignore_ids": []
 }

@@ -1,0 +1,396 @@
+{
+  "category_id": "monitors",
+  "category_name": "Monitores 4K",
+  "category_icon": "desktop-computer",
+  "description": "Monitores 32\" 4K 240Hz (OLED, QD-OLED, WOLED, Mini-LED)",
+  "models": [
+    {
+      "key": "msi-mpg-321urx",
+      "name": "MSI MPG 321URX QD-OLED (31.5\" 4K 240Hz, 3a gen QD-OLED)",
+      "match_tokens": [
+        "321URX"
+      ],
+      "exclude_tokens": [
+        "321CURX",
+        "321URXW",
+        "CASE"
+      ],
+      "pricerunner": [
+        "/pl/25-3249708366/Skaerme/MSI-MPG-321URXDE-QD-OLED-32-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        13326290
+      ],
+      "tier": "top",
+      "target_price": 5500,
+      "excellent_price": 5200,
+      "burnin_warranty": "3 anos incl. burn-in (anuncio global de MSI; requiere OLED Care activo). Terminos especificos para DK: no verificados en documento danes.",
+      "reviews": [
+        "https://www.rtings.com/monitor/reviews/msi/mpg-321urx-qd-oled",
+        "https://tftcentral.co.uk/reviews/msi-mpg-321urx"
+      ],
+      "review_summary": "RTINGS/TFTCentral: QD-OLED 3a gen, texto claramente mejor que generaciones previas gracias a ~140 PPI (algo de fringing visible en bordes de alto contraste). RTINGS: input lag muy bajo y VRR flicker mejor que muchos OLED rivales.",
+      "pros": "KVM + USB-C 90 W, sin ventilador, 3 anos burn-in, DP 1.4 DSC compatible con RTX 2080 Super a 4K 240 Hz",
+      "cons": "Brillo full-screen bajo (ABL tipico OLED), negros con tinte en habitaciones luminosas (sin polarizador), fringing leve",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "dell-aw3225qf",
+      "name": "Dell Alienware AW3225QF (31.6\" curvo 1700R 4K 240Hz QD-OLED)",
+      "match_tokens": [
+        "AW3225QF"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3273608468/Skaerme/Dell-Alienware-AW3225QF-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        13087459
+      ],
+      "tier": "top",
+      "target_price": 5900,
+      "excellent_price": 5600,
+      "burnin_warranty": "3 anos incl. burn-in (Dell, Advanced Exchange). Aplicacion concreta en DK por compra en tercero: no verificada en documento danes.",
+      "reviews": [
+        "https://www.rtings.com/monitor/reviews/dell/alienware-aw3225qf",
+        "https://tftcentral.co.uk/reviews/dell-alienware-aw3225qf"
+      ],
+      "review_summary": "Reviewed por RTINGS y TFTCentral. Mismo tipo de panel QD-OLED 3a gen que los planos; curvatura 1700R.",
+      "pros": "Mejor garantia/servicio de reemplazo, Dolby Vision, precio actual competitivo",
+      "cons": "Curvo (menos ideal para codigo/CAD), ventilador interno, sin KVM ni entrada USB-C",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "asus-pg32ucdp",
+      "name": "ASUS ROG Swift OLED PG32UCDP (31.5\" WOLED 4K 240Hz / FHD 480Hz)",
+      "match_tokens": [
+        "PG32UCDP"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3317034245/Skaerme/ASUS-ROG-Swift-PG32UCDP-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        13119976
+      ],
+      "tier": "top",
+      "target_price": 6200,
+      "excellent_price": 5900,
+      "burnin_warranty": "3 anos incl. burn-in (ASUS para la serie ROG OLED 32\"). Terminos DK no verificados en documento danes.",
+      "reviews": [
+        "https://www.rtings.com/monitor/reviews/asus/rog-swift-oled-pg32ucdp"
+      ],
+      "review_summary": "Reviewed por RTINGS. WOLED con subpixel RGWB y acabado mate: negros se mantienen en luz ambiente; modo dual 1080p 480 Hz util para shooters con GPU modesta.",
+      "pros": "Modo 480 Hz para shooters con RTX 2080 Super, mate sin negros morados, KVM + USB-C 90 W, 3 anos burn-in",
+      "cons": "Subpixel RGWB: texto algo menos nitido que IPS; colores en alto brillo algo menos saturados que QD-OLED",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "asus-pg32ucdmz",
+      "name": "ASUS ROG Swift OLED PG32UCDM / PG32UCDMZ (31.5\" QD-OLED 4K 240Hz)",
+      "match_tokens": [
+        "PG32UCDM"
+      ],
+      "exclude_tokens": [
+        "PG32UCDM3"
+      ],
+      "pricerunner": [
+        "/pl/25-3410106753/Skaerme/ASUS-ROG-Swift-OLED-PG32UCDMZ-3840x2160-4K-UHD-240Hz-QD-OLED-90W-USB-C-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        14631915
+      ],
+      "tier": "alternative",
+      "target_price": 6200,
+      "excellent_price": 5900,
+      "burnin_warranty": "3 anos incl. burn-in segun ASUS para PG32UCDM. PG32UCDMZ = variante regional; cobertura identica no verificada.",
+      "reviews": [
+        "https://www.rtings.com/monitor/reviews/asus/rog-swift-oled-pg32ucdm"
+      ],
+      "review_summary": "Reviewed por RTINGS (modelo PG32UCDM). Mismo panel QD-OLED que MSI 321URX; RTINGS indica que el MSI gestiona mejor el VRR flicker.",
+      "pros": "KVM + USB-C 90 W, sensor de proximidad, sin ventilador",
+      "cons": "Normalmente mas caro que el MSI con el mismo panel",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "gigabyte-fo32u2p",
+      "name": "Gigabyte AORUS FO32U2P (31.5\" QD-OLED 4K 240Hz, DP 2.1 UHBR20)",
+      "match_tokens": [
+        "FO32U2P"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3297527250/Skaerme/Gigabyte-AORUS-FO32U2P-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        13097498
+      ],
+      "tier": "alternative",
+      "target_price": 6300,
+      "excellent_price": 6000,
+      "burnin_warranty": "3 anos incl. burn-in (Gigabyte). Terminos DK no verificados en documento danes.",
+      "reviews": [
+        "https://www.rtings.com/monitor/reviews/gigabyte/aorus-fo32u2p",
+        "https://tftcentral.co.uk/reviews/gigabyte-aorus-fo32u2p"
+      ],
+      "review_summary": "Reviewed por RTINGS y TFTCentral. Mismo panel QD-OLED; diferencial: DisplayPort 2.1 UHBR20 (solo util con GPU futura compatible).",
+      "pros": "DP 2.1 sin DSC para GPU futura, KVM, USB-C 65 W, sin ventilador",
+      "cons": "La ventaja DP 2.1 no aporta nada con la RTX 2080 Super",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "gigabyte-fo32u2",
+      "name": "Gigabyte AORUS FO32U2 (31.5\" QD-OLED 4K 240Hz)",
+      "match_tokens": [
+        "FO32U2"
+      ],
+      "exclude_tokens": [
+        "FO32U2P"
+      ],
+      "pricerunner": [
+        "/pl/25-3292737654/Skaerme/Gigabyte-Aorus-FO32U2-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        13149735
+      ],
+      "tier": "watch",
+      "target_price": 5600,
+      "excellent_price": 5300,
+      "burnin_warranty": "3 anos incl. burn-in (Gigabyte). Terminos DK no verificados.",
+      "reviews": [],
+      "review_summary": "Sin review propia verificada (la de RTINGS/TFTCentral es del FO32U2P; no se extrapola).",
+      "pros": "Mismo tipo de panel que el FO32U2P, mas barato en teoria",
+      "cons": "Sin review independiente verificada del modelo exacto; USB-C 18 W",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "samsung-g80sd",
+      "name": "Samsung Odyssey OLED G8 G80SD (LS32DG800/802, 32\" QD-OLED 4K 240Hz mate)",
+      "match_tokens": [
+        "G80SD",
+        "DG800",
+        "DG802"
+      ],
+      "exclude_tokens": [
+        "34",
+        "G80SH"
+      ],
+      "pricerunner": [
+        "/pl/25-3318784990/Skaerme/Samsung-Odyssey-G80SD-LS32DG800SUXEN-Sammenlign-Priser",
+        "/pl/25-3311330725/Skaerme/Samsung-Odyssey-OLED-G8-LS32DG802SUXEN-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        17027995,
+        13620795
+      ],
+      "tier": "alternative",
+      "target_price": 5800,
+      "excellent_price": 5500,
+      "burnin_warranty": "No verificado. Indicios (foros/ficha nordica) de cobertura de burn-in en 'uso normal'; no confirmado con documento oficial danes.",
+      "reviews": [
+        "https://www.rtings.com/monitor/reviews/samsung/odyssey-oled-g80sd-s32dg80"
+      ],
+      "review_summary": "Reviewed por RTINGS. QD-OLED con acabado mate 'Glare Free' (menos reflejos, ligera textura).",
+      "pros": "Acabado mate util en oficina luminosa, sin ventilador",
+      "cons": "Sin USB-C ni KVM, Smart TV OS innecesario, garantia burn-in no verificada",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "samsung-g81sf",
+      "name": "Samsung Odyssey OLED G8 G81SF (S32FG81x, 32\" QD-OLED 4K 240Hz)",
+      "match_tokens": [
+        "G81SF",
+        "FG81"
+      ],
+      "exclude_tokens": [
+        "27"
+      ],
+      "pricerunner": [
+        "/pl/25-3400211023/Skaerme/Samsung-Odyssey-G8-G81SF-32-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        14550599
+      ],
+      "tier": "watch",
+      "target_price": 5300,
+      "excellent_price": 5000,
+      "burnin_warranty": "No verificado.",
+      "reviews": [],
+      "review_summary": "No se encontro review de RTINGS/TFTCentral verificada del modelo exacto (URL RTINGS probada: 404). No se extrapola del G80SD.",
+      "pros": "Precio bajo para 4K 240 Hz QD-OLED",
+      "cons": "Sin reviews independientes verificadas; garantia no verificada",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "msi-mag-321up",
+      "name": "MSI MAG 321UP QD-OLED (31.5\" 4K 165Hz)",
+      "match_tokens": [
+        "321UP"
+      ],
+      "exclude_tokens": [
+        "321UPX",
+        "321UPDE-X24",
+        "321CUP"
+      ],
+      "pricerunner": [
+        "/pl/25-3336533572/Skaerme/MSI-MAG-321UP-QD-OLED-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "watch",
+      "target_price": 4800,
+      "excellent_price": 4500,
+      "burnin_warranty": "3 anos incl. burn-in (politica MSI OLED). Terminos DK no verificados.",
+      "reviews": [],
+      "review_summary": "Sin review RTINGS/TFTCentral verificada del modelo exacto (RTINGS: 404). 165 Hz es suficiente para la RTX 2080 Super a 4K.",
+      "pros": "Mas barato; 165 Hz realista para tu GPU",
+      "cons": "Sin KVM ni USB-C de carga util; sin reviews verificadas",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "samsung-g73sh",
+      "name": "Samsung Odyssey OLED G7 G73SH (S32HG73x, 32\" OLED 4K 165Hz / FHD 330Hz)",
+      "match_tokens": [
+        "G73SH",
+        "HG73"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3532016487/Skaerme/Samsung-Odyssey-OLED-G7-G73SH-32-Inch-4K-Gaming-Kaerm-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        16617506
+      ],
+      "tier": "watch",
+      "target_price": 4600,
+      "excellent_price": 4300,
+      "burnin_warranty": "No verificado.",
+      "reviews": [],
+      "review_summary": "El 'Odyssey OLED G7 32\"' existe (G73SH). Sin reviews independientes verificadas.",
+      "pros": "OLED 4K mas barato del seguimiento",
+      "cons": "Sin reviews verificadas; tipo de panel/coating no confirmado por pruebas independientes",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "samsung-g70d",
+      "name": "Samsung Odyssey G7 G70D (S32DG702, 32\" IPS 4K 144Hz) - alternativa sin burn-in",
+      "match_tokens": [
+        "DG70",
+        "G70D"
+      ],
+      "exclude_tokens": [
+        "27"
+      ],
+      "pricerunner": [
+        "/pl/25-3378553018/Skaerme/Samsung-Odyssey-G7-S32DG702EU-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        14325974
+      ],
+      "tier": "alternative",
+      "target_price": 3200,
+      "excellent_price": 3000,
+      "burnin_warranty": "N/A (IPS, sin riesgo de burn-in).",
+      "reviews": [
+        "https://www.rtings.com/monitor/reviews/samsung/odyssey-g7-g70b-s32bg70"
+      ],
+      "review_summary": "Solo existe review RTINGS del predecesor G70B; no se extrapola al G70D.",
+      "pros": "Cero burn-in, texto RGB nitido, barato",
+      "cons": "Contraste IPS ~1000:1, HDR muy limitado, review del modelo exacto no verificada",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "samsung-neo-g7",
+      "name": "Samsung Odyssey Neo G7 S32BG75 (32\" Mini-LED VA curvo 1000R 4K 165Hz)",
+      "match_tokens": [
+        "BG75"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3208757348/Skaerme/Samsung-Odyssey-Neo-G7-S32BG750NP-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        6671551
+      ],
+      "tier": "not_recommended",
+      "target_price": 4500,
+      "excellent_price": 4300,
+      "burnin_warranty": "N/A (LCD Mini-LED).",
+      "reviews": [
+        "https://www.rtings.com/monitor/reviews/samsung/odyssey-neo-g7-s32bg75"
+      ],
+      "review_summary": "Reviewed por RTINGS. HDR brillante sin burn-in, pero curva 1000R agresiva y VA.",
+      "pros": "Alto brillo HDR, sin burn-in",
+      "cons": "Curva 1000R poco apta para codigo; precio actual muy por encima de su minimo de 3 meses",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "asus-pg32ucdm3",
+      "name": "ASUS ROG Swift OLED PG32UCDM3 (31.5\" QD-OLED 4K 240Hz, 2026)",
+      "match_tokens": [
+        "PG32UCDM3"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3471540093/Skaerme/ASUS-32-ROG-Swift-PG32UCDM3-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        16176239
+      ],
+      "tier": "not_recommended",
+      "target_price": 7500,
+      "excellent_price": 7000,
+      "burnin_warranty": "No verificado para esta variante.",
+      "reviews": [],
+      "review_summary": "Sin review independiente verificada (RTINGS: 404).",
+      "pros": "Version mas nueva",
+      "cons": "~3.000-4.000 DKK mas caro que el PG32UCDMZ/MSI sin mejora probada",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "lg-32gs95",
+      "name": "LG UltraGear 32GS95UE/UV-B (31.5\" WOLED 4K 240Hz / FHD 480Hz)",
+      "match_tokens": [
+        "32GS95"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3389051146/Skaerme/LG-UltraGear-32GS95UV-B-Gaming-Skaerm-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "not_recommended",
+      "target_price": 5900,
+      "excellent_price": 5600,
+      "burnin_warranty": "No verificado / ambiguo en Europa (LG no publica cobertura de burn-in explicita en terminos nordicos).",
+      "reviews": [
+        "https://www.rtings.com/monitor/reviews/lg/32gs95ue-b",
+        "https://tftcentral.co.uk/reviews/lg-32gs95ue"
+      ],
+      "review_summary": "Reviewed por RTINGS y TFTCentral (32GS95UE). Panel WOLED similar al PG32UCDP.",
+      "pros": "Modo 480 Hz",
+      "cons": "Garantia burn-in no verificada en DK, sin USB-C/KVM, mas caro hoy que el PG32UCDP",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    }
+  ],
+  "discovery_queries": [
+    "OLED 32 4K 240Hz",
+    "QD-OLED 32 4K",
+    "OLED 31.5 4K",
+    "32 4K OLED gaming skaerm",
+    "WOLED 32 4K"
+  ],
+  "discovery_ignore_ids": []
+}
