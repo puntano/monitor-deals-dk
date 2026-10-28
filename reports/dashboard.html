@@ -54,6 +54,10 @@
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             Automático 09:00 CPH
           </div>
+          <button onclick="triggerUpdate()" id="btn-update" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 active:scale-95 text-white font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer border border-blue-400/30">
+            <svg id="update-spinner" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span id="update-text">Actualizar Precios Ahora</span>
+          </button>
         </div>
       </div>
 
@@ -77,6 +81,15 @@
         </button>
       </div>
     </header>
+
+    <!-- BANNER DE ESTADO DE ACTUALIZACION -->
+    <div id="toast-banner" class="hidden transition-all duration-300 rounded-2xl p-4 text-xs font-semibold flex items-center justify-between border shadow-lg">
+      <div class="flex items-center gap-2.5">
+        <span id="toast-icon" class="text-base">🚀</span>
+        <span id="toast-msg">Mensaje</span>
+      </div>
+      <button onclick="hideToast()" class="text-slate-400 hover:text-white px-2 py-1 cursor-pointer">✕</button>
+    </div>
 
     <!-- METRICAS RESUMEN -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
@@ -592,6 +605,75 @@
 
         container.appendChild(card);
       });
+    }
+
+    function showNotification(msg, type = 'info') {
+      const banner = document.getElementById('toast-banner');
+      const icon = document.getElementById('toast-icon');
+      const text = document.getElementById('toast-msg');
+      if (!banner) return;
+      banner.classList.remove('hidden', 'bg-blue-500/10', 'border-blue-500/40', 'text-blue-200', 'bg-emerald-500/10', 'border-emerald-500/40', 'text-emerald-200', 'bg-rose-500/10', 'border-rose-500/40', 'text-rose-200');
+      if (type === 'success') {
+        banner.classList.add('bg-emerald-500/10', 'border-emerald-500/40', 'text-emerald-200');
+        icon.textContent = '✅';
+      } else if (type === 'error') {
+        banner.classList.add('bg-rose-500/10', 'border-rose-500/40', 'text-rose-200');
+        icon.textContent = '❌';
+      } else {
+        banner.classList.add('bg-blue-500/10', 'border-blue-500/40', 'text-blue-200');
+        icon.textContent = '🚀';
+      }
+      text.textContent = msg;
+    }
+
+    function hideToast() {
+      const banner = document.getElementById('toast-banner');
+      if (banner) banner.classList.add('hidden');
+    }
+
+    async function triggerUpdate() {
+      const btn = document.getElementById('btn-update');
+      const txt = document.getElementById('update-text');
+      const spinner = document.getElementById('update-spinner');
+      if (!btn || btn.disabled) return;
+
+      btn.disabled = true;
+      btn.classList.add('opacity-80');
+      spinner.classList.add('animate-spin');
+      txt.textContent = 'Enviando orden...';
+
+      try {
+        const res = await fetch('https://ntfy.sh/mt-dk-trigger-xpfrsrpcjylx2prx', {
+          method: 'POST',
+          body: JSON.stringify({ action: 'refresh', timestamp: new Date().toISOString() })
+        });
+        if (res.ok) {
+          showNotification('¡Búsqueda lanzada en tiempo real! Tu equipo local está consultando PriceRunner y Prisjagt DK. El dashboard se actualizará automáticamente en ~60-90 segundos.', 'info');
+          let secs = 90;
+          const interval = setInterval(() => {
+            secs--;
+            if (secs > 0) {
+              txt.textContent = `Actualizando (${secs}s)...`;
+            } else {
+              clearInterval(interval);
+              txt.textContent = 'Recargando...';
+              window.location.reload();
+            }
+          }, 1000);
+        } else {
+          throw new Error('HTTP ' + res.status);
+        }
+      } catch (err) {
+        console.error(err);
+        txt.textContent = 'Error al enviar';
+        showNotification('No se pudo enviar la orden remota. Si tu máquina está apagada, ejecuta el workflow en GitHub Actions.', 'error');
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.classList.remove('opacity-80');
+          spinner.classList.remove('animate-spin');
+          txt.textContent = 'Actualizar Precios Ahora';
+        }, 4000);
+      }
     }
 
     // Inicializar filtros al cargar
