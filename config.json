@@ -7,7 +7,7 @@
     "topic": "mt-dk-xpfrsrpcjylx2prx"
   },
   "windows_toast": true,
-  "vercel_url": "",
+  "vercel_url": "https://monitor-deals-dk.vercel.app",
   "weekly_heartbeat_weekday": 0,
   "request_delay_seconds": 6,
   "max_retries": 3,
