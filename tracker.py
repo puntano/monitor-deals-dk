@@ -492,6 +492,8 @@ def build_deal_message(res, kind_label):
         f"🎯 Objetivo: {fmt_dkk(m['target_price'])} · Mín ~3m: {fmt_dkk(res['ref_min'])}",
         f"🔗 Enlace directo: {link}"
     ]
+    if CFG.get("vercel_url"):
+        lines.append(f"📊 Dashboard web: {CFG['vercel_url']}")
     return "\n".join(lines), link
 
 
@@ -768,6 +770,20 @@ def write_report(ctx, new_reviews):
         log(f"Dashboard visual HTML generado con éxito ({len(dash_paths)} archivos)")
     except Exception as e:
         log(f"WARN al generar dashboard visual HTML: {e}")
+
+    # Sincronización automática con Git / Vercel (si hay repositorio remoto configurado)
+    try:
+        r_rem = subprocess.run(["git", "remote"], cwd=BASE, capture_output=True, text=True)
+        if r_rem.stdout.strip():
+            subprocess.run(["git", "add", "index.html", "public/", "reports/", "data/offers_history.csv"], cwd=BASE, capture_output=True)
+            subprocess.run(["git", "commit", "-m", f"Auto-update deals {RUN_DATE}"], cwd=BASE, capture_output=True)
+            r_push = subprocess.run(["git", "push"], cwd=BASE, capture_output=True, text=True)
+            if r_push.returncode == 0:
+                log("Sincronización con Git / Vercel completada con éxito.")
+            else:
+                log(f"Git push pendiente o no configurado: {r_push.stderr.strip()[:150]}")
+    except Exception as e:
+        log(f"Aviso en sync_to_git: {e}")
 
 
 # --------------------------------------------------------------------------- main
