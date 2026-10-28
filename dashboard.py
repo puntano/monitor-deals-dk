@@ -186,6 +186,7 @@ def generate_dashboard_html(output_paths=None):
             "cons": m.get("cons", ""),
             "reviews": m.get("reviews", []),
             "pricerunner": m.get("pricerunner", []),
+            "store_links": m.get("store_links", []),
             "offers": offers
         })
         
@@ -560,8 +561,43 @@ def generate_dashboard_html(output_paths=None):
         const cardBorder = isDeal ? 'border-emerald-500/50 shadow-lg shadow-emerald-500/5 bg-slate-900/95' : 'border-slate-800 bg-slate-900/75';
         
         const bestOffer = m.offers && m.offers.length > 0 ? m.offers[0] : null;
-        const buyUrl = bestOffer ? (bestOffer.offer_url || bestOffer.product_url) : (m.pricerunner.length ? 'https://www.pricerunner.dk' + m.pricerunner[0] : '#');
-        const prUrl = m.pricerunner.length ? 'https://www.pricerunner.dk' + m.pricerunner[0] : '#';
+        const primaryStore = (m.store_links && m.store_links.length > 0) ? m.store_links[0] : null;
+        
+        let buyUrl = 'https://www.pricerunner.dk';
+        let buyLabel = 'Ver opciones en Dinamarca';
+        
+        if (bestOffer && (bestOffer.offer_url || bestOffer.product_url)) {{
+          buyUrl = bestOffer.offer_url || bestOffer.product_url;
+          buyLabel = `Ir a ${{bestOffer.merchant}} (${{fmtDkk(m.best_total || m.best_price)}})`;
+        }} else if (primaryStore) {{
+          buyUrl = primaryStore.url;
+          buyLabel = `Configurar en ${{primaryStore.name}}`;
+        }} else if (m.pricerunner && m.pricerunner.length > 0) {{
+          buyUrl = 'https://www.pricerunner.dk' + m.pricerunner[0];
+          buyLabel = 'Ver en PriceRunner';
+        }}
+
+        const hasPR = m.pricerunner && m.pricerunner.length > 0;
+        const prUrl = hasPR ? ('https://www.pricerunner.dk' + m.pricerunner[0]) : (primaryStore ? primaryStore.url : 'https://www.pricerunner.dk');
+        const prLabel = hasPR ? 'PriceRunner' : (primaryStore ? primaryStore.name : 'Tienda Oficial');
+
+        // Botones de tiendas danesas directas
+        let storeLinksHtml = '';
+        if (m.store_links && m.store_links.length > 0) {{
+          storeLinksHtml = `
+            <div class="pt-2">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1.5">Tiendas y configuradores recomendados en Dinamarca:</span>
+              <div class="flex flex-wrap items-center gap-1.5">
+                ${{m.store_links.map(s => `
+                  <a href="${{s.url}}" target="_blank" class="px-2.5 py-1 rounded-lg bg-slate-950 hover:bg-slate-800 text-blue-300 hover:text-white border border-slate-700/80 text-[11px] font-medium inline-flex items-center gap-1 transition">
+                    <span>🏪</span> ${{s.name}}
+                    <svg class="w-2.5 h-2.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  </a>
+                `).join('')}}
+              </div>
+            </div>
+          `;
+        }}
 
         // Reviews HTML
         let reviewsHtml = '';
@@ -579,7 +615,7 @@ def generate_dashboard_html(output_paths=None):
         }}
 
         // Tabla de ofertas
-        let offersTable = '<div class="text-xs text-slate-400 p-3 italic">Las tiendas danesas se escanearán en la próxima ronda de las 09:00 o puedes consultar el comparador directo.</div>';
+        let offersTable = '';
         if (m.offers && m.offers.length > 0) {{
           offersTable = `
             <div class="overflow-x-auto">
@@ -616,6 +652,21 @@ def generate_dashboard_html(output_paths=None):
               </table>
             </div>
           `;
+        }} else if (m.store_links && m.store_links.length > 0) {{
+          offersTable = `
+            <div class="p-4 bg-slate-950/80 rounded-xl space-y-2 text-xs">
+              <p class="text-slate-300 font-medium">Esta configuración o modelo se adquiere y personaliza directamente a través de las siguientes tiendas oficiales en Dinamarca:</p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                ${{m.store_links.map(s => `
+                  <a href="${{s.url}}" target="_blank" class="px-3 py-1.5 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 font-semibold inline-flex items-center gap-1.5 transition">
+                    <span>🏪</span> ${{s.name}} &rarr;
+                  </a>
+                `).join('')}}
+              </div>
+            </div>
+          `;
+        }} else {{
+          offersTable = '<div class="text-xs text-slate-400 p-3 italic">Consultar comparador de PriceRunner para disponibilidad en tiendas danesas.</div>';
         }}
 
         const card = document.createElement('div');
@@ -648,6 +699,9 @@ def generate_dashboard_html(output_paths=None):
                   <p class="text-slate-300 leading-relaxed">${{m.cons}}</p>
                 </div>
               </div>
+
+              <!-- Bloque de tiendas oficiales danesas -->
+              ${{storeLinksHtml}}
 
               <!-- Garantia / Puertos / Reviews Links -->
               <div class="flex flex-wrap items-center justify-between gap-2 text-xs pt-1 text-slate-400">
@@ -693,14 +747,14 @@ def generate_dashboard_html(output_paths=None):
               <!-- Botones de accion -->
               <div class="space-y-2 pt-2">
                 <a href="${{buyUrl}}" target="_blank" class="w-full py-2.5 px-4 rounded-xl font-bold text-xs text-center bg-blue-600 hover:bg-blue-500 text-white transition shadow-sm flex items-center justify-center gap-2 cursor-pointer">
-                  <span>Ir a la tienda (${{m.best_merchant || 'Ver tienda'}})</span>
+                  <span>${{buyLabel}}</span>
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
                 
                 <div class="flex items-center gap-2">
-                  <a href="${{prUrl}}" target="_blank" class="flex-1 py-1.5 px-3 rounded-lg text-center bg-slate-900 hover:bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700/80 transition">PriceRunner</a>
+                  <a href="${{prUrl}}" target="_blank" class="flex-1 py-1.5 px-3 rounded-lg text-center bg-slate-900 hover:bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700/80 transition">${{prLabel}}</a>
                   <button onclick="toggleOffers('${{m.key}}')" class="flex-1 py-1.5 px-3 rounded-lg text-center bg-slate-900 hover:bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700/80 transition flex items-center justify-center gap-1 cursor-pointer">
-                    <span>${{m.offers ? m.offers.length : 0}} ofertas</span>
+                    <span>${{m.offers && m.offers.length > 0 ? m.offers.length + ' ofertas' : (m.store_links && m.store_links.length > 0 ? m.store_links.length + ' tiendas' : 'Ver tiendas')}}</span>
                     <svg id="icon-${{m.key}}" class="w-3 h-3 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                   </button>
                 </div>

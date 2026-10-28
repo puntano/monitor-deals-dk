@@ -9,12 +9,19 @@
   "windows_toast": true,
   "vercel_url": "https://monitor-deals-dk.vercel.app",
   "weekly_heartbeat_weekday": 0,
-  "request_delay_seconds": 6,
+  "request_delay_seconds": 2,
   "max_retries": 3,
   "realert_min_drop_pct": 2.0,
   "anomaly_low_ratio": 0.55,
   "anomaly_high_ratio": 1.8,
-  "low_trust_merchants": ["CDON DK", "Fyndiq", "Amazon", "Gigapro", "Ubaldi", "eBay"],
+  "low_trust_merchants": [
+    "CDON DK",
+    "Fyndiq",
+    "Amazon",
+    "Gigapro",
+    "Ubaldi",
+    "eBay"
+  ],
   "min_merchant_reviews": 20,
   "min_merchant_rating": 4.0
 }

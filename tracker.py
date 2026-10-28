@@ -136,11 +136,19 @@ def norm(s):
 
 
 def title_matches(title, model):
+    t_raw = (title or "").upper()
     t = norm(title)
-    if not any(norm(tok) in t for tok in model["match_tokens"]):
+    if not any(norm(tok) in t for tok in model.get("match_tokens", [])):
         return False
-    if any(norm(tok) in t for tok in model.get("exclude_tokens", [])):
-        return False
+    for tok in model.get("exclude_tokens", []):
+        tok_norm = norm(tok)
+        if len(tok_norm) <= 2:
+            # Token corto como PC: comprobar limites de palabra exactos para evitar falsos positivos con PCI / PCIe
+            if re.search(r"\b" + re.escape(tok.upper()) + r"\b", t_raw):
+                return False
+        else:
+            if tok_norm in t:
+                return False
     return True
 
 
@@ -303,6 +311,63 @@ def parse_prisjagt(html):
     return {"items": items, "tracked_since": oldest.group(1)[:10] if oldest else None}
 
 
+def parse_direct_store(html, url, default_merchant=None):
+    """Parsea Schema.org Product JSON-LD de tiendas danesas directas (Proshop, MM-Vision, etc.)."""
+    m = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.DOTALL)
+    for j in m:
+        try:
+            d = json.loads(j)
+            if isinstance(d, dict) and d.get("@type") == "Product":
+                name = d.get("name")
+                brand = d.get("brand")
+                if isinstance(brand, dict):
+                    brand = brand.get("name")
+                if "proshop.dk" in url:
+                    merchant = "Proshop"
+                elif "mm-vision.dk" in url:
+                    merchant = "MM-Vision"
+                else:
+                    merchant = default_merchant or brand or urllib.parse.urlparse(url).netloc.replace("www.", "")
+                offers = d.get("offers", {})
+                if isinstance(offers, list) and offers:
+                    offers = offers[0]
+                price = float(offers.get("price", 0))
+                avail = str(offers.get("availability", ""))
+                stock = "IN_STOCK" if ("InStock" in avail or "InStoreOnly" in avail) else ("BACKORDER" if "PreOrder" in avail else "UNKNOWN")
+                return {
+                    "merchant": merchant,
+                    "title": name,
+                    "price": price,
+                    "regular": price,
+                    "campaign": None,
+                    "camp_end": None,
+                    "shipping": 0.0,
+                    "stock": stock,
+                    "url": offers.get("url") or url
+                }
+        except Exception:
+            continue
+    # Fallback para MM-Vision si no hay JSON-LD
+    if "mm-vision.dk" in url:
+        h1_m = re.search(r'<h1[^>]*>([^<]+)</h1>', html)
+        title = h1_m.group(1).strip() if h1_m else "MM-Vision PC"
+        p_m = re.search(r'([0-9]{1,2}\.[0-9]{3})\s*(?:kr|,-)', html)
+        if p_m:
+            price_val = float(p_m.group(1).replace(".", "").replace(",", "."))
+            return {
+                "merchant": "MM-Vision",
+                "title": title,
+                "price": price_val,
+                "regular": price_val,
+                "campaign": None,
+                "camp_end": None,
+                "shipping": 0.0,
+                "stock": "IN_STOCK",
+                "url": url
+            }
+    return None
+
+
 # --------------------------------------------------------------------------- core
 def merchant_trusted(off):
     name = off["merchant"] or ""
@@ -377,6 +442,27 @@ def process_model(ctx, model):
         except Exception as e:
             ctx.err(key, "pricerunner.dk", url, e)
         time.sleep(CFG["request_delay_seconds"])
+
+    # ---- Ofertas directas de tiendas danesas (Proshop, MM-Vision, etc.)
+    for d_url in model.get("direct_urls", []):
+        try:
+            html = http_get(d_url, min_len=4000)
+            d_offer = parse_direct_store(html, d_url)
+            if d_offer and d_offer.get("price"):
+                pr_ok = True
+                ctx.ok += 1
+                total = d_offer["price"] + (d_offer["shipping"] or 0)
+                o2 = dict(d_offer, total=total, trusted=True, match=True, product_url=d_url)
+                offers.append(o2)
+                con.execute("""INSERT OR IGNORE INTO offers(run_id,check_date,checked_at,model_key,source,merchant,
+                    offer_title,price,regular_price,campaign_price,campaign_end,shipping,total,stock,trusted,title_match,
+                    product_url,offer_url) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                            (ctx.run_id, RUN_DATE, now_cph().isoformat(), key, "direct_store", d_offer["merchant"],
+                             d_offer["title"], d_offer["price"], d_offer["regular"], None, None, d_offer["shipping"], total,
+                             d_offer["stock"], 1, 1, d_url, d_url))
+        except Exception as e:
+            ctx.err(key, "direct_store", d_url, e)
+        time.sleep(CFG.get("request_delay_seconds", 3))
 
     # ---- historial Prisjagt
     pj_prices = []

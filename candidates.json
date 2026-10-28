@@ -2,6 +2,641 @@
   "_comment": "Candidatos consolidados multi-categoria (Monitores, GPUs, Desktops). Administrables individualmente en categories/*.json.",
   "models": [
     {
+      "key": "pc-mm-vision-ryzen-gamer",
+      "name": "MM-Vision Ryzen Gamer (AMD Ryzen 5 / Asus RTX 5060 8GB / 16GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Ryzen-gamer",
+        "Ryzen gamer"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-4832027/Stationaere-computere/MM-Vision-Ryzen-Gamer-%28992102%29-Sammenlign-Priser"
+      ],
+      "direct_urls": [
+        "https://www.mm-vision.dk/visiongaming/Ryzen-gamer-stationaer"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "MM-Vision (Configurador Oficial)",
+          "url": "https://www.mm-vision.dk/visiongaming/Ryzen-gamer-stationaer"
+        },
+        {
+          "name": "MM-Vision Gamer PC",
+          "url": "https://www.mm-vision.dk/visiongaming/computer/vision-gaming"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 10395,
+      "excellent_price": 9995,
+      "burnin_warranty": "2 años de garantía total danesa y soporte técnico directo en Roskilde.",
+      "reviews": [],
+      "review_summary": "Configuración de entrada económica a la plataforma AM5 / DDR5: equipada con Ryzen 5, Asus RTX 5060 8GB y 16GB DDR5-6000. Excelente para 1080p/1440p.",
+      "pros": "Precio muy ajustado (10.395 DKK), plataforma AM5 con memoria DDR5 actualizable, montaje danés silencioso",
+      "cons": "8GB de VRAM y GPU RTX 5060: insuficiente para aprovechar un monitor 4K a 240Hz en juegos pesados"
+    },
+    {
+      "key": "pc-mm-vision-monster",
+      "name": "MM-Vision Monster Gaming (Intel Core Ultra 5/7 / Asus RTX 5070 12GB / 16GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Monster-gaming",
+        "Monster gaming"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.mm-vision.dk/visiongaming/Monster-gaming-computer"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "MM-Vision Monster (Oficial)",
+          "url": "https://www.mm-vision.dk/visiongaming/Monster-gaming-computer"
+        },
+        {
+          "name": "MM-Vision Catálogo",
+          "url": "https://www.mm-vision.dk/visiongaming/computer/vision-gaming"
+        }
+      ],
+      "tier": "top",
+      "target_price": 13495,
+      "excellent_price": 12995,
+      "burnin_warranty": "2 años de garantía total MM-Vision con recogida y devolución gratuita.",
+      "reviews": [],
+      "review_summary": "Gama media-alta de gran rendimiento: procesador Intel Core Ultra junto con la nueva Asus GeForce RTX 5070 de 12GB GDDR7 y placa Asus TUF B860M-Plus.",
+      "pros": "Arquitectura Blackwell RTX 5070 con DLSS 4, placa base Asus TUF sólida, excelente flujo de aire",
+      "cons": "Viene con 16GB de RAM en la base (se recomienda ampliar a 32GB en el configurador por ~500 DKK)"
+    },
+    {
+      "key": "pc-mm-vision-tornado",
+      "name": "MM-Vision Tornado Gaming (AMD Ryzen 7 X3D / Asus Radeon RX 9070 XT 16GB / 32GB DDR5 / 2TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "tornado-gaming",
+        "Tornado gaming"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.mm-vision.dk/visiongaming/tornado-gaming-pc"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "MM-Vision Tornado (Oficial)",
+          "url": "https://www.mm-vision.dk/visiongaming/tornado-gaming-pc"
+        },
+        {
+          "name": "MM-Vision Catálogo",
+          "url": "https://www.mm-vision.dk/visiongaming/computer/vision-gaming"
+        }
+      ],
+      "tier": "top",
+      "target_price": 18995,
+      "excellent_price": 17995,
+      "burnin_warranty": "2 años de garantía total MM-Vision.",
+      "reviews": [],
+      "review_summary": "Configuración prémium lista para 4K sin cuellos de botella: procesador AMD Ryzen 7 X3D con 32GB de RAM DDR5-6000, SSD ultra rápido de 2TB y la nueva Radeon RX 9070 XT de 16GB con DP 2.1.",
+      "pros": "32GB de RAM y 2TB SSD PCIe 4.0 de serie, procesador Ryzen X3D (el mejor para juegos), puertos DP 2.1 nativos",
+      "cons": "Inversión cercana a los 19.000 DKK"
+    },
+    {
+      "key": "pc-mm-vision-demon",
+      "name": "MM-Vision Demon Gaming (Intel Core Ultra 7 265KF / Asus RTX 5070 Ti 16GB / 32GB DDR5 / 2TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Demon-gaming",
+        "Demon gaming"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.mm-vision.dk/visiongaming/Demon-gaming-stationaer"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "MM-Vision Demon (Oficial)",
+          "url": "https://www.mm-vision.dk/visiongaming/Demon-gaming-stationaer"
+        },
+        {
+          "name": "MM-Vision Catálogo",
+          "url": "https://www.mm-vision.dk/visiongaming/computer/vision-gaming"
+        }
+      ],
+      "tier": "top",
+      "target_price": 21295,
+      "excellent_price": 19995,
+      "burnin_warranty": "2 años de garantía danesa total MM-Vision.",
+      "reviews": [],
+      "review_summary": "El sweet spot de gama alta para programadores y gamers exigentes: Intel Core Ultra 7 (20 núcleos), tarjeta gráfica Asus RTX 5070 Ti de 16GB GDDR7, 32GB RAM y 2TB SSD.",
+      "pros": "16GB GDDR7 en bus de 256 bits (ideal para 4K 120-240Hz y modelos de IA), gran potencia de compilación y multitarea",
+      "cons": "Precio superior a 20.000 DKK"
+    },
+    {
+      "key": "pc-mm-vision-predator",
+      "name": "MM-Vision Predator Gaming (Intel Core Ultra 7 270K / Asus RTX 5080 OC 16GB / 32GB DDR5 / 2TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Predator-gaming",
+        "Predator gaming"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-5244095/Stationaere-computere/MM-Vision-Predator-gaming-%28992352%29-Sammenlign-Priser"
+      ],
+      "direct_urls": [
+        "https://www.mm-vision.dk/visiongaming/Predator-gaming-stationaer"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "MM-Vision Predator (Oficial)",
+          "url": "https://www.mm-vision.dk/visiongaming/Predator-gaming-stationaer"
+        },
+        {
+          "name": "MM-Vision High-End PCs",
+          "url": "https://www.mm-vision.dk/visiongaming/computer/vision-gaming"
+        }
+      ],
+      "tier": "top",
+      "target_price": 25895,
+      "excellent_price": 24500,
+      "burnin_warranty": "2 años de garantía total MM-Vision con recogida y devolución gratuita.",
+      "reviews": [],
+      "review_summary": "Estación de batalla entusiasta: procesador de 24 núcleos Intel Core Ultra 7 270K (5.5 GHz) combinado con la bestia Asus GeForce RTX 5080 OC de 16GB GDDR7 y fuente Corsair RMx Shift 80+ Gold.",
+      "pros": "Potencia absoluta para 4K 240Hz sin concesiones, DisplayPort 2.1 UHBR20 nativo, fuente Corsair Gold prémium",
+      "cons": "Presupuesto de 25.895 DKK pensado para entusiastas"
+    },
+    {
+      "key": "pc-dutzo-frostfire",
+      "name": "Proshop DUTZO Gaming Frostfire (AMD Ryzen 5 7600 / RTX 5060 / 16GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Frostfire",
+        "DUTZO Frostfire"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-3547202497/Stationaere-computere/Dutzo-Gaming-Frostfire-Sammenlign-Priser"
+      ],
+      "direct_urls": [
+        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Gaming-Frostfire/8076349"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop DUTZO Frostfire (Oficial)",
+          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Gaming-Frostfire/8076349"
+        },
+        {
+          "name": "Proshop Stationær PC",
+          "url": "https://www.proshop.dk/Stationaer-PC"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 10199,
+      "excellent_price": 9699,
+      "burnin_warranty": "2 años de garantía Proshop DK con servicio técnico directo en Aarhus.",
+      "reviews": [],
+      "review_summary": "Opción asequible ensamblada por Proshop (~10.199 DKK en stock): arquitectura AM5 moderna y DDR5, ideal para presupuestos contenidos.",
+      "pros": "Precio accesible para un equipo nuevo completo con garantía danesa, entrega rápida",
+      "cons": "Configuración de entrada (RTX 5060 / 16GB RAM): para 4K a altas tasas de refresco se queda corta"
+    },
+    {
+      "key": "pc-dutzo-wildfire",
+      "name": "Proshop DUTZO Gaming Wildfire (AMD Ryzen 7 7700 / RTX 5070 12GB / 32GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Wildfire",
+        "DUTZO Wildfire"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-3557786396/Stationaere-computere/Dutzo-Gaming-Wildfire-Sammenlign-Priser"
+      ],
+      "direct_urls": [
+        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Gaming-Wildfire/8076363"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop DUTZO Wildfire (Oficial)",
+          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Gaming-Wildfire/8076363"
+        },
+        {
+          "name": "Proshop Gaming PCs",
+          "url": "https://www.proshop.dk/Stationaer-PC"
+        }
+      ],
+      "tier": "top",
+      "target_price": 13399,
+      "excellent_price": 12500,
+      "burnin_warranty": "2 años de garantía Proshop Dinamarca.",
+      "reviews": [],
+      "review_summary": "Excelente relación calidad/precio: Ryzen 7 de 8 núcleos, 32GB de RAM DDR5 y tarjeta gráfica RTX 5070 de 12GB por 13.399 DKK.",
+      "pros": "32GB de RAM DDR5 de serie, procesador de 8 núcleos rápido, GPU de nueva generación por un precio muy razonable",
+      "cons": "Chasis cerrado sin tanta capacidad de expansión como los modelos Deluxe"
+    },
+    {
+      "key": "pc-dutzo-deluxe-ember",
+      "name": "Proshop DUTZO Deluxe Ember (AMD Ryzen 7 7800X3D / Radeon RX 9070 XT 16GB / 32GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Deluxe Ember",
+        "DUTZO Deluxe Ember"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Ember/8077030"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop DUTZO Deluxe Ember (Oficial)",
+          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Ember/8077030"
+        },
+        {
+          "name": "Proshop Gaming PCs",
+          "url": "https://www.proshop.dk/Stationaer-PC"
+        }
+      ],
+      "tier": "top",
+      "target_price": 16299,
+      "excellent_price": 15499,
+      "burnin_warranty": "2 años de garantía directa Proshop Dinamarca.",
+      "reviews": [],
+      "review_summary": "Configuración de referencia para 4K en Proshop: el codiciado procesador Ryzen 7 7800X3D junto con la Radeon RX 9070 XT de 16GB, 32GB DDR5 Corsair y chasis de alto flujo de aire.",
+      "pros": "Ryzen 7 7800X3D (sin cuello de botella de CPU), 16GB de VRAM con DP 2.1 nativo, componentes Corsair prémium",
+      "cons": "En preventa/pedido por alta demanda en Proshop"
+    },
+    {
+      "key": "pc-sharkgaming-rgbeast-5080",
+      "name": "SharkGaming RGBeast 5080 (AMD Ryzen 7 9800X3D / RTX 5080 16GB / 32GB DDR5 / 2TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "RGBeast 5080",
+        "Shark Gaming RGBeast"
+      ],
+      "exclude_tokens": [
+        "Mini"
+      ],
+      "pricerunner": [
+        "/pl/223-3544823012/Stationaere-computere/Shark-Gaming-RGBeast-5080-Gaming-PC-AMD-Ryzen-7-9800X3D-16-GB-2-TB-SSD-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "SharkGaming RGBeast (Oficial)",
+          "url": "https://sharkgaming.dk/gaming-computere/stationaer-gaming-pc"
+        },
+        {
+          "name": "SharkGaming Forside",
+          "url": "https://sharkgaming.dk/gaming-computere"
+        }
+      ],
+      "tier": "top",
+      "target_price": 24999,
+      "excellent_price": 23500,
+      "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
+      "reviews": [],
+      "review_summary": "Monstruo gaming de SharkGaming en Herlev: combina Ryzen 7 9800X3D con RTX 5080 de 16GB GDDR7, refrigeración líquida y 2TB SSD.",
+      "pros": "Rendimiento tope de gama para 4K 240Hz, refrigeración líquida, montaje danés",
+      "cons": "Presupuesto alto"
+    },
+    {
+      "key": "gpu-rtx-5080",
+      "name": "NVIDIA GeForce RTX 5080 16GB GDDR7 (Blackwell, DP 2.1 UHBR20)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5080"
+      ],
+      "exclude_tokens": [
+        "5070",
+        "5090",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC",
+        "VANDBLOK",
+        "WATERBLOCK"
+      ],
+      "pricerunner": [
+        "/pl/37-3393491435/Grafikkort/Gigabyte-GeForce-RTX-5080-Windforce-OC-SFF-HDMI-3xDP-16GB-Sammenlign-Priser",
+        "/pl/37-3393714660/Grafikkort/Gigabyte-GeForce-RTX-5080-Gaming-OC-16GB-Sammenlign-Priser",
+        "/pl/37-3393153365/Grafikkort/ASUS-ROG-Astral-GeForce-RTX-5080-OC-Edition-2xHDMI-3xDP-16GB-Sammenlign-Priser",
+        "/pl/37-3393664977/Grafikkort/ASUS-GeForce-RTX-5080-Prime-OC-HDMI-3-x-DP-16GB-GDDR7-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=nvidia-geforce-rtx-50-series"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        },
+        {
+          "name": "avXperten",
+          "url": "https://www.avxperten.dk/grafikkort/"
+        }
+      ],
+      "tier": "top",
+      "target_price": 12500,
+      "excellent_price": 11500,
+      "burnin_warranty": "3 años de garantía del fabricante (Gigabyte/ASUS). Soporte nativo DisplayPort 2.1 UHBR20.",
+      "reviews": [
+        "https://www.techpowerup.com/review/"
+      ],
+      "review_summary": "Tope de gama para 4K a 240Hz: arquitectura Blackwell con memoria GDDR7 y soporte DisplayPort 2.1 UHBR20 nativo sin compresión DSC. Aceleración masiva de IA.",
+      "pros": "DisplayPort 2.1 UHBR20 nativo (máxima fidelidad a 4K 240Hz), memoria GDDR7 ultra rápida, arquitectura Blackwell",
+      "cons": "Precio inicial alto en lanzamiento; requiere fuente ATX 3.0 de al menos 850W-1000W"
+    },
+    {
+      "key": "gpu-rtx-5070-ti",
+      "name": "NVIDIA GeForce RTX 5070 Ti 16GB GDDR7 (Blackwell, DP 2.1)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5070 Ti",
+        "5070Ti"
+      ],
+      "exclude_tokens": [
+        "5080",
+        "5090",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3394158728/Grafikkort/Gigabyte-GeForce-RTX-5070-Ti-Gaming-OC-16G-Graphics-Card-Sammenlign-Priser",
+        "/pl/37-3451098859/Grafikkort/ASUS-ProArt-GeForce-RTX-5070-Ti-OC-Sammenlign-Priser",
+        "/pl/37-3472717017/Grafikkort/Palit-Microsystems-VGA-PCIE16-RTX5070TI-16GB-Grafikkort-Sammenlign-Priser",
+        "/pl/37-3396371308/Grafikkort/Gigabyte-GeForce-RTX-5070-Ti-Windforce-OC-Grafikkort-16-GB-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=nvidia-geforce-rtx-50-series"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        },
+        {
+          "name": "avXperten",
+          "url": "https://www.avxperten.dk/grafikkort/"
+        }
+      ],
+      "tier": "top",
+      "target_price": 9500,
+      "excellent_price": 8900,
+      "burnin_warranty": "3 años de garantía oficial en Dinamarca (ASUS ProArt, Palit, Gigabyte).",
+      "reviews": [],
+      "review_summary": "El sweet spot de nueva generación: 16GB GDDR7, bus de 256 bits y DisplayPort 2.1 a un precio mucho más razonable que la 5080. Excelente para 4K 120-240Hz.",
+      "pros": "16GB GDDR7 en bus de 256 bits, DP 2.1 nativo, menor consumo que la 5080 (compatible con fuentes de 750W-850W)",
+      "cons": "Demanda inicial alta en tiendas danesas"
+    },
+    {
+      "key": "gpu-rtx-5070",
+      "name": "NVIDIA GeForce RTX 5070 12GB GDDR7 (Blackwell, DLSS 4)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5070"
+      ],
+      "exclude_tokens": [
+        "5070 Ti",
+        "5070Ti",
+        "5080",
+        "5090",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3396506989/Grafikkort/Gigabyte-GeForce-RTX-5070-Windforce-OC-SFF-12-GB-Grafikkort-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
+      ],
+      "tier": "top",
+      "target_price": 6200,
+      "excellent_price": 5700,
+      "burnin_warranty": "3 años de garantía fabricante (Gigabyte, ASUS).",
+      "reviews": [],
+      "review_summary": "Punto de entrada a la arquitectura Blackwell: gran salto de eficiencia respecto a la 4070 con memoria GDDR7 y soporte completo para nuevos modelos de IA.",
+      "pros": "Excelente relación rendimiento/precio para 4K con DLSS, tamaño contenido (formato SFF de 2 slots)",
+      "cons": "12GB de VRAM en lugar de 16GB para texturas ultra pesadas en 4K nativo"
+    },
+    {
+      "key": "gpu-rx-9070-xt",
+      "name": "AMD Radeon RX 9070 XT 16GB (RDNA 4, Ray Tracing V2, DP 2.1)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "9070 XT",
+        "9070XT",
+        "RX 9070"
+      ],
+      "exclude_tokens": [
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3396383505/Grafikkort/ASUS-PRIME-RX-9070-XT-OC-Grafikkort-Sammenlign-Priser",
+        "/pl/37-3396383352/Grafikkort/Powercolor-Reaper-RX9070XT-16G-A-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-9000-series"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 7200,
+      "excellent_price": 6600,
+      "burnin_warranty": "2-3 años de garantía fabricante (PowerColor, ASUS Prime).",
+      "reviews": [],
+      "review_summary": "La nueva arquitectura RDNA 4 de AMD: motores de Ray Tracing de 2ª generación rediseñados y puertos DisplayPort 2.1 nativos para monitores de alto refresco.",
+      "pros": "16GB VRAM, DisplayPort 2.1 nativo, gran salto en Ray Tracing de AMD, precio competitivo",
+      "cons": "Soporte FSR en lugar de NVIDIA DLSS para juegos que dependan de Frame Gen propietario"
+    },
+    {
+      "key": "gpu-rtx-4080-super",
+      "name": "NVIDIA GeForce RTX 4080 SUPER 16GB (Ada Lovelace, DLSS 3.5)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "4080 SUPER",
+        "4080SUPER"
+      ],
+      "exclude_tokens": [
+        "4090",
+        "4070",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk (Buscar stock)",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4080-super"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
+      ],
+      "tier": "top",
+      "target_price": 7600,
+      "excellent_price": 7200,
+      "burnin_warranty": "3 años de garantía oficial de fabricante.",
+      "reviews": [
+        "https://www.techpowerup.com/review/nvidia-geforce-rtx-4080-super-founders-edition/"
+      ],
+      "review_summary": "Referencia consolidada para 4K: potencia probada en todos los títulos AAA con DLSS 3.5 y Ray Reconstruction.",
+      "pros": "Excelente estabilidad de drivers, rendimiento formidable en 4K, 16GB GDDR6X",
+      "cons": "DisplayPort 1.4a con DSC (no DP 2.1 nativo); stock en transición por la llegada de la serie 50"
+    },
+    {
+      "key": "gpu-rtx-4070-ti-super",
+      "name": "NVIDIA GeForce RTX 4070 Ti SUPER 16GB (Ada Lovelace, 285W)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "4070 Ti SUPER",
+        "4070Ti SUPER",
+        "4070 Ti S"
+      ],
+      "exclude_tokens": [
+        "4070 SUPER",
+        "4080",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4070-ti-super"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
+      ],
+      "tier": "top",
+      "target_price": 6300,
+      "excellent_price": 5900,
+      "burnin_warranty": "3 años de garantía estándar.",
+      "reviews": [
+        "https://www.techpowerup.com/review/asus-geforce-rtx-4070-ti-super-tuf/"
+      ],
+      "review_summary": "Punto de entrada de 16GB en la generación 40: chip AD103, 256 bits de bus y consumo moderado de 285W.",
+      "pros": "16GB de VRAM, consumo comedido compatible con fuentes de 750W de calidad, DLSS 3",
+      "cons": "~18% menor rendimiento que 4080 Super en 4K"
+    },
+    {
+      "key": "gpu-rx-7900-xtx",
+      "name": "AMD Radeon RX 7900 XTX 24GB (RDNA 3, 24GB VRAM)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "7900 XTX",
+        "7900XTX"
+      ],
+      "exclude_tokens": [
+        "7900 XT",
+        "7900 GRE",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-7900-xtx"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 7200,
+      "excellent_price": 6800,
+      "burnin_warranty": "2-3 años de garantía del fabricante (Sapphire, ASUS, PowerColor).",
+      "reviews": [
+        "https://www.techpowerup.com/review/amd-radeon-rx-7900-xtx/"
+      ],
+      "review_summary": "Monstruo de rasterización con 24GB de VRAM y DisplayPort 2.1. Excepcional para desarrollo e inferencia local de modelos de IA (Llama, DeepSeek) sin saturar memoria.",
+      "pros": "24GB VRAM masiva (inigualable a este rango de precio), DisplayPort 2.1 nativo, gran potencia raster",
+      "cons": "Menor rendimiento en Ray Tracing intensivo y consumo eléctrico en reposo algo más elevado"
+    },
+    {
       "key": "msi-mpg-321urx",
       "name": "MSI MPG 321URX QD-OLED (31.5\" 4K 240Hz, 3a gen QD-OLED)",
       "match_tokens": [
@@ -380,265 +1015,26 @@
       "cons": "Garantia burn-in no verificada en DK, sin USB-C/KVM, mas caro hoy que el PG32UCDP",
       "category": "monitors",
       "category_name": "Monitores 4K"
-    },
-    {
-      "key": "gpu-rtx-5080",
-      "name": "NVIDIA GeForce RTX 5080 16GB GDDR7 (Blackwell, DP 2.1 UHBR20)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "5080"
-      ],
-      "exclude_tokens": [
-        "5070",
-        "5090",
-        "PC",
-        "DESKTOP"
-      ],
-      "pricerunner": [
-        "/pl/37-3393491435/Grafikkort/Gigabyte-GeForce-RTX-5080-Windforce-OC-SFF-HDMI-3xDP-16GB-Sammenlign-Priser",
-        "/pl/37-3393153365/Grafikkort/ASUS-ROG-Astral-GeForce-RTX-5080-OC-Edition-2xHDMI-3xDP-16GB-Sammenlign-Priser",
-        "/pl/37-3393664977/Grafikkort/ASUS-GeForce-RTX-5080-Prime-OC-HDMI-3-x-DP-16GB-GDDR7-Sammenlign-Priser"
-      ],
-      "prisjagt": [],
-      "tier": "top",
-      "target_price": 9500,
-      "excellent_price": 8900,
-      "burnin_warranty": "3 anos garantia de fabricante. Puerto DisplayPort 2.1 UHBR20 nativo.",
-      "reviews": [
-        "https://www.techpowerup.com/review/"
-      ],
-      "review_summary": "Arquitectura Blackwell de nueva generacion con memoria GDDR7 y soporte DisplayPort 2.1 UHBR20 nativo sin necesidad de DSC. Rendimiento 4K soberbio para pantallas 240Hz.",
-      "pros": "DisplayPort 2.1 UHBR20 nativo (ideal para 4K 240Hz sin compresion), memoria GDDR7 ultra rapida, aceleracion IA Blackwell",
-      "cons": "Precio de lanzamiento elevado, requiere fuente ATX 3.0 de al menos 850W-1000W"
-    },
-    {
-      "key": "gpu-rtx-5070-ti",
-      "name": "NVIDIA GeForce RTX 5070 Ti 16GB GDDR7 (Blackwell, DP 2.1)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "5070 Ti",
-        "5070Ti"
-      ],
-      "exclude_tokens": [
-        "5080",
-        "5090",
-        "PC"
-      ],
-      "pricerunner": [
-        "/pl/37-3451098859/Grafikkort/ASUS-ProArt-GeForce-RTX-5070-Ti-OC-Sammenlign-Priser",
-        "/pl/37-3472717017/Grafikkort/Palit-Microsystems-VGA-PCIE16-RTX5070TI-16GB-Grafikkort-Sammenlign-Priser"
-      ],
-      "prisjagt": [],
-      "tier": "top",
-      "target_price": 7500,
-      "excellent_price": 6900,
-      "burnin_warranty": "3 anos garantia de fabricante. Arquitectura Blackwell 16GB.",
-      "reviews": [],
-      "review_summary": "Gama alta accesible Blackwell con 16GB GDDR7. Gran salto de eficiencia y soporte DisplayPort 2.1.",
-      "pros": "16GB GDDR7, DP 2.1 nativo, menor consumo que la 5080, excelente valor relativo",
-      "cons": "Disponibilidad inicial en tiendas nordicas"
-    },
-    {
-      "key": "gpu-rtx-4080-super",
-      "name": "NVIDIA GeForce RTX 4080 SUPER 16GB (Ada Lovelace, DLSS 3.5, 320W)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "4080 SUPER",
-        "4080SUPER"
-      ],
-      "exclude_tokens": [
-        "4090",
-        "4070",
-        "LAPTOP",
-        "PC"
-      ],
-      "pricerunner": [
-        "/pl/37-3204629634/Grafikkort/Gigabyte-GeForce-RTX-4080-Gaming-OC-HDMI-3xDP-16GB-Sammenlign-Priser"
-      ],
-      "prisjagt": [],
-      "tier": "top",
-      "target_price": 7600,
-      "excellent_price": 7200,
-      "burnin_warranty": "3 anos garantia de fabricante (ASUS/Gigabyte/MSI).",
-      "reviews": [
-        "https://www.techpowerup.com/review/nvidia-geforce-rtx-4080-super-founders-edition/"
-      ],
-      "review_summary": "Referencia consolidada para 4K con Ray Tracing y DLSS 3 Frame Generation. 16GB GDDR6X, bus 256 bits.",
-      "pros": "Potencia masiva para 4K nativo/DLSS Calidad, eficiencia energetica de Ada Lovelace, DLSS 3.5 Ray Reconstruction",
-      "cons": "DisplayPort 1.4a con DSC (no DP 2.1), requiere conector 12VHPWR y chasis de >31cm"
-    },
-    {
-      "key": "gpu-rtx-4070-ti-super",
-      "name": "NVIDIA GeForce RTX 4070 Ti SUPER 16GB (Ada Lovelace, 285W)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "4070 Ti SUPER",
-        "4070Ti SUPER"
-      ],
-      "exclude_tokens": [
-        "4070 SUPER",
-        "4080",
-        "LAPTOP",
-        "PC"
-      ],
-      "pricerunner": [
-        "/pl/37-3204530474/Grafikkort/ASUS-TUF-Gaming-GeForce-RTX-4070-Ti-OC-2xHDMI-3xDP-12GB-Sammenlign-Priser"
-      ],
-      "prisjagt": [],
-      "tier": "top",
-      "target_price": 6300,
-      "excellent_price": 5900,
-      "burnin_warranty": "3 anos garantia estandar.",
-      "reviews": [
-        "https://www.techpowerup.com/review/asus-geforce-rtx-4070-ti-super-tuf/"
-      ],
-      "review_summary": "Punto de entrada ideal a 16GB VRAM en NVIDIA con chip AD103 y bus de 256 bits.",
-      "pros": "16GB VRAM, consume solo 285W (compatible con fuentes de 750W de calidad), DLSS 3 Frame Gen",
-      "cons": "~18% menor rendimiento que 4080 Super en 4K"
-    },
-    {
-      "key": "gpu-rx-7900-xtx",
-      "name": "AMD Radeon RX 7900 XTX 24GB (RDNA 3, DisplayPort 2.1 nativo)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "7900 XTX",
-        "7900XTX"
-      ],
-      "exclude_tokens": [
-        "7900 XT",
-        "7900 GRE",
-        "PC"
-      ],
-      "pricerunner": [],
-      "prisjagt": [],
-      "tier": "alternative",
-      "target_price": 7200,
-      "excellent_price": 6800,
-      "burnin_warranty": "2-3 anos garantia fabricante.",
-      "reviews": [
-        "https://www.techpowerup.com/review/amd-radeon-rx-7900-xtx/"
-      ],
-      "review_summary": "Monstruo de rasterizacion con 24GB de VRAM y DP 2.1. Muy atractiva para inferencia local de IA y LLMs grandes.",
-      "pros": "24GB VRAM masiva (ideal para LLMs locales como DeepSeek/Llama sin saturar memoria), DP 2.1 integrado",
-      "cons": "Menor rendimiento en Ray Tracing intensivo, carece de DLSS (usa FSR)"
-    },
-    {
-      "key": "pc-sharkgaming-5080",
-      "name": "SharkGaming RGBeast 5080 (Ryzen 7 9800X3D / RTX 5080 / 32GB DDR5 / 2TB SSD)",
-      "category": "desktops",
-      "category_name": "Equipos Completos",
-      "match_tokens": [
-        "RGBeast",
-        "5080"
-      ],
-      "exclude_tokens": [
-        "4060"
-      ],
-      "pricerunner": [
-        "/pl/223-3544823012/Stationaere-computere/Shark-Gaming-RGBeast-5080-Gaming-PC-AMD-Ryzen-7-9800X3D-16-GB-2-TB-SSD-Sammenlign-Priser"
-      ],
-      "prisjagt": [],
-      "tier": "top",
-      "target_price": 22000,
-      "excellent_price": 20500,
-      "burnin_warranty": "2 anos garantia danesa y reklamationsret completa SharkGaming.",
-      "reviews": [],
-      "review_summary": "Configuracion de ensueno para 4K 240Hz: el mejor CPU para gaming y programacion (Ryzen 7 9800X3D AM5) junto con la RTX 5080 de 16GB GDDR7.",
-      "pros": "Rendimiento extremo sin cuellos de botella, arquitectura AM5 moderna con soporte futuro, DP 2.1 nativo",
-      "cons": "Inversion alta"
-    },
-    {
-      "key": "pc-mm-vision-predator",
-      "name": "MM-Vision Predator Gaming PC (High-End Serie 992352 / Vision Beast)",
-      "category": "desktops",
-      "category_name": "Equipos Completos",
-      "match_tokens": [
-        "Predator",
-        "MM-Vision"
-      ],
-      "exclude_tokens": [],
-      "pricerunner": [
-        "/pl/223-5244095/Stationaere-computere/MM-Vision-Predator-gaming-%28992352%29-Sammenlign-Priser"
-      ],
-      "prisjagt": [],
-      "tier": "top",
-      "target_price": 17500,
-      "excellent_price": 16000,
-      "burnin_warranty": "2 anos de garantia danesa total y soporte directo MM-Vision.",
-      "reviews": [],
-      "review_summary": "MM-Vision es el ensamblador mas reputado de Dinamarca. Montaje limpio, refrigeracion silenciosa y componentes de primera marca estandar (facil de ampliar).",
-      "pros": "Garantia y soporte directo en Dinamarca, sin piezas propietarias, silencioso",
-      "cons": "Plazo de envio de 2-4 dias laborables por montaje y test de estabilidad"
-    },
-    {
-      "key": "pc-dutzo-frostfire",
-      "name": "Proshop DUTZO Gaming Frostfire / Wildfire (Ryzen 7 / RTX Serie 40/50)",
-      "category": "desktops",
-      "category_name": "Equipos Completos",
-      "match_tokens": [
-        "DUTZO",
-        "Frostfire",
-        "Wildfire"
-      ],
-      "exclude_tokens": [],
-      "pricerunner": [
-        "/pl/223-3547202497/Stationaere-computere/Dutzo-Gaming-Frostfire-Sammenlign-Priser",
-        "/pl/223-3557786396/Stationaere-computere/Dutzo-Gaming-Wildfire-Sammenlign-Priser"
-      ],
-      "prisjagt": [],
-      "tier": "top",
-      "target_price": 14900,
-      "excellent_price": 13900,
-      "burnin_warranty": "2 anos de garantia Proshop con devolucion rapida en DK.",
-      "reviews": [],
-      "review_summary": "Linea de PCs ensamblados por Proshop en Dinamarca. Componentes Corsair, Asus y Kingston con excelente relacion precio/rendimiento.",
-      "pros": "Envio rapido desde almacen Proshop en Aarhus, muy competitivo en precio",
-      "cons": "Configuraciones cerradas con menor margen de personalizacion en la web"
-    },
-    {
-      "key": "pc-mm-vision-ryzen-pro",
-      "name": "MM-Vision Ryzen Pro Gamer (AMD Ryzen 7 + RTX 4070 Ti / 4080 / 5070)",
-      "category": "desktops",
-      "category_name": "Equipos Completos",
-      "match_tokens": [
-        "Ryzen Pro Gamer",
-        "Ryzen Gamer"
-      ],
-      "exclude_tokens": [],
-      "pricerunner": [
-        "/pl/223-4717586/Stationaere-computere/MM-Vision-Ryzen-Pro-Gamer-%28992331%29-Sammenlign-Priser",
-        "/pl/223-4832027/Stationaere-computere/MM-Vision-Ryzen-Gamer-%28992102%29-Sammenlign-Priser"
-      ],
-      "prisjagt": [],
-      "tier": "alternative",
-      "target_price": 13500,
-      "excellent_price": 12500,
-      "burnin_warranty": "2 anos garantia MM-Vision.",
-      "reviews": [],
-      "review_summary": "Gama media-alta de MM-Vision. Optima para renovar por completo el sistema con una inversion contenida.",
-      "pros": "Excelente balance calidad/precio, plataforma AM5 con DDR5",
-      "cons": "Requiere seleccionar version con 32GB de RAM si viene con 16GB base"
     }
   ],
   "discovery_queries": [
+    "Vision Gaming",
+    "SharkGaming",
+    "DUTZO Gaming",
+    "Komplett-PC",
+    "Foeniks Gamer",
+    "RTX 5080",
+    "RTX 5070 Ti",
+    "RTX 5070",
+    "RX 9070 XT",
+    "RTX 4080 Super",
+    "RTX 4070 Ti Super",
+    "RX 7900 XTX",
     "OLED 32 4K 240Hz",
     "QD-OLED 32 4K",
     "OLED 31.5 4K",
     "32 4K OLED gaming skaerm",
-    "WOLED 32 4K",
-    "RTX 5080",
-    "RTX 5070 Ti",
-    "RTX 4080 Super",
-    "RTX 4070 Ti Super",
-    "RX 7900 XTX",
-    "DUTZO Gaming",
-    "Vision Gaming",
-    "SharkGaming"
+    "WOLED 32 4K"
   ],
   "discovery_ignore_ids": []
 }

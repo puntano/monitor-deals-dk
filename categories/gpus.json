@@ -2,7 +2,7 @@
   "category_id": "gpus",
   "category_name": "Tarjetas Gráficas",
   "category_icon": "cpu-chip",
-  "description": "GPUs para gaming 4K 120-240Hz, IA y desarrollo (NVIDIA RTX 50/40 y AMD Radeon)",
+  "description": "GPUs para gaming 4K 120-240Hz, IA y desarrollo en Dinamarca (NVIDIA Blackwell Serie 50, Ada Lovelace Serie 40 y AMD Radeon RDNA 4/3)",
   "models": [
     {
       "key": "gpu-rtx-5080",
@@ -15,25 +15,35 @@
       "exclude_tokens": [
         "5070",
         "5090",
-        "PC",
-        "DESKTOP"
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC",
+        "VANDBLOK",
+        "WATERBLOCK"
       ],
       "pricerunner": [
         "/pl/37-3393491435/Grafikkort/Gigabyte-GeForce-RTX-5080-Windforce-OC-SFF-HDMI-3xDP-16GB-Sammenlign-Priser",
+        "/pl/37-3393714660/Grafikkort/Gigabyte-GeForce-RTX-5080-Gaming-OC-16GB-Sammenlign-Priser",
         "/pl/37-3393153365/Grafikkort/ASUS-ROG-Astral-GeForce-RTX-5080-OC-Edition-2xHDMI-3xDP-16GB-Sammenlign-Priser",
         "/pl/37-3393664977/Grafikkort/ASUS-GeForce-RTX-5080-Prime-OC-HDMI-3-x-DP-16GB-GDDR7-Sammenlign-Priser"
       ],
       "prisjagt": [],
+      "store_links": [
+        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
+        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=nvidia-geforce-rtx-50-series"},
+        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"},
+        {"name": "avXperten", "url": "https://www.avxperten.dk/grafikkort/"}
+      ],
       "tier": "top",
-      "target_price": 9500,
-      "excellent_price": 8900,
-      "burnin_warranty": "3 anos garantia de fabricante. Puerto DisplayPort 2.1 UHBR20 nativo.",
+      "target_price": 12500,
+      "excellent_price": 11500,
+      "burnin_warranty": "3 años de garantía del fabricante (Gigabyte/ASUS). Soporte nativo DisplayPort 2.1 UHBR20.",
       "reviews": [
         "https://www.techpowerup.com/review/"
       ],
-      "review_summary": "Arquitectura Blackwell de nueva generacion con memoria GDDR7 y soporte DisplayPort 2.1 UHBR20 nativo sin necesidad de DSC. Rendimiento 4K soberbio para pantallas 240Hz.",
-      "pros": "DisplayPort 2.1 UHBR20 nativo (ideal para 4K 240Hz sin compresion), memoria GDDR7 ultra rapida, aceleracion IA Blackwell",
-      "cons": "Precio de lanzamiento elevado, requiere fuente ATX 3.0 de al menos 850W-1000W"
+      "review_summary": "Tope de gama para 4K a 240Hz: arquitectura Blackwell con memoria GDDR7 y soporte DisplayPort 2.1 UHBR20 nativo sin compresión DSC. Aceleración masiva de IA.",
+      "pros": "DisplayPort 2.1 UHBR20 nativo (máxima fidelidad a 4K 240Hz), memoria GDDR7 ultra rápida, arquitectura Blackwell",
+      "cons": "Precio inicial alto en lanzamiento; requiere fuente ATX 3.0 de al menos 850W-1000W"
     },
     {
       "key": "gpu-rtx-5070-ti",
@@ -47,25 +57,104 @@
       "exclude_tokens": [
         "5080",
         "5090",
-        "PC"
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
       ],
       "pricerunner": [
+        "/pl/37-3394158728/Grafikkort/Gigabyte-GeForce-RTX-5070-Ti-Gaming-OC-16G-Graphics-Card-Sammenlign-Priser",
         "/pl/37-3451098859/Grafikkort/ASUS-ProArt-GeForce-RTX-5070-Ti-OC-Sammenlign-Priser",
-        "/pl/37-3472717017/Grafikkort/Palit-Microsystems-VGA-PCIE16-RTX5070TI-16GB-Grafikkort-Sammenlign-Priser"
+        "/pl/37-3472717017/Grafikkort/Palit-Microsystems-VGA-PCIE16-RTX5070TI-16GB-Grafikkort-Sammenlign-Priser",
+        "/pl/37-3396371308/Grafikkort/Gigabyte-GeForce-RTX-5070-Ti-Windforce-OC-Grafikkort-16-GB-Sammenlign-Priser"
       ],
       "prisjagt": [],
+      "store_links": [
+        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=nvidia-geforce-rtx-50-series"},
+        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
+        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"},
+        {"name": "avXperten", "url": "https://www.avxperten.dk/grafikkort/"}
+      ],
       "tier": "top",
-      "target_price": 7500,
-      "excellent_price": 6900,
-      "burnin_warranty": "3 anos garantia de fabricante. Arquitectura Blackwell 16GB.",
+      "target_price": 9500,
+      "excellent_price": 8900,
+      "burnin_warranty": "3 años de garantía oficial en Dinamarca (ASUS ProArt, Palit, Gigabyte).",
       "reviews": [],
-      "review_summary": "Gama alta accesible Blackwell con 16GB GDDR7. Gran salto de eficiencia y soporte DisplayPort 2.1.",
-      "pros": "16GB GDDR7, DP 2.1 nativo, menor consumo que la 5080, excelente valor relativo",
-      "cons": "Disponibilidad inicial en tiendas nordicas"
+      "review_summary": "El sweet spot de nueva generación: 16GB GDDR7, bus de 256 bits y DisplayPort 2.1 a un precio mucho más razonable que la 5080. Excelente para 4K 120-240Hz.",
+      "pros": "16GB GDDR7 en bus de 256 bits, DP 2.1 nativo, menor consumo que la 5080 (compatible con fuentes de 750W-850W)",
+      "cons": "Demanda inicial alta en tiendas danesas"
+    },
+    {
+      "key": "gpu-rtx-5070",
+      "name": "NVIDIA GeForce RTX 5070 12GB GDDR7 (Blackwell, DLSS 4)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5070"
+      ],
+      "exclude_tokens": [
+        "5070 Ti",
+        "5070Ti",
+        "5080",
+        "5090",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3396506989/Grafikkort/Gigabyte-GeForce-RTX-5070-Windforce-OC-SFF-12-GB-Grafikkort-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort"},
+        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
+        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"}
+      ],
+      "tier": "top",
+      "target_price": 6200,
+      "excellent_price": 5700,
+      "burnin_warranty": "3 años de garantía fabricante (Gigabyte, ASUS).",
+      "reviews": [],
+      "review_summary": "Punto de entrada a la arquitectura Blackwell: gran salto de eficiencia respecto a la 4070 con memoria GDDR7 y soporte completo para nuevos modelos de IA.",
+      "pros": "Excelente relación rendimiento/precio para 4K con DLSS, tamaño contenido (formato SFF de 2 slots)",
+      "cons": "12GB de VRAM en lugar de 16GB para texturas ultra pesadas en 4K nativo"
+    },
+    {
+      "key": "gpu-rx-9070-xt",
+      "name": "AMD Radeon RX 9070 XT 16GB (RDNA 4, Ray Tracing V2, DP 2.1)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "9070 XT",
+        "9070XT",
+        "RX 9070"
+      ],
+      "exclude_tokens": [
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3396383505/Grafikkort/ASUS-PRIME-RX-9070-XT-OC-Grafikkort-Sammenlign-Priser",
+        "/pl/37-3396383352/Grafikkort/Powercolor-Reaper-RX9070XT-16G-A-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-9000-series"},
+        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
+        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"}
+      ],
+      "tier": "alternative",
+      "target_price": 7200,
+      "excellent_price": 6600,
+      "burnin_warranty": "2-3 años de garantía fabricante (PowerColor, ASUS Prime).",
+      "reviews": [],
+      "review_summary": "La nueva arquitectura RDNA 4 de AMD: motores de Ray Tracing de 2ª generación rediseñados y puertos DisplayPort 2.1 nativos para monitores de alto refresco.",
+      "pros": "16GB VRAM, DisplayPort 2.1 nativo, gran salto en Ray Tracing de AMD, precio competitivo",
+      "cons": "Soporte FSR en lugar de NVIDIA DLSS para juegos que dependan de Frame Gen propietario"
     },
     {
       "key": "gpu-rtx-4080-super",
-      "name": "NVIDIA GeForce RTX 4080 SUPER 16GB (Ada Lovelace, DLSS 3.5, 320W)",
+      "name": "NVIDIA GeForce RTX 4080 SUPER 16GB (Ada Lovelace, DLSS 3.5)",
       "category": "gpus",
       "category_name": "Tarjetas Gráficas",
       "match_tokens": [
@@ -75,23 +164,27 @@
       "exclude_tokens": [
         "4090",
         "4070",
-        "LAPTOP",
-        "PC"
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
       ],
-      "pricerunner": [
-        "/pl/37-3204629634/Grafikkort/Gigabyte-GeForce-RTX-4080-Gaming-OC-HDMI-3xDP-16GB-Sammenlign-Priser"
-      ],
+      "pricerunner": [],
       "prisjagt": [],
+      "store_links": [
+        {"name": "Proshop.dk (Buscar stock)", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4080-super"},
+        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
+        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"}
+      ],
       "tier": "top",
       "target_price": 7600,
       "excellent_price": 7200,
-      "burnin_warranty": "3 anos garantia de fabricante (ASUS/Gigabyte/MSI).",
+      "burnin_warranty": "3 años de garantía oficial de fabricante.",
       "reviews": [
         "https://www.techpowerup.com/review/nvidia-geforce-rtx-4080-super-founders-edition/"
       ],
-      "review_summary": "Referencia consolidada para 4K con Ray Tracing y DLSS 3 Frame Generation. 16GB GDDR6X, bus 256 bits.",
-      "pros": "Potencia masiva para 4K nativo/DLSS Calidad, eficiencia energetica de Ada Lovelace, DLSS 3.5 Ray Reconstruction",
-      "cons": "DisplayPort 1.4a con DSC (no DP 2.1), requiere conector 12VHPWR y chasis de >31cm"
+      "review_summary": "Referencia consolidada para 4K: potencia probada en todos los títulos AAA con DLSS 3.5 y Ray Reconstruction.",
+      "pros": "Excelente estabilidad de drivers, rendimiento formidable en 4K, 16GB GDDR6X",
+      "cons": "DisplayPort 1.4a con DSC (no DP 2.1 nativo); stock en transición por la llegada de la serie 50"
     },
     {
       "key": "gpu-rtx-4070-ti-super",
@@ -100,32 +193,37 @@
       "category_name": "Tarjetas Gráficas",
       "match_tokens": [
         "4070 Ti SUPER",
-        "4070Ti SUPER"
+        "4070Ti SUPER",
+        "4070 Ti S"
       ],
       "exclude_tokens": [
         "4070 SUPER",
         "4080",
-        "LAPTOP",
-        "PC"
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
       ],
-      "pricerunner": [
-        "/pl/37-3204530474/Grafikkort/ASUS-TUF-Gaming-GeForce-RTX-4070-Ti-OC-2xHDMI-3xDP-12GB-Sammenlign-Priser"
-      ],
+      "pricerunner": [],
       "prisjagt": [],
+      "store_links": [
+        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4070-ti-super"},
+        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
+        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"}
+      ],
       "tier": "top",
       "target_price": 6300,
       "excellent_price": 5900,
-      "burnin_warranty": "3 anos garantia estandar.",
+      "burnin_warranty": "3 años de garantía estándar.",
       "reviews": [
         "https://www.techpowerup.com/review/asus-geforce-rtx-4070-ti-super-tuf/"
       ],
-      "review_summary": "Punto de entrada ideal a 16GB VRAM en NVIDIA con chip AD103 y bus de 256 bits.",
-      "pros": "16GB VRAM, consume solo 285W (compatible con fuentes de 750W de calidad), DLSS 3 Frame Gen",
+      "review_summary": "Punto de entrada de 16GB en la generación 40: chip AD103, 256 bits de bus y consumo moderado de 285W.",
+      "pros": "16GB de VRAM, consumo comedido compatible con fuentes de 750W de calidad, DLSS 3",
       "cons": "~18% menor rendimiento que 4080 Super en 4K"
     },
     {
       "key": "gpu-rx-7900-xtx",
-      "name": "AMD Radeon RX 7900 XTX 24GB (RDNA 3, DisplayPort 2.1 nativo)",
+      "name": "AMD Radeon RX 7900 XTX 24GB (RDNA 3, 24GB VRAM)",
       "category": "gpus",
       "category_name": "Tarjetas Gráficas",
       "match_tokens": [
@@ -135,25 +233,34 @@
       "exclude_tokens": [
         "7900 XT",
         "7900 GRE",
-        "PC"
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
       ],
       "pricerunner": [],
       "prisjagt": [],
+      "store_links": [
+        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-7900-xtx"},
+        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
+        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"}
+      ],
       "tier": "alternative",
       "target_price": 7200,
       "excellent_price": 6800,
-      "burnin_warranty": "2-3 anos garantia fabricante.",
+      "burnin_warranty": "2-3 años de garantía del fabricante (Sapphire, ASUS, PowerColor).",
       "reviews": [
         "https://www.techpowerup.com/review/amd-radeon-rx-7900-xtx/"
       ],
-      "review_summary": "Monstruo de rasterizacion con 24GB de VRAM y DP 2.1. Muy atractiva para inferencia local de IA y LLMs grandes.",
-      "pros": "24GB VRAM masiva (ideal para LLMs locales como DeepSeek/Llama sin saturar memoria), DP 2.1 integrado",
-      "cons": "Menor rendimiento en Ray Tracing intensivo, carece de DLSS (usa FSR)"
+      "review_summary": "Monstruo de rasterización con 24GB de VRAM y DisplayPort 2.1. Excepcional para desarrollo e inferencia local de modelos de IA (Llama, DeepSeek) sin saturar memoria.",
+      "pros": "24GB VRAM masiva (inigualable a este rango de precio), DisplayPort 2.1 nativo, gran potencia raster",
+      "cons": "Menor rendimiento en Ray Tracing intensivo y consumo eléctrico en reposo algo más elevado"
     }
   ],
   "discovery_queries": [
     "RTX 5080",
     "RTX 5070 Ti",
+    "RTX 5070",
+    "RX 9070 XT",
     "RTX 4080 Super",
     "RTX 4070 Ti Super",
     "RX 7900 XTX"
