@@ -1,0 +1,5 @@
+data/run.lock
+__pycache__/
+*.pyc
+logs/
+.vercel
