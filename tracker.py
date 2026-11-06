@@ -94,7 +94,26 @@ def load_json(name):
         return json.load(f)
 
 
+SANDBOX_TRACKER = os.path.join(
+    os.path.dirname(BASE), "agent_sandbox", "workspace", "projects", "hardware-tracker"
+)
+
+
+def sync_categories_from_sandbox():
+    sandbox_cat = os.path.join(SANDBOX_TRACKER, "categories")
+    host_cat = os.path.join(BASE, "categories")
+    if not os.path.isdir(sandbox_cat) or not os.path.isdir(host_cat):
+        return
+    import shutil
+    for sf in glob.glob(os.path.join(sandbox_cat, "*.json")):
+        hf = os.path.join(host_cat, os.path.basename(sf))
+        if not os.path.exists(hf) or os.path.getmtime(sf) > os.path.getmtime(hf) + 1:
+            shutil.copy2(sf, hf)
+            log(f"Synced updated category file from OpenClaw sandbox: {os.path.basename(sf)}")
+
+
 def load_candidates():
+    sync_categories_from_sandbox()
     cat_dir = os.path.join(BASE, "categories")
     if os.path.isdir(cat_dir):
         cat_files = glob.glob(os.path.join(cat_dir, "*.json"))
@@ -832,8 +851,9 @@ def dispatch(ctx):
 # --------------------------------------------------------------------------- report
 def write_report(ctx, new_reviews):
     order = {"A": 0, "B": 1, "C": 2, "D": 3, "-": 4, "?": 5}
+    tier_order = {"top": 0, "alternative": 1, "watch": 2, "not_recommended": 3, "budget": 1}
     res_sorted = sorted(ctx.model_results.values(), key=lambda r: (order.get(r["grade"], 9),
-                        {"top": 0, "alternative": 1, "watch": 2, "not_recommended": 3}[r["model"]["tier"]]))
+                        tier_order.get(r["model"].get("tier", "alternative"), 1)))
     L = [f"# Informe de monitores - {RUN_TS.strftime('%Y-%m-%d %H:%M %Z')}", "",
          f"Fuentes OK: {ctx.ok} | fallidas: {ctx.failed} | alertas nuevas: {len(ctx.alerts)}" +
          (" (dry-run, no enviadas)" if ctx.dry_run else ""), "",
@@ -908,6 +928,20 @@ def write_report(ctx, new_reviews):
                 log(f"Git push pendiente o no configurado: {r_push.stderr.strip()[:150]}")
     except Exception as e:
         log(f"Aviso en sync_to_git: {e}")
+
+    # Sincronización automática de resultados hacia el sandbox de OpenClaw (sin exponer credenciales Git)
+    try:
+        if os.path.isdir(SANDBOX_TRACKER):
+            import shutil
+            for rel in ("data/history.db", "data/offers_history.csv", "reports/latest.md", "reports/dashboard.html", "index.html"):
+                src_p = os.path.join(BASE, rel)
+                dst_p = os.path.join(SANDBOX_TRACKER, rel)
+                if os.path.exists(src_p):
+                    os.makedirs(os.path.dirname(dst_p), exist_ok=True)
+                    shutil.copy2(src_p, dst_p)
+            log("Sincronización de base de datos y reportes con OpenClaw sandbox completada.")
+    except Exception as e:
+        log(f"Aviso en sync_to_sandbox: {e}")
 
 
 # --------------------------------------------------------------------------- main
