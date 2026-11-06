@@ -29,10 +29,22 @@
       ],
       "prisjagt": [],
       "store_links": [
-        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
-        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=nvidia-geforce-rtx-50-series"},
-        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"},
-        {"name": "avXperten", "url": "https://www.avxperten.dk/grafikkort/"}
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=nvidia-geforce-rtx-50-series"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        },
+        {
+          "name": "avXperten",
+          "url": "https://www.avxperten.dk/grafikkort/"
+        }
       ],
       "tier": "top",
       "target_price": 12500,
@@ -69,10 +81,22 @@
       ],
       "prisjagt": [],
       "store_links": [
-        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=nvidia-geforce-rtx-50-series"},
-        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
-        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"},
-        {"name": "avXperten", "url": "https://www.avxperten.dk/grafikkort/"}
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=nvidia-geforce-rtx-50-series"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        },
+        {
+          "name": "avXperten",
+          "url": "https://www.avxperten.dk/grafikkort/"
+        }
       ],
       "tier": "top",
       "target_price": 9500,
@@ -105,9 +129,18 @@
       ],
       "prisjagt": [],
       "store_links": [
-        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort"},
-        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
-        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"}
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
       ],
       "tier": "top",
       "target_price": 6200,
@@ -139,9 +172,18 @@
       ],
       "prisjagt": [],
       "store_links": [
-        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-9000-series"},
-        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
-        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"}
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-9000-series"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
       ],
       "tier": "alternative",
       "target_price": 7200,
@@ -171,9 +213,18 @@
       "pricerunner": [],
       "prisjagt": [],
       "store_links": [
-        {"name": "Proshop.dk (Buscar stock)", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4080-super"},
-        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
-        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"}
+        {
+          "name": "Proshop.dk (Buscar stock)",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4080-super"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
       ],
       "tier": "top",
       "target_price": 7600,
@@ -206,9 +257,18 @@
       "pricerunner": [],
       "prisjagt": [],
       "store_links": [
-        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4070-ti-super"},
-        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
-        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"}
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4070-ti-super"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
       ],
       "tier": "top",
       "target_price": 6300,
@@ -240,9 +300,18 @@
       "pricerunner": [],
       "prisjagt": [],
       "store_links": [
-        {"name": "Proshop.dk", "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-7900-xtx"},
-        {"name": "Komplett.dk", "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"},
-        {"name": "ComputerSalg", "url": "https://www.computersalg.dk/c/37/grafikkort"}
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-7900-xtx"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
       ],
       "tier": "alternative",
       "target_price": 7200,
@@ -254,6 +323,84 @@
       "review_summary": "Monstruo de rasterización con 24GB de VRAM y DisplayPort 2.1. Excepcional para desarrollo e inferencia local de modelos de IA (Llama, DeepSeek) sin saturar memoria.",
       "pros": "24GB VRAM masiva (inigualable a este rango de precio), DisplayPort 2.1 nativo, gran potencia raster",
       "cons": "Menor rendimiento en Ray Tracing intensivo y consumo eléctrico en reposo algo más elevado"
+    },
+    {
+      "key": "gpu-rtx-5090",
+      "name": "NVIDIA GeForce RTX 5090 32GB GDDR7 (Blackwell Halo Flagship, DP 2.1 UHBR20)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5090"
+      ],
+      "exclude_tokens": [
+        "5080",
+        "5070",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC",
+        "VANDBLOK",
+        "WATERBLOCK"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=nvidia-geforce-rtx-50-series"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
+      ],
+      "tier": "top",
+      "target_price": 16500,
+      "excellent_price": 15500,
+      "burnin_warranty": "3 anos de garantia de fabricante. Soporte completo DisplayPort 2.1 UHBR20.",
+      "reviews": [],
+      "review_summary": "El tope de gama absoluto para resolucion 4K a 240Hz nativos y cargas pesadas de IA/LLMs locales gracias a sus 32GB de memoria GDDR7.",
+      "pros": "32GB GDDR7, ancho de banda colosal, rendimiento definitivo en 4K y LLMs",
+      "cons": "Consumo de hasta 600W, requiere fuentes de 1000W-1200W, precio extremadamente elevado"
+    },
+    {
+      "key": "gpu-rx-9070",
+      "name": "AMD Radeon RX 9070 16GB (RDNA 4, FSR 4 AI, DP 2.1)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "9070"
+      ],
+      "exclude_tokens": [
+        "9070 XT",
+        "9070XT",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 5400,
+      "excellent_price": 4900,
+      "burnin_warranty": "2-3 anos de garantia de fabricante con soporte DP 2.1.",
+      "reviews": [],
+      "review_summary": "Alternativa de gran relacion precio/rendimiento con 16GB de VRAM compitiendo de frente contra la RTX 5070 en el rango de los 5.000-6.000 DKK.",
+      "pros": "16GB de VRAM a precio asequible, nueva arquitectura RDNA 4 con Ray Tracing optimizado",
+      "cons": "Ecosistema de IA algo menor comparado con CUDA/NVIDIA"
     }
   ],
   "discovery_queries": [

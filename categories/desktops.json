@@ -318,6 +318,66 @@
       "review_summary": "Monstruo gaming de SharkGaming en Herlev: combina Ryzen 7 9800X3D con RTX 5080 de 16GB GDDR7, refrigeración líquida y 2TB SSD.",
       "pros": "Rendimiento tope de gama para 4K 240Hz, refrigeración líquida, montaje danés",
       "cons": "Presupuesto alto"
+    },
+    {
+      "key": "pc-topdata-highline-9800x3d-5070",
+      "name": "Topdata High-Line Gaming (AMD Ryzen 7 9800X3D / RTX 5070 12GB / 16GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "High-Line",
+        "Highline"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://topdata.dk/shop/458-highline/14051-high-line7800x3d9800x3d16g-ddr5-ramrtx5070-12gb1tb-ssddeepcool/"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Topdata.dk Highline",
+          "url": "https://topdata.dk/shop/458-highline/"
+        }
+      ],
+      "tier": "top",
+      "target_price": 14499,
+      "excellent_price": 13499,
+      "burnin_warranty": "2 anos de garantia total danesa y soporte tecnico directo de Topdata.",
+      "reviews": [],
+      "review_summary": "Configuracion de maximo rendimiento gamer que combina el procesador rey de juegos (Ryzen 7 9800X3D) con una RTX 5070 12GB y refrigeracion DeepCool a un precio rompedor de 14.499 DKK.",
+      "pros": "CPU Ryzen 7 9800X3D tope de gama para gaming, precio muy agresivo frente a MM-Vision/SharkGaming, plataforma AM5 ampliable",
+      "cons": "Viene con 16GB de RAM base (se aconseja ampliar a 32GB en el configurador)"
+    },
+    {
+      "key": "pc-fcomputer-exclusive-5070",
+      "name": "Føniks Exclusive Gamer PC (AMD Ryzen 7 / RTX 5070 12GB / 32GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Føniks",
+        "Exclusive Gamer"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.fcomputer.dk/computer/faerdigsamlet-pc/exclusive-gamer-pc"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Føniks Computer",
+          "url": "https://www.fcomputer.dk/computer/faerdigsamlet-pc"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 13999,
+      "excellent_price": 12999,
+      "burnin_warranty": "3 anos de garantia total y soporte directo en tiendas fisicas de Foniks en Dinamarca.",
+      "reviews": [],
+      "review_summary": "Excelente opcion preconfigurada danesa de Foniks Computer con 3 anos de garantia completa, 32GB DDR5 de serie y tarjeta grafica RTX 5070.",
+      "pros": "3 anos de garantia local danesa, 32GB DDR5 de serie, tiendas fisicas en Frederiksberg y Tilst",
+      "cons": "Un poco mas costoso por el servicio de garantia extendida de 3 anos"
     }
   ],
   "discovery_queries": [

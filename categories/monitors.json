@@ -383,6 +383,75 @@
       "cons": "Garantia burn-in no verificada en DK, sin USB-C/KVM, mas caro hoy que el PG32UCDP",
       "category": "monitors",
       "category_name": "Monitores 4K"
+    },
+    {
+      "key": "philips-evnia-32m2n8900",
+      "name": "Philips Evnia 32M2N8900 (31.5\" 4K 240Hz, 3a gen QD-OLED)",
+      "match_tokens": [
+        "32M2N8900"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3322910311/Skaerme/Philips-Evnia-8000-32M2N8900-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 5900,
+      "excellent_price": 5400,
+      "burnin_warranty": "3 anos de garantia oficial Philips incluyendo cobertura de burn-in OLED.",
+      "reviews": [],
+      "review_summary": "Panel QD-OLED 3a gen de 240Hz con iluminacion Ambiglow en tres lados, switch KVM integrado y USB-C de 65W PD. Excelente fidelidad de color y bajo input lag.",
+      "pros": "Iluminacion Ambiglow integrada, KVM + USB-C 65W, 3 anos de garantia burn-in",
+      "cons": "USB-C limitado a 65W (vs 90W en otros modelos premium), acabado blanco no es para todos",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "aoc-agon-ag326ud",
+      "name": "AOC AGON PRO AG326UD (31.5\" 4K 165Hz QD-OLED)",
+      "match_tokens": [
+        "AG326UD"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3329386551/Skaerme/AOC-AGON-PRO-AG326UD-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 5300,
+      "excellent_price": 4900,
+      "burnin_warranty": "3 anos de garantia oficial con cobertura especifica para retencion de imagen OLED.",
+      "reviews": [],
+      "review_summary": "Una de las puertas de entrada mas asequibles a paneles QD-OLED 4K en Dinamarca (~5.900 DKK). Frecuencia de 165Hz perfectamente balanceada para GPUs actuales.",
+      "pros": "Precio muy agresivo para 4K QD-OLED, altavoces DTS de 8W integrados, negros perfectos y contraste infinito",
+      "cons": "165Hz en lugar de 240Hz, ergonomia y estetica mas agresiva estilo gaming",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "msi-mag-321upx",
+      "name": "MSI MAG 321UPX QD-OLED (31.5\" 4K 240Hz QD-OLED)",
+      "match_tokens": [
+        "321UPX"
+      ],
+      "exclude_tokens": [
+        "321URX",
+        "321CURX"
+      ],
+      "pricerunner": [
+        "/pl/25-3316438329/Skaerme/MSI-MAG-321UPX-QD-OLED-OLED-Monitor-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 5200,
+      "excellent_price": 4800,
+      "burnin_warranty": "3 anos de garantia MSI OLED Care incluyendo burn-in.",
+      "reviews": [],
+      "review_summary": "Hermana accesible del aclamado MPG 321URX: comparte el mismo panel Samsung QD-OLED 4K 240Hz de 3a gen y disipador de grafeno, reduciendo el USB-C PD a 15W para bajar el precio.",
+      "pros": "Mismo panel 240Hz de maxima gama que el 321URX por 500-1000 DKK menos, sin ventilador activo",
+      "cons": "USB-C solo entrega 15W, carece de luz RGB posterior",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     }
   ],
   "discovery_queries": [
