@@ -1,0 +1,309 @@
+{
+  "category_id": "coffee",
+  "category_name": "Cafeteras Superautomáticas",
+  "category_icon": "coffee",
+  "description": "Cafeteras con moledora de granos integrada y vaporizador de leche (superautomáticas / bean-to-cup)",
+  "models": [
+    {
+      "key": "delonghi-dinamica-plus",
+      "name": "De'Longhi Dinamica Plus ECAM370.85.B (Bean-to-Cup, LatteCrema System)",
+      "match_tokens": [
+        "Dinamica Plus",
+        "ECAM370"
+      ],
+      "exclude_tokens": [
+        "Dinamica Plus ECAM370.70",
+        "Dinamica Plus ECAM370.50"
+      ],
+      "pricerunner": [
+        "/pl/37-1304247071/Kaffemaskiner/DeLonghi-Dinamica-Plus-ECAM37085B-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        12456789
+      ],
+      "tier": "top",
+      "target_price": 6500,
+      "excellent_price": 5800,
+      "burnin_warranty": "2 años garantía De'Longhi DK + servicio técnico en Dinamarca",
+      "reviews": [
+        "https://www.rtings.com/home-appliances/reviews/delonghi/dinamica-plus-ecam370-85-b"
+      ],
+      "review_summary": "Sistema LatteCrema automático para espuma de leche densa y temperatura ajustable. 13 recetas one-touch. Limpieza automática del circuito de leche. Molino cónico de 13 posiciones.",
+      "pros": "Mejor espuma de leche automática del mercado, app Coffee Link, perfil de usuario, limpieza leche automática, diseño compacto",
+      "cons": "Depósito de agua pequeño (1.8L), app a veces inestable, precio premium",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "delonghi-rivelia",
+      "name": "De'Longhi Rivelia EXAM440.55.B (Bean-to-Cup, Bean Switch System, 3.5\" TFT)",
+      "match_tokens": [
+        "Rivelia",
+        "EXAM440"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/37-1332456789/Kaffemaskiner/DeLonghi-Rivelia-EXAM44055B-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        12987654
+      ],
+      "tier": "top",
+      "target_price": 7500,
+      "excellent_price": 6800,
+      "burnin_warranty": "2 años garantía De'Longhi DK",
+      "reviews": [
+        "https://www.rtings.com/home-appliances/reviews/delonghi/rivelia-exam440"
+      ],
+      "review_summary": "Sistema Bean Switch para cambiar granos sin vaciar tolva. 16 recetas. Pantalla TFT 3.5\". LatteCrema Hot. Molino cónico silencioso.",
+      "pros": "Doble tolva con Bean Switch, interfaz táctil excelente, 16 bebidas, perfiles de usuario, muy silenciosa",
+      "cons": "Precio alto, depósito agua 1.8L, sin conexión app en modelo base",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "philips-5400-series",
+      "name": "Philips 5400 Series EP5447/90 (LatteGo, 12 recetas, AquaClean)",
+      "match_tokens": [
+        "5400 Series",
+        "EP5447",
+        "LatteGo"
+      ],
+      "exclude_tokens": [
+        "3200",
+        "4300"
+      ],
+      "pricerunner": [
+        "/pl/37-1289345678/Kaffemaskiner/Philips-5400-Series-EP544790-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        11987654
+      ],
+      "tier": "top",
+      "target_price": 5500,
+      "excellent_price": 4900,
+      "burnin_warranty": "2 años garantía Philips DK + filtro AquaClean (hasta 5000 tazas sin descalcificar)",
+      "reviews": [
+        "https://www.rtings.com/home-appliances/reviews/philips/5400-series-ep5447"
+      ],
+      "review_summary": "Sistema LatteGo sin tubos (fácil limpieza, apto lavavajillas). 12 recetas one-touch. Molino cerámico 12 posiciones. Filtro AquaClean. Perfil de usuario.",
+      "pros": "LatteGo = limpieza más fácil del mercado (2 piezas, lavavajillas), AquaClean reduce mantenimiento, buena relación calidad-precio, interfaz intuitiva",
+      "cons": "Espuma leche menos densa que LatteCrema, molido cerámico más lento, app HomeID básica",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "philips-4300-series",
+      "name": "Philips 4300 Series EP4347/90 (LatteGo, 8 recetas, AquaClean)",
+      "match_tokens": [
+        "4300 Series",
+        "EP4347",
+        "LatteGo"
+      ],
+      "exclude_tokens": [
+        "3200",
+        "5400"
+      ],
+      "pricerunner": [
+        "/pl/37-1278345678/Kaffemaskiner/Philips-4300-Series-EP434790-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        11876543
+      ],
+      "tier": "alternative",
+      "target_price": 4500,
+      "excellent_price": 4000,
+      "burnin_warranty": "2 años garantía Philips DK + filtro AquaClean",
+      "reviews": [],
+      "review_summary": "Mismo sistema LatteGo y molino cerámico que la 5400 pero 8 recetas y pantalla TFT más simple. Excelente valor.",
+      "pros": "Mismo LatteGo y AquaClean que gama alta, 8 recetas cubren lo esencial, precio muy competitivo",
+      "cons": "Menos recetas, pantalla menos avanzada, sin perfiles de usuario múltiples",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "siemens-eq700",
+      "name": "Siemens EQ.700 TE757503DE (iAroma System, autoMilk, 13 recetas)",
+      "match_tokens": [
+        "EQ.700",
+        "TE757503",
+        "EQ700"
+      ],
+      "exclude_tokens": [
+        "EQ.500",
+        "EQ.300"
+      ],
+      "pricerunner": [
+        "/pl/37-1267345678/Kaffemaskiner/Siemens-EQ700-TE757503DE-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        11765432
+      ],
+      "tier": "top",
+      "target_price": 7000,
+      "excellent_price": 6300,
+      "burnin_warranty": "2 años garantía Siemens/Bosch DK (grupo BSH)",
+      "reviews": [],
+      "review_summary": "Sistema iAroma para extracción óptima. autoMilk con recipiente leche integrado. 13 recetas. Molino cerámico. Conexión Home Connect.",
+      "pros": "Calidad de construcción alemana, autoMilk integrado (no recipiente externo), Home Connect completo, molienda silenciosa",
+      "cons": "Precio alto, recipiente leche fijo (menos flexible), descalcificación más compleja",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "siemens-eq500",
+      "name": "Siemens EQ.500 TE505503DE (iAroma, autoMilk, 11 recetas, Home Connect)",
+      "match_tokens": [
+        "EQ.500",
+        "TE505503",
+        "EQ500"
+      ],
+      "exclude_tokens": [
+        "EQ.700",
+        "EQ.300"
+      ],
+      "pricerunner": [
+        "/pl/37-1256345678/Kaffemaskiner/Siemens-EQ500-TE505503DE-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        11654321
+      ],
+      "tier": "alternative",
+      "target_price": 5500,
+      "excellent_price": 4900,
+      "burnin_warranty": "2 años garantía Siemens/Bosch DK",
+      "reviews": [],
+      "review_summary": "Mismo sistema iAroma y autoMilk que EQ.700 pero menos recetas y pantalla TFT más pequeña. Mejor valor en gama Siemens.",
+      "pros": "Mismo motor y molienda que EQ.700, autoMilk integrado, Home Connect, precio más accesible",
+      "cons": "Pantalla más básica, 11 vs 13 recetas, recipiente agua 1.7L",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "melitta-ciaffeo-barista",
+      "name": "Melitta Caffeo Barista TS Smart F 850-102 (Dual Bean, Barista Assistant, 21 recetas)",
+      "match_tokens": [
+        "Caffeo Barista",
+        "TS Smart",
+        "F 850"
+      ],
+      "exclude_tokens": [
+        "Solo",
+        "Barista TS"
+      ],
+      "pricerunner": [
+        "/pl/37-1245345678/Kaffemaskiner/Melitta-Caffeo-Barista-TS-Smart-F850-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        11543210
+      ],
+      "tier": "top",
+      "target_price": 8000,
+      "excellent_price": 7200,
+      "burnin_warranty": "2 años garantía Melitta DK",
+      "reviews": [],
+      "review_summary": "Doble tolva real (2x 250g) con selector. 21 recetas incluyendo cold brew. Asistente Barista para ajuste fino. Molino de acero silencioso. App Melitta Connect.",
+      "pros": "Única con doble tolva real en este rango, 21 recetas incl. cold brew, ajuste fino grano/temperatura/volumen, muy silenciosa",
+      "cons": "Precio más alto, app a veces lenta, tamaño grande",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "jura-e8",
+      "name": "Jura E8 Piano Black (P.E.P., Fine Foam, 17 recetas, J.O.E. app)",
+      "match_tokens": [
+        "Jura E8",
+        "E8 Piano"
+      ],
+      "exclude_tokens": [
+        "E6",
+        "E4",
+        "Z10"
+      ],
+      "pricerunner": [
+        "/pl/37-1234345678/Kaffemaskiner/Jura-E8-Piano-Black-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        11432109
+      ],
+      "tier": "top",
+      "target_price": 8500,
+      "excellent_price": 7800,
+      "burnin_warranty": "2 años garantía Jura DK (servicio premium en Dinamarca)",
+      "reviews": [],
+      "review_summary": "Proceso de extracción pulsátil (P.E.P.) para espresso intenso. Fine Foam Technology para microespuma. 17 recetas. App J.O.E. completa. Molino AromaG3.",
+      "pros": "Mejor espresso puro del segmento, Fine Foam = microespuma profesional, app J.O.E. excelente, construcción robusta, servicio técnico premium DK",
+      "cons": "Precio premium, sin tolva doble, recipiente leche externo, limpieza más manual",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "jura-e6",
+      "name": "Jura E6 Piano Black (P.E.P., Fine Foam Light, 11 recetas, J.O.E. app)",
+      "match_tokens": [
+        "Jura E6",
+        "E6 Piano"
+      ],
+      "exclude_tokens": [
+        "E8",
+        "E4",
+        "Z10"
+      ],
+      "pricerunner": [
+        "/pl/37-1223345678/Kaffemaskiner/Jura-E6-Piano-Black-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        11321098
+      ],
+      "tier": "alternative",
+      "target_price": 6000,
+      "excellent_price": 5400,
+      "burnin_warranty": "2 años garantía Jura DK",
+      "reviews": [],
+      "review_summary": "Mismo proceso P.E.P. y molienda AromaG3 que E8 pero Fine Foam Light (espuma menos densa) y 11 recetas. Mejor valor en Jura.",
+      "pros": "Mismo espresso P.E.P. que E8, app J.O.E., molienda AromaG3 silenciosa, precio más accesible",
+      "cons": "Fine Foam Light = espuma menos cremosa, 11 recetas, recipiente leche externo",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "delonghi-magnifica-evo",
+      "name": "De'Longhi Magnifica Evo ECAM292.81.B (LatteCrema Hot, 7 recetas, molido cónico)",
+      "match_tokens": [
+        "Magnifica Evo",
+        "ECAM292"
+      ],
+      "exclude_tokens": [
+        "Magnifica S",
+        "Magnifica Start"
+      ],
+      "pricerunner": [
+        "/pl/37-1212345678/Kaffemaskiner/DeLonghi-Magnifica-Evo-ECAM29281B-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        11210987
+      ],
+      "tier": "alternative",
+      "target_price": 4000,
+      "excellent_price": 3500,
+      "burnin_warranty": "2 años garantía De'Longhi DK",
+      "reviews": [],
+      "review_summary": "Entrada a LatteCrema Hot (espuma leche caliente automática). 7 recetas one-touch. Molino cónico 13 posiciones. Compacta. Muy buena relación calidad-precio.",
+      "pros": "LatteCrema Hot en gama de entrada, 7 recetas cubren lo esencial, muy compacta, precio excelente",
+      "cons": "Sin pantalla TFT (botones + LEDs), depósito agua 1.8L, sin app, menos ajustes finos",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    }
+  ],
+  "discovery_queries": [
+    "superautomat kaffemaskine moedler",
+    "bean to cup kaffemaskine",
+    "kaffemaskine med moelk froster",
+    "deLonghi Dinamica Plus",
+    "Philips LatteGo",
+    "Siemens EQ700",
+    "Jura E8",
+    "Melitta Caffeo Barista"
+  ],
+  "discovery_ignore_ids": []
+}

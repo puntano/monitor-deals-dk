@@ -200,6 +200,7 @@ def generate_dashboard_html(output_paths=None):
     count_monitors = sum(1 for m in models_data if m["category"] == "monitors")
     count_gpus = sum(1 for m in models_data if m["category"] == "gpus")
     count_desktops = sum(1 for m in models_data if m["category"] == "desktops")
+    count_coffee = sum(1 for m in models_data if m["category"] == "coffee")
     total_active_offers = sum(len(m["offers"]) for m in models_data)
     best_deal = next((m for m in models_data if m["grade"] in ("A", "B")), None)
     
@@ -257,7 +258,7 @@ def generate_dashboard_html(output_paths=None):
             <h1 class="text-xl sm:text-2xl font-black text-white tracking-tight">Centro de Control de Hardware & Deals DK</h1>
           </div>
           <p class="text-xs sm:text-sm text-slate-400 mt-1">
-            Seguimiento de precios en tiempo real para <strong class="text-slate-200">Monitores 4K 240Hz</strong>, <strong class="text-purple-300">GPUs</strong> y <strong class="text-emerald-300">Desktops Prebuilt</strong> en Dinamarca.
+            Seguimiento de precios en tiempo real para <strong class="text-slate-200">Monitores 4K 240Hz</strong>, <strong class="text-purple-300">GPUs</strong>, <strong class="text-emerald-300">Desktops Prebuilt</strong> y <strong class="text-amber-300">Cafeteras Superautomáticas</strong> en Dinamarca.
           </p>
         </div>
         <div class="flex flex-wrap items-center gap-2 text-xs">
@@ -293,6 +294,10 @@ def generate_dashboard_html(output_paths=None):
           <span>💻 Equipos Completos (Desktops)</span>
           <span class="text-[11px] px-1.5 py-0.2 rounded-full bg-emerald-900/60 text-emerald-200 font-semibold">{count_desktops}</span>
         </button>
+        <button onclick="setCategory('coffee')" id="tab-coffee" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-slate-700/80 bg-slate-800/80 text-slate-300 hover:text-white transition flex items-center gap-2 shrink-0">
+          <span>☕ Cafeteras Superautomáticas</span>
+          <span class="text-[11px] px-1.5 py-0.2 rounded-full bg-amber-900/60 text-amber-200 font-semibold">{count_coffee}</span>
+        </button>
       </div>
     </header>
 
@@ -322,7 +327,7 @@ def generate_dashboard_html(output_paths=None):
           <span class="text-3xl font-black text-white" id="stat-total">{total_models}</span>
           <span class="text-xs text-slate-400">hardware verificado</span>
         </div>
-        <p class="text-xs text-slate-400 mt-1">{count_monitors} monitores · {count_gpus} GPUs · {count_desktops} PCs</p>
+        <p class="text-xs text-slate-400 mt-1">{count_monitors} monitores · {count_gpus} GPUs · {count_desktops} PCs · {count_coffee} cafeteras</p>
       </div>
 
       <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-sm">
@@ -497,6 +502,8 @@ def generate_dashboard_html(output_paths=None):
           return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-purple-500/10 text-purple-300 border border-purple-500/30 font-semibold flex items-center gap-1"><span>🎮</span> GPU Gaming & IA</span>';
         case 'desktops':
           return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-semibold flex items-center gap-1"><span>💻</span> Desktop Prebuilt DK</span>';
+        case 'coffee':
+          return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-amber-500/10 text-amber-300 border border-amber-500/30 font-semibold flex items-center gap-1"><span>☕</span> Cafetera Superautomática</span>';
         default:
           return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-blue-500/10 text-blue-300 border border-blue-500/30 font-semibold flex items-center gap-1"><span>🖥️</span> Monitor 4K 240Hz</span>';
       }}
