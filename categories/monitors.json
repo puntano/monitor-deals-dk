@@ -455,11 +455,7 @@
     }
   ],
   "discovery_queries": [
-    "OLED 32 4K 240Hz",
-    "QD-OLED 32 4K",
-    "OLED 31.5 4K",
-    "32 4K OLED gaming skaerm",
-    "WOLED 32 4K"
+    "/cl/25/Skaerme?attr_60381617=60381619"
   ],
   "discovery_ignore_ids": []
 }

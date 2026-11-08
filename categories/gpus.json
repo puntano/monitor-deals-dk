@@ -408,14 +408,6 @@
       "cons": "Ecosistema de IA algo menor comparado con CUDA/NVIDIA"
     }
   ],
-  "discovery_queries": [
-    "RTX 5080",
-    "RTX 5070 Ti",
-    "RTX 5070",
-    "RX 9070 XT",
-    "RTX 4080 Super",
-    "RTX 4070 Ti Super",
-    "RX 7900 XTX"
-  ],
+  "discovery_queries": [],
   "discovery_ignore_ids": []
 }

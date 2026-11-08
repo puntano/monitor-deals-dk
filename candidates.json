@@ -2,6 +2,286 @@
   "_comment": "Candidatos consolidados multi-categoria (Monitores, GPUs, Desktops). Administrables individualmente en categories/*.json.",
   "models": [
     {
+      "key": "delonghi-dinamica-plus",
+      "name": "De'Longhi Dinamica Plus ECAM380/370 (Bean-to-Cup, LatteCrema System)",
+      "match_tokens": [
+        "Dinamica Plus",
+        "ECAM370",
+        "ECAM380"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/82-3210610443/Kaffemaskiner/De-Longhi-Dinamica-Plus-ECAM380.95.TB-Sammenlign-Priser",
+        "/pl/82-3210028773/Kaffemaskiner/De-Longhi-ECAM380.85.SB-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 4200,
+      "excellent_price": 3800,
+      "burnin_warranty": "2 años garantía De'Longhi DK + servicio técnico en Dinamarca",
+      "reviews": [
+        "https://www.rtings.com/home-appliances/reviews/delonghi/dinamica-plus-ecam370-85-b"
+      ],
+      "review_summary": "Sistema LatteCrema automático para espuma de leche densa y temperatura ajustable. 13+ recetas one-touch. Limpieza automática del circuito de leche. Molino cónico de 13 posiciones.",
+      "pros": "Mejor espuma de leche automática del mercado, app Coffee Link, perfil de usuario, limpieza leche automática, diseño compacto",
+      "cons": "Depósito de agua pequeño (1.8L), app a veces inestable, precio premium",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "delonghi-rivelia",
+      "name": "De'Longhi Rivelia EXAM440.55.B (Bean-to-Cup, Bean Switch System, 3.5\" TFT)",
+      "match_tokens": [
+        "Rivelia",
+        "EXAM440"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/82-3214856172/Kaffemaskiner/De-Longhi-Rivelia-Automatic-Bean-to-Cup-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 4600,
+      "excellent_price": 4200,
+      "burnin_warranty": "2 años garantía De'Longhi DK",
+      "reviews": [
+        "https://www.rtings.com/home-appliances/reviews/delonghi/rivelia-exam440"
+      ],
+      "review_summary": "Sistema Bean Switch para cambiar granos sin vaciar tolva. 16 recetas. Pantalla TFT 3.5\". LatteCrema Hot. Molino cónico silencioso.",
+      "pros": "Doble tolva con Bean Switch, interfaz táctil excelente, 16 bebidas, perfiles de usuario, muy silenciosa",
+      "cons": "Precio alto, depósito agua 1.8L, sin conexión app en modelo base",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "philips-5400-series",
+      "name": "Philips 5400 Series EP5447/90 (LatteGo, 12 recetas, AquaClean)",
+      "match_tokens": [
+        "5400 Series",
+        "EP5447",
+        "LatteGo"
+      ],
+      "exclude_tokens": [
+        "3200",
+        "4300"
+      ],
+      "pricerunner": [
+        "/pl/82-5309706/Kaffemaskiner/Philips-Series-5400-EP5447-90-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 3600,
+      "excellent_price": 3200,
+      "burnin_warranty": "2 años garantía Philips DK + filtro AquaClean (hasta 5000 tazas sin descalcificar)",
+      "reviews": [
+        "https://www.rtings.com/home-appliances/reviews/philips/5400-series-ep5447"
+      ],
+      "review_summary": "Sistema LatteGo sin tubos (fácil limpieza, apto lavavajillas). 12 recetas one-touch. Molino cerámico 12 posiciones. Filtro AquaClean. Perfil de usuario.",
+      "pros": "LatteGo = limpieza más fácil del mercado (2 piezas, lavavajillas), AquaClean reduce mantenimiento, buena relación calidad-precio, interfaz intuitiva",
+      "cons": "Espuma leche menos densa que LatteCrema, molido cerámico más lento, app HomeID básica",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "philips-4300-series",
+      "name": "Philips 4300 Series EP4346/71 (LatteGo, 8 recetas, AquaClean)",
+      "match_tokens": [
+        "4300 Series",
+        "EP4346",
+        "EP4347",
+        "LatteGo"
+      ],
+      "exclude_tokens": [
+        "3200",
+        "5400"
+      ],
+      "pricerunner": [
+        "/pl/82-3395749891/Kaffemaskiner/Philips-Series-4300-EP4346-71-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 3900,
+      "excellent_price": 3500,
+      "burnin_warranty": "2 años garantía Philips DK + filtro AquaClean",
+      "reviews": [],
+      "review_summary": "Mismo sistema LatteGo y molino cerámico que la 5400 pero 8 recetas y pantalla TFT más simple. Excelente valor.",
+      "pros": "Mismo LatteGo y AquaClean que gama alta, 8 recetas cubren lo esencial, precio muy competitivo",
+      "cons": "Menos recetas, pantalla menos avanzada, sin perfiles de usuario múltiples",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "siemens-eq700",
+      "name": "Siemens EQ.700 TP715 / TQ715 (iAroma System, autoMilk, 13 recetas)",
+      "match_tokens": [
+        "EQ.700",
+        "EQ700",
+        "TP715",
+        "TQ715"
+      ],
+      "exclude_tokens": [
+        "EQ.500",
+        "EQ.300"
+      ],
+      "pricerunner": [
+        "/pl/82-3329313775/Kaffemaskiner/Siemens-EQ700-TP715D01-Fuldautomatisk-Kaffemaskine-2-4-L-Sammenlign-Priser",
+        "/pl/82-3315919528/Kaffemaskiner/Siemens-EQ700-Inox-TQ715R03-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 6800,
+      "excellent_price": 6200,
+      "burnin_warranty": "2 años garantía Siemens/Bosch DK (grupo BSH)",
+      "reviews": [],
+      "review_summary": "Sistema iAroma para extracción óptima. autoMilk con recipiente leche integrado. 13 recetas. Molino cerámico. Conexión Home Connect.",
+      "pros": "Calidad de construcción alemana, autoMilk integrado, Home Connect completo, molienda silenciosa",
+      "cons": "Precio alto, recipiente leche fijo (menos flexible), descalcificación más compleja",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "siemens-eq500",
+      "name": "Siemens EQ.500 TP515 / TQ513 (iAroma, autoMilk, 11 recetas)",
+      "match_tokens": [
+        "EQ.500",
+        "EQ500",
+        "TP515",
+        "TQ513"
+      ],
+      "exclude_tokens": [
+        "EQ.700",
+        "EQ.300"
+      ],
+      "pricerunner": [
+        "/pl/82-3304339288/Kaffemaskiner/Siemens-EQ.500-Classic-TP515R02-Sammenlign-Priser",
+        "/pl/82-3268598531/Kaffemaskiner/Siemens-TQ513R01-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 4100,
+      "excellent_price": 3700,
+      "burnin_warranty": "2 años garantía Siemens/Bosch DK",
+      "reviews": [],
+      "review_summary": "Mismo sistema iAroma y autoMilk que EQ.700 pero menos recetas y pantalla más compacta. Mejor valor en gama Siemens.",
+      "pros": "Mismo motor y molienda que EQ.700, autoMilk integrado, precio más accesible",
+      "cons": "Pantalla más básica, 11 vs 13 recetas, recipiente agua 1.7L",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "melitta-ciaffeo-barista",
+      "name": "Melitta Caffeo Barista T Smart F831 (Dual Bean, Barista Assistant, 21 recetas)",
+      "match_tokens": [
+        "Caffeo Barista",
+        "TS Smart",
+        "Barista T",
+        "F831",
+        "F 850"
+      ],
+      "exclude_tokens": [
+        "Solo"
+      ],
+      "pricerunner": [
+        "/pl/82-3532312152/Kaffemaskiner/Melitta-Caffeo-Barista-T-Smart-F831-101-Automatisk-Kaffemaskine-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 6400,
+      "excellent_price": 5800,
+      "burnin_warranty": "2 años garantía Melitta DK",
+      "reviews": [],
+      "review_summary": "Doble tolva real con selector. 21 recetas incluyendo cold brew. Asistente Barista para ajuste fino. Molino de acero silencioso. App Melitta Connect.",
+      "pros": "Única con doble tolva real en este rango, 21 recetas incl. cold brew, ajuste fino grano/temperatura/volumen, muy silenciosa",
+      "cons": "Precio más alto, app a veces lenta, tamaño grande",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "jura-e8",
+      "name": "Jura E8 Piano Black (P.E.P., Fine Foam, 17 recetas, J.O.E. app)",
+      "match_tokens": [
+        "Jura E8",
+        "E8 Piano",
+        "E8"
+      ],
+      "exclude_tokens": [
+        "E6",
+        "E4",
+        "Z10"
+      ],
+      "pricerunner": [
+        "/pl/82-3698958191/Kaffemaskiner/Jura-E8-%28ED%29-Piano-Black-Espressomaskine-3-kg-Sammenlign-Priser",
+        "/pl/82-3459013882/Kaffemaskiner/Jura-E8-ED-Espressomaskine-1.9-L-Sort-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 8400,
+      "excellent_price": 7800,
+      "burnin_warranty": "2 años garantía Jura DK (servicio premium en Dinamarca)",
+      "reviews": [],
+      "review_summary": "Proceso de extracción pulsátil (P.E.P.) para espresso intenso. Fine Foam Technology para microespuma. 17 recetas. App J.O.E. completa. Molino AromaG3.",
+      "pros": "Mejor espresso puro del segmento, Fine Foam = microespuma profesional, app J.O.E. excelente, construcción robusta, servicio técnico premium DK",
+      "cons": "Precio premium, sin tolva doble, recipiente leche externo, limpieza más manual",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "jura-e6",
+      "name": "Jura E6 Piano Black (P.E.P., Fine Foam Light, 11 recetas, J.O.E. app)",
+      "match_tokens": [
+        "Jura E6",
+        "E6 Piano",
+        "E6"
+      ],
+      "exclude_tokens": [
+        "E8",
+        "E4",
+        "Z10"
+      ],
+      "pricerunner": [
+        "/pl/82-3480551736/Kaffemaskiner/Jura-E6-ED-Dark-Inox-Sammenlign-Priser",
+        "/pl/82-3694408674/Kaffemaskiner/Jura-E6-%28ED%29-Espressomaskine-med-Startpakke-DK-Sprog-Piano-Black-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 6300,
+      "excellent_price": 5700,
+      "burnin_warranty": "2 años garantía Jura DK",
+      "reviews": [],
+      "review_summary": "Mismo proceso P.E.P. y molienda AromaG3 que E8 pero Fine Foam Light (espuma menos densa) y 11 recetas. Mejor valor en Jura.",
+      "pros": "Mismo espresso P.E.P. que E8, app J.O.E., molienda AromaG3 silenciosa, precio más accesible",
+      "cons": "Fine Foam Light = espuma menos cremosa, 11 recetas, recipiente leche externo",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "delonghi-magnifica-evo",
+      "name": "De'Longhi Magnifica Evo ECAM290.61 (LatteCrema Hot, 7 recetas, molido cónico)",
+      "match_tokens": [
+        "Magnifica Evo",
+        "ECAM290",
+        "ECAM292"
+      ],
+      "exclude_tokens": [
+        "Magnifica S",
+        "Magnifica Start"
+      ],
+      "pricerunner": [
+        "/pl/82-3200491154/Kaffemaskiner/DeLonghi-Magnifica-Evo-ECAM290.61-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 3100,
+      "excellent_price": 2750,
+      "burnin_warranty": "2 años garantía De'Longhi DK",
+      "reviews": [],
+      "review_summary": "Entrada a LatteCrema Hot (espuma leche caliente automática). 7 recetas one-touch. Molino cónico 13 posiciones. Compacta. Muy buena relación calidad-precio.",
+      "pros": "LatteCrema Hot en gama de entrada, 7 recetas cubren lo esencial, muy compacta, precio excelente",
+      "cons": "Sin pantalla TFT (botones + LEDs), depósito agua 1.8L, sin app, menos ajustes finos",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
       "key": "pc-mm-vision-ryzen-gamer",
       "name": "MM-Vision Ryzen Gamer (AMD Ryzen 5 / Asus RTX 5060 8GB / 16GB DDR5 / 1TB SSD)",
       "category": "desktops",
@@ -29,8 +309,8 @@
         }
       ],
       "tier": "alternative",
-      "target_price": 10395,
-      "excellent_price": 9995,
+      "target_price": 9875,
+      "excellent_price": 9356,
       "burnin_warranty": "2 años de garantía total danesa y soporte técnico directo en Roskilde.",
       "reviews": [],
       "review_summary": "Configuración de entrada económica a la plataforma AM5 / DDR5: equipada con Ryzen 5, Asus RTX 5060 8GB y 16GB DDR5-6000. Excelente para 1080p/1440p.",
@@ -63,8 +343,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 13495,
-      "excellent_price": 12995,
+      "target_price": 12820,
+      "excellent_price": 12146,
       "burnin_warranty": "2 años de garantía total MM-Vision con recogida y devolución gratuita.",
       "reviews": [],
       "review_summary": "Gama media-alta de gran rendimiento: procesador Intel Core Ultra junto con la nueva Asus GeForce RTX 5070 de 12GB GDDR7 y placa Asus TUF B860M-Plus.",
@@ -97,8 +377,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 18995,
-      "excellent_price": 17995,
+      "target_price": 18045,
+      "excellent_price": 17096,
       "burnin_warranty": "2 años de garantía total MM-Vision.",
       "reviews": [],
       "review_summary": "Configuración prémium lista para 4K sin cuellos de botella: procesador AMD Ryzen 7 X3D con 32GB de RAM DDR5-6000, SSD ultra rápido de 2TB y la nueva Radeon RX 9070 XT de 16GB con DP 2.1.",
@@ -131,8 +411,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 21295,
-      "excellent_price": 19995,
+      "target_price": 20230,
+      "excellent_price": 19166,
       "burnin_warranty": "2 años de garantía danesa total MM-Vision.",
       "reviews": [],
       "review_summary": "El sweet spot de gama alta para programadores y gamers exigentes: Intel Core Ultra 7 (20 núcleos), tarjeta gráfica Asus RTX 5070 Ti de 16GB GDDR7, 32GB RAM y 2TB SSD.",
@@ -167,8 +447,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 25895,
-      "excellent_price": 24500,
+      "target_price": 24600,
+      "excellent_price": 23306,
       "burnin_warranty": "2 años de garantía total MM-Vision con recogida y devolución gratuita.",
       "reviews": [],
       "review_summary": "Estación de batalla entusiasta: procesador de 24 núcleos Intel Core Ultra 7 270K (5.5 GHz) combinado con la bestia Asus GeForce RTX 5080 OC de 16GB GDDR7 y fuente Corsair RMx Shift 80+ Gold.",
@@ -203,8 +483,8 @@
         }
       ],
       "tier": "alternative",
-      "target_price": 10199,
-      "excellent_price": 9699,
+      "target_price": 9689,
+      "excellent_price": 9179,
       "burnin_warranty": "2 años de garantía Proshop DK con servicio técnico directo en Aarhus.",
       "reviews": [],
       "review_summary": "Opción asequible ensamblada por Proshop (~10.199 DKK en stock): arquitectura AM5 moderna y DDR5, ideal para presupuestos contenidos.",
@@ -239,8 +519,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 13399,
-      "excellent_price": 12500,
+      "target_price": 12729,
+      "excellent_price": 12059,
       "burnin_warranty": "2 años de garantía Proshop Dinamarca.",
       "reviews": [],
       "review_summary": "Excelente relación calidad/precio: Ryzen 7 de 8 núcleos, 32GB de RAM DDR5 y tarjeta gráfica RTX 5070 de 12GB por 13.399 DKK.",
@@ -273,8 +553,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 16299,
-      "excellent_price": 15499,
+      "target_price": 15484,
+      "excellent_price": 14669,
       "burnin_warranty": "2 años de garantía directa Proshop Dinamarca.",
       "reviews": [],
       "review_summary": "Configuración de referencia para 4K en Proshop: el codiciado procesador Ryzen 7 7800X3D junto con la Radeon RX 9070 XT de 16GB, 32GB DDR5 Corsair y chasis de alto flujo de aire.",
@@ -293,9 +573,7 @@
       "exclude_tokens": [
         "Mini"
       ],
-      "pricerunner": [
-        "/pl/223-3544823012/Stationaere-computere/Shark-Gaming-RGBeast-5080-Gaming-PC-AMD-Ryzen-7-9800X3D-16-GB-2-TB-SSD-Sammenlign-Priser"
-      ],
+      "pricerunner": [],
       "prisjagt": [],
       "store_links": [
         {
@@ -308,13 +586,73 @@
         }
       ],
       "tier": "top",
-      "target_price": 24999,
-      "excellent_price": 23500,
+      "target_price": 23749,
+      "excellent_price": 22499,
       "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
       "reviews": [],
       "review_summary": "Monstruo gaming de SharkGaming en Herlev: combina Ryzen 7 9800X3D con RTX 5080 de 16GB GDDR7, refrigeración líquida y 2TB SSD.",
       "pros": "Rendimiento tope de gama para 4K 240Hz, refrigeración líquida, montaje danés",
       "cons": "Presupuesto alto"
+    },
+    {
+      "key": "pc-topdata-highline-9800x3d-5070",
+      "name": "Topdata High-Line Gaming (AMD Ryzen 7 9800X3D / RTX 5070 12GB / 16GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "High-Line",
+        "Highline"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://topdata.dk/shop/458-highline/14051-high-line7800x3d9800x3d16g-ddr5-ramrtx5070-12gb1tb-ssddeepcool/"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Topdata.dk Highline",
+          "url": "https://topdata.dk/shop/458-highline/"
+        }
+      ],
+      "tier": "top",
+      "target_price": 13774,
+      "excellent_price": 13049,
+      "burnin_warranty": "2 anos de garantia total danesa y soporte tecnico directo de Topdata.",
+      "reviews": [],
+      "review_summary": "Configuracion de maximo rendimiento gamer que combina el procesador rey de juegos (Ryzen 7 9800X3D) con una RTX 5070 12GB y refrigeracion DeepCool a un precio rompedor de 14.499 DKK.",
+      "pros": "CPU Ryzen 7 9800X3D tope de gama para gaming, precio muy agresivo frente a MM-Vision/SharkGaming, plataforma AM5 ampliable",
+      "cons": "Viene con 16GB de RAM base (se aconseja ampliar a 32GB en el configurador)"
+    },
+    {
+      "key": "pc-fcomputer-exclusive-5070",
+      "name": "Føniks Exclusive Gamer PC (AMD Ryzen 7 / RTX 5070 12GB / 32GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Føniks",
+        "Exclusive Gamer"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.fcomputer.dk/computer/faerdigsamlet-pc/exclusive-gamer-pc/foeniks-fsw4-faerdigsamlet-gamer-computer"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Føniks Computer",
+          "url": "https://www.fcomputer.dk/computer/faerdigsamlet-pc"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 13299,
+      "excellent_price": 12599,
+      "burnin_warranty": "3 anos de garantia total y soporte directo en tiendas fisicas de Foniks en Dinamarca.",
+      "reviews": [],
+      "review_summary": "Excelente opcion preconfigurada danesa de Foniks Computer con 3 anos de garantia completa, 32GB DDR5 de serie y tarjeta grafica RTX 5070.",
+      "pros": "3 anos de garantia local danesa, 32GB DDR5 de serie, tiendas fisicas en Frederiksberg y Tilst",
+      "cons": "Un poco mas costoso por el servicio de garantia extendida de 3 anos"
     },
     {
       "key": "gpu-rtx-5080",
@@ -437,7 +775,8 @@
         "GAMING PC"
       ],
       "pricerunner": [
-        "/pl/37-3396506989/Grafikkort/Gigabyte-GeForce-RTX-5070-Windforce-OC-SFF-12-GB-Grafikkort-Sammenlign-Priser"
+        "/pl/37-3396506989/Grafikkort/Gigabyte-GeForce-RTX-5070-Windforce-OC-SFF-12-GB-Grafikkort-Sammenlign-Priser",
+        "/pl/37-3517052298/Grafikkort/ASUS-Dual-GeForce-RTX-5070-12GB-GDDR7-Grafikkort-Sammenlign-Priser"
       ],
       "prisjagt": [],
       "store_links": [
@@ -635,6 +974,88 @@
       "review_summary": "Monstruo de rasterización con 24GB de VRAM y DisplayPort 2.1. Excepcional para desarrollo e inferencia local de modelos de IA (Llama, DeepSeek) sin saturar memoria.",
       "pros": "24GB VRAM masiva (inigualable a este rango de precio), DisplayPort 2.1 nativo, gran potencia raster",
       "cons": "Menor rendimiento en Ray Tracing intensivo y consumo eléctrico en reposo algo más elevado"
+    },
+    {
+      "key": "gpu-rtx-5090",
+      "name": "NVIDIA GeForce RTX 5090 32GB GDDR7 (Blackwell Halo Flagship, DP 2.1 UHBR20)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5090"
+      ],
+      "exclude_tokens": [
+        "5080",
+        "5070",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC",
+        "VANDBLOK",
+        "WATERBLOCK"
+      ],
+      "pricerunner": [
+        "/pl/37-3393100693/Grafikkort/Gigabyte-GeForce-RTX-5090-WINDFORCE-OC-HDMI-3x-DP-32GB-Sammenlign-Priser",
+        "/pl/37-3393100158/Grafikkort/Gigabyte-GeForce-RTX-5090-GAMING-OC-HDMI-3x-DP-32GB-Sammenlign-Priser",
+        "/pl/37-3393099386/Grafikkort/MSI-GeForce-RTX-5090-Trio-OC-1xHDMI-3xDP-32GB-GDDR7-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=nvidia-geforce-rtx-50-series"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
+      ],
+      "tier": "top",
+      "target_price": 16500,
+      "excellent_price": 15500,
+      "burnin_warranty": "3 anos de garantia de fabricante. Soporte completo DisplayPort 2.1 UHBR20.",
+      "reviews": [],
+      "review_summary": "El tope de gama absoluto para resolucion 4K a 240Hz nativos y cargas pesadas de IA/LLMs locales gracias a sus 32GB de memoria GDDR7.",
+      "pros": "32GB GDDR7, ancho de banda colosal, rendimiento definitivo en 4K y LLMs",
+      "cons": "Consumo de hasta 600W, requiere fuentes de 1000W-1200W, precio extremadamente elevado"
+    },
+    {
+      "key": "gpu-rx-9070",
+      "name": "AMD Radeon RX 9070 16GB (RDNA 4, FSR 4 AI, DP 2.1)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "9070"
+      ],
+      "exclude_tokens": [
+        "9070 XT",
+        "9070XT",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 5400,
+      "excellent_price": 4900,
+      "burnin_warranty": "2-3 anos de garantia de fabricante con soporte DP 2.1.",
+      "reviews": [],
+      "review_summary": "Alternativa de gran relacion precio/rendimiento con 16GB de VRAM compitiendo de frente contra la RTX 5070 en el rango de los 5.000-6.000 DKK.",
+      "pros": "16GB de VRAM a precio asequible, nueva arquitectura RDNA 4 con Ray Tracing optimizado",
+      "cons": "Ecosistema de IA algo menor comparado con CUDA/NVIDIA"
     },
     {
       "key": "msi-mpg-321urx",
@@ -1013,6 +1434,75 @@
       "review_summary": "Reviewed por RTINGS y TFTCentral (32GS95UE). Panel WOLED similar al PG32UCDP.",
       "pros": "Modo 480 Hz",
       "cons": "Garantia burn-in no verificada en DK, sin USB-C/KVM, mas caro hoy que el PG32UCDP",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "philips-evnia-32m2n8900",
+      "name": "Philips Evnia 32M2N8900 (31.5\" 4K 240Hz, 3a gen QD-OLED)",
+      "match_tokens": [
+        "32M2N8900"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3322910311/Skaerme/Philips-Evnia-8000-32M2N8900-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 5900,
+      "excellent_price": 5400,
+      "burnin_warranty": "3 anos de garantia oficial Philips incluyendo cobertura de burn-in OLED.",
+      "reviews": [],
+      "review_summary": "Panel QD-OLED 3a gen de 240Hz con iluminacion Ambiglow en tres lados, switch KVM integrado y USB-C de 65W PD. Excelente fidelidad de color y bajo input lag.",
+      "pros": "Iluminacion Ambiglow integrada, KVM + USB-C 65W, 3 anos de garantia burn-in",
+      "cons": "USB-C limitado a 65W (vs 90W en otros modelos premium), acabado blanco no es para todos",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "aoc-agon-ag326ud",
+      "name": "AOC AGON PRO AG326UD (31.5\" 4K 165Hz QD-OLED)",
+      "match_tokens": [
+        "AG326UD"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/25-3329386551/Skaerme/AOC-AGON-PRO-AG326UD-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 5300,
+      "excellent_price": 4900,
+      "burnin_warranty": "3 anos de garantia oficial con cobertura especifica para retencion de imagen OLED.",
+      "reviews": [],
+      "review_summary": "Una de las puertas de entrada mas asequibles a paneles QD-OLED 4K en Dinamarca (~5.900 DKK). Frecuencia de 165Hz perfectamente balanceada para GPUs actuales.",
+      "pros": "Precio muy agresivo para 4K QD-OLED, altavoces DTS de 8W integrados, negros perfectos y contraste infinito",
+      "cons": "165Hz en lugar de 240Hz, ergonomia y estetica mas agresiva estilo gaming",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "msi-mag-321upx",
+      "name": "MSI MAG 321UPX QD-OLED (31.5\" 4K 240Hz QD-OLED)",
+      "match_tokens": [
+        "321UPX"
+      ],
+      "exclude_tokens": [
+        "321URX",
+        "321CURX"
+      ],
+      "pricerunner": [
+        "/pl/25-3316438329/Skaerme/MSI-MAG-321UPX-QD-OLED-OLED-Monitor-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 5200,
+      "excellent_price": 4800,
+      "burnin_warranty": "3 anos de garantia MSI OLED Care incluyendo burn-in.",
+      "reviews": [],
+      "review_summary": "Hermana accesible del aclamado MPG 321URX: comparte el mismo panel Samsung QD-OLED 4K 240Hz de 3a gen y disipador de grafeno, reduciendo el USB-C PD a 15W para bajar el precio.",
+      "pros": "Mismo panel 240Hz de maxima gama que el 321URX por 500-1000 DKK menos, sin ventilador activo",
+      "cons": "USB-C solo entrega 15W, carece de luz RGB posterior",
       "category": "monitors",
       "category_name": "Monitores 4K"
     }

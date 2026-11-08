@@ -32,8 +32,8 @@
         }
       ],
       "tier": "alternative",
-      "target_price": 10395,
-      "excellent_price": 9995,
+      "target_price": 9875,
+      "excellent_price": 9356,
       "burnin_warranty": "2 años de garantía total danesa y soporte técnico directo en Roskilde.",
       "reviews": [],
       "review_summary": "Configuración de entrada económica a la plataforma AM5 / DDR5: equipada con Ryzen 5, Asus RTX 5060 8GB y 16GB DDR5-6000. Excelente para 1080p/1440p.",
@@ -66,8 +66,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 13495,
-      "excellent_price": 12995,
+      "target_price": 12820,
+      "excellent_price": 12146,
       "burnin_warranty": "2 años de garantía total MM-Vision con recogida y devolución gratuita.",
       "reviews": [],
       "review_summary": "Gama media-alta de gran rendimiento: procesador Intel Core Ultra junto con la nueva Asus GeForce RTX 5070 de 12GB GDDR7 y placa Asus TUF B860M-Plus.",
@@ -100,8 +100,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 18995,
-      "excellent_price": 17995,
+      "target_price": 18045,
+      "excellent_price": 17096,
       "burnin_warranty": "2 años de garantía total MM-Vision.",
       "reviews": [],
       "review_summary": "Configuración prémium lista para 4K sin cuellos de botella: procesador AMD Ryzen 7 X3D con 32GB de RAM DDR5-6000, SSD ultra rápido de 2TB y la nueva Radeon RX 9070 XT de 16GB con DP 2.1.",
@@ -134,8 +134,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 21295,
-      "excellent_price": 19995,
+      "target_price": 20230,
+      "excellent_price": 19166,
       "burnin_warranty": "2 años de garantía danesa total MM-Vision.",
       "reviews": [],
       "review_summary": "El sweet spot de gama alta para programadores y gamers exigentes: Intel Core Ultra 7 (20 núcleos), tarjeta gráfica Asus RTX 5070 Ti de 16GB GDDR7, 32GB RAM y 2TB SSD.",
@@ -170,8 +170,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 25895,
-      "excellent_price": 24500,
+      "target_price": 24600,
+      "excellent_price": 23306,
       "burnin_warranty": "2 años de garantía total MM-Vision con recogida y devolución gratuita.",
       "reviews": [],
       "review_summary": "Estación de batalla entusiasta: procesador de 24 núcleos Intel Core Ultra 7 270K (5.5 GHz) combinado con la bestia Asus GeForce RTX 5080 OC de 16GB GDDR7 y fuente Corsair RMx Shift 80+ Gold.",
@@ -206,8 +206,8 @@
         }
       ],
       "tier": "alternative",
-      "target_price": 10199,
-      "excellent_price": 9699,
+      "target_price": 9689,
+      "excellent_price": 9179,
       "burnin_warranty": "2 años de garantía Proshop DK con servicio técnico directo en Aarhus.",
       "reviews": [],
       "review_summary": "Opción asequible ensamblada por Proshop (~10.199 DKK en stock): arquitectura AM5 moderna y DDR5, ideal para presupuestos contenidos.",
@@ -242,8 +242,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 13399,
-      "excellent_price": 12500,
+      "target_price": 12729,
+      "excellent_price": 12059,
       "burnin_warranty": "2 años de garantía Proshop Dinamarca.",
       "reviews": [],
       "review_summary": "Excelente relación calidad/precio: Ryzen 7 de 8 núcleos, 32GB de RAM DDR5 y tarjeta gráfica RTX 5070 de 12GB por 13.399 DKK.",
@@ -276,8 +276,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 16299,
-      "excellent_price": 15499,
+      "target_price": 15484,
+      "excellent_price": 14669,
       "burnin_warranty": "2 años de garantía directa Proshop Dinamarca.",
       "reviews": [],
       "review_summary": "Configuración de referencia para 4K en Proshop: el codiciado procesador Ryzen 7 7800X3D junto con la Radeon RX 9070 XT de 16GB, 32GB DDR5 Corsair y chasis de alto flujo de aire.",
@@ -309,8 +309,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 24999,
-      "excellent_price": 23500,
+      "target_price": 23749,
+      "excellent_price": 22499,
       "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
       "reviews": [],
       "review_summary": "Monstruo gaming de SharkGaming en Herlev: combina Ryzen 7 9800X3D con RTX 5080 de 16GB GDDR7, refrigeración líquida y 2TB SSD.",
@@ -339,8 +339,8 @@
         }
       ],
       "tier": "top",
-      "target_price": 14499,
-      "excellent_price": 13499,
+      "target_price": 13774,
+      "excellent_price": 13049,
       "burnin_warranty": "2 anos de garantia total danesa y soporte tecnico directo de Topdata.",
       "reviews": [],
       "review_summary": "Configuracion de maximo rendimiento gamer que combina el procesador rey de juegos (Ryzen 7 9800X3D) con una RTX 5070 12GB y refrigeracion DeepCool a un precio rompedor de 14.499 DKK.",
@@ -369,8 +369,8 @@
         }
       ],
       "tier": "alternative",
-      "target_price": 13999,
-      "excellent_price": 12999,
+      "target_price": 13299,
+      "excellent_price": 12599,
       "burnin_warranty": "3 anos de garantia total y soporte directo en tiendas fisicas de Foniks en Dinamarca.",
       "reviews": [],
       "review_summary": "Excelente opcion preconfigurada danesa de Foniks Computer con 3 anos de garantia completa, 32GB DDR5 de serie y tarjeta grafica RTX 5070.",
@@ -378,12 +378,6 @@
       "cons": "Un poco mas costoso por el servicio de garantia extendida de 3 anos"
     }
   ],
-  "discovery_queries": [
-    "Vision Gaming",
-    "SharkGaming",
-    "DUTZO Gaming",
-    "Komplett-PC",
-    "Foeniks Gamer"
-  ],
+  "discovery_queries": [],
   "discovery_ignore_ids": []
 }
