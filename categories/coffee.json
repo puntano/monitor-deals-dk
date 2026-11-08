@@ -6,21 +6,18 @@
   "models": [
     {
       "key": "delonghi-dinamica-plus",
-      "name": "De'Longhi Dinamica Plus ECAM370.85.B (Bean-to-Cup, LatteCrema System)",
+      "name": "De'Longhi Dinamica Plus ECAM380/370 (Bean-to-Cup, LatteCrema System)",
       "match_tokens": [
         "Dinamica Plus",
-        "ECAM370"
+        "ECAM370",
+        "ECAM380"
       ],
-      "exclude_tokens": [
-        "Dinamica Plus ECAM370.70",
-        "Dinamica Plus ECAM370.50"
-      ],
+      "exclude_tokens": [],
       "pricerunner": [
-        "/pl/37-1304247071/Kaffemaskiner/DeLonghi-Dinamica-Plus-ECAM37085B-Sammenlign-Priser"
+        "/pl/82-3210610443/Kaffemaskiner/De-Longhi-Dinamica-Plus-ECAM380.95.TB-Sammenlign-Priser",
+        "/pl/82-3210028773/Kaffemaskiner/De-Longhi-ECAM380.85.SB-Sammenlign-Priser"
       ],
-      "prisjagt": [
-        12456789
-      ],
+      "prisjagt": [],
       "tier": "top",
       "target_price": 6500,
       "excellent_price": 5800,
@@ -28,7 +25,7 @@
       "reviews": [
         "https://www.rtings.com/home-appliances/reviews/delonghi/dinamica-plus-ecam370-85-b"
       ],
-      "review_summary": "Sistema LatteCrema automático para espuma de leche densa y temperatura ajustable. 13 recetas one-touch. Limpieza automática del circuito de leche. Molino cónico de 13 posiciones.",
+      "review_summary": "Sistema LatteCrema automático para espuma de leche densa y temperatura ajustable. 13+ recetas one-touch. Limpieza automática del circuito de leche. Molino cónico de 13 posiciones.",
       "pros": "Mejor espuma de leche automática del mercado, app Coffee Link, perfil de usuario, limpieza leche automática, diseño compacto",
       "cons": "Depósito de agua pequeño (1.8L), app a veces inestable, precio premium",
       "category": "coffee",
@@ -43,11 +40,9 @@
       ],
       "exclude_tokens": [],
       "pricerunner": [
-        "/pl/37-1332456789/Kaffemaskiner/DeLonghi-Rivelia-EXAM44055B-Sammenlign-Priser"
+        "/pl/82-3214856172/Kaffemaskiner/De-Longhi-Rivelia-Automatic-Bean-to-Cup-Sammenlign-Priser"
       ],
-      "prisjagt": [
-        12987654
-      ],
+      "prisjagt": [],
       "tier": "top",
       "target_price": 7500,
       "excellent_price": 6800,
@@ -74,11 +69,9 @@
         "4300"
       ],
       "pricerunner": [
-        "/pl/37-1289345678/Kaffemaskiner/Philips-5400-Series-EP544790-Sammenlign-Priser"
+        "/pl/82-5309706/Kaffemaskiner/Philips-Series-5400-EP5447-90-Sammenlign-Priser"
       ],
-      "prisjagt": [
-        11987654
-      ],
+      "prisjagt": [],
       "tier": "top",
       "target_price": 5500,
       "excellent_price": 4900,
@@ -94,9 +87,10 @@
     },
     {
       "key": "philips-4300-series",
-      "name": "Philips 4300 Series EP4347/90 (LatteGo, 8 recetas, AquaClean)",
+      "name": "Philips 4300 Series EP4346/71 (LatteGo, 8 recetas, AquaClean)",
       "match_tokens": [
         "4300 Series",
+        "EP4346",
         "EP4347",
         "LatteGo"
       ],
@@ -105,11 +99,9 @@
         "5400"
       ],
       "pricerunner": [
-        "/pl/37-1278345678/Kaffemaskiner/Philips-4300-Series-EP434790-Sammenlign-Priser"
+        "/pl/82-3395749891/Kaffemaskiner/Philips-Series-4300-EP4346-71-Sammenlign-Priser"
       ],
-      "prisjagt": [
-        11876543
-      ],
+      "prisjagt": [],
       "tier": "alternative",
       "target_price": 4500,
       "excellent_price": 4000,
@@ -123,86 +115,85 @@
     },
     {
       "key": "siemens-eq700",
-      "name": "Siemens EQ.700 TE757503DE (iAroma System, autoMilk, 13 recetas)",
+      "name": "Siemens EQ.700 TP715 / TQ715 (iAroma System, autoMilk, 13 recetas)",
       "match_tokens": [
         "EQ.700",
-        "TE757503",
-        "EQ700"
+        "EQ700",
+        "TP715",
+        "TQ715"
       ],
       "exclude_tokens": [
         "EQ.500",
         "EQ.300"
       ],
       "pricerunner": [
-        "/pl/37-1267345678/Kaffemaskiner/Siemens-EQ700-TE757503DE-Sammenlign-Priser"
+        "/pl/82-3329313775/Kaffemaskiner/Siemens-EQ700-TP715D01-Fuldautomatisk-Kaffemaskine-2-4-L-Sammenlign-Priser",
+        "/pl/82-3315919528/Kaffemaskiner/Siemens-EQ700-Inox-TQ715R03-Sammenlign-Priser"
       ],
-      "prisjagt": [
-        11765432
-      ],
+      "prisjagt": [],
       "tier": "top",
       "target_price": 7000,
       "excellent_price": 6300,
       "burnin_warranty": "2 años garantía Siemens/Bosch DK (grupo BSH)",
       "reviews": [],
       "review_summary": "Sistema iAroma para extracción óptima. autoMilk con recipiente leche integrado. 13 recetas. Molino cerámico. Conexión Home Connect.",
-      "pros": "Calidad de construcción alemana, autoMilk integrado (no recipiente externo), Home Connect completo, molienda silenciosa",
+      "pros": "Calidad de construcción alemana, autoMilk integrado, Home Connect completo, molienda silenciosa",
       "cons": "Precio alto, recipiente leche fijo (menos flexible), descalcificación más compleja",
       "category": "coffee",
       "category_name": "Cafeteras Superautomáticas"
     },
     {
       "key": "siemens-eq500",
-      "name": "Siemens EQ.500 TE505503DE (iAroma, autoMilk, 11 recetas, Home Connect)",
+      "name": "Siemens EQ.500 TP515 / TQ513 (iAroma, autoMilk, 11 recetas)",
       "match_tokens": [
         "EQ.500",
-        "TE505503",
-        "EQ500"
+        "EQ500",
+        "TP515",
+        "TQ513"
       ],
       "exclude_tokens": [
         "EQ.700",
         "EQ.300"
       ],
       "pricerunner": [
-        "/pl/37-1256345678/Kaffemaskiner/Siemens-EQ500-TE505503DE-Sammenlign-Priser"
+        "/pl/82-3304339288/Kaffemaskiner/Siemens-EQ.500-Classic-TP515R02-Sammenlign-Priser",
+        "/pl/82-3268598531/Kaffemaskiner/Siemens-TQ513R01-Sammenlign-Priser"
       ],
-      "prisjagt": [
-        11654321
-      ],
+      "prisjagt": [],
       "tier": "alternative",
       "target_price": 5500,
       "excellent_price": 4900,
       "burnin_warranty": "2 años garantía Siemens/Bosch DK",
       "reviews": [],
-      "review_summary": "Mismo sistema iAroma y autoMilk que EQ.700 pero menos recetas y pantalla TFT más pequeña. Mejor valor en gama Siemens.",
-      "pros": "Mismo motor y molienda que EQ.700, autoMilk integrado, Home Connect, precio más accesible",
+      "review_summary": "Mismo sistema iAroma y autoMilk que EQ.700 pero menos recetas y pantalla más compacta. Mejor valor en gama Siemens.",
+      "pros": "Mismo motor y molienda que EQ.700, autoMilk integrado, precio más accesible",
       "cons": "Pantalla más básica, 11 vs 13 recetas, recipiente agua 1.7L",
       "category": "coffee",
       "category_name": "Cafeteras Superautomáticas"
     },
     {
       "key": "melitta-ciaffeo-barista",
-      "name": "Melitta Caffeo Barista TS Smart F 850-102 (Dual Bean, Barista Assistant, 21 recetas)",
+      "name": "Melitta Caffeo Barista T Smart F831 (Dual Bean, Barista Assistant, 21 recetas)",
       "match_tokens": [
         "Caffeo Barista",
         "TS Smart",
+        "Barista T",
+        "F831",
         "F 850"
       ],
       "exclude_tokens": [
-        "Solo",
-        "Barista TS"
+        "Solo"
       ],
       "pricerunner": [
-        "/pl/37-1245345678/Kaffemaskiner/Melitta-Caffeo-Barista-TS-Smart-F850-Sammenlign-Priser"
+        "/pl/82-3532312152/Kaffemaskiner/Melitta-Caffeo-Barista-T-Smart-F831-101-Automatisk-Kaffemaskine-Sammenlign-Priser"
       ],
-      "prisjagt": [
-        11543210
-      ],
+      "prisjagt": [],
       "tier": "top",
       "target_price": 8000,
       "excellent_price": 7200,
       "burnin_warranty": "2 años garantía Melitta DK",
       "reviews": [],
-      "review_summary": "Doble tolva real (2x 250g) con selector. 21 recetas incluyendo cold brew. Asistente Barista para ajuste fino. Molino de acero silencioso. App Melitta Connect.",
+      "review_summary": "Doble tolva real con selector. 21 recetas incluyendo cold brew. Asistente Barista para ajuste fino. Molino de acero silencioso. App Melitta Connect.",
       "pros": "Única con doble tolva real en este rango, 21 recetas incl. cold brew, ajuste fino grano/temperatura/volumen, muy silenciosa",
       "cons": "Precio más alto, app a veces lenta, tamaño grande",
       "category": "coffee",
@@ -213,7 +204,8 @@
       "name": "Jura E8 Piano Black (P.E.P., Fine Foam, 17 recetas, J.O.E. app)",
       "match_tokens": [
         "Jura E8",
-        "E8 Piano"
+        "E8 Piano",
+        "E8"
       ],
       "exclude_tokens": [
         "E6",
@@ -221,11 +213,10 @@
         "Z10"
       ],
       "pricerunner": [
-        "/pl/37-1234345678/Kaffemaskiner/Jura-E8-Piano-Black-Sammenlign-Priser"
+        "/pl/82-3698958191/Kaffemaskiner/Jura-E8-%28ED%29-Piano-Black-Espressomaskine-3-kg-Sammenlign-Priser",
+        "/pl/82-3459013882/Kaffemaskiner/Jura-E8-ED-Espressomaskine-1.9-L-Sort-Sammenlign-Priser"
       ],
-      "prisjagt": [
-        11432109
-      ],
+      "prisjagt": [],
       "tier": "top",
       "target_price": 8500,
       "excellent_price": 7800,
@@ -242,7 +233,8 @@
       "name": "Jura E6 Piano Black (P.E.P., Fine Foam Light, 11 recetas, J.O.E. app)",
       "match_tokens": [
         "Jura E6",
-        "E6 Piano"
+        "E6 Piano",
+        "E6"
       ],
       "exclude_tokens": [
         "E8",
@@ -250,11 +242,9 @@
         "Z10"
       ],
       "pricerunner": [
-        "/pl/37-1223345678/Kaffemaskiner/Jura-E6-Piano-Black-Sammenlign-Priser"
+        "/pl/82-3694408674/Kaffemaskiner/Jura-E6-%28ED%29-Espressomaskine-med-Startpakke-DK-Sprog-Piano-Black-Sammenlign-Priser"
       ],
-      "prisjagt": [
-        11321098
-      ],
+      "prisjagt": [],
       "tier": "alternative",
       "target_price": 6000,
       "excellent_price": 5400,
@@ -268,9 +258,10 @@
     },
     {
       "key": "delonghi-magnifica-evo",
-      "name": "De'Longhi Magnifica Evo ECAM292.81.B (LatteCrema Hot, 7 recetas, molido cónico)",
+      "name": "De'Longhi Magnifica Evo ECAM290.61 (LatteCrema Hot, 7 recetas, molido cónico)",
       "match_tokens": [
         "Magnifica Evo",
+        "ECAM290",
         "ECAM292"
       ],
       "exclude_tokens": [
@@ -278,11 +269,9 @@
         "Magnifica Start"
       ],
       "pricerunner": [
-        "/pl/37-1212345678/Kaffemaskiner/DeLonghi-Magnifica-Evo-ECAM29281B-Sammenlign-Priser"
+        "/pl/82-3200491154/Kaffemaskiner/DeLonghi-Magnifica-Evo-ECAM290.61-Sammenlign-Priser"
       ],
-      "prisjagt": [
-        11210987
-      ],
+      "prisjagt": [],
       "tier": "alternative",
       "target_price": 4000,
       "excellent_price": 3500,
