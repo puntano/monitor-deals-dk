@@ -196,136 +196,6 @@
       "cons": "Soporte FSR en lugar de NVIDIA DLSS para juegos que dependan de Frame Gen propietario"
     },
     {
-      "key": "gpu-rtx-4080-super",
-      "name": "NVIDIA GeForce RTX 4080 SUPER 16GB (Ada Lovelace, DLSS 3.5)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "4080 SUPER",
-        "4080SUPER"
-      ],
-      "exclude_tokens": [
-        "4090",
-        "4070",
-        "DESKTOP",
-        "STATIONAER",
-        "GAMING PC"
-      ],
-      "pricerunner": [],
-      "prisjagt": [],
-      "store_links": [
-        {
-          "name": "Proshop.dk (Buscar stock)",
-          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4080-super"
-        },
-        {
-          "name": "Komplett.dk",
-          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
-        },
-        {
-          "name": "ComputerSalg",
-          "url": "https://www.computersalg.dk/c/37/grafikkort"
-        }
-      ],
-      "tier": "top",
-      "target_price": 7600,
-      "excellent_price": 7200,
-      "burnin_warranty": "3 años de garantía oficial de fabricante.",
-      "reviews": [
-        "https://www.techpowerup.com/review/nvidia-geforce-rtx-4080-super-founders-edition/"
-      ],
-      "review_summary": "Referencia consolidada para 4K: potencia probada en todos los títulos AAA con DLSS 3.5 y Ray Reconstruction.",
-      "pros": "Excelente estabilidad de drivers, rendimiento formidable en 4K, 16GB GDDR6X",
-      "cons": "DisplayPort 1.4a con DSC (no DP 2.1 nativo); stock en transición por la llegada de la serie 50"
-    },
-    {
-      "key": "gpu-rtx-4070-ti-super",
-      "name": "NVIDIA GeForce RTX 4070 Ti SUPER 16GB (Ada Lovelace, 285W)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "4070 Ti SUPER",
-        "4070Ti SUPER",
-        "4070 Ti S"
-      ],
-      "exclude_tokens": [
-        "4070 SUPER",
-        "4080",
-        "DESKTOP",
-        "STATIONAER",
-        "GAMING PC"
-      ],
-      "pricerunner": [],
-      "prisjagt": [],
-      "store_links": [
-        {
-          "name": "Proshop.dk",
-          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4070-ti-super"
-        },
-        {
-          "name": "Komplett.dk",
-          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
-        },
-        {
-          "name": "ComputerSalg",
-          "url": "https://www.computersalg.dk/c/37/grafikkort"
-        }
-      ],
-      "tier": "top",
-      "target_price": 6300,
-      "excellent_price": 5900,
-      "burnin_warranty": "3 años de garantía estándar.",
-      "reviews": [
-        "https://www.techpowerup.com/review/asus-geforce-rtx-4070-ti-super-tuf/"
-      ],
-      "review_summary": "Punto de entrada de 16GB en la generación 40: chip AD103, 256 bits de bus y consumo moderado de 285W.",
-      "pros": "16GB de VRAM, consumo comedido compatible con fuentes de 750W de calidad, DLSS 3",
-      "cons": "~18% menor rendimiento que 4080 Super en 4K"
-    },
-    {
-      "key": "gpu-rx-7900-xtx",
-      "name": "AMD Radeon RX 7900 XTX 24GB (RDNA 3, 24GB VRAM)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "7900 XTX",
-        "7900XTX"
-      ],
-      "exclude_tokens": [
-        "7900 XT",
-        "7900 GRE",
-        "DESKTOP",
-        "STATIONAER",
-        "GAMING PC"
-      ],
-      "pricerunner": [],
-      "prisjagt": [],
-      "store_links": [
-        {
-          "name": "Proshop.dk",
-          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-7900-xtx"
-        },
-        {
-          "name": "Komplett.dk",
-          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
-        },
-        {
-          "name": "ComputerSalg",
-          "url": "https://www.computersalg.dk/c/37/grafikkort"
-        }
-      ],
-      "tier": "alternative",
-      "target_price": 7200,
-      "excellent_price": 6800,
-      "burnin_warranty": "2-3 años de garantía del fabricante (Sapphire, ASUS, PowerColor).",
-      "reviews": [
-        "https://www.techpowerup.com/review/amd-radeon-rx-7900-xtx/"
-      ],
-      "review_summary": "Monstruo de rasterización con 24GB de VRAM y DisplayPort 2.1. Excepcional para desarrollo e inferencia local de modelos de IA (Llama, DeepSeek) sin saturar memoria.",
-      "pros": "24GB VRAM masiva (inigualable a este rango de precio), DisplayPort 2.1 nativo, gran potencia raster",
-      "cons": "Menor rendimiento en Ray Tracing intensivo y consumo eléctrico en reposo algo más elevado"
-    },
-    {
       "key": "gpu-rtx-5090",
       "name": "NVIDIA GeForce RTX 5090 32GB GDDR7 (Blackwell Halo Flagship, DP 2.1 UHBR20)",
       "category": "gpus",
@@ -386,7 +256,9 @@
         "STATIONAER",
         "GAMING PC"
       ],
-      "pricerunner": [],
+      "pricerunner": [
+        "/pl/37-3398337160/Grafikkort/Acer-Predator-BiFrost-AMD-Radeon-RX-9070-OC-3xDP1xHDMI-16GB-GDDR6-Sammenlign-Priser"
+      ],
       "prisjagt": [],
       "store_links": [
         {
@@ -409,5 +281,140 @@
     }
   ],
   "discovery_queries": [],
-  "discovery_ignore_ids": []
+  "discovery_ignore_ids": [],
+  "paused_models": [
+    {
+      "key": "gpu-rtx-4080-super",
+      "name": "NVIDIA GeForce RTX 4080 SUPER 16GB (Ada Lovelace, DLSS 3.5)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "4080 SUPER",
+        "4080SUPER"
+      ],
+      "exclude_tokens": [
+        "4090",
+        "4070",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk (Buscar stock)",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4080-super"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
+      ],
+      "tier": "top",
+      "target_price": 7600,
+      "excellent_price": 7200,
+      "burnin_warranty": "3 años de garantía oficial de fabricante.",
+      "reviews": [
+        "https://www.techpowerup.com/review/nvidia-geforce-rtx-4080-super-founders-edition/"
+      ],
+      "review_summary": "Referencia consolidada para 4K: potencia probada en todos los títulos AAA con DLSS 3.5 y Ray Reconstruction.",
+      "pros": "Excelente estabilidad de drivers, rendimiento formidable en 4K, 16GB GDDR6X",
+      "cons": "DisplayPort 1.4a con DSC (no DP 2.1 nativo); stock en transición por la llegada de la serie 50",
+      "paused_reason": "Sin resultados en PriceRunner DK (2026-11-09): generacion anterior descatalogada."
+    },
+    {
+      "key": "gpu-rtx-4070-ti-super",
+      "name": "NVIDIA GeForce RTX 4070 Ti SUPER 16GB (Ada Lovelace, 285W)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "4070 Ti SUPER",
+        "4070Ti SUPER",
+        "4070 Ti S"
+      ],
+      "exclude_tokens": [
+        "4070 SUPER",
+        "4080",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4070-ti-super"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
+      ],
+      "tier": "top",
+      "target_price": 6300,
+      "excellent_price": 5900,
+      "burnin_warranty": "3 años de garantía estándar.",
+      "reviews": [
+        "https://www.techpowerup.com/review/asus-geforce-rtx-4070-ti-super-tuf/"
+      ],
+      "review_summary": "Punto de entrada de 16GB en la generación 40: chip AD103, 256 bits de bus y consumo moderado de 285W.",
+      "pros": "16GB de VRAM, consumo comedido compatible con fuentes de 750W de calidad, DLSS 3",
+      "cons": "~18% menor rendimiento que 4080 Super en 4K",
+      "paused_reason": "Sin resultados en PriceRunner DK (2026-11-09): generacion anterior descatalogada."
+    },
+    {
+      "key": "gpu-rx-7900-xtx",
+      "name": "AMD Radeon RX 7900 XTX 24GB (RDNA 3, 24GB VRAM)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "7900 XTX",
+        "7900XTX"
+      ],
+      "exclude_tokens": [
+        "7900 XT",
+        "7900 GRE",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-7900-xtx"
+        },
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "ComputerSalg",
+          "url": "https://www.computersalg.dk/c/37/grafikkort"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 7200,
+      "excellent_price": 6800,
+      "burnin_warranty": "2-3 años de garantía del fabricante (Sapphire, ASUS, PowerColor).",
+      "reviews": [
+        "https://www.techpowerup.com/review/amd-radeon-rx-7900-xtx/"
+      ],
+      "review_summary": "Monstruo de rasterización con 24GB de VRAM y DisplayPort 2.1. Excepcional para desarrollo e inferencia local de modelos de IA (Llama, DeepSeek) sin saturar memoria.",
+      "pros": "24GB VRAM masiva (inigualable a este rango de precio), DisplayPort 2.1 nativo, gran potencia raster",
+      "cons": "Menor rendimiento en Ray Tracing intensivo y consumo eléctrico en reposo algo más elevado",
+      "paused_reason": "Sin resultados en PriceRunner DK (2026-11-09): generacion anterior descatalogada."
+    }
+  ]
 }

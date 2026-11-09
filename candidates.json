@@ -562,39 +562,6 @@
       "cons": "En preventa/pedido por alta demanda en Proshop"
     },
     {
-      "key": "pc-sharkgaming-rgbeast-5080",
-      "name": "SharkGaming RGBeast 5080 (AMD Ryzen 7 9800X3D / RTX 5080 16GB / 32GB DDR5 / 2TB SSD)",
-      "category": "desktops",
-      "category_name": "Equipos Completos",
-      "match_tokens": [
-        "RGBeast 5080",
-        "Shark Gaming RGBeast"
-      ],
-      "exclude_tokens": [
-        "Mini"
-      ],
-      "pricerunner": [],
-      "prisjagt": [],
-      "store_links": [
-        {
-          "name": "SharkGaming RGBeast (Oficial)",
-          "url": "https://sharkgaming.dk/gaming-computere/stationaer-gaming-pc"
-        },
-        {
-          "name": "SharkGaming Forside",
-          "url": "https://sharkgaming.dk/gaming-computere"
-        }
-      ],
-      "tier": "top",
-      "target_price": 23749,
-      "excellent_price": 22499,
-      "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
-      "reviews": [],
-      "review_summary": "Monstruo gaming de SharkGaming en Herlev: combina Ryzen 7 9800X3D con RTX 5080 de 16GB GDDR7, refrigeración líquida y 2TB SSD.",
-      "pros": "Rendimiento tope de gama para 4K 240Hz, refrigeración líquida, montaje danés",
-      "cons": "Presupuesto alto"
-    },
-    {
       "key": "pc-topdata-highline-9800x3d-5070",
       "name": "Topdata High-Line Gaming (AMD Ryzen 7 9800X3D / RTX 5070 12GB / 16GB DDR5 / 1TB SSD)",
       "category": "desktops",
@@ -653,6 +620,78 @@
       "review_summary": "Excelente opcion preconfigurada danesa de Foniks Computer con 3 anos de garantia completa, 32GB DDR5 de serie y tarjeta grafica RTX 5070.",
       "pros": "3 anos de garantia local danesa, 32GB DDR5 de serie, tiendas fisicas en Frederiksberg y Tilst",
       "cons": "Un poco mas costoso por el servicio de garantia extendida de 3 anos"
+    },
+    {
+      "key": "pc-sharkgaming-rgbeast-r710",
+      "name": "SharkGaming RGBeast R710 (AMD Ryzen 7 / RTX 5070 / configuracion exacta de CPU, RAM y SSD a verificar en la tienda)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "RGBeast R710",
+        "Rgbeast R710"
+      ],
+      "exclude_tokens": [
+        "Mini"
+      ],
+      "pricerunner": [
+        "/pl/223-3456108542/Stationaere-computere/Shark-Gaming-RGBeast-R710-PC-RTX-5070-Ryzen-7-9700X-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "SharkGaming RGBeast (Oficial)",
+          "url": "https://sharkgaming.dk/gaming-computere/stationaer-gaming-pc"
+        },
+        {
+          "name": "SharkGaming Forside",
+          "url": "https://sharkgaming.dk/gaming-computere"
+        }
+      ],
+      "tier": "watch",
+      "target_price": 15700,
+      "excellent_price": 14900,
+      "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
+      "reviews": [],
+      "review_summary": "PC gaming ensamblado danes con RTX 5070. Ojo: las tiendas listan CPU distinta (9700X vs 9800X3D); confirmar la configuracion antes de comprar.",
+      "pros": "RTX 5070 12GB, ensamblado y garantia en Dinamarca, precio desde ~16.500 DKK",
+      "cons": "CPU/RAM/SSD no coinciden entre tiendas: verificar ficha exacta. Pocas tiendas lo venden (Magasin, MaxGaming)",
+      "direct_urls": []
+    },
+    {
+      "key": "pc-sharkgaming-rgbeast-9070xt",
+      "name": "SharkGaming RGBeast 9070 XT (AMD Ryzen 7 / Radeon RX 9070 XT 16GB / RAM y SSD a verificar en la tienda)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "RGBeast 9070 XT",
+        "Rgbeast 9070 XT"
+      ],
+      "exclude_tokens": [
+        "Mini"
+      ],
+      "pricerunner": [
+        "/pl/223-3457699627/Stationaere-computere/Shark-Gaming-RGBeast-9070-XT-PC-Ryzen-7-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "SharkGaming RGBeast (Oficial)",
+          "url": "https://sharkgaming.dk/gaming-computere/stationaer-gaming-pc"
+        },
+        {
+          "name": "SharkGaming Forside",
+          "url": "https://sharkgaming.dk/gaming-computere"
+        }
+      ],
+      "tier": "watch",
+      "target_price": 18999,
+      "excellent_price": 18000,
+      "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
+      "reviews": [],
+      "review_summary": "PC gaming ensamblado danes con RX 9070 XT de 16GB. CDON lo lista con Ryzen 7 9800X3D / X870; confirmar la configuracion exacta antes de comprar.",
+      "pros": "RX 9070 XT 16GB con DP 2.1 nativo, ensamblado y garantia en Dinamarca, desde ~20.000 DKK",
+      "cons": "Configuracion exacta a verificar; pocas tiendas (Magasin, MaxGaming, CDON)",
+      "direct_urls": []
     },
     {
       "key": "gpu-rtx-5080",
@@ -846,136 +885,6 @@
       "cons": "Soporte FSR en lugar de NVIDIA DLSS para juegos que dependan de Frame Gen propietario"
     },
     {
-      "key": "gpu-rtx-4080-super",
-      "name": "NVIDIA GeForce RTX 4080 SUPER 16GB (Ada Lovelace, DLSS 3.5)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "4080 SUPER",
-        "4080SUPER"
-      ],
-      "exclude_tokens": [
-        "4090",
-        "4070",
-        "DESKTOP",
-        "STATIONAER",
-        "GAMING PC"
-      ],
-      "pricerunner": [],
-      "prisjagt": [],
-      "store_links": [
-        {
-          "name": "Proshop.dk (Buscar stock)",
-          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4080-super"
-        },
-        {
-          "name": "Komplett.dk",
-          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
-        },
-        {
-          "name": "ComputerSalg",
-          "url": "https://www.computersalg.dk/c/37/grafikkort"
-        }
-      ],
-      "tier": "top",
-      "target_price": 7600,
-      "excellent_price": 7200,
-      "burnin_warranty": "3 años de garantía oficial de fabricante.",
-      "reviews": [
-        "https://www.techpowerup.com/review/nvidia-geforce-rtx-4080-super-founders-edition/"
-      ],
-      "review_summary": "Referencia consolidada para 4K: potencia probada en todos los títulos AAA con DLSS 3.5 y Ray Reconstruction.",
-      "pros": "Excelente estabilidad de drivers, rendimiento formidable en 4K, 16GB GDDR6X",
-      "cons": "DisplayPort 1.4a con DSC (no DP 2.1 nativo); stock en transición por la llegada de la serie 50"
-    },
-    {
-      "key": "gpu-rtx-4070-ti-super",
-      "name": "NVIDIA GeForce RTX 4070 Ti SUPER 16GB (Ada Lovelace, 285W)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "4070 Ti SUPER",
-        "4070Ti SUPER",
-        "4070 Ti S"
-      ],
-      "exclude_tokens": [
-        "4070 SUPER",
-        "4080",
-        "DESKTOP",
-        "STATIONAER",
-        "GAMING PC"
-      ],
-      "pricerunner": [],
-      "prisjagt": [],
-      "store_links": [
-        {
-          "name": "Proshop.dk",
-          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=geforce-rtx-4070-ti-super"
-        },
-        {
-          "name": "Komplett.dk",
-          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
-        },
-        {
-          "name": "ComputerSalg",
-          "url": "https://www.computersalg.dk/c/37/grafikkort"
-        }
-      ],
-      "tier": "top",
-      "target_price": 6300,
-      "excellent_price": 5900,
-      "burnin_warranty": "3 años de garantía estándar.",
-      "reviews": [
-        "https://www.techpowerup.com/review/asus-geforce-rtx-4070-ti-super-tuf/"
-      ],
-      "review_summary": "Punto de entrada de 16GB en la generación 40: chip AD103, 256 bits de bus y consumo moderado de 285W.",
-      "pros": "16GB de VRAM, consumo comedido compatible con fuentes de 750W de calidad, DLSS 3",
-      "cons": "~18% menor rendimiento que 4080 Super en 4K"
-    },
-    {
-      "key": "gpu-rx-7900-xtx",
-      "name": "AMD Radeon RX 7900 XTX 24GB (RDNA 3, 24GB VRAM)",
-      "category": "gpus",
-      "category_name": "Tarjetas Gráficas",
-      "match_tokens": [
-        "7900 XTX",
-        "7900XTX"
-      ],
-      "exclude_tokens": [
-        "7900 XT",
-        "7900 GRE",
-        "DESKTOP",
-        "STATIONAER",
-        "GAMING PC"
-      ],
-      "pricerunner": [],
-      "prisjagt": [],
-      "store_links": [
-        {
-          "name": "Proshop.dk",
-          "url": "https://www.proshop.dk/Grafikkort?f~grafikkort_grafikprocessorproducent=amd-radeon-rx-7900-xtx"
-        },
-        {
-          "name": "Komplett.dk",
-          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
-        },
-        {
-          "name": "ComputerSalg",
-          "url": "https://www.computersalg.dk/c/37/grafikkort"
-        }
-      ],
-      "tier": "alternative",
-      "target_price": 7200,
-      "excellent_price": 6800,
-      "burnin_warranty": "2-3 años de garantía del fabricante (Sapphire, ASUS, PowerColor).",
-      "reviews": [
-        "https://www.techpowerup.com/review/amd-radeon-rx-7900-xtx/"
-      ],
-      "review_summary": "Monstruo de rasterización con 24GB de VRAM y DisplayPort 2.1. Excepcional para desarrollo e inferencia local de modelos de IA (Llama, DeepSeek) sin saturar memoria.",
-      "pros": "24GB VRAM masiva (inigualable a este rango de precio), DisplayPort 2.1 nativo, gran potencia raster",
-      "cons": "Menor rendimiento en Ray Tracing intensivo y consumo eléctrico en reposo algo más elevado"
-    },
-    {
       "key": "gpu-rtx-5090",
       "name": "NVIDIA GeForce RTX 5090 32GB GDDR7 (Blackwell Halo Flagship, DP 2.1 UHBR20)",
       "category": "gpus",
@@ -1036,7 +945,9 @@
         "STATIONAER",
         "GAMING PC"
       ],
-      "pricerunner": [],
+      "pricerunner": [
+        "/pl/37-3398337160/Grafikkort/Acer-Predator-BiFrost-AMD-Radeon-RX-9070-OC-3xDP1xHDMI-16GB-GDDR6-Sammenlign-Priser"
+      ],
       "prisjagt": [],
       "store_links": [
         {

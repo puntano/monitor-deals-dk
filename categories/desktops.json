@@ -285,39 +285,6 @@
       "cons": "En preventa/pedido por alta demanda en Proshop"
     },
     {
-      "key": "pc-sharkgaming-rgbeast-5080",
-      "name": "SharkGaming RGBeast 5080 (AMD Ryzen 7 9800X3D / RTX 5080 16GB / 32GB DDR5 / 2TB SSD)",
-      "category": "desktops",
-      "category_name": "Equipos Completos",
-      "match_tokens": [
-        "RGBeast 5080",
-        "Shark Gaming RGBeast"
-      ],
-      "exclude_tokens": [
-        "Mini"
-      ],
-      "pricerunner": [],
-      "prisjagt": [],
-      "store_links": [
-        {
-          "name": "SharkGaming RGBeast (Oficial)",
-          "url": "https://sharkgaming.dk/gaming-computere/stationaer-gaming-pc"
-        },
-        {
-          "name": "SharkGaming Forside",
-          "url": "https://sharkgaming.dk/gaming-computere"
-        }
-      ],
-      "tier": "top",
-      "target_price": 23749,
-      "excellent_price": 22499,
-      "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
-      "reviews": [],
-      "review_summary": "Monstruo gaming de SharkGaming en Herlev: combina Ryzen 7 9800X3D con RTX 5080 de 16GB GDDR7, refrigeración líquida y 2TB SSD.",
-      "pros": "Rendimiento tope de gama para 4K 240Hz, refrigeración líquida, montaje danés",
-      "cons": "Presupuesto alto"
-    },
-    {
       "key": "pc-topdata-highline-9800x3d-5070",
       "name": "Topdata High-Line Gaming (AMD Ryzen 7 9800X3D / RTX 5070 12GB / 16GB DDR5 / 1TB SSD)",
       "category": "desktops",
@@ -376,6 +343,78 @@
       "review_summary": "Excelente opcion preconfigurada danesa de Foniks Computer con 3 anos de garantia completa, 32GB DDR5 de serie y tarjeta grafica RTX 5070.",
       "pros": "3 anos de garantia local danesa, 32GB DDR5 de serie, tiendas fisicas en Frederiksberg y Tilst",
       "cons": "Un poco mas costoso por el servicio de garantia extendida de 3 anos"
+    },
+    {
+      "key": "pc-sharkgaming-rgbeast-r710",
+      "name": "SharkGaming RGBeast R710 (AMD Ryzen 7 / RTX 5070 / configuracion exacta de CPU, RAM y SSD a verificar en la tienda)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "RGBeast R710",
+        "Rgbeast R710"
+      ],
+      "exclude_tokens": [
+        "Mini"
+      ],
+      "pricerunner": [
+        "/pl/223-3456108542/Stationaere-computere/Shark-Gaming-RGBeast-R710-PC-RTX-5070-Ryzen-7-9700X-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "SharkGaming RGBeast (Oficial)",
+          "url": "https://sharkgaming.dk/gaming-computere/stationaer-gaming-pc"
+        },
+        {
+          "name": "SharkGaming Forside",
+          "url": "https://sharkgaming.dk/gaming-computere"
+        }
+      ],
+      "tier": "watch",
+      "target_price": 15700,
+      "excellent_price": 14900,
+      "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
+      "reviews": [],
+      "review_summary": "PC gaming ensamblado danes con RTX 5070. Ojo: las tiendas listan CPU distinta (9700X vs 9800X3D); confirmar la configuracion antes de comprar.",
+      "pros": "RTX 5070 12GB, ensamblado y garantia en Dinamarca, precio desde ~16.500 DKK",
+      "cons": "CPU/RAM/SSD no coinciden entre tiendas: verificar ficha exacta. Pocas tiendas lo venden (Magasin, MaxGaming)",
+      "direct_urls": []
+    },
+    {
+      "key": "pc-sharkgaming-rgbeast-9070xt",
+      "name": "SharkGaming RGBeast 9070 XT (AMD Ryzen 7 / Radeon RX 9070 XT 16GB / RAM y SSD a verificar en la tienda)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "RGBeast 9070 XT",
+        "Rgbeast 9070 XT"
+      ],
+      "exclude_tokens": [
+        "Mini"
+      ],
+      "pricerunner": [
+        "/pl/223-3457699627/Stationaere-computere/Shark-Gaming-RGBeast-9070-XT-PC-Ryzen-7-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "SharkGaming RGBeast (Oficial)",
+          "url": "https://sharkgaming.dk/gaming-computere/stationaer-gaming-pc"
+        },
+        {
+          "name": "SharkGaming Forside",
+          "url": "https://sharkgaming.dk/gaming-computere"
+        }
+      ],
+      "tier": "watch",
+      "target_price": 18999,
+      "excellent_price": 18000,
+      "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
+      "reviews": [],
+      "review_summary": "PC gaming ensamblado danes con RX 9070 XT de 16GB. CDON lo lista con Ryzen 7 9800X3D / X870; confirmar la configuracion exacta antes de comprar.",
+      "pros": "RX 9070 XT 16GB con DP 2.1 nativo, ensamblado y garantia en Dinamarca, desde ~20.000 DKK",
+      "cons": "Configuracion exacta a verificar; pocas tiendas (Magasin, MaxGaming, CDON)",
+      "direct_urls": []
     }
   ],
   "discovery_queries": [],
