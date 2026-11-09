@@ -384,6 +384,33 @@ def parse_direct_store(html, url, default_merchant=None):
                 "stock": "IN_STOCK",
                 "url": url
             }
+    # Fallback para Microdata / OpenGraph (Topdata, Føniks, etc.)
+    p_meta = re.search(r'<meta\s+(?:itemprop=["\']price["\']|property=["\']product:price:amount["\'])\s+content=["\']([0-9.]+)["\']', html, re.I)
+    if not p_meta:
+        p_meta = re.search(r'<meta\s+content=["\']([0-9.]+)["\']\s+(?:itemprop=["\']price["\']|property=["\']product:price:amount["\'])', html, re.I)
+    if p_meta:
+        price_val = float(p_meta.group(1))
+        title_m = re.search(r'<meta\s+property=["\']og:title["\']\s+content=["\']([^"\']+)["\']', html, re.I)
+        if not title_m:
+            title_m = re.search(r'<h1[^>]*>([^<]+)</h1>', html)
+        title_val = title_m.group(1).strip() if title_m else "Store Product"
+        if "topdata.dk" in url:
+            merchant = "Topdata"
+        elif "fcomputer.dk" in url:
+            merchant = "Føniks Computer"
+        else:
+            merchant = default_merchant or urllib.parse.urlparse(url).netloc.replace("www.", "")
+        return {
+            "merchant": merchant,
+            "title": title_val,
+            "price": price_val,
+            "regular": price_val,
+            "campaign": None,
+            "camp_end": None,
+            "shipping": 0.0,
+            "stock": "IN_STOCK",
+            "url": url
+        }
     return None
 
 
@@ -537,8 +564,12 @@ def process_model(ctx, model):
     best = trusted[0] if trusted else None
     best_is = in_stock[0] if in_stock else None
 
+    # Historial de observaciones para madurez del modelo
+    n_days_tracked = len(own) + (1 if best else 0)
+
     res = {"model": model, "pr_ok": pr_ok, "offers": offers, "trusted": trusted, "best": best,
            "best_in_stock": best_is, "ref_min": ref_min, "median": median, "n_hist": len(pj_prices),
+           "n_days_tracked": n_days_tracked,
            "tracked_since": tracked_since, "prev": prev, "grade": None, "reason": "", "anomalies": []}
 
     # Anomalias: precios muy por debajo de la mediana (posible error o listado erroneo)
@@ -554,7 +585,7 @@ def process_model(ctx, model):
         res["grade"] = "-"
         res["reason"] = "Sin ofertas fiables disponibles hoy en PriceRunner (consulta correcta)."
     else:
-        res["grade"], res["reason"] = grade(model, best, ref_min, median)
+        res["grade"], res["reason"] = grade(model, best, ref_min, median, n_days_tracked=n_days_tracked)
 
     con.execute("""INSERT OR REPLACE INTO model_daily VALUES(?,?,?,?,?,?,?,?,?,?,?,?)""",
                 (RUN_DATE, key, best and best["total"], best and best["price"], best and best["merchant"],
@@ -564,22 +595,34 @@ def process_model(ctx, model):
     return res
 
 
-def grade(model, best, ref_min, median):
+def grade(model, best, ref_min, median, n_days_tracked=1):
     p = best["total"] if best["total"] is not None else best["price"]
-    tier = model["tier"]
-    tgt, exc = model["target_price"], model["excellent_price"]
+    tier = model.get("tier", "alternative")
+    tgt, exc = model.get("target_price"), model.get("excellent_price")
     new_low = ref_min is not None and best["price"] < ref_min * 0.99
+
+    # Si el modelo es muy nuevo y aún no tiene historial comprobado (menos de 3 días) ni referencia de Prisjagt,
+    # no asignamos A directa para evitar falsas alarmas con errores de scraping o targets iniciales no calibrados.
+    has_mature_baseline = (median is not None) or (ref_min is not None) or (n_days_tracked >= 3)
+
     if tier == "not_recommended":
-        if p <= exc:
+        if exc and p <= exc:
             return "C", f"Precio muy bajo ({fmt_dkk(p)}), pero el modelo no esta recomendado para tu perfil."
         return "D", "Modelo no recomendado (alternativas mejores por precio/garantia/pruebas)."
-    if p <= exc or (p <= tgt and new_low):
+    if exc and p <= exc:
+        if not has_mature_baseline:
+            g = "B"
+            r = f"{fmt_dkk(p)} bajo precio excelente estimado {fmt_dkk(exc)} (en calibración inicial: requiere 3 días de datos para clase A)"
+        else:
+            g = "A"
+            r = f"{fmt_dkk(p)} <= precio excelente {fmt_dkk(exc)}"
+    elif tgt and new_low and p <= tgt:
         g = "A"
-        r = f"{fmt_dkk(p)} <= precio excelente {fmt_dkk(exc)}" if p <= exc else \
-            f"{fmt_dkk(p)} bajo objetivo y nuevo minimo del periodo observado"
-    elif p <= tgt:
+        r = f"{fmt_dkk(p)} bajo objetivo y nuevo minimo del periodo observado"
+    elif tgt and p <= tgt:
         g, r = "B", f"{fmt_dkk(p)} <= precio objetivo {fmt_dkk(tgt)}"
-    elif ref_min and best["price"] <= ref_min * 1.02 and tier in ("top", "alternative"):
+    elif ref_min and median and ref_min < median * 0.95 and best["price"] <= ref_min * 1.02 and tier in ("top", "alternative"):
+        # Solo califica como B si el mínimo es un descuento real frente a la mediana histórica, no un precio plano estático
         g, r = "B", f"Precio en el minimo observado (~3 meses: {fmt_dkk(ref_min)}), aunque sobre el objetivo {fmt_dkk(tgt)}"
     elif median and best["price"] <= median * 1.03:
         g, r = "C", f"Precio habitual (mediana ~3 meses {fmt_dkk(median)}); objetivo {fmt_dkk(tgt)}"
@@ -656,14 +699,24 @@ def evaluate_alerts(ctx):
         if not res["pr_ok"]:
             continue
         cat = m.get("category", "monitors")
-        cat_badge = "[GPU] " if cat == "gpus" else ("[PC] " if cat == "desktops" else "[Monitor] ")
+        cat_badge = {"gpus": "[GPU] ", "desktops": "[PC] ", "coffee": "[Café] ", "monitors": "[Monitor] "}.get(cat, f"[{cat}] ")
         short_n = m["name"].split("(")[0].strip()
         # Oferta A/B (objetivo alcanzado / excelente)
-        if b and res["grade"] in ("A", "B"):
-            msg, link = build_deal_message(res, "precio objetivo/oferta")
-            title = f"{cat_badge}[{res['grade']}] {short_n} {fmt_dkk(b['total'])} @ {b['merchant']}"
-            maybe_alert(ctx, f"deal|{key}", "DEAL", key, b["price"], title, msg,
-                        priority=5 if res["grade"] == "A" else 4, click=link)
+        bi = res.get("best_in_stock")
+        gi_, ri_ = (grade(m, bi, res["ref_min"], res["median"], n_days_tracked=res.get("n_days_tracked", 1))
+                    if bi else (None, ""))
+        if bi and gi_ in ("A", "B"):
+            # Alerta principal: solo ofertas con stock real
+            r2 = dict(res, best=bi, grade=gi_, reason=ri_)
+            msg, link = build_deal_message(r2, "precio objetivo/oferta, en stock")
+            title = f"{cat_badge}[{gi_}] {short_n} {fmt_dkk(bi['total'])} @ {bi['merchant']}"
+            maybe_alert(ctx, f"deal|{key}", "DEAL", key, bi["price"], title, msg,
+                        priority=5 if gi_ == "A" else 4, click=link)
+        elif b and res["grade"] in ("A", "B"):
+            # Oferta buena pero solo bajo pedido / sin stock inmediato: aviso de baja prioridad
+            msg, link = build_deal_message(res, f"BAJO PEDIDO ({b['stock']}), sin stock inmediato")
+            title = f"{cat_badge}[{res['grade']}*] {short_n} {fmt_dkk(b['total'])} @ {b['merchant']} (bajo pedido)"
+            maybe_alert(ctx, f"deal|{key}", "DEAL", key, b["price"], title, msg, priority=2, click=link)
         else:
             # salio de la zona objetivo -> permitir alertar de nuevo si vuelve a entrar
             con.execute("DELETE FROM alert_state WHERE alert_key=?", (f"deal|{key}",))
@@ -696,21 +749,28 @@ def discover(ctx, cand):
                 tracked.add(mm.group(1))
     baseline = con.execute("SELECT COUNT(*) FROM discovered_products").fetchone()[0] == 0
     new_items = []
-    for q in cand["discovery_queries"]:
-        url = "https://www.pricerunner.dk/results?q=" + urllib.parse.quote(q)
+    for q in cand.get("discovery_queries", []):
+        # Si la query es una URL directa de categoría (ej: /cl/25/Skaerme), la consultamos directamente
+        if q.startswith("http") or q.startswith("/cl/"):
+            url = q if q.startswith("http") else "https://www.pricerunner.dk" + q
+        else:
+            # PriceRunner bloquea /results?q= con 202 anti-bot; solo consultamos si está habilitado o probamos categoría
+            continue
         try:
-            html = http_get(url, min_len=20000)
+            html = http_get(url, min_len=15000)
             ctx.ok += 1
-            for pid, slug in re.findall(r"/pl/25-(\d+)/Skaerme/([^\"'\s<>?]+)", html):
+            for pid, slug in re.findall(r"/pl/\d+-(\d+)/[^/]+/([^\"'\s<>?]+)", html):
                 if pid in tracked:
                     continue
                 s = slug.lower()
-                if "oled" not in s:
-                    continue
-                if not re.search(r"(^|-)(32|31[.,]?5|315)(-|$|inch|zoll|\")|-32-|32-inch|31\.5", s) and not re.search(r"32[a-z]", s):
-                    continue
-                if re.search(r"(^|-)(27|34|39|42|45|48|49)(-|$)", s):
-                    continue
+                # Filtrar monitores OLED 32" si estamos en Skaerme
+                if "skaerme" in url.lower():
+                    if "oled" not in s:
+                        continue
+                    if not re.search(r"(^|-)(32|31[.,]?5|315)(-|$|inch|zoll|\")|-32-|32-inch|31\.5", s) and not re.search(r"32[a-z]", s):
+                        continue
+                    if re.search(r"(^|-)(27|34|39|42|45|48|49)(-|$)", s):
+                        continue
                 path = f"/pl/25-{pid}/Skaerme/{slug}"
                 cur = con.execute("INSERT OR IGNORE INTO discovered_products VALUES(?,?,?,?,?)",
                                   (pid, slug.replace("-Sammenlign-Priser", "").replace("-", " "), path, RUN_DATE, int(baseline)))
@@ -854,7 +914,7 @@ def write_report(ctx, new_reviews):
     tier_order = {"top": 0, "alternative": 1, "watch": 2, "not_recommended": 3, "budget": 1}
     res_sorted = sorted(ctx.model_results.values(), key=lambda r: (order.get(r["grade"], 9),
                         tier_order.get(r["model"].get("tier", "alternative"), 1)))
-    L = [f"# Informe de monitores - {RUN_TS.strftime('%Y-%m-%d %H:%M %Z')}", "",
+    L = [f"# Informe de ofertas - {RUN_TS.strftime('%Y-%m-%d %H:%M %Z')}", "",
          f"Fuentes OK: {ctx.ok} | fallidas: {ctx.failed} | alertas nuevas: {len(ctx.alerts)}" +
          (" (dry-run, no enviadas)" if ctx.dry_run else ""), "",
          "| Clase | Modelo | Mejor oferta fiable (total) | Tienda / stock | Mejor en stock | Objetivo | Min ~3m | Mediana ~3m | Motivo |",
@@ -989,12 +1049,23 @@ def main():
         subprocess.run(["schtasks", "/Change", "/TN", "MonitorTrackerDK", "/DISABLE"], capture_output=True)
         return
 
-    # Bloqueo para evitar ejecuciones simultaneas
-    if os.path.exists(LOCK_PATH) and time.time() - os.path.getmtime(LOCK_PATH) < 3 * 3600:
-        log("Otra ejecucion en curso (lock). Saliendo.")
-        return
+    # Bloqueo para evitar ejecuciones simultaneas (si el proceso anterior murio o supero 1h, limpiar)
+    if os.path.exists(LOCK_PATH):
+        lock_age = time.time() - os.path.getmtime(LOCK_PATH)
+        if lock_age < 3600:
+            log("Otra ejecucion en curso (lock activo). Saliendo.")
+            return
+        else:
+            log(f"Lock huerfano detectado ({int(lock_age)}s). Limpiando lock previo...")
+            try:
+                os.remove(LOCK_PATH)
+            except Exception:
+                pass
     open(LOCK_PATH, "w").write(str(os.getpid()))
     con = db()
+    # Limpiar ejecuciones que quedaron en 'running' por cortes previos
+    con.execute("UPDATE runs SET status='interrupted', finished_at=? WHERE status='running'", (now_cph().isoformat(),))
+    con.commit()
     try:
         cur = con.execute("INSERT INTO runs(started_at,run_date,status) VALUES(?,?,?)",
                           (RUN_TS.isoformat(), RUN_DATE, "running"))
@@ -1029,12 +1100,12 @@ def main():
                         priority=2, require_drop=False)
         # Latido semanal (lunes) con resumen, prioridad minima
         if RUN_TS.weekday() == CFG.get("weekly_heartbeat_weekday", 0):
-            best = sorted([r for r in ctx.model_results.values() if r["best"] and r["model"]["tier"] in ("top", "alternative")],
+            best = sorted([r for r in ctx.model_results.values() if r["best"] and r["model"].get("tier") != "not_recommended"],
                           key=lambda r: r["best"]["total"] or 1e9)[:5]
             body = "Sistema activo. Mejores precios fiables hoy:\n" + "\n".join(
                 f"- {r['model']['name'].split('(')[0].strip()}: {fmt_dkk(r['best']['total'])} ({r['best']['merchant']}) clase {r['grade']}"
                 for r in best)
-            maybe_alert(ctx, f"hb|{RUN_DATE}", "HEARTBEAT", None, None, "Resumen semanal monitores DK", body,
+            maybe_alert(ctx, f"hb|{RUN_DATE}", "HEARTBEAT", None, None, "Resumen semanal ofertas DK", body,
                         priority=1, require_drop=False)
         dispatch(ctx)
         write_report(ctx, new_rev)

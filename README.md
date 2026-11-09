@@ -26,7 +26,7 @@ Para recibir las alertas en tu teléfono móvil (iOS o Android) o en el navegado
 2. Pulsa en **«Subscribe to topic»** (o «Añadir tema»).
 3. Ingresa el nombre de tema privado generado:
    ```text
-   mt-dk-xpfrsrpcjylx2prx
+   <tu topic privado: campo ntfy.topic de tu config.json local>
    ```
 4. ¡Listo! No requiere crear cuenta, no pide contraseñas y las notificaciones llegarán de forma instantánea cuando se detecte una oferta **A (Excelente)** o **B (Buena / precio objetivo)**, un nuevo mínimo verificable o un nuevo modelo relevante.
 

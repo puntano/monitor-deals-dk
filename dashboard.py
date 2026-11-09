@@ -212,6 +212,11 @@ def generate_dashboard_html(output_paths=None):
         dt_str = run_date
         
     js_models_json = json.dumps(models_data, ensure_ascii=False)
+    try:
+        with open(os.path.join(BASE, "config.json"), encoding="utf-8") as _f:
+            trigger_topic = json.load(_f)["ntfy"].get("trigger_topic", "")
+    except Exception:
+        trigger_topic = ""
     
     html_content = f"""<!DOCTYPE html>
 <html lang="es" class="dark">
@@ -821,7 +826,7 @@ def generate_dashboard_html(output_paths=None):
       txt.textContent = 'Enviando orden...';
 
       try {{
-        const res = await fetch('https://ntfy.sh/mt-dk-trigger-xpfrsrpcjylx2prx', {{
+        const res = await fetch('https://ntfy.sh/{trigger_topic}', {{
           method: 'POST',
           body: JSON.stringify({{ action: 'refresh', timestamp: new Date().toISOString() }})
         }});

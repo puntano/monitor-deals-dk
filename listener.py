@@ -16,8 +16,11 @@ from datetime import datetime
 sys.stdout.reconfigure(encoding="utf-8")
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-TRIGGER_TOPIC = "mt-dk-trigger-xpfrsrpcjylx2prx"
-ALERT_TOPIC = "mt-dk-xpfrsrpcjylx2prx"
+_CFG = json.load(open(os.path.join(BASE, "config.json"), encoding="utf-8"))
+TRIGGER_TOPIC = _CFG["ntfy"]["trigger_topic"]
+ALERT_TOPIC = _CFG["ntfy"]["topic"]
+COOLDOWN_S = int(_CFG.get("trigger_cooldown_minutes", 10)) * 60
+LAST_RUN_END = 0.0
 STREAM_URL = f"https://ntfy.sh/{TRIGGER_TOPIC}/json"
 
 LOG_FILE = os.path.join(BASE, "logs", "listener.log")
@@ -102,6 +105,10 @@ def main():
                     if ev_type == "message":
                         msg_body = event.get("message", "")
                         log(f"Mensaje recibido: {msg_body[:100]}")
+                        global LAST_RUN_END
+                        if time.time() - LAST_RUN_END < COOLDOWN_S:
+                            log("Orden ignorada: enfriamiento activo (evita abusos / spam del boton).")
+                            continue
                         if is_running:
                             log("Actualizacion ya en progreso, ignorando orden duplicada.")
                             continue
@@ -110,6 +117,7 @@ def main():
                             run_update()
                         finally:
                             is_running = False
+                            LAST_RUN_END = time.time()
         except Exception as e:
             log(f"Conexion interrumpida ({e}). Reintentando en {backoff}s...")
             time.sleep(backoff)
