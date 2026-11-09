@@ -4,3 +4,5 @@ __pycache__/
 logs/
 .vercel
 config.json
+
+data/history.db

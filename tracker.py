@@ -587,6 +587,16 @@ def process_model(ctx, model):
     else:
         res["grade"], res["reason"] = grade(model, best, ref_min, median, n_days_tracked=n_days_tracked)
 
+    # Una pasada posterior sin ofertas fiables no debe borrar el dato bueno ya registrado hoy
+    # (PriceRunner a veces devuelve la pagina incompleta). Se conserva el anterior y no se alerta.
+    if pr_ok and not best:
+        _prev_today = con.execute("SELECT best_price FROM model_daily WHERE check_date=? AND model_key=? "
+                                  "AND best_price IS NOT NULL", (RUN_DATE, key)).fetchone()
+        if _prev_today:
+            res["grade"] = "?"
+            res["reason"] = "Sin oferta fiable en esta pasada (posible fallo transitorio de PriceRunner); se conserva el dato anterior de hoy."
+            res["pr_ok"] = False
+            pr_ok = False
     con.execute("""INSERT OR REPLACE INTO model_daily VALUES(?,?,?,?,?,?,?,?,?,?,?,?)""",
                 (RUN_DATE, key, best and best["total"], best and best["price"], best and best["merchant"],
                  best and best["stock"], best_is and best_is["total"], best_is and best_is["merchant"],
@@ -759,7 +769,7 @@ def discover(ctx, cand):
         try:
             html = http_get(url, min_len=15000)
             ctx.ok += 1
-            for pid, slug in re.findall(r"/pl/\d+-(\d+)/[^/]+/([^\"'\s<>?]+)", html):
+            for cat_id, pid, cat_name, slug in re.findall(r"/pl/(\d+)-(\d+)/([^/]+)/([^\"'\s<>?]+)", html):
                 if pid in tracked:
                     continue
                 s = slug.lower()
@@ -771,7 +781,7 @@ def discover(ctx, cand):
                         continue
                     if re.search(r"(^|-)(27|34|39|42|45|48|49)(-|$)", s):
                         continue
-                path = f"/pl/25-{pid}/Skaerme/{slug}"
+                path = f"/pl/{cat_id}-{pid}/{cat_name}/{slug}"
                 cur = con.execute("INSERT OR IGNORE INTO discovered_products VALUES(?,?,?,?,?)",
                                   (pid, slug.replace("-Sammenlign-Priser", "").replace("-", " "), path, RUN_DATE, int(baseline)))
                 if cur.rowcount and not baseline:
@@ -865,7 +875,7 @@ def send_ntfy(title, message, priority=3, click=None, tags=None):
 
 
 def send_toast(title, message):
-    if not CFG.get("windows_toast"):
+    if not CFG.get("windows_toast") or os.name != "nt":
         return False
     ps = r"""
 $ErrorActionPreference='Stop'
