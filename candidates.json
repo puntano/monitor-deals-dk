@@ -985,6 +985,9 @@
       "prisjagt": [
         13326290
       ],
+      "direct_urls": [
+        "https://www.proshop.dk/3322637"
+      ],
       "tier": "top",
       "target_price": 5500,
       "excellent_price": 5200,
@@ -1414,6 +1417,112 @@
       "review_summary": "Hermana accesible del aclamado MPG 321URX: comparte el mismo panel Samsung QD-OLED 4K 240Hz de 3a gen y disipador de grafeno, reduciendo el USB-C PD a 15W para bajar el precio.",
       "pros": "Mismo panel 240Hz de maxima gama que el 321URX por 500-1000 DKK menos, sin ventilador activo",
       "cons": "USB-C solo entrega 15W, carece de luz RGB posterior",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "msi-mpg-322urx",
+      "name": "MSI MPG 322URX QD-OLED (31.5\" 4K 240Hz, DP 2.1 UHBR20 80Gbps, USB-C 98W)",
+      "match_tokens": [
+        "322URX",
+        "322UR"
+      ],
+      "exclude_tokens": [
+        "321URX",
+        "CASE"
+      ],
+      "pricerunner": [
+        "/pl/25-3529305013/Skaerme/MSI-MPG-322UR-QD-OLED-X24-32-inch-4K-240-Hz-Gaming-Monitor-Black-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        14347555
+      ],
+      "direct_urls": [
+        "https://www.elgiganten.dk/product/915270"
+      ],
+      "store_links": [
+        {
+          "name": "Elgiganten (Oferta Directa)",
+          "url": "https://www.elgiganten.dk/product/915270"
+        }
+      ],
+      "tier": "top",
+      "target_price": 6800,
+      "excellent_price": 6500,
+      "burnin_warranty": "3 años MSI OLED Care (incluye burn-in).",
+      "reviews": [
+        "https://www.rtings.com/monitor/reviews/msi/mpg-322urx-qd-oled",
+        "https://tftcentral.co.uk/reviews/msi-mpg-322urx"
+      ],
+      "review_summary": "Sucesor del MPG 321URX con DisplayPort 2.1 UHBR20 nativo (80 Gbps sin DSC para GPUs RTX serie 50) y USB-C Power Delivery ampliado a 98W.",
+      "pros": "DP 2.1 UHBR20 completo (80 Gbps), KVM + USB-C 98W, panel QD-OLED 3ª gen sin ventilador, en oferta en Elgiganten al precio del 321URX",
+      "cons": "Con RTX 2080 Super opera en DP 1.4 DSC igual que el 321URX, pero queda listo para una futura RTX 50",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "asus-xg32ucwmg",
+      "name": "ASUS ROG Strix OLED XG32UCWMG (31.5\" 4K 240Hz / FHD 480Hz Dual-Mode WOLED, TrueBlack Glossy)",
+      "match_tokens": [
+        "XG32UCWMG"
+      ],
+      "exclude_tokens": [
+        "XG32UCWG",
+        "XG32UCDS"
+      ],
+      "pricerunner": [
+        "/pl/25-3440436889/Skaerme/ASUS-ROG-Strix-OLED-XG32UCWMG-32-Inch-4K-Monitor-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        15147198
+      ],
+      "direct_urls": [
+        "https://www.elgiganten.dk/product/1008993"
+      ],
+      "store_links": [
+        {
+          "name": "Elgiganten (Oferta Directa)",
+          "url": "https://www.elgiganten.dk/product/1008993"
+        }
+      ],
+      "tier": "top",
+      "target_price": 6000,
+      "excellent_price": 5500,
+      "burnin_warranty": "3 años de garantía ASUS OLED Care incluyendo burn-in.",
+      "reviews": [
+        "https://tftcentral.co.uk/reviews/asus-rog-strix-xg32ucwmg"
+      ],
+      "review_summary": "Panel WOLED 4K 240Hz con modo dual FHD 480Hz y recubrimiento TrueBlack Glossy: negros puros sin el tinte púrpura de QD-OLED bajo luz ambiental.",
+      "pros": "Modo Dual 4K 240Hz / FHD 480Hz, acabado TrueBlack Glossy sin tinte morado, ~1.200 DKK más barato que el PG32UCDP en Elgiganten",
+      "cons": "USB-C con entrega de energía menor que en la serie ROG Swift PG32",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "asus-xg32ucds",
+      "name": "ASUS ROG Strix OLED XG32UCDS (31.5\" 4K 165Hz QD-OLED)",
+      "match_tokens": [
+        "XG32UCDS"
+      ],
+      "exclude_tokens": [
+        "XG32UCWMG",
+        "XG32UCWG"
+      ],
+      "pricerunner": [
+        "/pl/25-3419255243/Skaerme/ASUS-ROG-Strix-OLED-XG32UCDS-32-Zoll-4K-UHD-Gaming-Monitor-Sammenlign-Priser"
+      ],
+      "prisjagt": [
+        15126379
+      ],
+      "direct_urls": [],
+      "tier": "alternative",
+      "target_price": 5200,
+      "excellent_price": 4800,
+      "burnin_warranty": "3 años de garantía ASUS OLED Care incluyendo burn-in.",
+      "reviews": [],
+      "review_summary": "Variante de 165Hz de la familia ROG Strix QD-OLED 4K de 31.5 pulgadas: puerta de entrada económica al panel 4K QD-OLED de ASUS.",
+      "pros": "Panel 4K QD-OLED con disipador personalizado ASUS a precio contenido (~5.242 DKK)",
+      "cons": "Refresco de 165Hz en lugar de 240Hz",
       "category": "monitors",
       "category_name": "Monitores 4K"
     }
