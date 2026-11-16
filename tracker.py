@@ -255,6 +255,8 @@ CREATE TABLE IF NOT EXISTS category_deals(
   PRIMARY KEY(check_date, category, product_id));
 CREATE TABLE IF NOT EXISTS reviews_seen(
   url TEXT PRIMARY KEY, source TEXT, title TEXT, first_seen TEXT, baseline INTEGER, relevant INTEGER);
+CREATE TABLE IF NOT EXISTS ai_insights(
+  check_date TEXT PRIMARY KEY, model_used TEXT, created_at TEXT, payload_json TEXT);
 """
 
 
@@ -594,6 +596,7 @@ class Ctx:
         self.alerts = []          # (key, kind, model_key, price, title, message, priority, click)
         self.model_results = {}
         self.notes = []
+        self.ai_insights = None
         self.first_run = con.execute("SELECT COUNT(*) FROM runs WHERE status LIKE 'ok%' OR status LIKE 'partial%'").fetchone()[0] == 0
 
     def err(self, model_key, source, url, e):
@@ -868,6 +871,9 @@ def maybe_alert(ctx, alert_key, kind, model_key, price, title, message, priority
 
 def evaluate_alerts(ctx):
     con = ctx.con
+    ai_audits = {}
+    if ctx.ai_insights:
+        ai_audits = {a.get("model_key"): a for a in ctx.ai_insights.get("deal_audits", []) if a.get("model_key")}
     for key, res in ctx.model_results.items():
         m, b = res["model"], res["best"]
         if not res["pr_ok"]:
@@ -879,16 +885,24 @@ def evaluate_alerts(ctx):
         bi = res.get("best_in_stock")
         gi_, ri_ = (grade(m, bi, res["ref_min"], res["median"], n_days_tracked=res.get("n_days_tracked", 1))
                     if bi else (None, ""))
-        if bi and gi_ in ("A", "B"):
+        audit = ai_audits.get(key) or {}
+        if audit.get("verdict") == "FALSE_POSITIVE" and ((bi and gi_ in ("A", "B")) or (b and res["grade"] in ("A", "B"))):
+            log(f"AI SUPPRESS [{key}]: alerta DEAL omitida por falso positivo -> {audit.get('audit_note')}")
+            ctx.notes.append(f"ai_suppress:{key}")
+        elif bi and gi_ in ("A", "B"):
             # Alerta principal: solo ofertas con stock real
             r2 = dict(res, best=bi, grade=gi_, reason=ri_)
             msg, link = build_deal_message(r2, "precio objetivo/oferta, en stock")
+            if audit.get("verdict") == "SPEC_WARNING" and audit.get("audit_note"):
+                msg += f"\n⚠️ Auditoría IA: {audit['audit_note']}"
             title = f"{cat_badge}[{gi_}] {short_n} {fmt_dkk(bi['total'])} @ {bi['merchant']}"
             maybe_alert(ctx, f"deal|{key}", "DEAL", key, bi["price"], title, msg,
                         priority=5 if gi_ == "A" else 4, click=link)
         elif b and res["grade"] in ("A", "B"):
             # Oferta buena pero solo bajo pedido / sin stock inmediato: aviso de baja prioridad
             msg, link = build_deal_message(res, f"BAJO PEDIDO ({b['stock']}), sin stock inmediato")
+            if audit.get("verdict") == "SPEC_WARNING" and audit.get("audit_note"):
+                msg += f"\n⚠️ Auditoría IA: {audit['audit_note']}"
             title = f"{cat_badge}[{res['grade']}*] {short_n} {fmt_dkk(b['total'])} @ {b['merchant']} (bajo pedido)"
             maybe_alert(ctx, f"deal|{key}", "DEAL", key, b["price"], title, msg, priority=2, click=link)
         else:
@@ -1133,6 +1147,42 @@ def dispatch(ctx):
                         (akey, kind, mkey, price, now_cph().isoformat()))
 
 
+def render_and_sync_dashboard():
+    """Regenera el dashboard HTML y sincroniza reportes con Git/Vercel y OpenClaw sandbox."""
+    try:
+        import dashboard
+        dash_paths = dashboard.generate_dashboard_html()
+        log(f"Dashboard visual HTML generado con éxito ({len(dash_paths)} archivos)")
+    except Exception as e:
+        log(f"WARN al generar dashboard visual HTML: {e}")
+
+    try:
+        r_rem = subprocess.run(["git", "remote"], cwd=BASE, capture_output=True, text=True)
+        if r_rem.stdout.strip():
+            subprocess.run(["git", "add", "index.html", "public/", "reports/", "data/offers_history.csv", "candidates.json", "categories/"], cwd=BASE, capture_output=True)
+            subprocess.run(["git", "commit", "-m", f"Auto-update deals {RUN_DATE}"], cwd=BASE, capture_output=True)
+            r_push = subprocess.run(["git", "push"], cwd=BASE, capture_output=True, text=True)
+            if r_push.returncode == 0:
+                log("Sincronización con Git / Vercel completada con éxito.")
+            else:
+                log(f"Git push pendiente o no configurado: {r_push.stderr.strip()[:150]}")
+    except Exception as e:
+        log(f"Aviso en sync_to_git: {e}")
+
+    try:
+        if os.path.isdir(SANDBOX_TRACKER):
+            import shutil
+            for rel in ("data/history.db", "data/offers_history.csv", "reports/latest.md", "reports/dashboard.html", "index.html"):
+                src_p = os.path.join(BASE, rel)
+                dst_p = os.path.join(SANDBOX_TRACKER, rel)
+                if os.path.exists(src_p):
+                    os.makedirs(os.path.dirname(dst_p), exist_ok=True)
+                    shutil.copy2(src_p, dst_p)
+            log("Sincronización de base de datos y reportes con OpenClaw sandbox completada.")
+    except Exception as e:
+        log(f"Aviso en sync_to_sandbox: {e}")
+
+
 # --------------------------------------------------------------------------- report
 def write_report(ctx, new_reviews):
     order = {"A": 0, "B": 1, "C": 2, "D": 3, "-": 4, "?": 5}
@@ -1192,41 +1242,7 @@ def write_report(ctx, new_reviews):
         for row in ctx.con.execute(f"SELECT {','.join(cols)} FROM offers ORDER BY check_date, model_key, total"):
             w.writerow(row)
 
-    # Generar Dashboard Visual HTML interactivo
-    try:
-        import dashboard
-        dash_paths = dashboard.generate_dashboard_html()
-        log(f"Dashboard visual HTML generado con éxito ({len(dash_paths)} archivos)")
-    except Exception as e:
-        log(f"WARN al generar dashboard visual HTML: {e}")
-
-    # Sincronización automática con Git / Vercel (si hay repositorio remoto configurado)
-    try:
-        r_rem = subprocess.run(["git", "remote"], cwd=BASE, capture_output=True, text=True)
-        if r_rem.stdout.strip():
-            subprocess.run(["git", "add", "index.html", "public/", "reports/", "data/offers_history.csv", "candidates.json", "categories/"], cwd=BASE, capture_output=True)
-            subprocess.run(["git", "commit", "-m", f"Auto-update deals {RUN_DATE}"], cwd=BASE, capture_output=True)
-            r_push = subprocess.run(["git", "push"], cwd=BASE, capture_output=True, text=True)
-            if r_push.returncode == 0:
-                log("Sincronización con Git / Vercel completada con éxito.")
-            else:
-                log(f"Git push pendiente o no configurado: {r_push.stderr.strip()[:150]}")
-    except Exception as e:
-        log(f"Aviso en sync_to_git: {e}")
-
-    # Sincronización automática de resultados hacia el sandbox de OpenClaw (sin exponer credenciales Git)
-    try:
-        if os.path.isdir(SANDBOX_TRACKER):
-            import shutil
-            for rel in ("data/history.db", "data/offers_history.csv", "reports/latest.md", "reports/dashboard.html", "index.html"):
-                src_p = os.path.join(BASE, rel)
-                dst_p = os.path.join(SANDBOX_TRACKER, rel)
-                if os.path.exists(src_p):
-                    os.makedirs(os.path.dirname(dst_p), exist_ok=True)
-                    shutil.copy2(src_p, dst_p)
-            log("Sincronización de base de datos y reportes con OpenClaw sandbox completada.")
-    except Exception as e:
-        log(f"Aviso en sync_to_sandbox: {e}")
+    render_and_sync_dashboard()
 
 
 # --------------------------------------------------------------------------- main
@@ -1234,7 +1250,7 @@ def status():
     con = db()
     print("BD:", DB_PATH)
     for t in ("runs", "offers", "prisjagt_history", "model_daily", "errors", "alerts_log", "alert_state",
-              "discovered_products", "category_deals", "reviews_seen"):
+              "discovered_products", "category_deals", "reviews_seen", "ai_insights"):
         print(f"  {t}: {con.execute(f'SELECT COUNT(*) FROM {t}').fetchone()[0]} filas")
     print("Ultimas ejecuciones:")
     for r in con.execute("SELECT run_id,started_at,finished_at,status,ok_sources,failed_sources FROM runs ORDER BY run_id DESC LIMIT 7"):
@@ -1249,11 +1265,23 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--test-notify", action="store_true")
     ap.add_argument("--status", action="store_true")
+    ap.add_argument("--ai-only", action="store_true", help="ejecutar solo analisis Gemini 3.8 Flash sobre datos de hoy y regenerar dashboard")
     ap.add_argument("--force", action="store_true", help="ignorar fecha de fin")
     a = ap.parse_args()
 
     if a.status:
         return status()
+    if a.ai_only:
+        con = db()
+        try:
+            import ai_analyzer
+            cand = load_candidates()
+            log("Inicio analisis IA (--ai-only)...")
+            ai_analyzer.run_ai_analysis(con, cand, RUN_DATE, log, config=CFG)
+        finally:
+            con.close()
+        render_and_sync_dashboard()
+        return
     if a.test_notify:
         title = "[B] MSI MPG 321URX: 5.690 DKK @ Komplett.dk"
         msg = ("💰 **5.690 DKK** (envío 0 DKK) | **Komplett.dk**\n"
@@ -1312,6 +1340,11 @@ def main():
             discover(ctx, cand)
         except Exception as e:
             ctx.err("discovery", "process", "", e)
+        try:
+            import ai_analyzer
+            ctx.ai_insights = ai_analyzer.run_ai_analysis(con, cand, RUN_DATE, log, config=CFG)
+        except Exception as e:
+            log(f"AI WARN en run_ai_analysis: {e}")
         new_rev = []
         try:
             new_rev = check_reviews(ctx, cand)

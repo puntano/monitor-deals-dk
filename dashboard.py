@@ -164,7 +164,41 @@ def generate_dashboard_html(output_paths=None):
         }
         for r in cat_deals_rows
     ]
-    
+
+    # 5b. Insights generados por Google AI Studio (Gemini 3.8 Flash)
+    ai_payload = {}
+    ai_meta = None
+    try:
+        ai_row = con.execute(
+            "SELECT check_date, model_used, created_at, payload_json FROM ai_insights ORDER BY check_date DESC LIMIT 1"
+        ).fetchone()
+        if ai_row and ai_row[3]:
+            ai_payload = json.loads(ai_row[3])
+            ai_meta = {"check_date": ai_row[0], "model_used": ai_row[1], "created_at": ai_row[2]}
+    except Exception:
+        ai_payload = {}
+
+    ai_audit_map = {
+        a["model_key"]: a
+        for a in (ai_payload.get("deal_audits") or [])
+        if isinstance(a, dict) and a.get("model_key")
+    }
+    ai_val_map = {
+        v["model_key"]: v
+        for v in (ai_payload.get("desktop_valuations") or [])
+        if isinstance(v, dict) and v.get("model_key")
+    }
+    ai_radar_map = {
+        str(p["product_id"]): p
+        for p in (ai_payload.get("top_radar_picks") or [])
+        if isinstance(p, dict) and p.get("product_id")
+    }
+    ai_briefing = ai_payload.get("executive_briefing") or None
+
+    for cd in cat_deals_data:
+        cd["ai_pick"] = ai_radar_map.get(str(cd["product_id"]))
+    cat_deals_data.sort(key=lambda x: (0 if x.get("ai_pick") else 1, -float(x.get("drop_pct") or 0)))
+
     con.close()
     
     # Construir lista combinada de modelos
@@ -239,6 +273,8 @@ def generate_dashboard_html(output_paths=None):
             "reviews": m.get("reviews", []),
             "pricerunner": m.get("pricerunner", []),
             "store_links": m.get("store_links", []),
+            "ai_audit": ai_audit_map.get(mkey),
+            "ai_desktop_val": ai_val_map.get(mkey),
             "offers": offers
         })
         
@@ -265,6 +301,8 @@ def generate_dashboard_html(output_paths=None):
         
     js_models_json = json.dumps(models_data, ensure_ascii=False)
     js_cat_deals_json = json.dumps(cat_deals_data, ensure_ascii=False)
+    js_ai_briefing_json = json.dumps(ai_briefing, ensure_ascii=False)
+    js_ai_meta_json = json.dumps(ai_meta, ensure_ascii=False)
     try:
         with open(os.path.join(BASE, "config.json"), encoding="utf-8") as _f:
             trigger_topic = json.load(_f)["ntfy"].get("trigger_topic", "")
@@ -411,6 +449,24 @@ def generate_dashboard_html(output_paths=None):
       </div>
     </div>
 
+    <!-- BRIEFING EJECUTIVO IA (GEMINI 3.8 FLASH) -->
+    <section id="ai-briefing-section" class="hidden bg-gradient-to-br from-indigo-950/60 via-slate-900/95 to-slate-900 border border-indigo-500/35 rounded-2xl p-5 shadow-lg space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+        <div class="space-y-1">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-400/40 text-indigo-200 text-[11px] font-bold">
+              <span>🧠</span> Briefing Ejecutivo IA · ¿Qué Conviene Comprar Hoy?
+            </span>
+            <span id="ai-briefing-meta" class="text-[11px] text-slate-400"></span>
+          </div>
+          <h2 id="ai-briefing-headline" class="text-base sm:text-lg font-extrabold text-white tracking-tight"></h2>
+          <p id="ai-briefing-summary" class="text-xs text-slate-300 leading-relaxed max-w-4xl"></p>
+        </div>
+        <button onclick="toggleBriefing()" id="btn-toggle-briefing" class="px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-300 text-xs font-semibold border border-slate-700 shrink-0 transition cursor-pointer">Ocultar</button>
+      </div>
+      <div id="ai-briefing-cards" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3"></div>
+    </section>
+
     <!-- BARRA DE FILTROS Y BUSQUEDA -->
     <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-3">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
@@ -521,10 +577,91 @@ def generate_dashboard_html(output_paths=None):
   <script>
     const ITEMS = {js_models_json};
     const CATEGORY_DEALS = {js_cat_deals_json};
+    const AI_BRIEFING = {js_ai_briefing_json};
+    const AI_META = {js_ai_meta_json};
     let currentCategory = 'all';
     let currentFilter = 'all';
     let inStockOnly = false;
     let topTierOnly = false;
+    let briefingCollapsed = false;
+
+    function toggleBriefing() {{
+      const grid = document.getElementById('ai-briefing-cards');
+      const btn = document.getElementById('btn-toggle-briefing');
+      if (!grid || !btn) return;
+      briefingCollapsed = !briefingCollapsed;
+      if (briefingCollapsed) {{
+        grid.classList.add('hidden');
+        btn.textContent = 'Mostrar recomendaciones';
+      }} else {{
+        grid.classList.remove('hidden');
+        btn.textContent = 'Ocultar';
+      }}
+    }}
+
+    function jumpToModel(key, cat) {{
+      if (cat) {{
+        currentCategory = cat;
+        document.querySelectorAll('.cat-pill').forEach(btn => btn.classList.remove('active'));
+        const activeBtn = document.getElementById('tab-' + cat);
+        if (activeBtn) activeBtn.classList.add('active');
+      }}
+      currentFilter = 'all';
+      document.querySelectorAll('.filter-btn').forEach(btn => {{
+        btn.classList.remove('bg-blue-600', 'text-white');
+        btn.classList.add('bg-slate-800', 'text-slate-300');
+      }});
+      const bAll = document.getElementById('btn-all');
+      if (bAll) {{
+        bAll.classList.remove('bg-slate-800', 'text-slate-300');
+        bAll.classList.add('bg-blue-600', 'text-white');
+      }}
+      const searchEl = document.getElementById('search-input');
+      if (searchEl) searchEl.value = '';
+      const stockEl = document.getElementById('stock-only');
+      if (stockEl) stockEl.checked = false;
+      const tierEl = document.getElementById('top-tier-only');
+      if (tierEl) tierEl.checked = false;
+      applyFilters();
+      setTimeout(() => {{
+        const target = document.getElementById('card-' + key);
+        if (target) {{
+          target.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+          target.classList.add('ring-2', 'ring-indigo-400');
+          setTimeout(() => target.classList.remove('ring-2', 'ring-indigo-400'), 2500);
+        }}
+      }}, 80);
+    }}
+
+    function renderBriefing() {{
+      const sec = document.getElementById('ai-briefing-section');
+      if (!sec || !AI_BRIEFING || !AI_BRIEFING.headline) return;
+      sec.classList.remove('hidden');
+      document.getElementById('ai-briefing-headline').textContent = AI_BRIEFING.headline;
+      document.getElementById('ai-briefing-summary').textContent = AI_BRIEFING.market_summary || '';
+      const metaEl = document.getElementById('ai-briefing-meta');
+      if (metaEl && AI_META) {{
+        metaEl.textContent = `${{AI_META.model_used || 'gemini-3.8-flash'}} · datos ${{AI_META.check_date || ''}}`;
+      }}
+      const cardsEl = document.getElementById('ai-briefing-cards');
+      const picks = AI_BRIEFING.category_picks || [];
+      cardsEl.innerHTML = picks.map(p => `
+        <div onclick="jumpToModel('${{escHtml(p.best_buy_key)}}', '${{escHtml(p.category)}}')" class="bg-slate-950/85 hover:bg-slate-950 border border-indigo-500/25 hover:border-indigo-400/60 rounded-xl p-3.5 flex flex-col justify-between gap-2 transition cursor-pointer">
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between gap-1.5">
+              ${{getCategoryBadge(p.category)}}
+              <span class="text-[10px] font-bold text-indigo-300 bg-indigo-500/15 px-2 py-0.5 rounded-lg border border-indigo-500/30">${{escHtml(p.verdict_title)}}</span>
+            </div>
+            <h3 class="text-xs font-bold text-white leading-snug">${{escHtml(p.best_buy_name)}}</h3>
+            <p class="text-[11px] text-slate-300 leading-relaxed">${{escHtml(p.rationale)}}</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-slate-800/80 text-xs">
+            <span class="font-black text-emerald-400">${{fmtDkk(p.price_dkk)}}</span>
+            <span class="text-[11px] text-slate-400">${{escHtml(p.merchant)}} · Ver ficha →</span>
+          </div>
+        </div>
+      `).join('');
+    }}
 
     function fmtDkk(v) {{
       if (v === null || v === undefined) return 'n/d';
@@ -554,18 +691,32 @@ def generate_dashboard_html(output_paths=None):
 
       radarEl.innerHTML = deals.slice(0, 18).map(d => {{
         const saved = Math.max(0, (d.old_price || 0) - (d.price || 0));
+        const aiPick = d.ai_pick;
+        const cardCls = aiPick
+          ? 'bg-gradient-to-b from-amber-500/10 via-slate-950/90 to-slate-950 border-amber-400/50 hover:border-amber-300'
+          : 'bg-slate-950/80 border-slate-800 hover:border-rose-500/40';
+        const aiBadgeHtml = aiPick
+          ? `<span class="text-[10px] px-2 py-0.5 rounded-lg bg-indigo-500/25 text-indigo-200 border border-indigo-400/50 font-bold">✨ ${{escHtml(aiPick.ai_badge || 'Elegido por Gemini IA')}}</span>`
+          : '';
+        const aiReasonHtml = (aiPick && aiPick.ai_reason)
+          ? `<p class="text-[11px] text-amber-200/90 leading-snug bg-amber-500/10 border border-amber-500/25 rounded-lg px-2 py-1">🤖 ${{escHtml(aiPick.ai_reason)}}</p>`
+          : '';
         const trackBadge = d.is_tracked
           ? '<span class="text-[10px] px-2 py-0.5 rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">✓ En tu seguimiento</span>'
           : '<span class="text-[10px] px-2 py-0.5 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 font-semibold">✨ Hallazgo Black Weeks</span>';
         const prHref = 'https://www.pricerunner.dk' + (d.path || '');
         return `
-          <div class="bg-slate-950/80 border border-slate-800 hover:border-rose-500/40 rounded-xl p-3.5 flex flex-col justify-between gap-2.5 transition">
+          <div class="border rounded-xl p-3.5 flex flex-col justify-between gap-2.5 transition ${{cardCls}}">
             <div class="space-y-1.5">
               <div class="flex flex-wrap items-center justify-between gap-1.5">
-                ${{getCategoryBadge(d.category)}}
+                <div class="flex flex-wrap items-center gap-1">
+                  ${{getCategoryBadge(d.category)}}
+                  ${{aiBadgeHtml}}
+                </div>
                 <span class="text-[11px] px-2 py-0.5 rounded-lg bg-rose-500/15 text-rose-300 border border-rose-500/30 font-bold">🔥 -${{Math.round(d.drop_pct)}}% (-${{fmtDkk(saved)}})</span>
               </div>
               <h3 class="text-xs font-bold text-slate-100 leading-snug line-clamp-2">${{escHtml(d.name)}}</h3>
+              ${{aiReasonHtml}}
             </div>
             <div class="flex items-end justify-between gap-2 pt-1 border-t border-slate-800/80">
               <div>
@@ -807,7 +958,55 @@ def generate_dashboard_html(output_paths=None):
           offersTable = '<div class="text-xs text-slate-400 p-3 italic">Consultar comparador de PriceRunner para disponibilidad en tiendas danesas.</div>';
         }}
 
+        // Auditoria IA (Feature 1)
+        let aiAuditBadge = '';
+        let aiAuditBox = '';
+        if (m.ai_audit && m.ai_audit.verdict) {{
+          const v = m.ai_audit.verdict;
+          const note = escHtml(m.ai_audit.audit_note || '');
+          if (v === 'FALSE_POSITIVE') {{
+            aiAuditBadge = '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-rose-500/20 text-rose-300 border border-rose-500/50 font-bold">🚨 Posible Falso Positivo IA</span>';
+            aiAuditBox = note ? `<div class="bg-rose-500/10 border border-rose-500/35 rounded-xl px-3 py-2 text-xs text-rose-200"><strong class="font-bold">🚨 Auditoría IA:</strong> ${{note}}</div>` : '';
+          }} else if (v === 'SPEC_WARNING') {{
+            aiAuditBadge = '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-amber-500/15 text-amber-300 border border-amber-500/40 font-semibold">⚠️ Aviso IA Specs</span>';
+            aiAuditBox = note ? `<div class="bg-amber-500/10 border border-amber-500/30 rounded-xl px-3 py-2 text-xs text-amber-200"><strong class="font-bold">⚠️ Auditoría IA:</strong> ${{note}}</div>` : '';
+          }} else {{
+            aiAuditBadge = '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-indigo-500/15 text-indigo-300 border border-indigo-400/30 font-semibold">🤖 Verificado IA</span>';
+            aiAuditBox = note ? `<div class="bg-indigo-500/5 border border-indigo-500/20 rounded-xl px-3 py-1.5 text-[11px] text-indigo-200/90"><strong class="font-semibold text-indigo-300">🤖 Auditoría IA:</strong> ${{note}}</div>` : '';
+          }}
+        }}
+
+        // Tasacion IA PC armado vs por piezas (Feature 4)
+        let aiDesktopValHtml = '';
+        if (m.ai_desktop_val && m.ai_desktop_val.diy_estimate_dkk) {{
+          const dv = m.ai_desktop_val;
+          const delta = Number(dv.delta_dkk || 0);
+          const verdict = dv.verdict || 'FAIR';
+          let vBadgeCls = 'bg-blue-500/15 text-blue-300 border-blue-500/30';
+          let vLabel = 'Precio Justo de Montaje';
+          if (verdict === 'BARGAIN') {{
+            vBadgeCls = 'bg-emerald-500/15 text-emerald-300 border-emerald-500/40';
+            vLabel = 'Chollo vs. Por Piezas';
+          }} else if (verdict === 'OVERPRICED') {{
+            vBadgeCls = 'bg-rose-500/15 text-rose-300 border-rose-500/35';
+            vLabel = 'Caro frente a Piezas';
+          }}
+          const deltaText = delta <= 0
+            ? `${{fmtDkk(Math.abs(delta))}} más barato que por piezas`
+            : `+${{fmtDkk(delta)}} de montaje vs. piezas`;
+          aiDesktopValHtml = `
+            <div class="bg-slate-950/85 border border-slate-700/70 rounded-xl p-3 text-xs space-y-1.5">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="font-bold text-slate-200 flex items-center gap-1.5"><span>🧮</span> Tasación IA vs. Por Piezas en DK: <span class="text-white">~${{fmtDkk(dv.diy_estimate_dkk)}}</span></span>
+                <span class="text-[11px] px-2 py-0.5 rounded-lg border font-bold ${{vBadgeCls}}">${{vLabel}} (${{deltaText}})</span>
+              </div>
+              <p class="text-[11px] text-slate-400 leading-snug">${{escHtml(dv.breakdown || '')}}</p>
+            </div>
+          `;
+        }}
+
         const card = document.createElement('div');
+        card.id = 'card-' + m.key;
         card.className = `border rounded-2xl p-5 sm:p-6 transition shadow-sm ${{cardBorder}}`;
         card.innerHTML = `
           <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-5">
@@ -820,12 +1019,15 @@ def generate_dashboard_html(output_paths=None):
                 <span class="text-xs px-2.5 py-0.5 rounded-xl bg-slate-800 text-slate-300 font-medium">Tier: ${{m.tier.toUpperCase()}}</span>
                 ${{m.best_stock === 'IN_STOCK' ? '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-medium">En stock</span>' : ''}}
                 ${{m.delta_7d <= -100 ? `<span class="text-xs px-2.5 py-0.5 rounded-xl bg-rose-500/15 text-rose-300 border border-rose-500/40 font-bold">🔥 Bajó ${{fmtDkk(Math.abs(m.delta_7d))}} (${{m.delta_pct}}%)</span>` : ''}}
+                ${{aiAuditBadge}}
               </div>
 
               <div>
                 <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">${{m.name}}</h3>
                 <p class="text-xs text-slate-400 mt-1">${{m.review_summary || ''}}</p>
               </div>
+
+              ${{aiAuditBox}}
 
               <!-- Pros y Cons -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1">
@@ -838,6 +1040,8 @@ def generate_dashboard_html(output_paths=None):
                   <p class="text-slate-300 leading-relaxed">${{m.cons}}</p>
                 </div>
               </div>
+
+              ${{aiDesktopValHtml}}
 
               <!-- Bloque de tiendas oficiales danesas -->
               ${{storeLinksHtml}}
@@ -987,7 +1191,8 @@ def generate_dashboard_html(output_paths=None):
       }}
     }}
 
-    // Inicializar filtros al cargar
+    // Inicializar filtros y briefing al cargar
+    renderBriefing();
     applyFilters();
   </script>
 </body>
