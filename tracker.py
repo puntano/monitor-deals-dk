@@ -303,6 +303,37 @@ def parse_pricerunner(html):
     raise FetchError("no se encontro __DEHYDRATED_QUERY_STATE__ en PriceRunner")
 
 
+_PJ_SHOP_MAP = {
+    "Proshop": "Proshop.dk",
+    "Komplett": "Komplett.dk",
+    "Power": "POWER",
+    "Happii": "happii.dk",
+    "Goblue": "GoBlue.dk",
+}
+
+
+def _extract_json_array(text, marker):
+    """Extrae un arreglo JSON balanceado a partir de un marcador literal."""
+    i = text.find(marker)
+    if i < 0:
+        return None
+    start = text.index("[", i)
+    depth, j = 0, start
+    while j < len(text):
+        ch = text[j]
+        if ch == "[":
+            depth += 1
+        elif ch == "]":
+            depth -= 1
+            if depth == 0:
+                break
+        j += 1
+    try:
+        return json.loads(text[start:j + 1])
+    except Exception:
+        return None
+
+
 def parse_prisjagt(html):
     chunks = re.findall(r'self\.__next_f\.push\(\[1,"(.*?)"\]\)', html, re.S)
     joined = ""
@@ -311,27 +342,123 @@ def parse_prisjagt(html):
             joined += json.loads('"' + c + '"')
         except Exception:
             pass
-    i = joined.find('"historyItems":[')
-    if i < 0:
-        raise FetchError("historyItems no encontrado en Prisjagt")
-    start = joined.index("[", i)
-    depth, j = 0, start
-    while j < len(joined):
-        ch = joined[j]
-        if ch == "[":
-            depth += 1
-        elif ch == "]":
-            depth -= 1
-            if depth == 0:
-                break
-        j += 1
-    items = json.loads(joined[start:j + 1])
+    items = _extract_json_array(joined, '"historyItems":[')
+    offer_rows = _extract_json_array(joined, '"offerRows":[')
+    if items is None and offer_rows is None:
+        raise FetchError("ni historyItems ni offerRows encontrados en Prisjagt")
+    items = items or []
+    offer_rows = offer_rows or []
+
+    stock_map = {
+        "InStock": "IN_STOCK",
+        "in_stock": "IN_STOCK",
+        "Backorder": "BACKORDER",
+        "Incoming": "BACKORDER",
+        "incoming": "BACKORDER",
+        "PreOrder": "BACKORDER",
+        "OutOfStock": "OUT_OF_STOCK",
+        "out_of_stock": "OUT_OF_STOCK",
+    }
+    live_offers = []
+    for r in offer_rows:
+        if not isinstance(r, dict):
+            continue
+        if r.get("isPaidMembership"):
+            continue
+        cond = r.get("condition")
+        if cond not in (None, "New", "$undefined"):
+            continue
+        price_obj = r.get("price") or {}
+        if not isinstance(price_obj, dict) or price_obj.get("amount") is None:
+            continue
+        try:
+            price = float(price_obj["amount"])
+        except Exception:
+            continue
+        orig_obj = r.get("originalPrice")
+        regular = float(orig_obj["amount"]) if isinstance(orig_obj, dict) and orig_obj.get("amount") is not None else price
+
+        ship = 0.0
+        ship_obj = r.get("shipping")
+        if isinstance(ship_obj, dict):
+            nodes = ship_obj.get("nodes") or []
+            if nodes and isinstance(nodes[0], dict):
+                amt = (nodes[0].get("price") or {}).get("amount")
+                if amt is not None:
+                    try:
+                        ship = float(amt)
+                    except Exception:
+                        pass
+
+        raw_shop = (r.get("shop") or {}).get("name") or ""
+        shop_name = _PJ_SHOP_MAP.get(raw_shop, raw_shop)
+
+        rev = r.get("shopUserReviews") or {}
+        rev_count = rev.get("numberOfReviewsInScore") or 0
+        if isinstance(rev, dict) and rev_count >= 5 and rev.get("score") is not None:
+            rating = float(rev["score"])
+            reviews = int(rev_count)
+        else:
+            rating = None
+            reviews = None
+
+        offer_id = str(r.get("shopOfferId") or "")
+        if shop_name == "Elgiganten" and offer_id.isdigit():
+            offer_url = f"https://www.elgiganten.dk/product/{offer_id}"
+        elif shop_name in ("Proshop", "Proshop.dk") and offer_id.isdigit():
+            offer_url = f"https://www.proshop.dk/{offer_id}"
+        elif shop_name in ("Komplett", "Komplett.dk") and offer_id.isdigit():
+            offer_url = f"https://www.komplett.dk/product/{offer_id}"
+        else:
+            offer_url = r.get("clickoutUrl") or f"https://prisjagt.dk/product.php?p={r.get('productId') or ''}"
+
+        live_offers.append({
+            "merchant": shop_name,
+            "rating": rating,
+            "reviews": reviews,
+            "regular": regular,
+            "campaign": price if regular > price else None,
+            "camp_start": None,
+            "camp_end": None,
+            "price": price,
+            "shipping": ship,
+            "stock": stock_map.get(r.get("stockStatus"), "UNKNOWN"),
+            "title": r.get("name") or "",
+            "url": offer_url,
+        })
+
     oldest = re.search(r'"oldestHistoryItem":"([^"]+)"', joined)
-    return {"items": items, "tracked_since": oldest.group(1)[:10] if oldest else None}
+    return {
+        "items": items,
+        "offers": live_offers,
+        "tracked_since": oldest.group(1)[:10] if oldest else None,
+    }
+
+
+_DOMAIN_MERCHANT_MAP = (
+    ("proshop.dk", "Proshop.dk"),
+    ("mm-vision.dk", "MM-Vision"),
+    ("elgiganten.dk", "Elgiganten"),
+    ("power.dk", "POWER"),
+    ("komplett.dk", "Komplett.dk"),
+    ("fcomputer.dk", "Føniks Computer"),
+    ("topdata.dk", "Topdata"),
+    ("computersalg.dk", "CS MEGASTORE"),
+    ("compumail.dk", "CompuMail"),
+    ("avxperten.dk", "avXperten"),
+)
+
+
+def _merchant_from_url(url, default_merchant=None, brand=None):
+    u_low = url.lower()
+    for dom, merch in _DOMAIN_MERCHANT_MAP:
+        if dom in u_low:
+            return merch
+    return default_merchant or brand or urllib.parse.urlparse(url).netloc.replace("www.", "")
 
 
 def parse_direct_store(html, url, default_merchant=None):
-    """Parsea Schema.org Product JSON-LD de tiendas danesas directas (Proshop, MM-Vision, etc.)."""
+    """Parsea Schema.org Product JSON-LD de tiendas danesas directas (Proshop, MM-Vision, Elgiganten, etc.)."""
     m = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.DOTALL)
     for j in m:
         try:
@@ -341,12 +468,7 @@ def parse_direct_store(html, url, default_merchant=None):
                 brand = d.get("brand")
                 if isinstance(brand, dict):
                     brand = brand.get("name")
-                if "proshop.dk" in url:
-                    merchant = "Proshop"
-                elif "mm-vision.dk" in url:
-                    merchant = "MM-Vision"
-                else:
-                    merchant = default_merchant or brand or urllib.parse.urlparse(url).netloc.replace("www.", "")
+                merchant = _merchant_from_url(url, default_merchant=default_merchant, brand=brand)
                 offers = d.get("offers", {})
                 if isinstance(offers, list) and offers:
                     offers = offers[0]
@@ -394,12 +516,7 @@ def parse_direct_store(html, url, default_merchant=None):
         if not title_m:
             title_m = re.search(r'<h1[^>]*>([^<]+)</h1>', html)
         title_val = title_m.group(1).strip() if title_m else "Store Product"
-        if "topdata.dk" in url:
-            merchant = "Topdata"
-        elif "fcomputer.dk" in url:
-            merchant = "Føniks Computer"
-        else:
-            merchant = default_merchant or urllib.parse.urlparse(url).netloc.replace("www.", "")
+        merchant = _merchant_from_url(url, default_merchant=default_merchant)
         return {
             "merchant": merchant,
             "title": title_val,
@@ -510,13 +627,13 @@ def process_model(ctx, model):
             ctx.err(key, "direct_store", d_url, e)
         time.sleep(CFG.get("request_delay_seconds", 3))
 
-    # ---- historial Prisjagt
+    # ---- historial y ofertas en vivo Prisjagt
     pj_prices = []
     tracked_since = None
     for pid in model.get("prisjagt", []):
         url = f"https://prisjagt.dk/product.php?p={pid}"
         try:
-            html = http_get(url, min_len=20000, expect="historyItems")
+            html = http_get(url, min_len=15000)
             ph = parse_prisjagt(html)
             ctx.ok += 1
             tracked_since = ph["tracked_since"] or tracked_since
@@ -531,6 +648,20 @@ def process_model(ctx, model):
                 con.execute("""INSERT OR IGNORE INTO prisjagt_history(model_key,prisjagt_id,shop,date,price,offer_name,
                     membership,first_seen) VALUES(?,?,?,?,?,?,?,?)""",
                             (key, pid, shop, d, price, name, int(bool(it.get("isMembershipPrice"))), RUN_DATE))
+            for o in ph.get("offers", []):
+                pr_ok = True
+                ship = o["shipping"] if o["shipping"] is not None else 0.0
+                total = o["price"] + ship
+                o2 = dict(o, camp_end_used=None, total=total,
+                          trusted=merchant_trusted(o), match=title_matches(o["title"], model),
+                          product_url=url)
+                offers.append(o2)
+                con.execute("""INSERT OR IGNORE INTO offers(run_id,check_date,checked_at,model_key,source,merchant,
+                    offer_title,price,regular_price,campaign_price,campaign_end,shipping,total,stock,trusted,title_match,
+                    product_url,offer_url) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                            (ctx.run_id, RUN_DATE, now_cph().isoformat(), key, "prisjagt.dk", o["merchant"],
+                             o["title"], o["price"], o["regular"], o["campaign"], o["camp_end"], ship, total,
+                             o["stock"], int(o2["trusted"]), int(o2["match"]), url, o["url"]))
         except Exception as e:
             ctx.err(key, "prisjagt.dk", url, e)
         time.sleep(CFG["request_delay_seconds"])

@@ -93,16 +93,26 @@ def generate_dashboard_html(output_paths=None):
         FROM model_daily WHERE check_date=?
     """, (run_date,)).fetchall()
     
-    # 4. Todas las ofertas del dia
+    # 4. Todas las ofertas del dia (deduplicadas por tienda canonica)
     offers_rows = con.execute("""
         SELECT model_key, merchant, offer_title, price, regular_price, campaign_price,
                campaign_end, shipping, total, stock, trusted, title_match, product_url, offer_url
-        FROM offers WHERE check_date=? ORDER BY total ASC, price ASC
+        FROM offers
+        WHERE check_date=? AND title_match=1 AND stock != 'OUT_OF_STOCK'
+        ORDER BY CASE WHEN trusted=1 THEN 0 ELSE 1 END ASC,
+                 COALESCE(total, price) ASC,
+                 CASE WHEN stock='IN_STOCK' THEN 0 ELSE 1 END ASC
     """, (run_date,)).fetchall()
     
     offers_by_model = {}
+    seen_merchants = {}
     for r in offers_rows:
         mkey = r[0]
+        canon_merch = (r[1] or "").lower().replace(".dk", "").strip()
+        seen = seen_merchants.setdefault(mkey, set())
+        if canon_merch in seen:
+            continue
+        seen.add(canon_merch)
         offers_by_model.setdefault(mkey, []).append({
             "merchant": r[1],
             "title": r[2],
@@ -118,6 +128,16 @@ def generate_dashboard_html(output_paths=None):
             "product_url": r[12],
             "offer_url": r[13],
         })
+
+    # 4b. Precio maximo en los ultimos 7 dias para calcular rebaja reciente
+    hist_7d = {}
+    for mk, bt in con.execute("""
+        SELECT model_key, MAX(best_total)
+        FROM model_daily
+        WHERE check_date < ? AND check_date >= date(?, '-7 day') AND best_total IS NOT NULL
+        GROUP BY model_key
+    """, (run_date, run_date)).fetchall():
+        hist_7d[mk] = bt
         
     # 5. Descubrimientos y reviews recientes
     discovered = con.execute("SELECT product_id, name, path, first_seen FROM discovered_products ORDER BY first_seen DESC LIMIT 8").fetchall()
@@ -161,6 +181,14 @@ def generate_dashboard_html(output_paths=None):
             r_min = None
             r_med = None
             n_off = 0
+
+        ref_prev = hist_7d.get(mkey) or r_med
+        if b_total is not None and ref_prev:
+            delta_7d = round(b_total - ref_prev)
+            delta_pct = round((b_total - ref_prev) / ref_prev * 100)
+        else:
+            delta_7d = 0
+            delta_pct = 0
             
         models_data.append({
             "key": mkey,
@@ -177,6 +205,8 @@ def generate_dashboard_html(output_paths=None):
             "best_in_stock_merchant": bis_merch,
             "ref_min": r_min,
             "ref_median": r_med,
+            "delta_7d": delta_7d,
+            "delta_pct": delta_pct,
             "n_offers": n_off,
             "target_price": m.get("target_price"),
             "excellent_price": m.get("excellent_price"),
@@ -366,6 +396,7 @@ def generate_dashboard_html(output_paths=None):
           <span class="text-xs font-semibold text-slate-400 mr-1">Estado:</span>
           <button onclick="setFilter('all')" id="btn-all" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-blue-600 text-white shadow-sm transition">Todos</button>
           <button onclick="setFilter('deals')" id="btn-deals" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Solo Ofertas A/B</button>
+          <button onclick="setFilter('drops')" id="btn-drops" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition">🔥 Con rebaja reciente</button>
           <button onclick="setFilter('normal')" id="btn-normal" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Precio Normal (C)</button>
           <button onclick="setFilter('watch')" id="btn-watch" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition">En Radar / Próx. Escaneo</button>
         </div>
@@ -540,6 +571,7 @@ def generate_dashboard_html(output_paths=None):
 
         // Estado / Calificacion
         if (currentFilter === 'deals' && !(m.grade === 'A' || m.grade === 'B')) return false;
+        if (currentFilter === 'drops' && !(m.delta_7d <= -100 || m.grade === 'A' || m.grade === 'B')) return false;
         if (currentFilter === 'normal' && m.grade !== 'C') return false;
         if (currentFilter === 'watch' && m.grade !== 'WATCH') return false;
 
@@ -547,7 +579,7 @@ def generate_dashboard_html(output_paths=None):
         if (topTierOnly && m.tier !== 'top') return false;
 
         // Filtro stock
-        if (inStockOnly && m.best_stock !== 'IN_STOCK') return false;
+        if (inStockOnly && m.best_stock !== 'IN_STOCK' && !m.best_in_stock_total) return false;
 
         // Busqueda texto
         if (q) {{
@@ -557,6 +589,10 @@ def generate_dashboard_html(output_paths=None):
 
         return true;
       }});
+
+      if (currentFilter === 'drops') {{
+        filtered.sort((a, b) => (a.delta_pct || 0) - (b.delta_pct || 0));
+      }}
 
       // Actualizar contador dinamico
       const statDeals = filtered.filter(m => m.grade === 'A' || m.grade === 'B').length;
@@ -693,6 +729,7 @@ def generate_dashboard_html(output_paths=None):
                 ${{getGradeBadge(m.grade)}}
                 <span class="text-xs px-2.5 py-0.5 rounded-xl bg-slate-800 text-slate-300 font-medium">Tier: ${{m.tier.toUpperCase()}}</span>
                 ${{m.best_stock === 'IN_STOCK' ? '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-medium">En stock</span>' : ''}}
+                ${{m.delta_7d <= -100 ? `<span class="text-xs px-2.5 py-0.5 rounded-xl bg-rose-500/15 text-rose-300 border border-rose-500/40 font-bold">🔥 Bajó ${{fmtDkk(Math.abs(m.delta_7d))}} (${{m.delta_pct}}%)</span>` : ''}}
               </div>
 
               <div>
@@ -739,6 +776,7 @@ def generate_dashboard_html(output_paths=None):
                   <span class="text-3xl font-black text-white tracking-tight">${{fmtDkk(m.best_total || m.best_price)}}</span>
                 </div>
                 <p class="text-xs text-slate-500 mt-0.5">IVA danés (moms) + envío incluido</p>
+                ${{(m.best_stock && m.best_stock !== 'IN_STOCK' && m.best_stock !== 'WATCH') ? (m.best_in_stock_total ? `<p class="text-[11px] text-amber-300 mt-1.5 bg-amber-500/10 border border-amber-500/20 rounded-lg px-2 py-1">⏳ Bajo pedido (${{m.best_stock}}) · En stock ya: <strong class="text-emerald-300">${{fmtDkk(m.best_in_stock_total)}}</strong> (${{m.best_in_stock_merchant}})</p>` : `<p class="text-[11px] text-amber-300 mt-1.5">⏳ Sin stock inmediato (${{m.best_stock}})</p>`) : ''}}
 
                 <div class="mt-4 space-y-1.5 text-xs border-t border-slate-800/80 pt-3">
                   <div class="flex justify-between">
