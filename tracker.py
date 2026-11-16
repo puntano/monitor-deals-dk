@@ -536,11 +536,27 @@ def parse_direct_store(html, url, default_merchant=None):
 
 
 # --------------------------------------------------------------------------- core
+TRUSTED_MERCHANTS_ALLOWLIST = (
+    "proshop", "komplett", "elgiganten", "power", "punkt1",
+    "mm-vision", "mm vision", "føniks", "foeniks", "fcomputer", "topdata",
+    "sharkgaming", "shark gaming", "maxgaming", "magasin",
+    "compumail", "computersalg", "cs megastore", "avxperten",
+    "happii", "merlin", "skousen", "whiteaway", "føtex", "foetex",
+    "bilka", "salling", "imerco", "kitchenone", "rigtig kaffe",
+    "house of barista", "moccatime", "coolshop", "goblue",
+    "asus store", "samsung", "acer", "lenovo", "dell", "lg",
+    "siemens", "sharkninja", "taurus gaming",
+)
+
+
 def merchant_trusted(off):
-    name = off["merchant"] or ""
-    if any(name.lower().startswith(x.lower()) for x in CFG["low_trust_merchants"]):
+    name = (off.get("merchant") or "").strip()
+    n_low = name.lower()
+    if any(n_low.startswith(x.lower()) for x in CFG["low_trust_merchants"]):
         return False
-    if off["rating"] is not None and off["reviews"] is not None:
+    if any(re.search(r"\b" + re.escape(w) + r"\b", n_low) for w in TRUSTED_MERCHANTS_ALLOWLIST):
+        return True
+    if off.get("rating") is not None and off.get("reviews") is not None:
         if off["reviews"] < CFG["min_merchant_reviews"] or off["rating"] < CFG["min_merchant_rating"]:
             return False
     return True
