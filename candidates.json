@@ -652,13 +652,10 @@
       "category_name": "Equipos Completos",
       "match_tokens": [
         "Føniks",
-        "Foeniks",
         "Exclusive Gamer"
       ],
       "exclude_tokens": [],
-      "pricerunner": [
-        "/pl/223-3433753257/Stationaere-computere/Foeniks-AMD-Ryzen-7-RTX5070-Gamer-Computer-Sammenlign-Priser"
-      ],
+      "pricerunner": [],
       "direct_urls": [
         "https://www.fcomputer.dk/computer/faerdigsamlet-pc/exclusive-gamer-pc/foeniks-fsw4-faerdigsamlet-gamer-computer"
       ],
@@ -1563,7 +1560,7 @@
         "CASE"
       ],
       "pricerunner": [
-        "/pl/25-3529305013/Skaerme/MSI-MPG-322UR-QD-OLED-X24-32-inch-4K-240-Hz-Gaming-Monitor-Black-Sammenlign-Priser"
+        "/pl/25-3390885745/Skaerme/MSI-MPG-322URX-QD-OLED-Gaming-Monitor-Sammenlign-Priser"
       ],
       "prisjagt": [
         14347555

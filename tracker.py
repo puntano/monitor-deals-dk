@@ -1304,6 +1304,7 @@ def main():
             maybe_alert(ctx, f"hb|{RUN_DATE}", "HEARTBEAT", None, None, "Resumen semanal ofertas DK", body,
                         priority=1, require_drop=False)
         dispatch(ctx)
+        con.commit()
         write_report(ctx, new_rev)
         st = "ok" if ctx.failed == 0 else ("partial" if ctx.ok > 0 else "failed")
         con.execute("UPDATE runs SET finished_at=?,status=?,ok_sources=?,failed_sources=?,notes=? WHERE run_id=?",
