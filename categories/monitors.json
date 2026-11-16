@@ -561,6 +561,84 @@
       "cons": "Refresco de 165Hz en lugar de 240Hz",
       "category": "monitors",
       "category_name": "Monitores 4K"
+    },
+    {
+      "key": "dell-s3225qc",
+      "name": "Dell 32 Plus S3225QC (31.5\" 4K 120Hz QD-OLED, USB-C 65W)",
+      "match_tokens": [
+        "S3225QC"
+      ],
+      "exclude_tokens": [
+        "CASE",
+        "STAND"
+      ],
+      "pricerunner": [
+        "/pl/25-3422356447/Skaerme/Dell-32-Plus-4K-QD-OLED-Monitor-S3225QC-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "direct_urls": [],
+      "tier": "alternative",
+      "target_price": 4200,
+      "excellent_price": 4000,
+      "burnin_warranty": "3 años de garantía Dell Advanced Exchange (incluye burn-in en gama OLED Dell).",
+      "reviews": [],
+      "review_summary": "La puerta de entrada QD-OLED 4K de 32\" más económica en Dinamarca: 120Hz con USB-C 65W, ideal para productividad mixta y gaming a un precio por debajo de 4.000 DKK en ofertas.",
+      "pros": "Panel 4K QD-OLED de 31.5\" por ~3.999 DKK en POWER, USB-C 65W, altavoces integrados",
+      "cons": "120Hz en lugar de 240Hz, sin KVM completo ni puertos HDMI 2.1 de ancho de banda completo para 240Hz",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "asus-xg32ucwg",
+      "name": "ASUS ROG Strix OLED XG32UCWG (31.5\" 4K 165Hz / FHD 330Hz Dual-Mode WOLED, TrueBlack Glossy)",
+      "match_tokens": [
+        "XG32UCWG"
+      ],
+      "exclude_tokens": [
+        "XG32UCWMG",
+        "XG32UCDS"
+      ],
+      "pricerunner": [
+        "/pl/25-3423718536/Skaerme/ASUS-ROG-Strix-OLED-XG32UCWG-32-Zoll-4K-UHD-Gaming-Monitor-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "direct_urls": [],
+      "tier": "alternative",
+      "target_price": 5500,
+      "excellent_price": 5100,
+      "burnin_warranty": "3 años de garantía ASUS OLED Care incluyendo burn-in.",
+      "reviews": [],
+      "review_summary": "Hermano de 165Hz/330Hz del XG32UCWMG con idéntico panel WOLED TrueBlack Glossy: negros puros sin tinte púrpura y gran nitidez de texto.",
+      "pros": "TrueBlack Glossy WOLED, modo dual 4K 165Hz / FHD 330Hz, precio ~5.249–5.578 DKK",
+      "cons": "Refresco nativo de 165Hz en 4K (240Hz en el modelo XG32UCWMG)",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "lg-32gx870b",
+      "name": "LG UltraGear OLED 32GX870B-B (31.5\" 4K 240Hz / FHD 480Hz Dual-Mode WOLED, USB-C 90W)",
+      "match_tokens": [
+        "32GX870B",
+        "32GX870"
+      ],
+      "exclude_tokens": [
+        "32GX870A"
+      ],
+      "pricerunner": [
+        "/pl/25-3547208528/Skaerme/LG-32GX870B-B-4K-Ultra-HD-OLED-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "direct_urls": [],
+      "tier": "watch",
+      "target_price": 7500,
+      "excellent_price": 7000,
+      "burnin_warranty": "2 años garantía LG DK + política OLED estándar.",
+      "reviews": [],
+      "review_summary": "Nueva revisión Dual-Mode 4K 240Hz / FHD 480Hz de LG UltraGear con conectividad USB-C de 90W.",
+      "pros": "Modo Dual 4K 240Hz / 480Hz, USB-C 90W, chasis UltraGear renovado",
+      "cons": "Precio de lanzamiento todavía alto (~9.645 DKK)",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     }
   ],
   "discovery_queries": [

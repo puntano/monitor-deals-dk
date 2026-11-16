@@ -321,10 +321,13 @@
       "category_name": "Equipos Completos",
       "match_tokens": [
         "Føniks",
+        "Foeniks",
         "Exclusive Gamer"
       ],
       "exclude_tokens": [],
-      "pricerunner": [],
+      "pricerunner": [
+        "/pl/223-3433753257/Stationaere-computere/Foeniks-AMD-Ryzen-7-RTX5070-Gamer-Computer-Sammenlign-Priser"
+      ],
       "direct_urls": [
         "https://www.fcomputer.dk/computer/faerdigsamlet-pc/exclusive-gamer-pc/foeniks-fsw4-faerdigsamlet-gamer-computer"
       ],
@@ -415,6 +418,31 @@
       "pros": "RX 9070 XT 16GB con DP 2.1 nativo, ensamblado y garantia en Dinamarca, desde ~20.000 DKK",
       "cons": "Configuracion exacta a verificar; pocas tiendas (Magasin, MaxGaming, CDON)",
       "direct_urls": []
+    },
+    {
+      "key": "pc-cepter-r57-5070",
+      "name": "POWER Cepter E-Sport R57 Wi-Fi Gaming PC (AMD Ryzen 7 / RTX 5070 / 16GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Cepter E-Sport R57",
+        "E-Sport R57"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-3451589265/Stationaere-computere/Cepter-E-Sport-R57-Wi-Fi-PC-%2816GB-1TB%29-Sammenlign-Priser"
+      ],
+      "direct_urls": [],
+      "prisjagt": [],
+      "store_links": [],
+      "tier": "alternative",
+      "target_price": 12999,
+      "excellent_price": 12000,
+      "burnin_warranty": "2 años de garantía danesa directa en POWER / Punkt1.",
+      "reviews": [],
+      "review_summary": "Equipo gaming preensamblado distribuido por POWER en Dinamarca con RTX 5070, Wi-Fi integrado y 1TB SSD; en fuerte campaña de Black Weeks (−25% desde 15.999 DKK).",
+      "pros": "Oferta Black Weeks muy agresiva (~11.999 DKK en stock en POWER), garantía local danesa",
+      "cons": "16GB de RAM en la configuración base (ampliable más adelante)"
     }
   ],
   "discovery_queries": [],

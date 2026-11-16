@@ -282,6 +282,60 @@
       "category_name": "Cafeteras Superautomáticas"
     },
     {
+      "key": "delonghi-magnifica-s",
+      "name": "De'Longhi Magnifica S ECAM 21.117.B (Bean-to-Cup Compacta, Cappuccino System)",
+      "match_tokens": [
+        "Magnifica S",
+        "ECAM 21.117",
+        "ECAM21.117",
+        "ECAM22.110"
+      ],
+      "exclude_tokens": [
+        "Evo",
+        "Start",
+        "Plus"
+      ],
+      "pricerunner": [
+        "/pl/82-3673343/Kaffemaskiner/DeLonghi-Magnifica-S-ECAM-21.117.B-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 2350,
+      "excellent_price": 2100,
+      "burnin_warranty": "2 años garantía De'Longhi DK",
+      "reviews": [],
+      "review_summary": "Superventas histórico superautomático de entrada: fiable, compacto, fácil de mantener y con vaporizador manual para espuma de leche tradicional.",
+      "pros": "Precio imbatible (~1.888–2.287 DKK), muy fiable, repuestos económicos y fáciles en DK",
+      "cons": "Vaporizador manual en lugar de jarra automática LatteCrema, estética veterana",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "ninja-autobarista",
+      "name": "Ninja Luxe Café / AutoBarista AE1051EU (Espresso & Bean-to-Cup Barista System)",
+      "match_tokens": [
+        "AutoBarista",
+        "AE1051",
+        "ES601",
+        "ES701"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/82-3527097603/Kaffemaskiner/Ninja-AutoBarista-AE1051EU-Kaffemaskine-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 5500,
+      "excellent_price": 5000,
+      "burnin_warranty": "2 años garantía oficial Ninja Dinamarca",
+      "reviews": [],
+      "review_summary": "Sistema híbrido con molino cónico integrado de 25 ajustes, tecnología Barista Assist con báscula integrada y espumador dual automático frío/caliente.",
+      "pros": "Báscula integrada y guía automática de molienda, excelente calidad en espresso y cold brew, rebajada ~33% en Black Weeks (~4.999 DKK)",
+      "cons": "Requiere tampeo manual asistido (no es totalmente hands-off como De'Longhi Dinamica)",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
       "key": "pc-mm-vision-ryzen-gamer",
       "name": "MM-Vision Ryzen Gamer (AMD Ryzen 5 / Asus RTX 5060 8GB / 16GB DDR5 / 1TB SSD)",
       "category": "desktops",
@@ -598,10 +652,13 @@
       "category_name": "Equipos Completos",
       "match_tokens": [
         "Føniks",
+        "Foeniks",
         "Exclusive Gamer"
       ],
       "exclude_tokens": [],
-      "pricerunner": [],
+      "pricerunner": [
+        "/pl/223-3433753257/Stationaere-computere/Foeniks-AMD-Ryzen-7-RTX5070-Gamer-Computer-Sammenlign-Priser"
+      ],
       "direct_urls": [
         "https://www.fcomputer.dk/computer/faerdigsamlet-pc/exclusive-gamer-pc/foeniks-fsw4-faerdigsamlet-gamer-computer"
       ],
@@ -692,6 +749,31 @@
       "pros": "RX 9070 XT 16GB con DP 2.1 nativo, ensamblado y garantia en Dinamarca, desde ~20.000 DKK",
       "cons": "Configuracion exacta a verificar; pocas tiendas (Magasin, MaxGaming, CDON)",
       "direct_urls": []
+    },
+    {
+      "key": "pc-cepter-r57-5070",
+      "name": "POWER Cepter E-Sport R57 Wi-Fi Gaming PC (AMD Ryzen 7 / RTX 5070 / 16GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Cepter E-Sport R57",
+        "E-Sport R57"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-3451589265/Stationaere-computere/Cepter-E-Sport-R57-Wi-Fi-PC-%2816GB-1TB%29-Sammenlign-Priser"
+      ],
+      "direct_urls": [],
+      "prisjagt": [],
+      "store_links": [],
+      "tier": "alternative",
+      "target_price": 12999,
+      "excellent_price": 12000,
+      "burnin_warranty": "2 años de garantía danesa directa en POWER / Punkt1.",
+      "reviews": [],
+      "review_summary": "Equipo gaming preensamblado distribuido por POWER en Dinamarca con RTX 5070, Wi-Fi integrado y 1TB SSD; en fuerte campaña de Black Weeks (−25% desde 15.999 DKK).",
+      "pros": "Oferta Black Weeks muy agresiva (~11.999 DKK en stock en POWER), garantía local danesa",
+      "cons": "16GB de RAM en la configuración base (ampliable más adelante)"
     },
     {
       "key": "gpu-rtx-5080",
@@ -815,7 +897,10 @@
       ],
       "pricerunner": [
         "/pl/37-3396506989/Grafikkort/Gigabyte-GeForce-RTX-5070-Windforce-OC-SFF-12-GB-Grafikkort-Sammenlign-Priser",
-        "/pl/37-3517052298/Grafikkort/ASUS-Dual-GeForce-RTX-5070-12GB-GDDR7-Grafikkort-Sammenlign-Priser"
+        "/pl/37-3517052298/Grafikkort/ASUS-Dual-GeForce-RTX-5070-12GB-GDDR7-Grafikkort-Sammenlign-Priser",
+        "/pl/37-3734759599/Grafikkort/Gigabyte-GeForce-RTX-5070-WindForce-OC-Sammenlign-Priser",
+        "/pl/37-3457574241/Grafikkort/ASUS-Prime-GeForce-RTX-5070-OC-Graphics-Card-Sammenlign-Priser",
+        "/pl/37-3396650631/Grafikkort/MSI-GeForce-RTX-5070-12G-Gaming-Trio-OC-Sammenlign-Priser"
       ],
       "prisjagt": [],
       "store_links": [
@@ -858,7 +943,9 @@
       ],
       "pricerunner": [
         "/pl/37-3396383505/Grafikkort/ASUS-PRIME-RX-9070-XT-OC-Grafikkort-Sammenlign-Priser",
-        "/pl/37-3396383352/Grafikkort/Powercolor-Reaper-RX9070XT-16G-A-Sammenlign-Priser"
+        "/pl/37-3396383352/Grafikkort/Powercolor-Reaper-RX9070XT-16G-A-Sammenlign-Priser",
+        "/pl/37-3396994287/Grafikkort/Gigabyte-Radeon-9070-XT-Gaming-OC-16G-Grafikkort-Sammenlign-Priser",
+        "/pl/37-3396385541/Grafikkort/Sapphire-Pulse-Radeon-RX-9070-XT-Gaming-16GB-GDDR6-PCI-Express-Graphics-Card-Sammenlign-Priser"
       ],
       "prisjagt": [],
       "store_links": [
@@ -941,12 +1028,16 @@
       "exclude_tokens": [
         "9070 XT",
         "9070XT",
+        "GRE",
         "DESKTOP",
         "STATIONAER",
         "GAMING PC"
       ],
       "pricerunner": [
-        "/pl/37-3398337160/Grafikkort/Acer-Predator-BiFrost-AMD-Radeon-RX-9070-OC-3xDP1xHDMI-16GB-GDDR6-Sammenlign-Priser"
+        "/pl/37-3398337160/Grafikkort/Acer-Predator-BiFrost-AMD-Radeon-RX-9070-OC-3xDP1xHDMI-16GB-GDDR6-Sammenlign-Priser",
+        "/pl/37-3396506934/Grafikkort/Sapphire-Pulse-Radeon-RX-9070-2xHDMI-2xDP-16GB-Sammenlign-Priser",
+        "/pl/37-3396385681/Grafikkort/Asrock-Radeon-RX-9070-Challenger-16GB-GDDR6-PCI-Express-Graphics-Card-Sammenlign-Priser",
+        "/pl/37-3397082083/Grafikkort/Acer-Radeon-RX-9070-Nitro-OC-16GB-GDDR6-RAM-Grafikkort-Sammenlign-Priser"
       ],
       "prisjagt": [],
       "store_links": [
@@ -960,13 +1051,53 @@
         }
       ],
       "tier": "alternative",
-      "target_price": 5400,
-      "excellent_price": 4900,
+      "target_price": 6200,
+      "excellent_price": 5800,
       "burnin_warranty": "2-3 anos de garantia de fabricante con soporte DP 2.1.",
       "reviews": [],
       "review_summary": "Alternativa de gran relacion precio/rendimiento con 16GB de VRAM compitiendo de frente contra la RTX 5070 en el rango de los 5.000-6.000 DKK.",
       "pros": "16GB de VRAM a precio asequible, nueva arquitectura RDNA 4 con Ray Tracing optimizado",
       "cons": "Ecosistema de IA algo menor comparado con CUDA/NVIDIA"
+    },
+    {
+      "key": "gpu-rtx-5060-ti-16gb",
+      "name": "NVIDIA GeForce RTX 5060 Ti 16GB GDDR7 (Blackwell, DLSS 4, DP 2.1)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5060 Ti",
+        "5060TI",
+        "5060-Ti"
+      ],
+      "exclude_tokens": [
+        "8GB",
+        "8 GB",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3441192026/Grafikkort/ASUS-Dual-GeForce-RTX-5060TI-O16GB-GDDR7-16GB-OC-Grafikkort-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 5200,
+      "excellent_price": 4850,
+      "burnin_warranty": "3 años de garantía oficial en Dinamarca (ASUS Dual).",
+      "reviews": [],
+      "review_summary": "Opción Blackwell de 16GB GDDR7 para gaming 1440p/4K con DLSS 4 y Multi Frame Generation y aceleración local de IA por menos de 5.000 DKK.",
+      "pros": "16GB de VRAM GDDR7, DisplayPort 2.1, bajo consumo, oferta Black Weeks a ~4.790 DKK en Komplett.dk",
+      "cons": "Bus de 128 bits, menor rendimiento bruto en 4K nativo sin DLSS frente a RTX 5070/5070 Ti"
     },
     {
       "key": "msi-mpg-321urx",
@@ -1523,6 +1654,84 @@
       "review_summary": "Variante de 165Hz de la familia ROG Strix QD-OLED 4K de 31.5 pulgadas: puerta de entrada económica al panel 4K QD-OLED de ASUS.",
       "pros": "Panel 4K QD-OLED con disipador personalizado ASUS a precio contenido (~5.242 DKK)",
       "cons": "Refresco de 165Hz en lugar de 240Hz",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "dell-s3225qc",
+      "name": "Dell 32 Plus S3225QC (31.5\" 4K 120Hz QD-OLED, USB-C 65W)",
+      "match_tokens": [
+        "S3225QC"
+      ],
+      "exclude_tokens": [
+        "CASE",
+        "STAND"
+      ],
+      "pricerunner": [
+        "/pl/25-3422356447/Skaerme/Dell-32-Plus-4K-QD-OLED-Monitor-S3225QC-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "direct_urls": [],
+      "tier": "alternative",
+      "target_price": 4200,
+      "excellent_price": 4000,
+      "burnin_warranty": "3 años de garantía Dell Advanced Exchange (incluye burn-in en gama OLED Dell).",
+      "reviews": [],
+      "review_summary": "La puerta de entrada QD-OLED 4K de 32\" más económica en Dinamarca: 120Hz con USB-C 65W, ideal para productividad mixta y gaming a un precio por debajo de 4.000 DKK en ofertas.",
+      "pros": "Panel 4K QD-OLED de 31.5\" por ~3.999 DKK en POWER, USB-C 65W, altavoces integrados",
+      "cons": "120Hz en lugar de 240Hz, sin KVM completo ni puertos HDMI 2.1 de ancho de banda completo para 240Hz",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "asus-xg32ucwg",
+      "name": "ASUS ROG Strix OLED XG32UCWG (31.5\" 4K 165Hz / FHD 330Hz Dual-Mode WOLED, TrueBlack Glossy)",
+      "match_tokens": [
+        "XG32UCWG"
+      ],
+      "exclude_tokens": [
+        "XG32UCWMG",
+        "XG32UCDS"
+      ],
+      "pricerunner": [
+        "/pl/25-3423718536/Skaerme/ASUS-ROG-Strix-OLED-XG32UCWG-32-Zoll-4K-UHD-Gaming-Monitor-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "direct_urls": [],
+      "tier": "alternative",
+      "target_price": 5500,
+      "excellent_price": 5100,
+      "burnin_warranty": "3 años de garantía ASUS OLED Care incluyendo burn-in.",
+      "reviews": [],
+      "review_summary": "Hermano de 165Hz/330Hz del XG32UCWMG con idéntico panel WOLED TrueBlack Glossy: negros puros sin tinte púrpura y gran nitidez de texto.",
+      "pros": "TrueBlack Glossy WOLED, modo dual 4K 165Hz / FHD 330Hz, precio ~5.249–5.578 DKK",
+      "cons": "Refresco nativo de 165Hz en 4K (240Hz en el modelo XG32UCWMG)",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
+    },
+    {
+      "key": "lg-32gx870b",
+      "name": "LG UltraGear OLED 32GX870B-B (31.5\" 4K 240Hz / FHD 480Hz Dual-Mode WOLED, USB-C 90W)",
+      "match_tokens": [
+        "32GX870B",
+        "32GX870"
+      ],
+      "exclude_tokens": [
+        "32GX870A"
+      ],
+      "pricerunner": [
+        "/pl/25-3547208528/Skaerme/LG-32GX870B-B-4K-Ultra-HD-OLED-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "direct_urls": [],
+      "tier": "watch",
+      "target_price": 7500,
+      "excellent_price": 7000,
+      "burnin_warranty": "2 años garantía LG DK + política OLED estándar.",
+      "reviews": [],
+      "review_summary": "Nueva revisión Dual-Mode 4K 240Hz / FHD 480Hz de LG UltraGear con conectividad USB-C de 90W.",
+      "pros": "Modo Dual 4K 240Hz / 480Hz, USB-C 90W, chasis UltraGear renovado",
+      "cons": "Precio de lanzamiento todavía alto (~9.645 DKK)",
       "category": "monitors",
       "category_name": "Monitores 4K"
     }

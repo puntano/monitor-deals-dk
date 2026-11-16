@@ -126,7 +126,10 @@
       ],
       "pricerunner": [
         "/pl/37-3396506989/Grafikkort/Gigabyte-GeForce-RTX-5070-Windforce-OC-SFF-12-GB-Grafikkort-Sammenlign-Priser",
-        "/pl/37-3517052298/Grafikkort/ASUS-Dual-GeForce-RTX-5070-12GB-GDDR7-Grafikkort-Sammenlign-Priser"
+        "/pl/37-3517052298/Grafikkort/ASUS-Dual-GeForce-RTX-5070-12GB-GDDR7-Grafikkort-Sammenlign-Priser",
+        "/pl/37-3734759599/Grafikkort/Gigabyte-GeForce-RTX-5070-WindForce-OC-Sammenlign-Priser",
+        "/pl/37-3457574241/Grafikkort/ASUS-Prime-GeForce-RTX-5070-OC-Graphics-Card-Sammenlign-Priser",
+        "/pl/37-3396650631/Grafikkort/MSI-GeForce-RTX-5070-12G-Gaming-Trio-OC-Sammenlign-Priser"
       ],
       "prisjagt": [],
       "store_links": [
@@ -169,7 +172,9 @@
       ],
       "pricerunner": [
         "/pl/37-3396383505/Grafikkort/ASUS-PRIME-RX-9070-XT-OC-Grafikkort-Sammenlign-Priser",
-        "/pl/37-3396383352/Grafikkort/Powercolor-Reaper-RX9070XT-16G-A-Sammenlign-Priser"
+        "/pl/37-3396383352/Grafikkort/Powercolor-Reaper-RX9070XT-16G-A-Sammenlign-Priser",
+        "/pl/37-3396994287/Grafikkort/Gigabyte-Radeon-9070-XT-Gaming-OC-16G-Grafikkort-Sammenlign-Priser",
+        "/pl/37-3396385541/Grafikkort/Sapphire-Pulse-Radeon-RX-9070-XT-Gaming-16GB-GDDR6-PCI-Express-Graphics-Card-Sammenlign-Priser"
       ],
       "prisjagt": [],
       "store_links": [
@@ -252,12 +257,16 @@
       "exclude_tokens": [
         "9070 XT",
         "9070XT",
+        "GRE",
         "DESKTOP",
         "STATIONAER",
         "GAMING PC"
       ],
       "pricerunner": [
-        "/pl/37-3398337160/Grafikkort/Acer-Predator-BiFrost-AMD-Radeon-RX-9070-OC-3xDP1xHDMI-16GB-GDDR6-Sammenlign-Priser"
+        "/pl/37-3398337160/Grafikkort/Acer-Predator-BiFrost-AMD-Radeon-RX-9070-OC-3xDP1xHDMI-16GB-GDDR6-Sammenlign-Priser",
+        "/pl/37-3396506934/Grafikkort/Sapphire-Pulse-Radeon-RX-9070-2xHDMI-2xDP-16GB-Sammenlign-Priser",
+        "/pl/37-3396385681/Grafikkort/Asrock-Radeon-RX-9070-Challenger-16GB-GDDR6-PCI-Express-Graphics-Card-Sammenlign-Priser",
+        "/pl/37-3397082083/Grafikkort/Acer-Radeon-RX-9070-Nitro-OC-16GB-GDDR6-RAM-Grafikkort-Sammenlign-Priser"
       ],
       "prisjagt": [],
       "store_links": [
@@ -271,13 +280,53 @@
         }
       ],
       "tier": "alternative",
-      "target_price": 5400,
-      "excellent_price": 4900,
+      "target_price": 6200,
+      "excellent_price": 5800,
       "burnin_warranty": "2-3 anos de garantia de fabricante con soporte DP 2.1.",
       "reviews": [],
       "review_summary": "Alternativa de gran relacion precio/rendimiento con 16GB de VRAM compitiendo de frente contra la RTX 5070 en el rango de los 5.000-6.000 DKK.",
       "pros": "16GB de VRAM a precio asequible, nueva arquitectura RDNA 4 con Ray Tracing optimizado",
       "cons": "Ecosistema de IA algo menor comparado con CUDA/NVIDIA"
+    },
+    {
+      "key": "gpu-rtx-5060-ti-16gb",
+      "name": "NVIDIA GeForce RTX 5060 Ti 16GB GDDR7 (Blackwell, DLSS 4, DP 2.1)",
+      "category": "gpus",
+      "category_name": "Tarjetas Gráficas",
+      "match_tokens": [
+        "5060 Ti",
+        "5060TI",
+        "5060-Ti"
+      ],
+      "exclude_tokens": [
+        "8GB",
+        "8 GB",
+        "DESKTOP",
+        "STATIONAER",
+        "GAMING PC"
+      ],
+      "pricerunner": [
+        "/pl/37-3441192026/Grafikkort/ASUS-Dual-GeForce-RTX-5060TI-O16GB-GDDR7-16GB-OC-Grafikkort-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Komplett.dk",
+          "url": "https://www.komplett.dk/category/10412/hardware/skjermkort"
+        },
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Grafikkort"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 5200,
+      "excellent_price": 4850,
+      "burnin_warranty": "3 años de garantía oficial en Dinamarca (ASUS Dual).",
+      "reviews": [],
+      "review_summary": "Opción Blackwell de 16GB GDDR7 para gaming 1440p/4K con DLSS 4 y Multi Frame Generation y aceleración local de IA por menos de 5.000 DKK.",
+      "pros": "16GB de VRAM GDDR7, DisplayPort 2.1, bajo consumo, oferta Black Weeks a ~4.790 DKK en Komplett.dk",
+      "cons": "Bus de 128 bits, menor rendimiento bruto en 4K nativo sin DLSS frente a RTX 5070/5070 Ti"
     }
   ],
   "discovery_queries": [],

@@ -283,6 +283,60 @@
       "cons": "Sin pantalla TFT (botones + LEDs), depósito agua 1.8L, sin app, menos ajustes finos",
       "category": "coffee",
       "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "delonghi-magnifica-s",
+      "name": "De'Longhi Magnifica S ECAM 21.117.B (Bean-to-Cup Compacta, Cappuccino System)",
+      "match_tokens": [
+        "Magnifica S",
+        "ECAM 21.117",
+        "ECAM21.117",
+        "ECAM22.110"
+      ],
+      "exclude_tokens": [
+        "Evo",
+        "Start",
+        "Plus"
+      ],
+      "pricerunner": [
+        "/pl/82-3673343/Kaffemaskiner/DeLonghi-Magnifica-S-ECAM-21.117.B-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "alternative",
+      "target_price": 2350,
+      "excellent_price": 2100,
+      "burnin_warranty": "2 años garantía De'Longhi DK",
+      "reviews": [],
+      "review_summary": "Superventas histórico superautomático de entrada: fiable, compacto, fácil de mantener y con vaporizador manual para espuma de leche tradicional.",
+      "pros": "Precio imbatible (~1.888–2.287 DKK), muy fiable, repuestos económicos y fáciles en DK",
+      "cons": "Vaporizador manual en lugar de jarra automática LatteCrema, estética veterana",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
+    },
+    {
+      "key": "ninja-autobarista",
+      "name": "Ninja Luxe Café / AutoBarista AE1051EU (Espresso & Bean-to-Cup Barista System)",
+      "match_tokens": [
+        "AutoBarista",
+        "AE1051",
+        "ES601",
+        "ES701"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/82-3527097603/Kaffemaskiner/Ninja-AutoBarista-AE1051EU-Kaffemaskine-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "tier": "top",
+      "target_price": 5500,
+      "excellent_price": 5000,
+      "burnin_warranty": "2 años garantía oficial Ninja Dinamarca",
+      "reviews": [],
+      "review_summary": "Sistema híbrido con molino cónico integrado de 25 ajustes, tecnología Barista Assist con báscula integrada y espumador dual automático frío/caliente.",
+      "pros": "Báscula integrada y guía automática de molienda, excelente calidad en espresso y cold brew, rebajada ~33% en Black Weeks (~4.999 DKK)",
+      "cons": "Requiere tampeo manual asistido (no es totalmente hands-off como De'Longhi Dinamica)",
+      "category": "coffee",
+      "category_name": "Cafeteras Superautomáticas"
     }
   ],
   "discovery_queries": [],
