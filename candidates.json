@@ -511,17 +511,17 @@
     },
     {
       "key": "pc-dutzo-frostfire",
-      "name": "Proshop DUTZO Gaming Frostfire (AMD Ryzen 5 7600 / RTX 5060 / 16GB DDR5 / 1TB SSD)",
+      "name": "Proshop DUTZO Gaming Frostfire (AMD Ryzen 5 7500F / ASUS RTX 5060 8GB / 16GB DDR5 / 1TB SSD)",
       "category": "desktops",
       "category_name": "Equipos Completos",
       "match_tokens": [
         "Frostfire",
         "DUTZO Frostfire"
       ],
-      "exclude_tokens": [],
-      "pricerunner": [
-        "/pl/223-3547202497/Stationaere-computere/Dutzo-Gaming-Frostfire-Sammenlign-Priser"
+      "exclude_tokens": [
+        "Deluxe Frostfire"
       ],
+      "pricerunner": [],
       "direct_urls": [
         "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Gaming-Frostfire/8076349"
       ],
@@ -541,13 +541,13 @@
       "excellent_price": 9179,
       "burnin_warranty": "2 años de garantía Proshop DK con servicio técnico directo en Aarhus.",
       "reviews": [],
-      "review_summary": "Opción asequible ensamblada por Proshop (~10.199 DKK en stock): arquitectura AM5 moderna y DDR5, ideal para presupuestos contenidos.",
-      "pros": "Precio accesible para un equipo nuevo completo con garantía danesa, entrega rápida",
-      "cons": "Configuración de entrada (RTX 5060 / 16GB RAM): para 4K a altas tasas de refresco se queda corta"
+      "review_summary": "Opción blanca económica de entrada (~10.299 DKK): Ryzen 5 7500F, ASUS RTX 5060 Dual OC 8GB, 16GB DDR5-6000 CL38 y 1TB NVMe.",
+      "pros": "Precio accesible para un equipo completo blanco con Windows 11 y garantía danesa",
+      "cons": "Configuración de entrada (RTX 5060 8GB / 16GB RAM): para 4K a altas tasas de refresco se queda corta"
     },
     {
       "key": "pc-dutzo-wildfire",
-      "name": "Proshop DUTZO Gaming Wildfire (AMD Ryzen 7 7700 / RTX 5070 12GB / 32GB DDR5 / 1TB SSD)",
+      "name": "Proshop DUTZO Gaming Wildfire (AMD Ryzen 5 9600X / ASUS RTX 5070 12GB / 16GB DDR5 / 1TB SSD)",
       "category": "desktops",
       "category_name": "Equipos Completos",
       "match_tokens": [
@@ -555,35 +555,33 @@
         "DUTZO Wildfire"
       ],
       "exclude_tokens": [],
-      "pricerunner": [
-        "/pl/223-3557786396/Stationaere-computere/Dutzo-Gaming-Wildfire-Sammenlign-Priser"
-      ],
+      "pricerunner": [],
       "direct_urls": [
-        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Gaming-Wildfire/8076363"
+        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Gaming-Wildfire/8078272"
       ],
       "prisjagt": [],
       "store_links": [
         {
           "name": "Proshop DUTZO Wildfire (Oficial)",
-          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Gaming-Wildfire/8076363"
+          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Gaming-Wildfire/8078272"
         },
         {
           "name": "Proshop Gaming PCs",
           "url": "https://www.proshop.dk/Stationaer-PC"
         }
       ],
-      "tier": "top",
-      "target_price": 12729,
-      "excellent_price": 12059,
+      "tier": "alternative",
+      "target_price": 13499,
+      "excellent_price": 12799,
       "burnin_warranty": "2 años de garantía Proshop Dinamarca.",
       "reviews": [],
-      "review_summary": "Excelente relación calidad/precio: Ryzen 7 de 8 núcleos, 32GB de RAM DDR5 y tarjeta gráfica RTX 5070 de 12GB por 13.399 DKK.",
-      "pros": "32GB de RAM DDR5 de serie, procesador de 8 núcleos rápido, GPU de nueva generación por un precio muy razonable",
-      "cons": "Chasis cerrado sin tanta capacidad de expansión como los modelos Deluxe"
+      "review_summary": "Revisión vigente en Proshop (SKU 8078272): AMD Ryzen 5 9600X, ASUS GeForce RTX 5070 Dual OC 12GB, Corsair Vengeance 16GB (1x16GB) DDR5-6000 y Kingston NV3 1TB SSD.",
+      "pros": "RTX 5070 de 12GB y CPU Zen 5 Ryzen 5 9600X a un precio contenido",
+      "cons": "Solo trae 16GB (1x16GB) DDR5 de serie (conviene ampliar a 32GB o ir a los modelos Deluxe)"
     },
     {
       "key": "pc-dutzo-deluxe-ember",
-      "name": "Proshop DUTZO Deluxe Ember (AMD Ryzen 7 7800X3D / Radeon RX 9070 XT 16GB / 32GB DDR5 / 1TB SSD)",
+      "name": "Proshop DUTZO Deluxe Ember (AMD Ryzen 7 7800X3D / XFX Radeon RX 9070 XT 16GB / 32GB DDR5 / 1TB SSD)",
       "category": "desktops",
       "category_name": "Equipos Completos",
       "match_tokens": [
@@ -593,13 +591,13 @@
       "exclude_tokens": [],
       "pricerunner": [],
       "direct_urls": [
-        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Ember/8077030"
+        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Ember/8078449"
       ],
       "prisjagt": [],
       "store_links": [
         {
           "name": "Proshop DUTZO Deluxe Ember (Oficial)",
-          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Ember/8077030"
+          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Ember/8078449"
         },
         {
           "name": "Proshop Gaming PCs",
@@ -607,13 +605,13 @@
         }
       ],
       "tier": "top",
-      "target_price": 15484,
-      "excellent_price": 14669,
+      "target_price": 16999,
+      "excellent_price": 15999,
       "burnin_warranty": "2 años de garantía directa Proshop Dinamarca.",
       "reviews": [],
-      "review_summary": "Configuración de referencia para 4K en Proshop: el codiciado procesador Ryzen 7 7800X3D junto con la Radeon RX 9070 XT de 16GB, 32GB DDR5 Corsair y chasis de alto flujo de aire.",
-      "pros": "Ryzen 7 7800X3D (sin cuello de botella de CPU), 16GB de VRAM con DP 2.1 nativo, componentes Corsair prémium",
-      "cons": "En preventa/pedido por alta demanda en Proshop"
+      "review_summary": "Configuración de referencia para 4K en stock en Proshop (SKU 8078449): Ryzen 7 7800X3D, XFX Radeon RX 9070 XT 16GB, Corsair Vengeance 32GB (2x16GB) DDR5-6000 CL38 y SSD PCIe 4.0 1TB.",
+      "pros": "32GB DDR5 reales de serie, Ryzen 7 7800X3D, 16GB VRAM con DP 2.1 nativo, en stock en Proshop",
+      "cons": "SSD de 1TB de serie"
     },
     {
       "key": "pc-topdata-highline-9800x3d-5070",
@@ -647,12 +645,12 @@
     },
     {
       "key": "pc-fcomputer-exclusive-5070",
-      "name": "Føniks Exclusive Gamer PC (AMD Ryzen 7 / RTX 5070 12GB / 32GB DDR5 / 1TB SSD)",
+      "name": "Føniks Warrior IV Gamer PC (AMD Ryzen 7 7800X3D / RTX 5070 12GB / 16GB DDR5 / 1TB SSD)",
       "category": "desktops",
       "category_name": "Equipos Completos",
       "match_tokens": [
-        "Føniks",
-        "Exclusive Gamer"
+        "Føniks Warrior IV",
+        "Warrior IV"
       ],
       "exclude_tokens": [],
       "pricerunner": [],
@@ -662,22 +660,22 @@
       "prisjagt": [],
       "store_links": [
         {
-          "name": "Føniks Computer",
-          "url": "https://www.fcomputer.dk/computer/faerdigsamlet-pc"
+          "name": "Føniks Warrior IV (Oficial)",
+          "url": "https://www.fcomputer.dk/computer/faerdigsamlet-pc/exclusive-gamer-pc/foeniks-fsw4-faerdigsamlet-gamer-computer"
         }
       ],
       "tier": "alternative",
-      "target_price": 13299,
-      "excellent_price": 12599,
-      "burnin_warranty": "3 anos de garantia total y soporte directo en tiendas fisicas de Foniks en Dinamarca.",
+      "target_price": 14499,
+      "excellent_price": 13699,
+      "burnin_warranty": "3 años de garantía total y soporte directo en tiendas físicas de Føniks en Dinamarca.",
       "reviews": [],
-      "review_summary": "Excelente opcion preconfigurada danesa de Foniks Computer con 3 anos de garantia completa, 32GB DDR5 de serie y tarjeta grafica RTX 5070.",
-      "pros": "3 anos de garantia local danesa, 32GB DDR5 de serie, tiendas fisicas en Frederiksberg y Tilst",
-      "cons": "Un poco mas costoso por el servicio de garantia extendida de 3 anos"
+      "review_summary": "Configuración Føniks Warrior IV con Ryzen 7 7800X3D, GeForce RTX 5070 12GB, 16GB DDR5 y SSD 1TB M.2 (para 32GB DDR5 de serie en Føniks ver el modelo Chimera II).",
+      "pros": "CPU Ryzen 7 7800X3D, 3 años de garantía local danesa, tiendas físicas en Frederiksberg y Tilst",
+      "cons": "Incluye 16GB DDR5 de serie en esta configuración base (15.699 DKK)"
     },
     {
       "key": "pc-sharkgaming-rgbeast-r710",
-      "name": "SharkGaming RGBeast R710 (AMD Ryzen 7 / RTX 5070 / configuracion exacta de CPU, RAM y SSD a verificar en la tienda)",
+      "name": "SharkGaming RGBeast R710 (AMD Ryzen 7 9800X3D / RTX 5070 12GB / 16GB DDR5 / 1TB NVMe)",
       "category": "desktops",
       "category_name": "Equipos Completos",
       "match_tokens": [
@@ -701,19 +699,19 @@
           "url": "https://sharkgaming.dk/gaming-computere"
         }
       ],
-      "tier": "watch",
-      "target_price": 15700,
-      "excellent_price": 14900,
+      "tier": "alternative",
+      "target_price": 16000,
+      "excellent_price": 15200,
       "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
       "reviews": [],
-      "review_summary": "PC gaming ensamblado danes con RTX 5070. Ojo: las tiendas listan CPU distinta (9700X vs 9800X3D); confirmar la configuracion antes de comprar.",
-      "pros": "RTX 5070 12GB, ensamblado y garantia en Dinamarca, precio desde ~16.500 DKK",
-      "cons": "CPU/RAM/SSD no coinciden entre tiendas: verificar ficha exacta. Pocas tiendas lo venden (Magasin, MaxGaming)",
+      "review_summary": "PC gaming ensamblado danés con AMD Ryzen 7 9800X3D, GeForce RTX 5070 12GB, 16GB DDR5 y 1TB NVMe SSD.",
+      "pros": "CPU Ryzen 7 9800X3D, refrigeración líquida, ensamblado y garantía danesa (~16.499 DKK en Magasin / 17.299 DKK en MaxGaming)",
+      "cons": "Incluye 16GB DDR5 de serie (verificar ficha en tienda por variantes de distribuidor)",
       "direct_urls": []
     },
     {
       "key": "pc-sharkgaming-rgbeast-9070xt",
-      "name": "SharkGaming RGBeast 9070 XT (AMD Ryzen 7 / Radeon RX 9070 XT 16GB / RAM y SSD a verificar en la tienda)",
+      "name": "SharkGaming RGBeast 9070 XT (AMD Ryzen 7 9800X3D / Radeon RX 9070 XT 16GB / 32GB DDR5 / 1TB NVMe)",
       "category": "desktops",
       "category_name": "Equipos Completos",
       "match_tokens": [
@@ -737,14 +735,14 @@
           "url": "https://sharkgaming.dk/gaming-computere"
         }
       ],
-      "tier": "watch",
-      "target_price": 18999,
-      "excellent_price": 18000,
+      "tier": "top",
+      "target_price": 18500,
+      "excellent_price": 17500,
       "burnin_warranty": "2 años de garantía SharkGaming y reklamationsret danesa con soporte en Herlev.",
       "reviews": [],
-      "review_summary": "PC gaming ensamblado danes con RX 9070 XT de 16GB. CDON lo lista con Ryzen 7 9800X3D / X870; confirmar la configuracion exacta antes de comprar.",
-      "pros": "RX 9070 XT 16GB con DP 2.1 nativo, ensamblado y garantia en Dinamarca, desde ~20.000 DKK",
-      "cons": "Configuracion exacta a verificar; pocas tiendas (Magasin, MaxGaming, CDON)",
+      "review_summary": "PC gaming de gama alta ensamblado en Dinamarca con Ryzen 7 9800X3D, Radeon RX 9070 XT 16GB, 32GB DDR5 y refrigeración líquida AIO 360mm.",
+      "pros": "32GB DDR5 de serie, RX 9070 XT 16GB con DP 2.1 nativo, Ryzen 7 9800X3D, rebajado a ~17.499 DKK en Magasin (desde 19.999 DKK)",
+      "cons": "Consultar ficha exacta de tienda por detalles del chasis",
       "direct_urls": []
     },
     {
@@ -771,6 +769,272 @@
       "review_summary": "Equipo gaming preensamblado distribuido por POWER en Dinamarca con RTX 5070, Wi-Fi integrado y 1TB SSD; en fuerte campaña de Black Weeks (−25% desde 15.999 DKK).",
       "pros": "Oferta Black Weeks muy agresiva (~11.999 DKK en stock en POWER), garantía local danesa",
       "cons": "16GB de RAM en la configuración base (ampliable más adelante)"
+    },
+    {
+      "key": "pc-dutzo-deluxe-blaze",
+      "name": "Proshop DUTZO Deluxe Blaze (AMD Ryzen 7 7800X3D / ASUS RX 9070 XT Prime OC 16GB / 32GB DDR5 / 1TB WD Black SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Deluxe Blaze",
+        "DUTZO Deluxe Blaze"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Blaze/8075245"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop DUTZO Deluxe Blaze",
+          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Blaze/8075245"
+        }
+      ],
+      "tier": "top",
+      "target_price": 16999,
+      "excellent_price": 15999,
+      "burnin_warranty": "2 años de garantía directa Proshop Dinamarca.",
+      "reviews": [],
+      "review_summary": "Equipo Deluxe en stock en Proshop con Ryzen 7 7800X3D, ASUS Radeon RX 9070 XT Prime OC 16GB, Corsair Vengeance 32GB (2x16GB) DDR5-6000 y SSD WD Black SN7100 1TB.",
+      "pros": "32GB DDR5 reales de serie, GPU ASUS Prime OC, SSD WD Black SN7100, en stock inmediato en Proshop",
+      "cons": "SSD base de 1TB"
+    },
+    {
+      "key": "pc-dutzo-deluxe-fire",
+      "name": "Proshop DUTZO Deluxe Fire (AMD Ryzen 7 9800X3D / ASUS RX 9070 XT Prime OC 16GB / 32GB DDR5 / 2TB NVMe SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Deluxe Fire",
+        "DUTZO Deluxe Fire"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Fire/8078454"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop DUTZO Deluxe Fire",
+          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Fire/8078454"
+        }
+      ],
+      "tier": "top",
+      "target_price": 19800,
+      "excellent_price": 18800,
+      "burnin_warranty": "2 años de garantía directa Proshop Dinamarca.",
+      "reviews": [],
+      "review_summary": "Tope de gama AMD en Proshop: Ryzen 7 9800X3D, ASUS RX 9070 XT Prime OC 16GB, Corsair Vengeance 32GB (2x16GB) DDR5-6000 CL38 y 2TB PCIe 4.0 NVMe SSD.",
+      "pros": "CPU 9800X3D + 32GB DDR5 + 2TB NVMe de serie, DisplayPort 2.1 nativo",
+      "cons": "Precio de ~20.799 DKK y actualmente bajo pedido en Proshop"
+    },
+    {
+      "key": "pc-dutzo-deluxe-inferno",
+      "name": "Proshop DUTZO Deluxe Inferno (AMD Ryzen 7 7800X3D / ASUS RTX 5070 Ti Prime OC 16GB / 32GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Deluxe Inferno",
+        "DUTZO Deluxe Inferno"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Inferno/8078275"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop DUTZO Deluxe Inferno",
+          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Inferno/8078275"
+        }
+      ],
+      "tier": "top",
+      "target_price": 20499,
+      "excellent_price": 19499,
+      "burnin_warranty": "2 años de garantía directa Proshop Dinamarca.",
+      "reviews": [],
+      "review_summary": "Montaje equilibrado de gama alta con NVIDIA RTX 5070 Ti 16GB, Ryzen 7 7800X3D, Corsair Vengeance 32GB (2x16GB) DDR5-6000 y Kingston NV3 1TB SSD.",
+      "pros": "32GB DDR5 reales, RTX 5070 Ti 16GB GDDR7 con DLSS 4 y DP 2.1, procesador 7800X3D",
+      "cons": "Bajo pedido en Proshop (~21.499 DKK)"
+    },
+    {
+      "key": "pc-dutzo-corsair-cataclysm",
+      "name": "Proshop DUTZO & Corsair Deluxe Cataclysm (AMD Ryzen 7 9800X3D / ASUS RTX 5080 Prime OC 16GB / 32GB DDR5 CL30 / 2TB WD Black SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Deluxe Cataclysm",
+        "Cataclysm"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Corsair-Deluxe-Cataclysm/8077726"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop DUTZO Cataclysm",
+          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Corsair-Deluxe-Cataclysm/8077726"
+        }
+      ],
+      "tier": "top",
+      "target_price": 26299,
+      "excellent_price": 24999,
+      "burnin_warranty": "2 años de garantía directa Proshop Dinamarca.",
+      "reviews": [],
+      "review_summary": "Estación entusiasta con componentes Corsair y ASUS: Ryzen 7 9800X3D, ASUS RTX 5080 Prime OC 16GB, 32GB DDR5-6000 CL30 de baja latencia y SSD WD Black SN7100 2TB.",
+      "pros": "RAM DDR5 CL30 rápida (32GB reales), RTX 5080 16GB + 9800X3D, 2TB WD Black, en stock inmediato",
+      "cons": "Presupuesto entusiasta (~27.699 DKK)"
+    },
+    {
+      "key": "pc-mm-vision-typhoon",
+      "name": "MM-Vision Typhoon Gaming (AMD Ryzen 7 X3D / Asus RTX 5080 OC 16GB / 32GB DDR5 / 2TB NVMe SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Typhoon gamer",
+        "Typhoon"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.mm-vision.dk/visiongaming/typhoon-gamer-stationaer"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "MM-Vision Typhoon (Oficial)",
+          "url": "https://www.mm-vision.dk/visiongaming/typhoon-gamer-stationaer"
+        }
+      ],
+      "tier": "top",
+      "target_price": 25195,
+      "excellent_price": 23995,
+      "burnin_warranty": "2 años de garantía total MM-Vision con recogida y devolución gratuita.",
+      "reviews": [],
+      "review_summary": "Equivalente AMD X3D al Predator en MM-Vision: procesador AMD Ryzen 7 X3D, Asus GeForce RTX 5080 OC 16GB Prime, Corsair 32GB DDR5-6000 y SSD NVMe 2TB.",
+      "pros": "32GB DDR5 y 2TB NVMe de serie, RTX 5080 OC 16GB + plataforma AMD AM5 X3D, en stock",
+      "cons": "Precio base de 26.495 DKK"
+    },
+    {
+      "key": "pc-fcomputer-chimera-ii-32gb",
+      "name": "Føniks Chimera II Gamer PC (AMD Ryzen 7 7800X3D / RTX 5070 12GB / 32GB DDR5 / 1TB SSD / Win 11)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Chimera II"
+      ],
+      "exclude_tokens": [
+        "Chimera III"
+      ],
+      "pricerunner": [
+        "/pl/223-3414017490/Stationaere-computere/Foeniks-Chimera-II-Faerdigsamlet-Gamer-Computer-Sammenlign-Priser"
+      ],
+      "direct_urls": [],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Føniks Computer",
+          "url": "https://www.fcomputer.dk/computer/faerdigsamlet-pc"
+        }
+      ],
+      "tier": "top",
+      "target_price": 16999,
+      "excellent_price": 15999,
+      "burnin_warranty": "3 años de garantía total y soporte directo en tiendas físicas de Føniks en Dinamarca.",
+      "reviews": [],
+      "review_summary": "Configuración de Føniks Computer con 32GB DDR5 reales incluidos de serie: AMD Ryzen 7 7800X3D, GeForce RTX 5070 12GB, 1TB M.2 SSD y Windows 11 preinstalado.",
+      "pros": "32GB DDR5 reales de serie, CPU 7800X3D, 3 años de garantía local danesa y Windows 11 incluido",
+      "cons": "Precio de 17.999 DKK frente a opciones con RX 9070 XT en rango similar"
+    },
+    {
+      "key": "pc-nordic-thor-v8-32gb",
+      "name": "Nordic Gaming Asgard Thor V8 (AMD Ryzen 7 / RTX 5070 12GB / 32GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Thor V8",
+        "Asgard Thor V8"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [
+        "/pl/223-3544822466/Stationaere-computere/Nordic-Gaming-Asgard-Thor-V8-PC-Ryzen-7-32GB-RTX-5070-1TB-Sammenlign-Priser"
+      ],
+      "direct_urls": [],
+      "prisjagt": [],
+      "store_links": [],
+      "tier": "alternative",
+      "target_price": 15999,
+      "excellent_price": 14999,
+      "burnin_warranty": "2 años de garantía danesa en tienda (CompuMail / Ultrashop).",
+      "reviews": [],
+      "review_summary": "Preensamblado Nordic Gaming Asgard Thor V8 con AMD Ryzen 7, GeForce RTX 5070 12GB, 32GB de RAM DDR5 reales de serie y 1TB SSD.",
+      "pros": "32GB DDR5 reales de serie, disponible en tiendas danesas fiables como CompuMail en stock (~16.599 DKK)",
+      "cons": "Confirmar generación exacta del Ryzen 7 según lote del distribuidor"
+    },
+    {
+      "key": "pc-dutzo-deluxe-frostfire",
+      "name": "Proshop DUTZO Deluxe Frostfire White (AMD Ryzen 5 9600X / ASUS RTX 5070 Prime OC White 12GB / 16GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "Deluxe Frostfire",
+        "DUTZO Deluxe Frostfire"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Frostfire/8078274"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop DUTZO Deluxe Frostfire",
+          "url": "https://www.proshop.dk/DUTZO-stationaer-gaming-PC/DUTZO-Deluxe-Frostfire/8078274"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 14249,
+      "excellent_price": 13499,
+      "burnin_warranty": "2 años de garantía directa Proshop Dinamarca.",
+      "reviews": [],
+      "review_summary": "Edición blanca estética en stock en Proshop con Ryzen 5 9600X, ASUS RTX 5070 Prime OC White 12GB, 16GB DDR5-6000 y Kingston NV3 1TB SSD.",
+      "pros": "En stock inmediato en Proshop, estética blanca integral con GPU ASUS Prime OC, refrigeración mejorada",
+      "cons": "Solo incluye 16GB (1x16GB) DDR5 de serie por 14.999 DKK"
+    },
+    {
+      "key": "pc-mm-vision-bf26-special",
+      "name": "MM-Vision Game BF26 Special Black Friday (AMD Ryzen / Asus Radeon RX 9060 XT 16GB / 16GB DDR5 / 1TB SSD)",
+      "category": "desktops",
+      "category_name": "Equipos Completos",
+      "match_tokens": [
+        "BF26 Special",
+        "Game BF26"
+      ],
+      "exclude_tokens": [],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.mm-vision.dk/visiongaming/vision-game-special-gaming-pc"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "MM-Vision BF26 Special",
+          "url": "https://www.mm-vision.dk/visiongaming/vision-game-special-gaming-pc"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 12495,
+      "excellent_price": 11895,
+      "burnin_warranty": "2 años de garantía total MM-Vision con recogida y devolución gratuita.",
+      "reviews": [],
+      "review_summary": "Edición Especial Black Friday de MM-Vision: monta la nueva Asus Radeon RX 9060 XT con 16GB de VRAM, Corsair Vengeance 16GB DDR5-6000 y 1TB NVMe por 12.495 DKK.",
+      "pros": "Edición promocional Black Friday, GPU de 16GB VRAM (RX 9060 XT) a precio contenido, placa Asus TUF B850",
+      "cons": "Base de 16GB DDR5 (ampliable a 32GB en configurador)"
     },
     {
       "key": "gpu-rtx-5080",
