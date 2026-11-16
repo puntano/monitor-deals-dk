@@ -139,9 +139,31 @@ def generate_dashboard_html(output_paths=None):
     """, (run_date, run_date)).fetchall():
         hist_7d[mk] = bt
         
-    # 5. Descubrimientos y reviews recientes
+    # 5. Descubrimientos, radar Black Friday y reviews recientes
     discovered = con.execute("SELECT product_id, name, path, first_seen FROM discovered_products ORDER BY first_seen DESC LIMIT 8").fetchall()
     reviews = con.execute("SELECT url, source, title, first_seen FROM reviews_seen WHERE relevant=1 ORDER BY first_seen DESC LIMIT 6").fetchall()
+    try:
+        cat_deals_rows = con.execute("""
+            SELECT category, product_id, name, price, old_price, drop_pct, path, is_tracked
+            FROM category_deals
+            WHERE check_date=(SELECT MAX(check_date) FROM category_deals)
+            ORDER BY drop_pct DESC, (old_price - price) DESC
+        """).fetchall()
+    except Exception:
+        cat_deals_rows = []
+    cat_deals_data = [
+        {
+            "category": r[0],
+            "product_id": r[1],
+            "name": r[2],
+            "price": r[3],
+            "old_price": r[4],
+            "drop_pct": r[5],
+            "path": r[6],
+            "is_tracked": bool(r[7]),
+        }
+        for r in cat_deals_rows
+    ]
     
     con.close()
     
@@ -242,6 +264,7 @@ def generate_dashboard_html(output_paths=None):
         dt_str = run_date
         
     js_models_json = json.dumps(models_data, ensure_ascii=False)
+    js_cat_deals_json = json.dumps(cat_deals_data, ensure_ascii=False)
     try:
         with open(os.path.join(BASE, "config.json"), encoding="utf-8") as _f:
             trigger_topic = json.load(_f)["ntfy"].get("trigger_topic", "")
@@ -427,6 +450,20 @@ def generate_dashboard_html(output_paths=None):
       <!-- Inyectado dinamicamente por JS -->
     </div>
 
+    <!-- RADAR ABIERTO BLACK FRIDAY (TODA LA CATEGORIA) -->
+    <div class="bg-slate-900/80 border border-rose-500/30 rounded-2xl p-5 shadow-sm space-y-3 pt-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <h2 class="text-sm font-bold text-white flex items-center gap-2">
+            <span>🔥</span> Radar Abierto Black Friday · Rebajas Detectadas en Toda la Categoría (PriceRunner DK)
+          </h2>
+          <p class="text-xs text-slate-400 mt-0.5">Productos de todo el mercado danés con caída reciente de precio (&ge; 5% y &ge; 150 DKK), estén o no en tu lista fija.</p>
+        </div>
+        <span id="bf-radar-count" class="text-xs px-2.5 py-1 rounded-xl bg-rose-500/15 text-rose-300 border border-rose-500/30 font-semibold shrink-0">0 ofertas</span>
+      </div>
+      <div id="bf-radar-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+    </div>
+
     <!-- SECCION INFERIOR: DESCUBRIMIENTOS & REVIEWS -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 pt-4">
       <!-- Nuevos modelos detectados -->
@@ -483,6 +520,7 @@ def generate_dashboard_html(output_paths=None):
   <!-- SCRIPT CLIENTE PARA FILTROS DINAMICOS -->
   <script>
     const ITEMS = {js_models_json};
+    const CATEGORY_DEALS = {js_cat_deals_json};
     let currentCategory = 'all';
     let currentFilter = 'all';
     let inStockOnly = false;
@@ -491,6 +529,57 @@ def generate_dashboard_html(output_paths=None):
     function fmtDkk(v) {{
       if (v === null || v === undefined) return 'n/d';
       return Math.round(v).toLocaleString('es-ES') + ' DKK';
+    }}
+
+    function escHtml(s) {{
+      return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }}
+
+    function renderRadar(q) {{
+      const radarEl = document.getElementById('bf-radar-container');
+      const countEl = document.getElementById('bf-radar-count');
+      if (!radarEl) return;
+
+      const deals = CATEGORY_DEALS.filter(d => {{
+        if (currentCategory !== 'all' && d.category !== currentCategory) return false;
+        if (q && !(d.name || '').toLowerCase().includes(q)) return false;
+        return true;
+      }});
+
+      if (countEl) countEl.textContent = deals.length + ' rebajas detectadas';
+      if (deals.length === 0) {{
+        radarEl.innerHTML = '<div class="col-span-full text-xs text-slate-400 italic p-3 bg-slate-950/50 rounded-xl">No se detectaron rebajas abiertas para este filtro en la última consulta.</div>';
+        return;
+      }}
+
+      radarEl.innerHTML = deals.slice(0, 18).map(d => {{
+        const saved = Math.max(0, (d.old_price || 0) - (d.price || 0));
+        const trackBadge = d.is_tracked
+          ? '<span class="text-[10px] px-2 py-0.5 rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">✓ En tu seguimiento</span>'
+          : '<span class="text-[10px] px-2 py-0.5 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 font-semibold">✨ Hallazgo Black Weeks</span>';
+        const prHref = 'https://www.pricerunner.dk' + (d.path || '');
+        return `
+          <div class="bg-slate-950/80 border border-slate-800 hover:border-rose-500/40 rounded-xl p-3.5 flex flex-col justify-between gap-2.5 transition">
+            <div class="space-y-1.5">
+              <div class="flex flex-wrap items-center justify-between gap-1.5">
+                ${{getCategoryBadge(d.category)}}
+                <span class="text-[11px] px-2 py-0.5 rounded-lg bg-rose-500/15 text-rose-300 border border-rose-500/30 font-bold">🔥 -${{Math.round(d.drop_pct)}}% (-${{fmtDkk(saved)}})</span>
+              </div>
+              <h3 class="text-xs font-bold text-slate-100 leading-snug line-clamp-2">${{escHtml(d.name)}}</h3>
+            </div>
+            <div class="flex items-end justify-between gap-2 pt-1 border-t border-slate-800/80">
+              <div>
+                <div class="flex items-baseline gap-2">
+                  <span class="text-base font-black text-white">${{fmtDkk(d.price)}}</span>
+                  <span class="text-[11px] text-slate-500 line-through">${{fmtDkk(d.old_price)}}</span>
+                </div>
+                <div class="mt-1">${{trackBadge}}</div>
+              </div>
+              <a href="${{prHref}}" target="_blank" class="px-2.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-semibold shrink-0 transition">Ver oferta →</a>
+            </div>
+          </div>
+        `;
+      }}).join('');
     }}
 
     function setCategory(cat) {{
@@ -560,6 +649,7 @@ def generate_dashboard_html(output_paths=None):
 
     function applyFilters() {{
       const q = document.getElementById('search-input').value.toLowerCase().trim();
+      renderRadar(q);
       inStockOnly = document.getElementById('stock-only').checked;
       topTierOnly = document.getElementById('top-tier-only').checked;
       const container = document.getElementById('hardware-container');

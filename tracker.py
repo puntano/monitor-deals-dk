@@ -249,6 +249,10 @@ CREATE TABLE IF NOT EXISTS alerts_log(
   price REAL, title TEXT, message TEXT, channels TEXT, dry_run INTEGER);
 CREATE TABLE IF NOT EXISTS discovered_products(
   product_id TEXT PRIMARY KEY, name TEXT, path TEXT, first_seen TEXT, baseline INTEGER);
+CREATE TABLE IF NOT EXISTS category_deals(
+  check_date TEXT, category TEXT, product_id TEXT, name TEXT,
+  price REAL, old_price REAL, drop_pct REAL, path TEXT, is_tracked INTEGER,
+  PRIMARY KEY(check_date, category, product_id));
 CREATE TABLE IF NOT EXISTS reviews_seen(
   url TEXT PRIMARY KEY, source TEXT, title TEXT, first_seen TEXT, baseline INTEGER, relevant INTEGER);
 """
@@ -880,52 +884,103 @@ def evaluate_alerts(ctx):
 
 
 # --------------------------------------------------------------------------- discovery & reviews
+CATEGORY_DEAL_FEEDS = [
+    ("monitors", "/cl/25/Skaerme?attr_60394085=60394174&attr_60394205=60531614"),
+    ("monitors", "/cl/25/Skaerme?attr_60394085=60394174"),
+    ("gpus", "/cl/37/Grafikkort?attr_60534931=100018433,100018426,100018432,100019366"),
+    ("gpus", "/cl/37/Grafikkort?attr_60535069=100019067,100019066"),
+    ("desktops", "/cl/223/Stationaere-computere?attr_60480813=100018440,100018441,100018438"),
+    ("desktops", "/cl/223/Stationaere-computere"),
+    ("coffee", "/cl/82/Kaffemaskiner?attr_BRAND=1032,46,2524,156798"),
+    ("coffee", "/cl/82/Kaffemaskiner"),
+]
+
+
+def _extract_pr_category_products(html):
+    m = re.search(r'<script id="initial_payload"[^>]*>(.*?)</script>', html, re.S)
+    if not m:
+        return []
+    try:
+        data = json.loads(m.group(1))
+    except Exception:
+        return []
+    for q in data.get("__DEHYDRATED_QUERY_STATE__", {}).get("queries", []):
+        qk = q.get("queryKey")
+        if isinstance(qk, list) and qk and qk[0] == "cl-list-data-query":
+            pages = (q.get("state") or {}).get("data", {}).get("pages") or []
+            if pages and isinstance(pages[0], dict):
+                return pages[0].get("products") or []
+    return []
+
+
 def discover(ctx, cand):
     con = ctx.con
-    tracked = set()
+    tracked_pids = set()
     for m in cand["models"]:
-        for p in m["pricerunner"]:
-            mm = re.search(r"/pl/25-(\d+)/", p)
+        for p in m.get("pricerunner", []):
+            mm = re.search(r"/pl/\d+-(\d+)/", p)
             if mm:
-                tracked.add(mm.group(1))
+                tracked_pids.add(mm.group(1))
     baseline = con.execute("SELECT COUNT(*) FROM discovered_products").fetchone()[0] == 0
+    con.execute("DELETE FROM category_deals WHERE check_date=?", (RUN_DATE,))
     new_items = []
-    for q in cand.get("discovery_queries", []):
-        # Si la query es una URL directa de categoría (ej: /cl/25/Skaerme), la consultamos directamente
-        if q.startswith("http") or q.startswith("/cl/"):
-            url = q if q.startswith("http") else "https://www.pricerunner.dk" + q
-        else:
-            # PriceRunner bloquea /results?q= con 202 anti-bot; solo consultamos si está habilitado o probamos categoría
-            continue
+    seen_disc = set(tracked_pids)
+    deals_count = 0
+
+    for cat, feed_path in CATEGORY_DEAL_FEEDS:
+        url = "https://www.pricerunner.dk" + feed_path
         try:
             html = http_get(url, min_len=15000)
             ctx.ok += 1
-            for cat_id, pid, cat_name, slug in re.findall(r"/pl/(\d+)-(\d+)/([^/]+)/([^\"'\s<>?]+)", html):
-                if pid in tracked:
+            products = _extract_pr_category_products(html)
+            for p in products:
+                pid = str(p.get("id") or "")
+                name = (p.get("name") or "").strip()
+                path = p.get("url") or ""
+                if not pid or not name or not path:
                     continue
-                s = slug.lower()
-                # Filtrar monitores OLED 32" si estamos en Skaerme
-                if "skaerme" in url.lower():
-                    if "oled" not in s:
-                        continue
-                    if not re.search(r"(^|-)(32|31[.,]?5|315)(-|$|inch|zoll|\")|-32-|32-inch|31\.5", s) and not re.search(r"32[a-z]", s):
-                        continue
-                    if re.search(r"(^|-)(27|34|39|42|45|48|49)(-|$)", s):
-                        continue
-                path = f"/pl/{cat_id}-{pid}/{cat_name}/{slug}"
-                cur = con.execute("INSERT OR IGNORE INTO discovered_products VALUES(?,?,?,?,?)",
-                                  (pid, slug.replace("-Sammenlign-Priser", "").replace("-", " "), path, RUN_DATE, int(baseline)))
-                if cur.rowcount and not baseline:
-                    new_items.append((pid, slug, path))
+
+                if cat == "monitors" and pid not in seen_disc:
+                    low = (name + " " + path).lower()
+                    if ("oled" in low
+                            and (re.search(r"(^|[\s\-\"])(32|31[.,]?5|315)($|[\s\-\"]|inch|zoll)", low) or re.search(r"32[a-z]", low))
+                            and not re.search(r"(^|[\s\-])(27|34|39|42|45|48|49)($|[\s\-\"])", low)):
+                        seen_disc.add(pid)
+                        cur = con.execute("INSERT OR IGNORE INTO discovered_products VALUES(?,?,?,?,?)",
+                                          (pid, name, path, RUN_DATE, int(baseline)))
+                        if cur.rowcount and not baseline:
+                            new_items.append((pid, name, path))
+
+                lp_raw = (p.get("lowestPrice") or {}).get("amount")
+                pd = p.get("priceDrop") or {}
+                if lp_raw is None or not isinstance(pd, dict) or not pd:
+                    continue
+                try:
+                    price = float(lp_raw)
+                    old_price = float((pd.get("oldPrice") or {}).get("amount") or price)
+                    drop_pct = float(pd.get("percent") or 0.0)
+                except Exception:
+                    continue
+                if drop_pct < 5.0 or (old_price - price) < 150 or price < 800:
+                    continue
+                if cat == "monitors" and re.search(r"\b(24|25)\b", name):
+                    continue
+                is_trk = int(pid in tracked_pids)
+                con.execute("""INSERT OR REPLACE INTO category_deals
+                    (check_date, category, product_id, name, price, old_price, drop_pct, path, is_tracked)
+                    VALUES(?,?,?,?,?,?,?,?,?)""",
+                    (RUN_DATE, cat, pid, name, price, old_price, round(drop_pct, 1), path, is_trk))
+                deals_count += 1
         except Exception as e:
             ctx.err("discovery", "pricerunner.dk", url, e)
         time.sleep(CFG["request_delay_seconds"])
+
     if new_items:
-        msg = "✨ " + "\n".join(f"• {s.replace('-Sammenlign-Priser','').replace('-',' ')}" for _, s, _ in new_items[:3])
+        msg = "✨ " + "\n".join(f"• {nm}" for _, nm, _ in new_items[:3])
         maybe_alert(ctx, "new|" + ",".join(sorted(i[0] for i in new_items)), "NEW_MODEL", None, None,
                     f"{len(new_items)} monitor(es) 32\" OLED nuevo(s) en DK", msg, priority=3,
                     click="https://www.pricerunner.dk" + new_items[0][2], require_drop=False)
-    ctx.notes.append(f"discovery: {len(new_items)} nuevos" + (" (linea base inicial)" if baseline else ""))
+    ctx.notes.append(f"discovery: {len(new_items)} nuevos, {deals_count} rebajas categoria" + (" (linea base inicial)" if baseline else ""))
 
 
 def review_relevant(title, url, cand):
@@ -1150,7 +1205,7 @@ def status():
     con = db()
     print("BD:", DB_PATH)
     for t in ("runs", "offers", "prisjagt_history", "model_daily", "errors", "alerts_log", "alert_state",
-              "discovered_products", "reviews_seen"):
+              "discovered_products", "category_deals", "reviews_seen"):
         print(f"  {t}: {con.execute(f'SELECT COUNT(*) FROM {t}').fetchone()[0]} filas")
     print("Ultimas ejecuciones:")
     for r in con.execute("SELECT run_id,started_at,finished_at,status,ok_sources,failed_sources FROM runs ORDER BY run_id DESC LIMIT 7"):
