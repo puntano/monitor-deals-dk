@@ -283,20 +283,31 @@ def parse_pricerunner(html):
                     merchants = qd.get("merchants") or {}
                     for o in qd.get("offers") or []:
                         m = merchants.get(str(o.get("merchantId"))) or {}
+                        icc = m.get("internationalCountryCode")
+                        mname = m.get("name") or f"merchant {o.get('merchantId')}"
+                        is_amazon = "amazon" in mname.lower()
+                        if icc:
+                            if icc == "DE" and is_amazon:
+                                mname = "Amazon.de"
+                            else:
+                                continue
+                        elif is_amazon:
+                            mname = "Amazon.de"
                         rating = m.get("rating") or {}
                         reg = (o.get("price") or {}).get("amount")
                         camp = o.get("campaignPrice") or {}
                         camp_p = (camp.get("price") or {}).get("amount")
                         eff = (camp.get("salePriceEffectiveDate") or {})
                         ship = (o.get("shippingCost") or {}).get("amount")
+                        ship_val = float(ship) if ship is not None else (0.0 if is_amazon else None)
                         out["offers"].append({
-                            "merchant": m.get("name") or f"merchant {o.get('merchantId')}",
+                            "merchant": mname,
                             "rating": float(rating["average"]) if rating.get("average") else None,
                             "reviews": rating.get("count"),
                             "regular": float(reg) if reg else None,
                             "campaign": float(camp_p) if camp_p else None,
                             "camp_start": eff.get("start"), "camp_end": eff.get("end"),
-                            "shipping": float(ship) if ship is not None else None,
+                            "shipping": ship_val,
                             "stock": o.get("stockStatus") or "UNKNOWN",
                             "title": o.get("name") or "",
                             "url": o.get("url"),
@@ -545,7 +556,7 @@ TRUSTED_MERCHANTS_ALLOWLIST = (
     "bilka", "salling", "imerco", "kitchenone", "rigtig kaffe",
     "house of barista", "moccatime", "coolshop", "goblue",
     "asus store", "samsung", "acer", "lenovo", "dell", "lg",
-    "siemens", "sharkninja", "taurus gaming",
+    "siemens", "sharkninja", "taurus gaming", "amazon.de", "amazon",
 )
 
 
@@ -602,6 +613,8 @@ def process_model(ctx, model):
     pr_ok = False
     for path in model.get("pricerunner", []):
         url = "https://www.pricerunner.dk" + path
+        if "origin=" not in url:
+            url += ("&origin=ALL" if "?" in url else "?origin=ALL")
         try:
             html = http_get(url, min_len=20000, expect="__DEHYDRATED_QUERY_STATE__")
             parsed = parse_pricerunner(html)
