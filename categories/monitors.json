@@ -639,6 +639,42 @@
       "cons": "Precio de lanzamiento todavía alto (~9.645 DKK)",
       "category": "monitors",
       "category_name": "Monitores 4K"
+    },
+    {
+      "key": "samsung-g80sh",
+      "name": "Samsung Odyssey OLED G8 G80SH (32\" 4K 240Hz QD-OLED 2026 · Prismatch < 6.699 DKK)",
+      "match_tokens": [
+        "G80SH",
+        "HG800SU",
+        "HG802SU"
+      ],
+      "exclude_tokens": [
+        "27",
+        "G80HS",
+        "HG802ES",
+        "6K"
+      ],
+      "pricerunner": [
+        "/pl/25-3503044764/Skaerme/Samsung-32-Odyssey-OLED-G8-G80SH-UHD-Gaming-Monitor-Sammenlign-Priser"
+      ],
+      "prisjagt": [],
+      "direct_urls": [],
+      "store_links": [
+        {
+          "name": "POWER.dk (Prismatch)",
+          "url": "https://www.power.dk/search/?q=G80SH"
+        }
+      ],
+      "tier": "top",
+      "target_price": 6698,
+      "excellent_price": 6200,
+      "burnin_warranty": "Comprado en POWER.dk por 6.699 DKK (Prismatch si baja de 6.699 DKK en tienda DK en stock). Garantía Samsung DK + OLED Care.",
+      "reviews": [],
+      "review_summary": "Panel Samsung QD-OLED 2026 (G80SH / S32HG800SU) con mayor brillo, acabado Glare Free antirreflejos y certificación VESA DisplayHDR True Black 500.",
+      "pros": "Panel 2026 más brillante, Glare Free real, 4K 240Hz 0.03ms, HDR True Black 500, DisplayPort + HDMI 2.1 + USB-C; alerta Prismatch configurada < 6.699 DKK",
+      "cons": "Precio recién lanzado; sin Prisjagt ID aún en histórico de 90 días",
+      "category": "monitors",
+      "category_name": "Monitores 4K"
     }
   ],
   "discovery_queries": [
