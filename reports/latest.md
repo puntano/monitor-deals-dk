@@ -1,6 +1,6 @@
-# Informe de ofertas - 2026-11-17 18:31 Romance Standard Time
+# Informe de ofertas - 2026-11-17 18:41 Romance Standard Time
 
-Fuentes OK: 127 | fallidas: 1 | alertas nuevas: 0
+Fuentes OK: 131 | fallidas: 1 | alertas nuevas: 2
 
 | Clase | Modelo | Mejor oferta fiable (total) | Tienda / stock | Mejor en stock | Objetivo | Min ~3m | Mediana ~3m | Motivo |
 |---|---|---|---|---|---|---|---|---|
@@ -21,6 +21,8 @@ Fuentes OK: 127 | fallidas: 1 | alertas nuevas: 0
 | B | De'Longhi Magnifica Evo ECAM290.61 (LatteCrema Hot, 7 recetas, molido cónico) | 2.809 DKK | CompuMail / IN_STOCK | 2.809 DKK (CompuMail) | 3.100 DKK | 2.664 DKK | 2.664 DKK | 2.809 DKK <= precio objetivo 3.100 DKK |
 | B | POWER Cepter E-Sport R57 Wi-Fi Gaming PC (AMD Ryzen 7 / RTX 5070 / 16GB DDR5 / 1TB SSD) | 12.047 DKK | POWER / COLLECT_IN_STORE | - | 12.999 DKK | 11.999 DKK | n/d | 12.047 DKK <= precio objetivo 12.999 DKK |
 | B | MM-Vision Game BF26 Special Black Friday (AMD Ryzen / Asus Radeon RX 9060 XT 16GB / 16GB DDR5 / 1TB SSD) | 12.495 DKK | MM-Vision / IN_STOCK | 12.495 DKK (MM-Vision) | 12.495 DKK | 12.495 DKK | n/d | 12.495 DKK <= precio objetivo 12.495 DKK |
+| B | ASUS ROG Strix G16 (2025) (16" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB) | 25.490 DKK | Komplett.dk / BACKORDER | 27.047 DKK (Punkt1) | 25.500 DKK | n/d | n/d | 25.490 DKK <= precio objetivo 25.500 DKK |
+| B | Acer Predator Helios Neo 16 AI (16" WQXGA | Core Ultra 9 290HX Plus | RTX 5080 16GB | 32GB | 1TB) | 26.990 DKK | Komplett.dk / BACKORDER | 32.719 DKK (CompuMail) | 29.000 DKK | n/d | n/d | 26.990 DKK <= precio objetivo 29.000 DKK |
 | B | MSI MAG 321UPX QD-OLED (31.5" 4K 240Hz QD-OLED) | 4.851 DKK | Amazon.de / IN_STOCK | 4.851 DKK (Amazon.de) | 5.200 DKK | 4.851 DKK | n/d | 4.851 DKK <= precio objetivo 5.200 DKK |
 | B | Samsung Odyssey OLED G8 G81SF (S32FG81x, 32" QD-OLED 4K 240Hz) | 4.399 DKK | Føniks Computer / IN_STOCK | 4.399 DKK (Føniks Computer) | 5.300 DKK | 4.399 DKK | 5.599 DKK | 4.399 DKK <= precio excelente 5.000 DKK (limitado a B: sin reviews independientes verificadas del modelo exacto) |
 | B | LG UltraGear OLED 32GX870B-B (31.5" 4K 240Hz / FHD 480Hz Dual-Mode WOLED, USB-C 90W) | 7.239 DKK | Elgiganten / IN_STOCK | 7.239 DKK (Elgiganten) | 7.500 DKK | 7.190 DKK | n/d | 7.239 DKK <= precio objetivo 7.500 DKK |
@@ -56,6 +58,8 @@ Fuentes OK: 127 | fallidas: 1 | alertas nuevas: 0
 | D | Føniks Chimera II Gamer PC (AMD Ryzen 7 7800X3D / RTX 5070 12GB / 32GB DDR5 / 1TB SSD / Win 11) | 17.999 DKK | Føniks Computer / IN_STOCK | 17.999 DKK (Føniks Computer) | 16.999 DKK | 17.999 DKK | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 16.999 DKK |
 | D | Lenovo Legion Pro 7 Gen 10 (16" OLED 240Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 32GB | 1TB) | 30.262 DKK | Legion Laptops / IN_STOCK | 30.262 DKK (Legion Laptops) | 29.500 DKK | n/d | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 29.500 DKK |
 | D | Lenovo Legion Pro 7i Gen 10 (16" OLED 240Hz | Core Ultra 9 275HX/290HX | RTX 5080 16GB | 32-64GB | 1-2TB) | 48.990 DKK | Legion Laptops / IN_STOCK | 48.990 DKK (Legion Laptops) | 29.500 DKK | n/d | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 29.500 DKK |
+| D | MSI Raider A18 HX A9WIG (18" 4K Mini LED 120Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 64GB | 2TB) | 29.047 DKK | Punkt1 / IN_STOCK | 29.047 DKK (Punkt1) | 28.500 DKK | n/d | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 28.500 DKK |
+| D | GIGABYTE Aorus Master 16 (16" WQXGA OLED 240Hz | Core Ultra 9 275HX | RTX 5080 16GB | 32GB | 2TB) | 28.005 DKK | Proshop.dk / BACKORDER | - | 26.000 DKK | n/d | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 26.000 DKK |
 | D | Samsung Odyssey OLED G8 G80SH (32" 4K 240Hz QD-OLED 2026 · Prismatch < 6.699 DKK) | 6.786 DKK | CompuMail / IN_STOCK | 6.786 DKK (CompuMail) | 6.698 DKK | n/d | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 6.698 DKK |
 | D | Proshop DUTZO Gaming Wildfire (AMD Ryzen 5 9600X / ASUS RTX 5070 12GB / 16GB DDR5 / 1TB SSD) | 14.199 DKK | Proshop.dk / BACKORDER | - | 13.499 DKK | 13.399 DKK | 13.399 DKK | Por encima del precio habitual (mediana 13.399 DKK) y del objetivo 13.499 DKK |
 | D | SharkGaming RGBeast R710 (AMD Ryzen 7 9800X3D / RTX 5070 12GB / 16GB DDR5 / 1TB NVMe) | 16.499 DKK | Magasin Onlineshop / IN_STOCK | 16.499 DKK (Magasin Onlineshop) | 16.000 DKK | 16.499 DKK | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 16.000 DKK |
@@ -72,11 +76,7 @@ Fuentes OK: 127 | fallidas: 1 | alertas nuevas: 0
 | D | Samsung Odyssey Neo G7 S32BG75 (32" Mini-LED VA curvo 1000R 4K 165Hz) | 6.649 DKK | CompuMail / BACKORDER | 6.747 DKK (POWER) | 4.500 DKK | 4.486 DKK | 6.699 DKK | Modelo no recomendado (alternativas mejores por precio/garantia/pruebas). |
 | D | ASUS ROG Swift OLED PG32UCDM3 (31.5" QD-OLED 4K 240Hz, 2026) | 10.039 DKK | Elgiganten / BACKORDER | 11.041 DKK (CS MEGASTORE) | 7.500 DKK | 9.990 DKK | 10.457 DKK | Modelo no recomendado (alternativas mejores por precio/garantia/pruebas). |
 | D | LG UltraGear 32GS95UE/UV-B (31.5" WOLED 4K 240Hz / FHD 480Hz) | 8.744 DKK | Proshop.dk / BACKORDER | - | 5.900 DKK | 8.213 DKK | 8.615 DKK | Modelo no recomendado (alternativas mejores por precio/garantia/pruebas). |
-| - | GIGABYTE Aorus Master 16 (16" WQXGA OLED 240Hz | Core Ultra 9 275HX | RTX 5080 16GB | 32GB | 2TB) | n/d | - | - | 26.000 DKK | n/d | n/d | Sin ofertas fiables disponibles hoy en PriceRunner (consulta correcta). |
 | - | Philips Evnia 32M2N8900 (31.5" 4K 240Hz, 3a gen QD-OLED) | n/d | - | - | 5.900 DKK | n/d | n/d | Sin ofertas fiables disponibles hoy en PriceRunner (consulta correcta). |
-| ? | MSI Raider A18 HX A9WIG (18" 4K Mini LED 120Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 64GB | 2TB) | n/d | - | - | 28.500 DKK | n/d | n/d | Sin datos hoy (error de consulta). No se interpreta como agotado ni como cambio de precio. |
-| ? | ASUS ROG Strix G16 (2025) (16" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB) | n/d | - | - | 25.500 DKK | n/d | n/d | Sin datos hoy (error de consulta). No se interpreta como agotado ni como cambio de precio. |
-| ? | Acer Predator Helios Neo 16 AI (16" WQXGA | Core Ultra 9 290HX Plus | RTX 5080 16GB | 32GB | 1TB) | n/d | - | - | 29.000 DKK | n/d | n/d | Sin datos hoy (error de consulta). No se interpreta como agotado ni como cambio de precio. |
 
 Clases: A excelente, B buena, C normal, D no recomendada, - sin ofertas fiables, ? error de consulta.
 Min/mediana ~3m: historial Prisjagt (ultimos 92 dias, tiendas fiables, titulo coincidente, sin precios de socio) + registros propios. No es un minimo historico absoluto.
@@ -91,8 +91,8 @@ Prisjagt sigue el producto desde 2025-02-26; historial accesible: ~3 meses.
 - Elgiganten: 6.499 DKK + envio 0 DKK [IN_STOCK] - MSI MPG 322URX QD-OLED 32" gaming-skærm
 - Elgiganten: 6.499 DKK + envio 79 DKK [IN_STOCK] - MSI MPG 322URX QD-OLED 32" gaming-skærm
 - CDON: 8.588 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - PC-skærm - MSI - MPG 322URX QD-OLED - 31,5 tommer - 4K Ultra HD - Sort
-- CS MEGASTORE: 9.069 DKK + envio 0 DKK [BACKORDER] - (ComputerSalg) MSI MPG 322URX QD-OLED, 80 cm (31.5), 3840 x 2160 pixel, 4K Ultra HD, QD-OL
 - CS MEGASTORE: 9.069 DKK + envio 0 DKK [BACKORDER] - (ComputerSalg) MSI MPG 322URX QD-OLED gamingmonitor 31,5 4K 240 Hz
+- CS MEGASTORE: 9.069 DKK + envio 0 DKK [BACKORDER] - (ComputerSalg) MSI MPG 322URX QD-OLED, 80 cm (31.5), 3840 x 2160 pixel, 4K Ultra HD, QD-OL
 - Føniks Computer: 12.850 DKK + envio 0 DKK [IN_STOCK] - MSI MPG 322URX QD-OLED Skærm - 31.5" - 4K Ultra HD - 240 Hz - 0.03 ms - Gaming
 - Geekd: 13.069 DKK + envio 0 DKK [OUT_OF_STOCK] - MSI MPG 322URX QD-OLED – 31,5″ gamingskærm, 3840 × 2160, 240 Hz
 - Gigapro: 13.639 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MSI MPG 322URX QD-OLED computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sort
@@ -166,8 +166,8 @@ Garantia burn-in: 3 años de garantía Dell Advanced Exchange (incluye burn-in e
 - CompuMail: 3.976 DKK + envio 0 DKK [IN_STOCK] - Dell Plus S3225QC 32" 3840 x 2160 (4K) HDMI 120Hz --> På lager, levering hos dig 18-11-202
 - POWER: 3.999 DKK + envio 49 DKK [IN_STOCK] - Dell S3225QC 32" 4K QD-OLED skærm
 - Secure Data Center: 4.014 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - DELL Plus S3225QC computerskærm 80,3 cm (31.6") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort
-- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC skærm 32 4K 120 Hz QD-OLED, Sort, Sølv
 - CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC-skærm, 32, 4K, 120 Hz, QD-OLED
+- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC skærm 32 4K 120 Hz QD-OLED, Sort, Sølv
 - CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC-skærm, 32, 4K, 120 Hz, QD-OLED
 - CompuMail: 4.153 DKK + envio 0 DKK [BACKORDER] - Dell Plus S3225QC 32" 3840 x 2160 (4K) HDMI USB-C 120Hz Dockingskærm --> På fjernlager, le
 - PROconsult Data A/S: 4.249 DKK + envio 49 DKK [IN_STOCK] - Dell 32 Plus S3225QC 31.6" 4K/UHD QD-OLED Docking Monitor HDMI/USB-C
@@ -184,11 +184,11 @@ Garantia burn-in: 2 años garantía De'Longhi DK + servicio técnico en Dinamarc
 - GoBlue.dk: 3.993 DKK + envio 69 DKK [IN_STOCK] - DeLonghi Dinamica Plus ECAM380.85.SB Automatisk kaffemaskine - Sølv/sort
 - CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
 - CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
-- CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
-- CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
+- CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB espressomaskine 15 bar, sølv/sort
 - CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
 - CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB espressomaskine 15 bar, sølv/sort
-- CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB espressomaskine 15 bar, sølv/sort
+- CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
+- CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
 - CS MEGASTORE: 4.063 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
 - CompuMail: 4.207 DKK + envio 69 DKK [IN_STOCK] - De'Longhi Dinamica Plus ECAM380.85.SB Automatisk kaffemaskine Sølv/sort --> På lager, leve
 
@@ -201,8 +201,8 @@ Garantia burn-in: 2 años garantía De'Longhi DK
 - CompuMail: 5.522 DKK + envio 69 DKK [BACKORDER] - De'Longhi Rivelia EXAM440.55.B Automatisk kaffemaskine Sort onyx --> På fjernlager, leveve
 - Salling: 5.624 DKK + envio 0 DKK [IN_STOCK] - Rivelia Milk Exam 440.55 Kaffemaskine
 - avXperten: 5.649 DKK + envio 79 DKK [IN_STOCK] - DeLonghi Rivelia EXAM440.55.B Espressomaskine 1450W (1,4 Liter/19 bar)
-- CS MEGASTORE: 5.727 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B kaffemaskine 19 bar, sort
 - CS MEGASTORE: 5.727 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B - Automatisk kaffemaskine med mælkeskummer -
+- CS MEGASTORE: 5.727 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B kaffemaskine 19 bar, sort
 - CS MEGASTORE: 5.727 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B - Automatisk kaffemaskine med mælkeskummer -
 - CS MEGASTORE: 5.727 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B - Automatisk kaffemaskine med mælkeskummer -
 - Gigapro: 5.969 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - De’Longhi Rivelia EXAM440.55.B Fuld-auto Espressomaskine 1,4 L
@@ -297,12 +297,12 @@ Garantia burn-in: 2 años garantía De'Longhi DK
 - Bilka: 2.699 DKK + envio 189 DKK [IN_STOCK] (precio campana hasta 2026-11-26) - De'Longhi Magnifica Evo espressomaskine ECAM 290.61.B - sort
 - CompuMail: 2.740 DKK + envio 69 DKK [IN_STOCK] - De'Longhi Magnifica Evo ECAM290.61.B Automatisk kaffemaskine Sort --> På lager, levering h
 - happii.dk: 2.872 DKK + envio 33 DKK [IN_STOCK] - DeLonghi DeLonghi Magnifica Evo
+- CS MEGASTORE: 2.887 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
+- CS MEGASTORE: 2.887 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B espressomaskine 1,8 L 15 bar, sort
+- CS MEGASTORE: 2.887 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
 - CS MEGASTORE: 2.887 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B espressomaskine 1,8 L 15 bar, sort
 - CS MEGASTORE: 2.887 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
 - CS MEGASTORE: 2.887 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
-- CS MEGASTORE: 2.887 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
-- CS MEGASTORE: 2.887 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
-- CS MEGASTORE: 2.887 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B espressomaskine 1,8 L 15 bar, sort
 - CS MEGASTORE: 2.887 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
 - Merlin: 2.921 DKK + envio 0 DKK [IN_STOCK] - DeLonghi DeLonghi Magnifica Evo
 - Proshop.dk: 2.944 DKK + envio 0 DKK [IN_STOCK] - DeLonghi DeLonghi Magnifica Evo
@@ -318,10 +318,27 @@ Comparador:
 Garantia burn-in: 2 años de garantía total MM-Vision con recogida y devolución gratuita.  
 - MM-Vision: 12.495 DKK + envio 0 DKK [IN_STOCK] - Game BF26 Special
 
+### ASUS ROG Strix G16 (2025) (16" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB)  
+Comparador: https://www.pricerunner.dk/pl/27-3446322756/Baerbar/ASUS-ROG-Strix-G16-G614-Ryzen-9-Laptop-Sammenlign-Priser  
+Garantia burn-in: 2 años de garantía ASUS DK / POWER.dk.  
+- Komplett.dk: 25.490 DKK + envio 0 DKK [BACKORDER] - ASUS ROG Strix G16 16'' FHD+ 165 Hz
+- Punkt1: 26.999 DKK + envio 48 DKK [IN_STOCK] - ASUS ROG Strix G16 (2025) G614PW-RV005W 16" bærbar pc
+- POWER: 26.999 DKK + envio 49 DKK [IN_STOCK] - ASUS ROG Strix G16 (2025) G614PW-RV005W 16" bærbar pc
+
+### Acer Predator Helios Neo 16 AI (16" WQXGA | Core Ultra 9 290HX Plus | RTX 5080 16GB | 32GB | 1TB)  
+Comparador: https://www.pricerunner.dk/pl/27-3547202552/Baerbar/Acer-Predator-Helios-Neo-16-AI-PHN16-I71-16-WQXGA-Sammenlign-Priser  
+Garantia burn-in: 2 años de garantía Acer DK / CompuMail.  
+- Komplett.dk: 26.990 DKK + envio 0 DKK [BACKORDER] (precio campana hasta 2026-11-30) - Acer Predator Helios Neo 16 AI PHN16-I71 16'' WQXGA
+- CompuMail: 32.719 DKK + envio 0 DKK [IN_STOCK] - Acer Predator Helios Neo 16 AI PHN16-I71 16" 2560 x 1600 290HX Plus 32GB 1.024TB NVIDIA Ge
+- CS MEGASTORE: 32.780 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Acer Predator Helios Neo 16 AI PHN16-I71 - Intel Core Ultra 9 - 290HX Plus 
+- Labtech Data: 32.966 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace; titulo no coincide (otra variante)) - Acer Predator Helios Neo 16 U9-290HX 32GB 1TB RTX5080
+- Laptops.dk: 35.646 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Acer Predator Helios Neo 16 AI PHN16-I71 - NH.U46ED.003
+
 ### MSI MAG 321UPX QD-OLED (31.5" 4K 240Hz QD-OLED)  
 Comparador: https://www.pricerunner.dk/pl/25-3316438329/Skaerme/MSI-MAG-321UPX-QD-OLED-OLED-Monitor-Sammenlign-Priser  
 Garantia burn-in: 3 anos de garantia MSI OLED Care incluyendo burn-in.  
 - Amazon.de: 4.851 DKK + envio 0 DKK [IN_STOCK] - MSI MAG 321UPX QD-OLED 31,5" 4K UHD Gaming Monitor 240 Hz | 3840 x 2160, QD-OLED, 0,03 ms,
+- CDON DK: 11.181 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MSI MAG 321UPX QD-OLED skærm 1 stk., sort
 
 ### Samsung Odyssey OLED G8 G81SF (S32FG81x, 32" QD-OLED 4K 240Hz)  
 Comparador: https://www.pricerunner.dk/pl/25-3400211023/Skaerme/Samsung-Odyssey-G8-G81SF-32-Sammenlign-Priser  
@@ -368,9 +385,9 @@ Garantia burn-in: 2 años garantía Siemens/Bosch DK (grupo BSH)
 ### Melitta Caffeo Barista T Smart F831 (Dual Bean, Barista Assistant, 21 recetas)  
 Comparador: https://www.pricerunner.dk/pl/82-3532312152/Kaffemaskiner/Melitta-Caffeo-Barista-T-Smart-F831-101-Automatisk-Kaffemaskine-Sammenlign-Priser  
 Garantia burn-in: 2 años garantía Melitta DK  
-- CS MEGASTORE: 6.507 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Melitta CAFFEO Barista T Smart F831-101 - Automatisk kaffemaskine med mælke
-- CS MEGASTORE: 6.507 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Melitta CAFFEO Barista T Smart F831-101 - Automatisk kaffemaskine med mælke
 - CS MEGASTORE: 6.507 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Melitta Barista T Smart F83/1-101 espressomaskine 15 bar, sølv
+- CS MEGASTORE: 6.507 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Melitta CAFFEO Barista T Smart F831-101 - Automatisk kaffemaskine med mælke
+- CS MEGASTORE: 6.507 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Melitta CAFFEO Barista T Smart F831-101 - Automatisk kaffemaskine med mælke
 - CDON DK: 6.508 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MELITA F831-101 Barista T Smart - Sølv (uden mælketank)
 - CDON DK: 6.589 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace; titulo no coincide (otra variante)) - Melitta Barista Smart T Espressomaskine 1,8 L
 - CDON DK: 6.796 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Melitta T Smart F831-101 espressomaskine
@@ -480,7 +497,7 @@ Prisjagt sigue el producto desde 2024-03-15; historial accesible: ~3 meses.
 - Favoritten.dk: 6.520 DKK + envio 89 DKK [IN_STOCK] - Alienware AW3225QF computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort,
 - Boligcenter: 6.599 DKK + envio 239 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gamingskærm Dell Alienware AW3225QF - 32" 4K QD-OLED
 - CDON: 6.602 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Alienware AW3225QF computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD QDOLED Sort, 
-- Senetic: 6.690 DKK + envio 156 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Alienware AW3225QF computerskærm 81,3 cm (32') 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort,
+- Senetic: 6.656 DKK + envio 156 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Alienware AW3225QF computerskærm 81,3 cm (32') 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort,
 - CDON DK: 6.704 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Alienware AW3225QF computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort,
 - CDON: 6.704 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Alienware AW3225QF computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort,
 
@@ -644,12 +661,24 @@ Comparador:
 Garantia burn-in: 2 años de garantía oficial Lenovo DK.  
 - Legion Laptops: 48.990 DKK + envio 0 DKK [IN_STOCK] - Legion Pro 7i Gen 10 (16" Intel)
 
+### MSI Raider A18 HX A9WIG (18" 4K Mini LED 120Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 64GB | 2TB)  
+Comparador: https://www.pricerunner.dk/pl/27-3454613865/Baerbar/MSI-Raider-A18-HX-18-RTX-5080-Ryzen-9-64GB-2TB-Sammenlign-Priser  
+Garantia burn-in: 2 años de reklamationsret a través de POWER.dk.  
+- Punkt1: 28.999 DKK + envio 48 DKK [IN_STOCK] - MSI Raider A18 HX A9WIG-007NEU 18" bærbar pc
+- POWER: 28.999 DKK + envio 49 DKK [IN_STOCK] - MSI Raider A18 HX A9WIG-007NEU 18" bærbar pc
+
+### GIGABYTE Aorus Master 16 (16" WQXGA OLED 240Hz | Core Ultra 9 275HX | RTX 5080 16GB | 32GB | 2TB)  
+Comparador: https://www.pricerunner.dk/pl/27-3555387611/Baerbar/Gigabyte-Aorus-Master-16-RTX-5080-Laptop-Sammenlign-Priser  
+Garantia burn-in: 2 años de garantía Proshop.dk.  
+- Proshop.dk: 27.499 DKK + envio 0 DKK [UNKNOWN] - GIGABYTE Aorus Master 16 - 16" | RTX 5080 | Core Ultra 9 | 32GB | 2TB
+- Proshop.dk: 28.005 DKK + envio 0 DKK [BACKORDER] - GIGABYTE AORUS MASTER 16 6YJM5NEE65SH laptop
+
 ### Samsung Odyssey OLED G8 G80SH (32" 4K 240Hz QD-OLED 2026 · Prismatch < 6.699 DKK)  
 Comparador: https://www.pricerunner.dk/pl/25-3503044764/Skaerme/Samsung-32-Odyssey-OLED-G8-G80SH-UHD-Gaming-Monitor-Sammenlign-Priser  
 Garantia burn-in: Comprado en POWER.dk por 6.699 DKK (Prismatch si baja de 6.699 DKK en tienda DK en stock). Garantía Samsung DK + OLED Care.  
 - CompuMail: 6.786 DKK + envio 0 DKK [IN_STOCK] - Samsung Odyssey OLED G8 S32HG800SU 32" 3840 x 2160 (4K) HDMI DisplayPort USB-C 240Hz --> P
-- CS MEGASTORE: 6.822 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G8 LS32HG800SUXEN skærm 32 4K 240 Hz, sølv
 - CS MEGASTORE: 6.822 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G8 S32HG800SU skærm 32 240 Hz Sølv
+- CS MEGASTORE: 6.822 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G8 LS32HG800SUXEN skærm 32 4K 240 Hz, sølv
 - CDON DK: 7.233 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G80SH computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
 - Gigapro: 7.289 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G80SH computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
 - Favoritten.dk: 7.352 DKK + envio 89 DKK [IN_STOCK] - Samsung G80SH computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
@@ -703,9 +732,9 @@ Comparador: https://www.pricerunner.dk/pl/37-3441192026/Grafikkort/ASUS-Dual-GeF
 Garantia burn-in: 3 años de garantía oficial en Dinamarca (ASUS Dual).  
 - Elgiganten: 6.499 DKK + envio 49 DKK [IN_STOCK] - ASUS GeForce RTX 5060 Ti 16GB DUAL OC grafikkort
 - CS MEGASTORE: 6.677 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5060 Ti 16GB - OC Edition - grafikkort - GeForce RTX 
+- CS MEGASTORE: 6.677 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5060 Ti grafikkort 16 GB GDDR7 OC
 - CS MEGASTORE: 6.677 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual-grafikkort RTX 5060 Ti 16 GB GDDR7 DUAL-RTX5060TI-O16G OC Edition
 - CS MEGASTORE: 6.677 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5060 Ti 16GB - OC Edition - grafikkort - GeForce RTX 
-- CS MEGASTORE: 6.677 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5060 Ti grafikkort 16 GB GDDR7 OC
 - Proshop.dk: 6.690 DKK + envio 0 DKK [IN_STOCK] - ASUS GeForce RTX 5060 Ti DUAL OC - 16GB GDDR7 RAM - Grafikkort
 - Komplett.dk: 6.690 DKK + envio 0 DKK [IN_STOCK] - Asus Dual GeForce RTX 5060 Ti OC
 - CompuMail: 6.754 DKK + envio 0 DKK [BACKORDER] - ASUS Dual GeForce RTX 5060 Ti 16GB --> På fjernlager, levevering hos dig 23-11-2026
@@ -754,8 +783,8 @@ Garantia burn-in: 3 años de garantía ASUS OLED Care incluyendo burn-in.
 - Favoritten.dk: 5.687 DKK + envio 89 DKK [IN_STOCK] - ASUS ROG Strix OLED XG32UCWG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sor
 - Labtech Data: 5.947 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWG computer monitor 80 cm (31.5") 3840 x 2160 pixels 4K Ultra HD
 - Boligcenter: 6.099 DKK + envio 50 DKK [IN_STOCK] (tienda poco fiable/marketplace) - OLED-skærm ASUS ROG Strix XG32UCWG 32" 4K 165 Hz
+- CDON DK: 6.173 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sor
 - vooma: 6.269 DKK + envio 49 DKK [IN_STOCK] - ASUS ROG Strix XG32UCWG 32 3840 x 2160 (4K) HDMI DisplayPort USB-C 165Hz
-- CDON DK: 6.275 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sor
 
 ### MSI MAG 321UP QD-OLED (31.5" 4K 165Hz)  
 Comparador: https://www.pricerunner.dk/pl/25-3336533572/Skaerme/MSI-MAG-321UP-QD-OLED-Sammenlign-Priser  
@@ -821,27 +850,14 @@ Comparador: https://www.pricerunner.dk/pl/25-3389051146/Skaerme/LG-UltraGear-32G
 Garantia burn-in: No verificado / ambiguo en Europa (LG no publica cobertura de burn-in explicita en terminos nordicos).  
 - Proshop.dk: 8.744 DKK + envio 0 DKK [BACKORDER] - 32" LG UltraGear 32GS95UV-B - 3840x2160 (4K) - 240Hz - OLED
 
-### GIGABYTE Aorus Master 16 (16" WQXGA OLED 240Hz | Core Ultra 9 275HX | RTX 5080 16GB | 32GB | 2TB)  
-Comparador:   
-Garantia burn-in: 2 años de garantía Proshop.dk.  
-- Proshop.dk: 27.499 DKK + envio 0 DKK [UNKNOWN] - GIGABYTE Aorus Master 16 - 16" | RTX 5080 | Core Ultra 9 | 32GB | 2TB
-
 ### Philips Evnia 32M2N8900 (31.5" 4K 240Hz, 3a gen QD-OLED)  
 Comparador: https://www.pricerunner.dk/pl/25-3322910311/Skaerme/Philips-Evnia-8000-32M2N8900-Sammenlign-Priser  
 Garantia burn-in: 3 anos de garantia oficial Philips incluyendo cobertura de burn-in OLED.  
 - CDON DK: 8.915 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Philips Evnia 8000 32M2N8900/00 computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD 
 
-### MSI Raider A18 HX A9WIG (18" 4K Mini LED 120Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 64GB | 2TB)  
-Comparador:   
-Garantia burn-in: 2 años de reklamationsret a través de POWER.dk.  
-
-### ASUS ROG Strix G16 (2025) (16" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB)  
-Comparador:   
-Garantia burn-in: 2 años de garantía ASUS DK / POWER.dk.  
-
-### Acer Predator Helios Neo 16 AI (16" WQXGA | Core Ultra 9 290HX Plus | RTX 5080 16GB | 32GB | 1TB)  
-Comparador:   
-Garantia burn-in: 2 años de garantía Acer DK / CompuMail.  
-
 ## Errores de consulta (no interpretados como cambios de precio/stock)
 - gpu-rx-9070 / pricerunner.dk: estado PriceRunner sin producto ni ofertas
+
+## Alertas de esta ejecucion
+- [DEAL] [laptops] [B*] ASUS ROG Strix G16 25.490 DKK @ Komplett.dk (bajo pedido)
+- [DEAL] [laptops] [B*] Acer Predator Helios Neo 16 AI 26.990 DKK @ Komplett.dk (bajo pedido)

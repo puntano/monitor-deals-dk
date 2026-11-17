@@ -89,7 +89,9 @@
       "exclude_tokens": [
         "5090"
       ],
-      "pricerunner": [],
+      "pricerunner": [
+        "/pl/27-3454613865/Baerbar/MSI-Raider-A18-HX-18-RTX-5080-Ryzen-9-64GB-2TB-Sammenlign-Priser"
+      ],
       "direct_urls": [
         "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/msi-raider-a18-hx-a9wig-007neu-18-baerbar-pc/p-4210676/"
       ],
@@ -119,13 +121,16 @@
       "category_name": "Laptops RTX 5080 (≥32GB)",
       "match_tokens": [
         "G614PW-RV005W",
-        "Strix G16"
+        "Strix G16",
+        "G614"
       ],
       "exclude_tokens": [
         "5070",
         "5060"
       ],
-      "pricerunner": [],
+      "pricerunner": [
+        "/pl/27-3446322756/Baerbar/ASUS-ROG-Strix-G16-G614-Ryzen-9-Laptop-Sammenlign-Priser"
+      ],
       "direct_urls": [
         "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/asus-rog-strix-g16-2025-g614pw-rv005w-16-baerbar-pc/p-4237300/"
       ],
@@ -158,7 +163,9 @@
         "5070",
         "5090"
       ],
-      "pricerunner": [],
+      "pricerunner": [
+        "/pl/27-3555387611/Baerbar/Gigabyte-Aorus-Master-16-RTX-5080-Laptop-Sammenlign-Priser"
+      ],
       "direct_urls": [
         "https://www.proshop.dk/Baerbar/GIGABYTE-Aorus-Master-16-16-RTX-5080-Core-Ultra-9-32GB-2TB/3345634"
       ],
@@ -190,7 +197,9 @@
       "exclude_tokens": [
         "5070"
       ],
-      "pricerunner": [],
+      "pricerunner": [
+        "/pl/27-3547202552/Baerbar/Acer-Predator-Helios-Neo-16-AI-PHN16-I71-16-WQXGA-Sammenlign-Priser"
+      ],
       "direct_urls": [
         "https://compumail.dk/da/p/1004638363"
       ],
