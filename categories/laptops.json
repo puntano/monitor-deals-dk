@@ -1,0 +1,294 @@
+{
+  "category_id": "laptops",
+  "category_name": "Laptops RTX 5080 (≥32GB)",
+  "category_icon": "laptop",
+  "description": "Laptops gaming y estaciones portátiles en Dinamarca con NVIDIA GeForce RTX 5080 (16GB) y al menos 32GB de RAM DDR5/LPDDR5X",
+  "models": [
+    {
+      "key": "laptop-lenovo-legion-pro-7-amd",
+      "name": "Lenovo Legion Pro 7 Gen 10 (16\" OLED 240Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 32GB | 1TB)",
+      "category": "laptops",
+      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "match_tokens": [
+        "Legion Pro 7",
+        "83RUCT",
+        "16AFR10H"
+      ],
+      "exclude_tokens": [
+        "5070",
+        "5090"
+      ],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.lenovo.com/dk/da/p/laptops/legion-laptops/legion-pro-series/legion-pro-7-gen-10-16-inch-amd/83ructo1wwdk2"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Lenovo DK (Oficial)",
+          "url": "https://www.lenovo.com/dk/da/p/laptops/legion-laptops/legion-pro-series/legion-pro-7-gen-10-16-inch-amd/83ructo1wwdk2"
+        }
+      ],
+      "tier": "top",
+      "target_price": 29500,
+      "excellent_price": 27500,
+      "burnin_warranty": "2 años de garantía oficial Lenovo DK.",
+      "reviews": [
+        "https://www.notebookcheck.net/"
+      ],
+      "review_summary": "La mejor 16\" equilibrada: Ryzen 9 9955HX3D + RTX 5080 a 175W completos con cámara de vapor Coldfront Vapor, pantalla OLED 2560x1600 240Hz HDR 1000 y cargador de 400W.",
+      "pros": "Mismo 9955HX3D + 175W RTX 5080 que portátiles de 18\", pantalla OLED 240Hz, excelente chasis/bisagras, tamaño 16\" fácil de llevar de viaje",
+      "cons": "Trae 32GB y 1TB en la configuración base (ampliables)"
+    },
+    {
+      "key": "laptop-lenovo-legion-pro-7i-intel",
+      "name": "Lenovo Legion Pro 7i Gen 10 (16\" OLED 240Hz | Core Ultra 9 275HX/290HX | RTX 5080 16GB | 32-64GB | 1-2TB)",
+      "category": "laptops",
+      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "match_tokens": [
+        "Legion Pro 7i",
+        "16IAX10H",
+        "83F500NUMX"
+      ],
+      "exclude_tokens": [
+        "5070",
+        "5090"
+      ],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.lenovo.com/dk/da/p/laptops/legion-laptops/legion-pro-series/legion-pro-7i-gen-10-16-inch-intel/83f500numx"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Lenovo DK (Oficial)",
+          "url": "https://www.lenovo.com/dk/da/p/laptops/legion-laptops/legion-pro-series/legion-pro-7i-gen-10-16-inch-intel/83f500numx"
+        }
+      ],
+      "tier": "top",
+      "target_price": 29500,
+      "excellent_price": 27500,
+      "burnin_warranty": "2 años de garantía oficial Lenovo DK.",
+      "reviews": [
+        "https://www.notebookcheck.net/"
+      ],
+      "review_summary": "Versión Intel del Legion Pro 7 Gen 10 (Core Ultra 9 275HX / 290HX Plus + RTX 5080 16GB a 175W), pantalla 16\" OLED 240Hz HDR 1000 y cámara de vapor Coldfront Vapor.",
+      "pros": "Excelente construcción, pantalla 16\" OLED 240Hz, Thunderbolt/USB4, muy buen rendimiento multinúcleo y refrigeración por cámara de vapor",
+      "cons": "Precio oficial Lenovo DK muy alto sin oferta (~48.990 DKK en config 64GB/2TB Gen5); conviene esperar campaña/reestock en tiendas como POWER (~27.999 DKK)"
+    },
+    {
+      "key": "laptop-msi-raider-a18-hx",
+      "name": "MSI Raider A18 HX A9WIG (18\" 4K Mini LED 120Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 64GB | 2TB)",
+      "category": "laptops",
+      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "match_tokens": [
+        "Raider A18 HX",
+        "A9WIG-007NEU",
+        "A9WIG"
+      ],
+      "exclude_tokens": [
+        "5090"
+      ],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/msi-raider-a18-hx-a9wig-007neu-18-baerbar-pc/p-4210676/"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "POWER.dk",
+          "url": "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/msi-raider-a18-hx-a9wig-007neu-18-baerbar-pc/p-4210676/"
+        }
+      ],
+      "tier": "top",
+      "target_price": 28500,
+      "excellent_price": 26500,
+      "burnin_warranty": "2 años de reklamationsret a través de POWER.dk.",
+      "reviews": [
+        "https://www.pcmag.com/",
+        "https://www.notebookcheck.net/"
+      ],
+      "review_summary": "Reemplazo de escritorio puro de 18\": Ryzen 9 9955HX3D, RTX 5080 16GB, 64GB RAM, 2TB SSD y panel 4K Mini LED 120Hz HDR 1000.",
+      "pros": "64GB RAM y 2TB SSD de serie, Ryzen 9 9955HX3D sin cuellos de botella, pantalla 18\" 4K Mini LED muy brillante",
+      "cons": "Muy pesada (~3.63 kg), ventiladores muy ruidosos al máximo (52-60 dBA), batería corta (~1.5-2h), 120Hz sin G-SYNC"
+    },
+    {
+      "key": "laptop-asus-rog-strix-g16-5080",
+      "name": "ASUS ROG Strix G16 (2025) (16\" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB)",
+      "category": "laptops",
+      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "match_tokens": [
+        "G614PW-RV005W",
+        "Strix G16"
+      ],
+      "exclude_tokens": [
+        "5070",
+        "5060"
+      ],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/asus-rog-strix-g16-2025-g614pw-rv005w-16-baerbar-pc/p-4237300/"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "POWER.dk",
+          "url": "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/asus-rog-strix-g16-2025-g614pw-rv005w-16-baerbar-pc/p-4237300/"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 25500,
+      "excellent_price": 23500,
+      "burnin_warranty": "2 años de garantía ASUS DK / POWER.dk.",
+      "reviews": [],
+      "review_summary": "Opción 16\" más económica en tienda grande con RTX 5080 16GB y 32GB RAM de fábrica.",
+      "pros": "Precio contenido para llevar RTX 5080 + 32GB, formato 16\" manejable",
+      "cons": "Pantalla WUXGA (1920x1200) IPS 165Hz básica para una RTX 5080; CPU Ryzen 9 8940HX inferior al 9955HX3D"
+    },
+    {
+      "key": "laptop-gigabyte-aorus-master-16",
+      "name": "GIGABYTE Aorus Master 16 (16\" WQXGA OLED 240Hz | Core Ultra 9 275HX | RTX 5080 16GB | 32GB | 2TB)",
+      "category": "laptops",
+      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "match_tokens": [
+        "Aorus Master 16",
+        "BYHC5NEE65SP"
+      ],
+      "exclude_tokens": [
+        "5070",
+        "5090"
+      ],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.proshop.dk/Baerbar/GIGABYTE-Aorus-Master-16-16-RTX-5080-Core-Ultra-9-32GB-2TB/3345634"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Baerbar/GIGABYTE-Aorus-Master-16-16-RTX-5080-Core-Ultra-9-32GB-2TB/3345634"
+        }
+      ],
+      "tier": "top",
+      "target_price": 26000,
+      "excellent_price": 24500,
+      "burnin_warranty": "2 años de garantía Proshop.dk.",
+      "reviews": [],
+      "review_summary": "Excelente relación especificaciones/precio cuando hay stock: Core Ultra 9 275HX, RTX 5080, 32GB DDR5, 2TB SSD y Windows 11 Pro.",
+      "pros": "2TB SSD y 32GB RAM de fábrica, pantalla 16\" WQXGA 240Hz OLED, Windows 11 Pro",
+      "cons": "Stock intermitente en Proshop"
+    },
+    {
+      "key": "laptop-acer-predator-helios-neo-16-ai",
+      "name": "Acer Predator Helios Neo 16 AI (16\" WQXGA | Core Ultra 9 290HX Plus | RTX 5080 16GB | 32GB | 1TB)",
+      "category": "laptops",
+      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "match_tokens": [
+        "Helios Neo 16 AI",
+        "PHN16-I71"
+      ],
+      "exclude_tokens": [
+        "5070"
+      ],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://compumail.dk/da/p/1004638363"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "CompuMail.dk",
+          "url": "https://compumail.dk/da/p/1004638363"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 29000,
+      "excellent_price": 26500,
+      "burnin_warranty": "2 años de garantía Acer DK / CompuMail.",
+      "reviews": [],
+      "review_summary": "Portátil gaming de 16\" con Intel Core Ultra 9 290HX Plus, RTX 5080 16GB, 32GB DDR5 y teclado nórdico.",
+      "pros": "CPU Intel Core Ultra 9 290HX Plus muy potente, 32GB DDR5, buena refrigeración Predator",
+      "cons": "Precio algo alto (>32.000 DKK) frente a la Legion Pro 7 AMD"
+    },
+    {
+      "key": "laptop-asus-rog-zephyrus-g16-5080",
+      "name": "ASUS ROG Zephyrus G16 (16\" OLED 240Hz | Core Ultra 9 386H | RTX 5080 16GB | 64GB | 1TB)",
+      "category": "laptops",
+      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "match_tokens": [
+        "GU606AW-TB004W",
+        "Zephyrus G16"
+      ],
+      "exclude_tokens": [
+        "5070",
+        "5060",
+        "4070",
+        "4080"
+      ],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.elgiganten.dk/product/computer-kontor/computere/barbar-computer/asus-rog-zephyrus-g16-intel-386hrtx-508064gb1tb-16-barbar-gaming-pc/1130205",
+        "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/asus-rog-zephyrus-g16-gu606aw-tb004w-16-copilot-pc/p-4237302/"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Elgiganten.dk",
+          "url": "https://www.elgiganten.dk/product/computer-kontor/computere/barbar-computer/asus-rog-zephyrus-g16-intel-386hrtx-508064gb1tb-16-barbar-gaming-pc/1130205"
+        },
+        {
+          "name": "POWER.dk",
+          "url": "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/asus-rog-zephyrus-g16-gu606aw-tb004w-16-copilot-pc/p-4237302/"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 33000,
+      "excellent_price": 29999,
+      "burnin_warranty": "2 años de garantía ASUS DK.",
+      "reviews": [],
+      "review_summary": "Chasis ultrafino de aluminio CNC con 64GB RAM, RTX 5080 y OLED 240Hz. Ideal si se prioriza peso y diseño sobre TGP máximo.",
+      "pros": "Muy delgada y ligera para viajar, 64GB RAM, pantalla OLED 240Hz excelente, buen stock",
+      "cons": "Precio muy elevado (~36.800-37.500 DKK) y menor TGP sostenido que modelos más gruesos"
+    },
+    {
+      "key": "laptop-razer-blade-16-5080",
+      "name": "Razer Blade 16 (16\" OLED 240Hz | Core Ultra 9 386H | RTX 5080 16GB | 32GB | 1TB)",
+      "category": "laptops",
+      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "match_tokens": [
+        "Razer Blade 16",
+        "Blade 16"
+      ],
+      "exclude_tokens": [
+        "5070",
+        "5090",
+        "4070",
+        "4080"
+      ],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.proshop.dk/Baerbar/Razer-Blade-16-16-RTX-5080-Core-Ultra-9-32GB-1TB/3482387",
+        "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/razer-blade-16-32gb1tbrtx-5080-16-baerbar-pc/p-4520905/"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "Proshop.dk",
+          "url": "https://www.proshop.dk/Baerbar/Razer-Blade-16-16-RTX-5080-Core-Ultra-9-32GB-1TB/3482387"
+        },
+        {
+          "name": "POWER.dk",
+          "url": "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/razer-blade-16-32gb1tbrtx-5080-16-baerbar-pc/p-4520905/"
+        }
+      ],
+      "tier": "alternative",
+      "target_price": 32500,
+      "excellent_price": 29999,
+      "burnin_warranty": "2 años de garantía en Proshop / POWER.dk.",
+      "reviews": [],
+      "review_summary": "Portátil premium CNC de Razer con Core Ultra 9 386H, RTX 5080 16GB y 32GB LPDDR5X-9600.",
+      "pros": "Construcción unibody de aluminio CNC, muy compacta, OLED 240Hz",
+      "cons": "Precio muy alto (~36.499 DKK), RAM LPDDR5X soldada"
+    }
+  ]
+}
