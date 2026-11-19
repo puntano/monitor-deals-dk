@@ -1,17 +1,19 @@
-# Informe de ofertas - 2026-11-19 13:34 Romance Standard Time
+# Informe de ofertas - 2026-11-19 15:18 Romance Standard Time
 
-Fuentes OK: 127 | fallidas: 5 | alertas nuevas: 4
+Fuentes OK: 125 | fallidas: 7 | alertas nuevas: 3
 
 | Clase | Modelo | Mejor oferta fiable (total) | Tienda / stock | Mejor en stock | Objetivo | Min ~3m | Mediana ~3m | Motivo |
 |---|---|---|---|---|---|---|---|---|
 | A | Proshop DUTZO Deluxe Blaze (AMD Ryzen 7 7800X3D / ASUS RX 9070 XT Prime OC 16GB / 32GB DDR5 / 1TB WD Black SSD) | 16.499 DKK | Proshop.dk / IN_STOCK | 16.499 DKK (Proshop.dk) | 16.999 DKK | 17.799 DKK | 17.799 DKK | 16.499 DKK bajo objetivo y nuevo minimo del periodo observado |
+| A | ASUS ROG Strix OLED XG32UCWMG (31.5" 4K 240Hz / FHD 480Hz Dual-Mode WOLED, TrueBlack Glossy) | 5.490 DKK | Proshop.dk / IN_STOCK | 5.490 DKK (Proshop.dk) | 6.000 DKK | 5.490 DKK | 6.454 DKK | 5.490 DKK <= precio excelente 5.500 DKK |
 | A | Siemens EQ.500 TP515 / TQ513 (iAroma, autoMilk, 11 recetas) | 3.499 DKK | Coolshop / IN_STOCK | 3.499 DKK (Coolshop) | 4.100 DKK | 3.499 DKK | 3.499 DKK | 3.499 DKK <= precio excelente 3.700 DKK |
 | A | De'Longhi Magnifica S ECAM 21.117.B (Bean-to-Cup Compacta, Cappuccino System) | 1.933 DKK | Skousen / IN_STOCK | 1.933 DKK (Skousen) | 2.350 DKK | 1.888 DKK | 1.888 DKK | 1.933 DKK <= precio excelente 2.100 DKK |
-| A | AMD Radeon RX 9070 XT 16GB (RDNA 4, Ray Tracing V2, DP 2.1) | 6.358 DKK | Elgiganten / IN_STOCK | 6.358 DKK (Elgiganten) | 7.200 DKK | 5.999 DKK | 6.590 DKK | 6.358 DKK <= precio excelente 6.600 DKK |
-| A | ASUS ROG Strix OLED XG32UCDS (31.5" 4K 165Hz QD-OLED) | 4.645 DKK | CompuMail / IN_STOCK | 4.645 DKK (CompuMail) | 5.200 DKK | 4.599 DKK | 5.266 DKK | 4.645 DKK <= precio excelente 4.800 DKK |
+| A | ASUS ROG Strix OLED XG32UCDS (31.5" 4K 165Hz QD-OLED) | 3.999 DKK | Proshop.dk / IN_STOCK | 3.999 DKK (Proshop.dk) | 5.200 DKK | 3.999 DKK | 5.254 DKK | 3.999 DKK <= precio excelente 4.800 DKK |
+| A | Dell 32 Plus S3225QC (31.5" 4K 120Hz QD-OLED, USB-C 65W) | 3.777 DKK | Proshop.dk / IN_STOCK | 3.777 DKK (Proshop.dk) | 4.200 DKK | 3.976 DKK | 3.976 DKK | 3.777 DKK <= precio excelente 4.000 DKK |
+| A | ASUS ROG Strix OLED XG32UCWG (31.5" 4K 165Hz / FHD 330Hz Dual-Mode WOLED, TrueBlack Glossy) | 4.888 DKK | Proshop.dk / IN_STOCK | 4.888 DKK (Proshop.dk) | 5.500 DKK | 5.578 DKK | 5.578 DKK | 4.888 DKK <= precio excelente 5.100 DKK |
 | B | De'Longhi Dinamica Plus ECAM380/370 (Bean-to-Cup, LatteCrema System) | 4.019 DKK | CS MEGASTORE / IN_STOCK | 4.019 DKK (CS MEGASTORE) | 4.200 DKK | 3.915 DKK | 3.975 DKK | 4.019 DKK <= precio objetivo 4.200 DKK |
 | B | De'Longhi Rivelia EXAM440.55.B (Bean-to-Cup, Bean Switch System, 3.5" TFT) | 4.499 DKK | Magasin Onlineshop / IN_STOCK | 4.499 DKK (Magasin Onlineshop) | 4.600 DKK | 4.499 DKK | 4.499 DKK | 4.499 DKK <= precio objetivo 4.600 DKK |
-| B | Philips 5400 Series EP5447/90 (LatteGo, 12 recetas, AquaClean) | 3.492 DKK | Proshop.dk / BACKORDER | n/d (digiexpert.dk) | 3.600 DKK | 3.452 DKK | 3.546 DKK | 3.492 DKK <= precio objetivo 3.600 DKK |
+| B | Philips 5400 Series EP5447/90 (LatteGo, 12 recetas, AquaClean) | 3.551 DKK | Proshop.dk / BACKORDER | n/d (digiexpert.dk) | 3.600 DKK | 3.452 DKK | 3.546 DKK | 3.551 DKK <= precio objetivo 3.600 DKK |
 | B | Jura E8 Piano Black (P.E.P., Fine Foam, 17 recetas, J.O.E. app) | 7.995 DKK | Moccatime / IN_STOCK | 7.995 DKK (Moccatime) | 8.400 DKK | 7.995 DKK | 7.995 DKK | 7.995 DKK <= precio objetivo 8.400 DKK |
 | B | Ninja Luxe Café / AutoBarista AE1051EU (Espresso & Bean-to-Cup Barista System) | 5.047 DKK | Punkt1 / IN_STOCK | 5.047 DKK (Punkt1) | 5.500 DKK | 4.999 DKK | 4.999 DKK | 5.047 DKK <= precio objetivo 5.500 DKK |
 | B | NVIDIA GeForce RTX 5090 32GB GDDR7 (Blackwell Halo Flagship, DP 2.1 UHBR20) | 56.046 DKK | Amazon.de / IN_STOCK | 56.046 DKK (Amazon.de) | 16.500 DKK | 56.046 DKK | 69.929 DKK | Precio en el minimo observado (~3 meses: 56.046 DKK), aunque sobre el objetivo 16.500 DKK |
@@ -19,15 +21,12 @@ Fuentes OK: 127 | fallidas: 5 | alertas nuevas: 4
 | B | Dell Alienware AW3225QF (31.6" curvo 1700R 4K 240Hz QD-OLED) | 6.301 DKK | CompuMail / IN_STOCK | 6.301 DKK (CompuMail) | 5.900 DKK | 6.199 DKK | 6.660 DKK | Precio en el minimo observado (~3 meses: 6.199 DKK), aunque sobre el objetivo 5.900 DKK |
 | B | ASUS ROG Swift OLED PG32UCDP (31.5" WOLED 4K 240Hz / FHD 480Hz) | 5.972 DKK | Amazon.de / IN_STOCK | 5.972 DKK (Amazon.de) | 6.200 DKK | 5.972 DKK | 6.736 DKK | 5.972 DKK <= precio objetivo 6.200 DKK |
 | B | MSI MPG 322URX QD-OLED (31.5" 4K 240Hz, DP 2.1 UHBR20 80Gbps, USB-C 98W) | 6.558 DKK | Elgiganten / IN_STOCK | 6.558 DKK (Elgiganten) | 6.800 DKK | 5.749 DKK | 8.724 DKK | 6.558 DKK <= precio objetivo 6.800 DKK |
-| B | ASUS ROG Strix OLED XG32UCWMG (31.5" 4K 240Hz / FHD 480Hz Dual-Mode WOLED, TrueBlack Glossy) | 5.558 DKK | Elgiganten / IN_STOCK | 5.558 DKK (Elgiganten) | 6.000 DKK | 5.499 DKK | 6.454 DKK | 5.558 DKK <= precio objetivo 6.000 DKK |
 | B | Jura E6 Piano Black (P.E.P., Fine Foam Light, 11 recetas, J.O.E. app) | 6.495 DKK | House of Barista / IN_STOCK | 6.495 DKK (House of Barista) | 6.300 DKK | 6.495 DKK | 7.493 DKK | Precio en el minimo observado (~3 meses: 6.495 DKK), aunque sobre el objetivo 6.300 DKK |
 | B | De'Longhi Magnifica Evo ECAM290.61 (LatteCrema Hot, 7 recetas, molido cónico) | 2.809 DKK | CompuMail / IN_STOCK | 2.809 DKK (CompuMail) | 3.100 DKK | 2.664 DKK | 2.664 DKK | 2.809 DKK <= precio objetivo 3.100 DKK |
 | B | POWER Cepter E-Sport R57 Wi-Fi Gaming PC (AMD Ryzen 7 / RTX 5070 / 16GB DDR5 / 1TB SSD) | 12.047 DKK | POWER / COLLECT_IN_STORE | - | 12.999 DKK | 11.999 DKK | 11.999 DKK | 12.047 DKK <= precio objetivo 12.999 DKK |
 | B | MM-Vision Game BF26 Special Black Friday (AMD Ryzen / Asus Radeon RX 9060 XT 16GB / 16GB DDR5 / 1TB SSD) | 12.495 DKK | MM-Vision / IN_STOCK | 12.495 DKK (MM-Vision) | 12.495 DKK | 12.495 DKK | 12.495 DKK | 12.495 DKK <= precio objetivo 12.495 DKK |
-| B | ASUS ROG Strix G16 (2025) (16" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB) | 25.490 DKK | Komplett.dk / BACKORDER | 27.047 DKK (Punkt1) | 25.500 DKK | 25.490 DKK | n/d | 25.490 DKK <= precio objetivo 25.500 DKK |
 | B | Acer Predator Helios Neo 16 AI (16" WQXGA | Core Ultra 9 290HX Plus | RTX 5080 16GB | 32GB | 1TB) | 26.990 DKK | Komplett.dk / IN_STOCK | 26.990 DKK (Komplett.dk) | 29.000 DKK | 26.990 DKK | n/d | 26.990 DKK <= precio objetivo 29.000 DKK |
 | B | MSI MAG 321UPX QD-OLED (31.5" 4K 240Hz QD-OLED) | 4.851 DKK | Amazon.de / IN_STOCK | 4.851 DKK (Amazon.de) | 5.200 DKK | 4.851 DKK | 4.851 DKK | 4.851 DKK <= precio objetivo 5.200 DKK |
-| B | Dell 32 Plus S3225QC (31.5" 4K 120Hz QD-OLED, USB-C 65W) | 4.048 DKK | POWER / IN_STOCK | 4.048 DKK (POWER) | 4.200 DKK | 3.976 DKK | 3.976 DKK | 4.048 DKK <= precio objetivo 4.200 DKK |
 | B | Samsung Odyssey OLED G8 G81SF (S32FG81x, 32" QD-OLED 4K 240Hz) | 4.399 DKK | Føniks Computer / IN_STOCK | 4.399 DKK (Føniks Computer) | 5.300 DKK | 4.399 DKK | 5.599 DKK | 4.399 DKK <= precio excelente 5.000 DKK (limitado a B: sin reviews independientes verificadas del modelo exacto) |
 | B | LG UltraGear OLED 32GX870B-B (31.5" 4K 240Hz / FHD 480Hz Dual-Mode WOLED, USB-C 90W) | 7.239 DKK | Elgiganten / IN_STOCK | 7.239 DKK (Elgiganten) | 7.500 DKK | 7.190 DKK | 7.190 DKK | 7.239 DKK <= precio objetivo 7.500 DKK |
 | C | Siemens EQ.700 TP715 / TQ715 (iAroma System, autoMilk, 13 recetas) | 6.910 DKK | Amazon.de / IN_STOCK | 6.910 DKK (Amazon.de) | 6.800 DKK | 6.875 DKK | 6.910 DKK | Precio habitual (mediana ~3 meses 6.910 DKK); objetivo 6.800 DKK |
@@ -56,19 +55,18 @@ Fuentes OK: 127 | fallidas: 5 | alertas nuevas: 4
 | C | NVIDIA GeForce RTX 5060 Ti 16GB GDDR7 (Blackwell, DLSS 4, DP 2.1) | 6.548 DKK | Elgiganten / IN_STOCK | 6.548 DKK (Elgiganten) | 5.200 DKK | 6.499 DKK | 6.499 DKK | Precio habitual (mediana ~3 meses 6.499 DKK); objetivo 5.200 DKK |
 | C | ASUS ROG Swift OLED PG32UCDM / PG32UCDMZ (31.5" QD-OLED 4K 240Hz) | 6.332 DKK | Føniks Computer / IN_STOCK | 6.332 DKK (Føniks Computer) | 6.200 DKK | 4.899 DKK | 7.311 DKK | Precio habitual (mediana ~3 meses 7.311 DKK); objetivo 6.200 DKK |
 | C | Gigabyte AORUS FO32U2P (31.5" QD-OLED 4K 240Hz, DP 2.1 UHBR20) | 7.052 DKK | avXperten / IN_STOCK | 7.052 DKK (avXperten) | 6.300 DKK | 6.709 DKK | 6.775 DKK | Precio habitual (mediana ~3 meses 6.775 DKK); objetivo 6.300 DKK |
-| C | Samsung Odyssey OLED G8 G80SD (LS32DG800/802, 32" QD-OLED 4K 240Hz mate) | 6.688 DKK | CompuMail / IN_STOCK | 6.688 DKK (CompuMail) | 5.800 DKK | 5.844 DKK | 6.496 DKK | Precio habitual (mediana ~3 meses 6.496 DKK); objetivo 5.800 DKK |
+| C | Samsung Odyssey OLED G8 G80SD (LS32DG800/802, 32" QD-OLED 4K 240Hz mate) | 6.689 DKK | CompuMail / BACKORDER | 6.803 DKK (CS MEGASTORE) | 5.800 DKK | 5.844 DKK | 6.496 DKK | Precio habitual (mediana ~3 meses 6.496 DKK); objetivo 5.800 DKK |
 | C | Samsung Odyssey G7 G70D (S32DG702, 32" IPS 4K 144Hz) - alternativa sin burn-in | 3.350 DKK | CompuMail / IN_STOCK | 3.350 DKK (CompuMail) | 3.200 DKK | 3.340 DKK | 3.396 DKK | Precio habitual (mediana ~3 meses 3.396 DKK); objetivo 3.200 DKK |
 | C | AOC AGON PRO AG326UD (31.5" 4K 165Hz QD-OLED) | 5.714 DKK | avXperten / IN_STOCK | 5.714 DKK (avXperten) | 5.300 DKK | 5.635 DKK | 5.909 DKK | Precio habitual (mediana ~3 meses 5.909 DKK); objetivo 5.300 DKK |
-| C | ASUS ROG Strix OLED XG32UCWG (31.5" 4K 165Hz / FHD 330Hz Dual-Mode WOLED, TrueBlack Glossy) | 5.554 DKK | CompuMail / IN_STOCK | 5.554 DKK (CompuMail) | 5.500 DKK | 5.578 DKK | 5.578 DKK | Precio habitual (mediana ~3 meses 5.578 DKK); objetivo 5.500 DKK |
 | C | Gigabyte AORUS FO32U2 (31.5" QD-OLED 4K 240Hz) | 6.817 DKK | Proshop.dk / IN_STOCK | 6.817 DKK (Proshop.dk) | 5.600 DKK | 6.699 DKK | 6.699 DKK | Precio habitual (mediana ~3 meses 6.699 DKK); objetivo 5.600 DKK |
 | C | Samsung Odyssey OLED G7 G73SH (S32HG73x, 32" OLED 4K 165Hz / FHD 330Hz) | 4.647 DKK | POWER / COLLECT_IN_STORE | 4.647 DKK (POWER) | 4.600 DKK | 4.599 DKK | 5.026 DKK | Precio habitual (mediana ~3 meses 5.026 DKK); objetivo 4.600 DKK |
 | D | Proshop DUTZO Deluxe Ember (AMD Ryzen 7 7800X3D / XFX Radeon RX 9070 XT 16GB / 32GB DDR5 / 1TB SSD) | 17.799 DKK | Proshop.dk / IN_STOCK | 17.799 DKK (Proshop.dk) | 16.999 DKK | 16.299 DKK | 17.100 DKK | Por encima del precio habitual (mediana 17.100 DKK) y del objetivo 16.999 DKK |
 | D | Lenovo Legion Pro 7 Gen 10 (16" OLED 240Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 32GB | 1TB) | 30.262 DKK | Legion Laptops / IN_STOCK | 30.262 DKK (Legion Laptops) | 29.500 DKK | 30.262 DKK | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 29.500 DKK |
 | D | Lenovo Legion Pro 7i Gen 10 (16" OLED 240Hz | Core Ultra 9 275HX/290HX | RTX 5080 16GB | 32-64GB | 1-2TB) | 48.990 DKK | Legion Laptops / IN_STOCK | 48.990 DKK (Legion Laptops) | 29.500 DKK | 48.990 DKK | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 29.500 DKK |
-| D | MSI Raider A18 HX A9WIG (18" 4K Mini LED 120Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 64GB | 2TB) | 29.047 DKK | Punkt1 / IN_STOCK | 29.047 DKK (Punkt1) | 28.500 DKK | 28.999 DKK | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 28.500 DKK |
 | D | GIGABYTE Aorus Master 16 (16" WQXGA OLED 240Hz | Core Ultra 9 275HX | RTX 5080 16GB | 32GB | 2TB) | 29.667 DKK | Proshop.dk / BACKORDER | - | 26.000 DKK | 28.005 DKK | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 26.000 DKK |
 | D | Samsung Odyssey OLED G8 G80SH (32" 4K 240Hz QD-OLED 2026 · Prismatch < 6.699 DKK) | 6.749 DKK | CompuMail / IN_STOCK | 6.749 DKK (CompuMail) | 6.698 DKK | 6.786 DKK | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 6.698 DKK |
 | D | Proshop DUTZO Gaming Wildfire (AMD Ryzen 5 9600X / ASUS RTX 5070 12GB / 16GB DDR5 / 1TB SSD) | 14.199 DKK | Proshop.dk / BACKORDER | - | 13.499 DKK | 13.399 DKK | 13.399 DKK | Por encima del precio habitual (mediana 13.399 DKK) y del objetivo 13.499 DKK |
+| D | AMD Radeon RX 9070 XT 16GB (RDNA 4, Ray Tracing V2, DP 2.1) | 7.265 DKK | Amazon.de / IN_STOCK | 7.265 DKK (Amazon.de) | 7.200 DKK | 5.999 DKK | 6.590 DKK | Por encima del precio habitual (mediana 6.590 DKK) y del objetivo 7.200 DKK |
 | D | Razer Blade 16 (16" OLED 240Hz | Core Ultra 9 386H | RTX 5080 16GB | 32GB | 1TB) | 36.499 DKK | Proshop.dk / IN_STOCK | 36.499 DKK (Proshop.dk) | 32.500 DKK | 36.499 DKK | n/d | Por encima del precio habitual (mediana n/d) y del objetivo 32.500 DKK |
 | D | MSI MAG 321UP QD-OLED (31.5" 4K 165Hz) | 9.143 DKK | CS MEGASTORE / BACKORDER | - | 4.800 DKK | 5.165 DKK | 5.415 DKK | Por encima del precio habitual (mediana 5.415 DKK) y del objetivo 4.800 DKK |
 | D | Samsung Odyssey Neo G7 S32BG75 (32" Mini-LED VA curvo 1000R 4K 165Hz) | 6.649 DKK | CompuMail / BACKORDER | 6.747 DKK (POWER) | 4.500 DKK | 4.486 DKK | 6.699 DKK | Modelo no recomendado (alternativas mejores por precio/garantia/pruebas). |
@@ -76,6 +74,8 @@ Fuentes OK: 127 | fallidas: 5 | alertas nuevas: 4
 | D | LG UltraGear 32GS95UE/UV-B (31.5" WOLED 4K 240Hz / FHD 480Hz) | 10.848 DKK | Proshop.dk / BACKORDER | - | 5.900 DKK | 8.213 DKK | 8.622 DKK | Modelo no recomendado (alternativas mejores por precio/garantia/pruebas). |
 | - | Proshop DUTZO Gaming Frostfire (AMD Ryzen 5 7500F / ASUS RTX 5060 8GB / 16GB DDR5 / 1TB SSD) | n/d | - | - | 9.689 DKK | 10.199 DKK | 10.199 DKK | Sin ofertas fiables disponibles hoy en PriceRunner (consulta correcta). |
 | - | Philips Evnia 32M2N8900 (31.5" 4K 240Hz, 3a gen QD-OLED) | n/d | - | - | 5.900 DKK | n/d | n/d | Sin ofertas fiables disponibles hoy en PriceRunner (consulta correcta). |
+| ? | MSI Raider A18 HX A9WIG (18" 4K Mini LED 120Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 64GB | 2TB) | n/d | - | - | 28.500 DKK | 28.999 DKK | n/d | Sin datos hoy (error de consulta). No se interpreta como agotado ni como cambio de precio. |
+| ? | ASUS ROG Strix G16 (2025) (16" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB) | n/d | - | - | 25.500 DKK | 25.490 DKK | n/d | Sin datos hoy (error de consulta). No se interpreta como agotado ni como cambio de precio. |
 | ? | ASUS ROG Zephyrus G16 (16" OLED 240Hz | Core Ultra 9 386H | RTX 5080 16GB | 64GB | 1TB) | n/d | - | - | 33.000 DKK | 36.799 DKK | n/d | Sin datos hoy (error de consulta). No se interpreta como agotado ni como cambio de precio. |
 
 Clases: A excelente, B buena, C normal, D no recomendada, - sin ofertas fiables, ? error de consulta.
@@ -87,6 +87,23 @@ Min/mediana ~3m: historial Prisjagt (ultimos 92 dias, tiendas fiables, titulo co
 Comparador:   
 Garantia burn-in: 2 años de garantía directa Proshop Dinamarca.  
 - Proshop.dk: 16.499 DKK + envio 0 DKK [IN_STOCK] - DUTZO Deluxe Blaze
+
+### ASUS ROG Strix OLED XG32UCWMG (31.5" 4K 240Hz / FHD 480Hz Dual-Mode WOLED, TrueBlack Glossy)  
+Comparador: https://www.pricerunner.dk/pl/25-3440436889/Skaerme/ASUS-ROG-Strix-OLED-XG32UCWMG-32-Inch-4K-Monitor-Sammenlign-Priser  
+Garantia burn-in: 3 años de garantía ASUS OLED Care incluyendo burn-in.  
+Prisjagt sigue el producto desde 2025-08-14; historial accesible: ~3 meses.  
+- Proshop.dk: 5.490 DKK + envio 0 DKK [IN_STOCK] (precio campana hasta 2026-11-30) - 32" ASUS ROG Strix XG32UCWMG - 3840x2160 (4K) - 240Hz - OLED - KVM switch
+- Proshop.dk: 5.490 DKK + envio 0 DKK [IN_STOCK] - 32" ASUS ROG Strix XG32UCWMG - 3840x2160 (4K) - 240Hz - OLED - KVM switch
+- Elgiganten: 5.499 DKK + envio 59 DKK [IN_STOCK] (precio campana hasta 2026-11-30) - ASUS ROG Strix XG32UCWMG 32" 4K/WOLED/240Hz/0,03ms gaming skærm
+- Elgiganten: 5.499 DKK + envio 79 DKK [IN_STOCK] - ASUS ROG Strix XG32UCWMG 32" 4K/WOLED/240Hz/0,03ms gaming skærm
+- CS MEGASTORE: 5.697 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix XG32UCWMG skærm 31,5 4K 240 Hz OLED, sort
+- CS MEGASTORE: 5.697 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix XG32UCWMG - OLED-monitor - gaming - USB - 32 (31.5 til at se
+- Taurus Gaming: 5.749 DKK + envio 0 DKK [IN_STOCK] - ASUS 32" ROG Strix XG32UCWMG OLED 4K 240/480 Hz Dual Mode
+- CS MEGASTORE: 5.879 DKK + envio 0 DKK [UNKNOWN] - ASUS ROG Strix XG32UCWMG skærm 31,5 4K 240 Hz OLED, sort
+- Geekd: 5.939 DKK + envio 0 DKK [BACKORDER] - BLACK MONTH - ASUS ROG Strix OLED XG32UCWMG – skærm – Sort - Forventet levering: 10 hverda
+- CDON: 6.169 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWMG 80.01cm (16:9) UHD HDMI DP
+- CDON DK: 6.422 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix XG32UCWMG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD OLED So
+- happii.dk: 6.466 DKK + envio 33 DKK [IN_STOCK] - 32" ASUS ROG Strix XG32UCWMG - 3840x2160 (4K) - 240Hz - OLED - KVM switch
 
 ### Siemens EQ.500 TP515 / TQ513 (iAroma, autoMilk, 11 recetas)  
 Comparador: https://www.pricerunner.dk/pl/82-3304339288/Kaffemaskiner/Siemens-EQ.500-Classic-TP515R02-Sammenlign-Priser, https://www.pricerunner.dk/pl/82-3268598531/Kaffemaskiner/Siemens-TQ513R01-Sammenlign-Priser  
@@ -106,10 +123,10 @@ Comparador: https://www.pricerunner.dk/pl/82-3673343/Kaffemaskiner/DeLonghi-Magn
 Garantia burn-in: 2 años garantía De'Longhi DK  
 - Skousen: 1.888 DKK + envio 45 DKK [IN_STOCK] (precio campana hasta 2026-11-29) - De'Longhi Magnifica S Ecam21.117.b Espressomaskine - Få leveret fra i morgen - Vi matcher 
 - happii.dk: 2.263 DKK + envio 33 DKK [IN_STOCK] - DeLonghi ECAM 21.117.B
+- Merlin: 2.308 DKK + envio 0 DKK [IN_STOCK] - DeLonghi ECAM 21.117.B
 - CS MEGASTORE: 2.318 DKK + envio 0 DKK [BACKORDER] - (ComputerSalg) De'Longhi Magnifica S ECAM21.117.B - Automatisk kaffemaskine
-- Merlin: 2.333 DKK + envio 0 DKK [IN_STOCK] - DeLonghi ECAM 21.117.B
-- Proshop.dk: 2.352 DKK + envio 0 DKK [IN_STOCK] - DeLonghi ECAM 21.117.B
-- CompuMail: 2.504 DKK + envio 69 DKK [IN_STOCK] - De'Longhi Magnifica S ECAM 21.117.B Automatisk kaffemaskine Sort --> På lager, levering ho
+- Proshop.dk: 2.327 DKK + envio 0 DKK [IN_STOCK] - DeLonghi ECAM 21.117.B
+- CompuMail: 2.397 DKK + envio 69 DKK [IN_STOCK] - De'Longhi Magnifica S ECAM 21.117.B Automatisk kaffemaskine Sort --> På lager, levering ho
 - Gigapro: 2.589 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - De’Longhi Magnifica S ECAM 21.117.B kaffemaskine Semi-auto Espressomaskine 1,8 L
 - Boligcenter: 2.599 DKK + envio 169 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Espressomaskine DeLonghi Magnifica S ECAM 21.117.B - sort
 - Favoritten.dk: 2.607 DKK + envio 89 DKK [IN_STOCK] - De’Longhi Magnifica S ECAM 21.117.B kaffemaskine Semi-auto Espressomaskine 1,8 L
@@ -117,28 +134,14 @@ Garantia burn-in: 2 años garantía De'Longhi DK
 - vooma: 2.879 DKK + envio 49 DKK [IN_STOCK] - De'Longhi Magnifica S ECAM 21.117.B Automatisk kaffemaskine Sort
 - Labtech Data: 2.892 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - De’Longhi Magnifica S ECAM 21.117.B coffee maker Semi-auto Espresso machine 1.8 L
 
-### AMD Radeon RX 9070 XT 16GB (RDNA 4, Ray Tracing V2, DP 2.1)  
-Comparador: https://www.pricerunner.dk/pl/37-3396383505/Grafikkort/ASUS-PRIME-RX-9070-XT-OC-Grafikkort-Sammenlign-Priser, https://www.pricerunner.dk/pl/37-3396383352/Grafikkort/Powercolor-Reaper-RX9070XT-16G-A-Sammenlign-Priser, https://www.pricerunner.dk/pl/37-3396994287/Grafikkort/Gigabyte-Radeon-9070-XT-Gaming-OC-16G-Grafikkort-Sammenlign-Priser, https://www.pricerunner.dk/pl/37-3396385541/Grafikkort/Sapphire-Pulse-Radeon-RX-9070-XT-Gaming-16GB-GDDR6-PCI-Express-Graphics-Card-Sammenlign-Priser  
-Garantia burn-in: 2-3 años de garantía fabricante (PowerColor, ASUS Prime).  
-- Elgiganten: 6.299 DKK + envio 59 DKK [IN_STOCK] - Gigabyte Radeon RX 9070 XT GAMING OC 16G grafikkort
-- Amazon.de: 7.265 DKK + envio 0 DKK [IN_STOCK] - Gigabyte Radeon RX 9070 XT Gaming OC 16G Grafikkarte - 16 GB GDDR6, 256 Bit, PCI-E 5.0, 30
-- Amazon.de: 7.339 DKK + envio 0 DKK [IN_STOCK] - Sapphire Pulse AMD Radeon™ RX 9070 XT Gaming 16GB DUAL HDMI/DUAL DP
-- Amazon.de: 7.466 DKK + envio 0 DKK [IN_STOCK] - ASUS Prime Radeon RX 9070 XT OC Edition 16GB GDDR6 Gaming-Grafikkarte | PCIe 5.0, 256-Bit,
-- CompuMail: 7.741 DKK + envio 0 DKK [IN_STOCK] - ASUS Prime Radeon RX 9070 XT OC Edition 16GB --> På vej ind, levering hos dig 22-11-2026
-- Proshop.dk: 7.777 DKK + envio 0 DKK [IN_STOCK] - ASUS Radeon RX 9070 XT Prime OC - 16GB GDDR6 RAM - Grafikkort
-- happii.dk: 7.990 DKK + envio 33 DKK [IN_STOCK] - PowerColor Radeon RX 9070 XT Reaper - 16GB GDDR6 RAM - Grafikkort
-- Proshop.dk: 7.990 DKK + envio 0 DKK [IN_STOCK] - PowerColor Radeon RX 9070 XT Reaper - 16GB GDDR6 RAM - Grafikkort
-- Merlin: 7.990 DKK + envio 0 DKK [IN_STOCK] - PowerColor Radeon RX 9070 XT Reaper - 16GB GDDR6 RAM - Grafikkort
-- Føniks Computer: 7.999 DKK + envio 0 DKK [IN_STOCK] - Gigabyte Radeon RX 9070 XT OC Gaming - 16GB GDDR6 - PCIe 5.0
-- CS MEGASTORE: 8.148 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) PowerColor Reaper Radeon RX 9070 XT - Grafikkort - Radeon RX 9070 XT - 16 G
-- CS MEGASTORE: 8.148 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) PowerColor RX 9070 XT grafikkort 16 GB GDDR6 Reaper
-
 ### ASUS ROG Strix OLED XG32UCDS (31.5" 4K 165Hz QD-OLED)  
 Comparador: https://www.pricerunner.dk/pl/25-3419255243/Skaerme/ASUS-ROG-Strix-OLED-XG32UCDS-32-Zoll-4K-UHD-Gaming-Monitor-Sammenlign-Priser  
 Garantia burn-in: 3 años de garantía ASUS OLED Care incluyendo burn-in.  
 Prisjagt sigue el producto desde 2025-08-06; historial accesible: ~3 meses.  
-- CompuMail: 4.645 DKK + envio 0 DKK [IN_STOCK] - ASUS ROG Strix XG32UCDS 32" 3840 x 2160 (4K) HDMI DisplayPort USB-C 165Hz --> På vej ind, 
+- Proshop.dk: 3.999 DKK + envio 0 DKK [IN_STOCK] (precio campana hasta 2026-11-30) - 32" ASUS ROG Strix XG32UCDS - 3840x2160 (4K) - 165Hz - QD-OLED - 15W USB-C
+- Proshop.dk: 3.999 DKK + envio 0 DKK [IN_STOCK] - 32" ASUS ROG Strix XG32UCDS - 3840x2160 (4K) - 165Hz - QD-OLED - 15W USB-C
 - CompuMail: 4.645 DKK + envio 0 DKK [UNKNOWN] - ASUS ROG Strix XG32UCDS 32" 3840 x 2160 (4K) HDMI DisplayPort USB-C 165Hz --> På vej ind, 
+- CompuMail: 4.646 DKK + envio 0 DKK [IN_STOCK] - ASUS ROG Strix XG32UCDS 32" 3840 x 2160 (4K) HDMI DisplayPort USB-C 165Hz --> På vej ind, 
 - avXperten: 4.669 DKK + envio 79 DKK [IN_STOCK] - Asus XG32UCDS PC Skærm - 31.5", 4K Ultra HD, DP, HDMI, USB-C (0,03 ms)
 - CDON: 4.890 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCDS 80,01 cm (16:9) UHD HDMI DP
 - GoBlue.dk: 5.241 DKK + envio 69 DKK [IN_STOCK] - ASUS ROG Strix XG32UCDS - 32" - 165 Hz - Black
@@ -147,8 +150,38 @@ Prisjagt sigue el producto desde 2025-08-06; historial accesible: ~3 meses.
 - Geekd: 5.379 DKK + envio 0 DKK [IN_STOCK] - ASUS ROG Strix OLED XG32UCDS – 31,5" OLED, 165 Hz
 - CS MEGASTORE: 5.417 DKK + envio 0 DKK [UNKNOWN] - ASUS ROG Strix XG32UCDS skærm 32 4K UHD 165 Hz QD-OLED
 - CS MEGASTORE: 5.437 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix XG32UCDS skærm 32 4K UHD 165 Hz QD-OLED
-- CS MEGASTORE: 5.437 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix OLED XG32UCDS gamingmonitor 31,5 4K 165 Hz QD-OLED
-- MM Vision: 5.499 DKK + envio 0 DKK [IN_STOCK] - Asus ROG Strix XG32UCDS 32" 4K - OLED - 165Hz - Højdejusterbar
+
+### Dell 32 Plus S3225QC (31.5" 4K 120Hz QD-OLED, USB-C 65W)  
+Comparador: https://www.pricerunner.dk/pl/25-3422356447/Skaerme/Dell-32-Plus-4K-QD-OLED-Monitor-S3225QC-Sammenlign-Priser  
+Garantia burn-in: 3 años de garantía Dell Advanced Exchange (incluye burn-in en gama OLED Dell).  
+- Proshop.dk: 3.777 DKK + envio 0 DKK [IN_STOCK] (precio campana hasta 2026-11-30) - 32" Dell Plus S3225QC - 3840x2160 (4K) - 120Hz - QD-OLED
+- POWER: 3.999 DKK + envio 49 DKK [IN_STOCK] - Dell S3225QC 32" 4K QD-OLED skærm
+- Secure Data Center: 4.014 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - DELL Plus S3225QC computerskærm 80,3 cm (31.6") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort
+- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC-skærm, 32, 4K, 120 Hz, QD-OLED
+- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC skærm 32 4K 120 Hz QD-OLED, Sort, Sølv
+- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC-skærm, 32, 4K, 120 Hz, QD-OLED
+- CompuMail: 4.177 DKK + envio 0 DKK [BACKORDER] - Dell Plus S3225QC 32" 3840 x 2160 (4K) HDMI USB-C 120Hz Dockingskærm --> På fjernlager, le
+- PROconsult Data A/S: 4.249 DKK + envio 49 DKK [IN_STOCK] - Dell 32 Plus S3225QC 31.6" 4K/UHD QD-OLED Docking Monitor HDMI/USB-C
+- CompuMail: 4.270 DKK + envio 0 DKK [IN_STOCK] - Dell Plus S3225QC 32" 3840 x 2160 (4K) HDMI 120Hz --> På lager, levering hos dig 20-11-202
+- avXperten: 4.462 DKK + envio 79 DKK [IN_STOCK] - Dell S3225QC OLED PC Skærm - 32", 3840x2160, 120Hz
+- Gigapro: 4.509 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - DELL Plus S3225QC computerskærm 80,3 cm (31.6") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort
+- Laptops.dk: 4.597 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Dell Plus S3225QC - OLED-monitor - 4K - 32" - HDR - DELL-S3225QC
+
+### ASUS ROG Strix OLED XG32UCWG (31.5" 4K 165Hz / FHD 330Hz Dual-Mode WOLED, TrueBlack Glossy)  
+Comparador: https://www.pricerunner.dk/pl/25-3423718536/Skaerme/ASUS-ROG-Strix-OLED-XG32UCWG-32-Zoll-4K-UHD-Gaming-Monitor-Sammenlign-Priser  
+Garantia burn-in: 3 años de garantía ASUS OLED Care incluyendo burn-in.  
+- Proshop.dk: 4.888 DKK + envio 0 DKK [IN_STOCK] (precio campana hasta 2026-11-30) - 32" ASUS ROG Strix XG32UCWG - 3840x2160 (4K) - 165Hz - OLED - KVM switch
+- avXperten: 5.249 DKK + envio 79 DKK [BACKORDER] (titulo no coincide (otra variante)) - Asus ROG Strix Gaming PC Skærm - 31.5", 4K UHD (OLED), 165Hz - Sort
+- CompuMail: 5.554 DKK + envio 0 DKK [IN_STOCK] - ASUS ROG Strix XG32UCWG 32" 3840 x 2160 (4K) HDMI DisplayPort USB-C 165Hz --> På lager, le
+- CS MEGASTORE: 5.577 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix XG32UCWG OLED-skærm 31,5 4K 165 Hz, Sort
+- CS MEGASTORE: 5.577 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix OLED XG32UCWG gamingskærm 31,5 4K 165 Hz
+- Geekd: 5.578 DKK + envio 0 DKK [IN_STOCK] - BLACK MONTH - ASUS ROG Strix OLED XG32UCWG – skærm – Sort - Forventet levering: 2 hverdage
+- Gigapro: 5.639 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sor
+- PROconsult Data A/S: 5.649 DKK + envio 49 DKK [IN_STOCK] - ASUS ROG Strix OLED XG32UCWG 31.5" 4K UHD Dual Mode Gaming Monitor 2xHDMI/DP/USB-C
+- Favoritten.dk: 5.687 DKK + envio 89 DKK [IN_STOCK] - ASUS ROG Strix OLED XG32UCWG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sor
+- Labtech Data: 5.947 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWG computer monitor 80 cm (31.5") 3840 x 2160 pixels 4K Ultra HD
+- Boligcenter: 6.099 DKK + envio 50 DKK [IN_STOCK] (tienda poco fiable/marketplace) - OLED-skærm ASUS ROG Strix XG32UCWG 32" 4K 165 Hz
+- CDON DK: 6.222 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sor
 
 ### De'Longhi Dinamica Plus ECAM380/370 (Bean-to-Cup, LatteCrema System)  
 Comparador: https://www.pricerunner.dk/pl/82-3210610443/Kaffemaskiner/De-Longhi-Dinamica-Plus-ECAM380.95.TB-Sammenlign-Priser, https://www.pricerunner.dk/pl/82-3210028773/Kaffemaskiner/De-Longhi-ECAM380.85.SB-Sammenlign-Priser  
@@ -160,11 +193,11 @@ Garantia burn-in: 2 años garantía De'Longhi DK + servicio técnico en Dinamarc
 - CS MEGASTORE: 4.019 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB espressomaskine 15 bar, sølv/sort
 - CS MEGASTORE: 4.019 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
 - CS MEGASTORE: 4.019 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
-- CS MEGASTORE: 4.019 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
-- CS MEGASTORE: 4.019 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
 - CS MEGASTORE: 4.019 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB espressomaskine 15 bar, sølv/sort
 - CS MEGASTORE: 4.019 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
-- Smartphoneshop.dk: 4.020 DKK + envio 109 DKK [IN_STOCK] - De'Longhi Dinamica Plus ECAM380.85.SB Silver/Black
+- CS MEGASTORE: 4.019 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
+- CS MEGASTORE: 4.019 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Dinamica Plus ECAM380.85.SB - Automatisk kaffemaskine med mælkesk
+- Proshop.dk: 4.019 DKK + envio 0 DKK [IN_STOCK] - DeLonghi DeLonghi ECAM380.85.SB coffee maker
 
 ### De'Longhi Rivelia EXAM440.55.B (Bean-to-Cup, Bean Switch System, 3.5" TFT)  
 Comparador: https://www.pricerunner.dk/pl/82-3214856172/Kaffemaskiner/De-Longhi-Rivelia-Automatic-Bean-to-Cup-Sammenlign-Priser  
@@ -174,9 +207,9 @@ Garantia burn-in: 2 años garantía De'Longhi DK
 - Elgiganten: 5.129 DKK + envio 59 DKK [IN_STOCK] - DeLonghi Rivelia EXAM440.55.B kaffemaskine (sort)
 - Smartphoneshop.dk: 5.140 DKK + envio 109 DKK [IN_STOCK] - De'Longhi Rivelia EXAM440.55.B LatteCrema Onyx Black
 - CompuMail: 5.160 DKK + envio 69 DKK [BACKORDER] - De'Longhi Rivelia EXAM440.55.B Automatisk kaffemaskine Sort onyx --> På fjernlager, leveve
+- CS MEGASTORE: 5.183 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B - Automatisk kaffemaskine med mælkeskummer -
+- CS MEGASTORE: 5.183 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B - Automatisk kaffemaskine med mælkeskummer -
 - CS MEGASTORE: 5.183 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B kaffemaskine 19 bar, sort
-- CS MEGASTORE: 5.183 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B - Automatisk kaffemaskine med mælkeskummer -
-- CS MEGASTORE: 5.183 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B - Automatisk kaffemaskine med mælkeskummer -
 - CS MEGASTORE: 5.183 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Rivelia EXAM440.55.B - Automatisk kaffemaskine med mælkeskummer -
 - Salling: 5.624 DKK + envio 0 DKK [IN_STOCK] - Rivelia Milk Exam 440.55 Kaffemaskine
 - avXperten: 5.649 DKK + envio 79 DKK [IN_STOCK] - DeLonghi Rivelia EXAM440.55.B Espressomaskine 1450W (1,4 Liter/19 bar)
@@ -187,7 +220,7 @@ Comparador: https://www.pricerunner.dk/pl/82-5309706/Kaffemaskiner/Philips-Serie
 Garantia burn-in: 2 años garantía Philips DK + filtro AquaClean (hasta 5000 tazas sin descalcificar)  
 - Smartphoneshop.dk: 3.450 DKK + envio 79 DKK [IN_STOCK] (titulo no coincide (otra variante)) - Philips Series 5400 Fuldautomatisk kaffemaskine Silver/Black
 - digiexpert.dk: 3.469 DKK + envio n/d [IN_STOCK] - Philips EP5447/90
-- Proshop.dk: 3.492 DKK + envio 0 DKK [BACKORDER] - Philips 5400 series EP5447 - automatic coffee machine with cappuccinatore - 15 bar - black
+- Proshop.dk: 3.551 DKK + envio 0 DKK [BACKORDER] - Philips 5400 series EP5447 - automatic coffee machine with cappuccinatore - 15 bar - black
 - CompuMail: 3.569 DKK + envio 69 DKK [IN_STOCK] - Philips 5400 series EP5447 Automatisk kaffemaskine Sort --> På lager, levering hos dig 20-
 - Gigapro: 3.849 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Philips Fuldautomatiske EP5447/90-espressomaskiner i 5400-serien
 - Favoritten.dk: 3.884 DKK + envio 89 DKK [IN_STOCK] - Philips Fuldautomatiske EP5447/90-espressomaskiner i 5400-serien
@@ -226,7 +259,7 @@ Garantia burn-in: 3 anos de garantia de fabricante. Soporte completo DisplayPort
 - Amazon.de: 56.046 DKK + envio 0 DKK [IN_STOCK] - MSI GeForce RTX 5090 32G Gaming Trio OC - Gaming Grafikkarte | 32GB GDDR7 (28Gbps/512-bit)
 - Amazon.de: 60.538 DKK + envio 0 DKK [IN_STOCK] - Gigabyte GeForce RTX 5090 Gaming OC 32G Grafikkarte - 32GB GDDR7, 512 Bit, PCI-E 5.0, 2550
 - Smartphoneshop.dk: 67.400 DKK + envio 39 DKK [IN_STOCK] - Gigabyte GeForce RTX 5090 GAMING OC 32 GB GDDR7 grafikkort
-- CompuMail: 67.444 DKK + envio 0 DKK [BACKORDER] - Gigabyte NVIDIA GeForce RTX 5090 32GB GDDR7 SDRAM --> På fjernlager, levevering hos dig 30
+- CompuMail: 67.444 DKK + envio 0 DKK [BACKORDER] - Gigabyte NVIDIA GeForce RTX 5090 32GB GDDR7 SDRAM --> På fjernlager, levevering hos dig 01
 - CompuMail: 69.928 DKK + envio 0 DKK [BACKORDER] - Gigabyte GeForce RTX 5090 WINDFORCE OC 32G 32GB --> På fjernlager, levevering hos dig 29-1
 - Proshop.dk: 69.990 DKK + envio 0 DKK [IN_STOCK] - GIGABYTE GeForce RTX 5090 WindForce 3 OC - 32GB GDDR7 RAM - Grafikkort
 - Geekd: 69.990 DKK + envio 0 DKK [BACKORDER] - BLACK MONTH - Gigabyte Geforce RTX5090 WINDFORCE OC 32GB Grafikkort - Forventet levering: 
@@ -234,7 +267,7 @@ Garantia burn-in: 3 anos de garantia de fabricante. Soporte completo DisplayPort
 - Geekd: 70.179 DKK + envio 0 DKK [BACKORDER] - BLACK MONTH - MSI GeForce RTX 5090 32G GAMING TRIO OC Grafikkort - Forventet levering: 8 h
 - Gigapro: 72.739 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - GIGABYTE GeForce RTX 5090 GAMING OC 32G NVIDIA 32 GB GDDR7
 - Geekd: 72.839 DKK + envio 0 DKK [BACKORDER] - BLACK MONTH - Gigabyte Geforce RTX5090 GAMING OC 32GB Grafikkort - Forventet levering: 6 h
-- CompuMail: 73.429 DKK + envio 0 DKK [BACKORDER] - MSI GeForce RTX 5090 32G GAMING TRIO OC 32GB --> På fjernlager, levevering hos dig 26-11-2
+- CompuMail: 73.332 DKK + envio 0 DKK [BACKORDER] - MSI GeForce RTX 5090 32G GAMING TRIO OC 32GB --> På fjernlager, levevering hos dig 27-11-2
 
 ### MSI MPG 321URX QD-OLED (31.5" 4K 240Hz, 3a gen QD-OLED)  
 Comparador: https://www.pricerunner.dk/pl/25-3249708366/Skaerme/MSI-MPG-321URXDE-QD-OLED-32-Sammenlign-Priser  
@@ -244,24 +277,24 @@ Prisjagt sigue el producto desde 2024-02-20; historial accesible: ~3 meses.
 - CompuMail: 6.048 DKK + envio 0 DKK [BACKORDER] - MSI MPG 321URX QD-OLED 31.5" 3820 x 2160 HDMI DisplayPort USB-C 240Hz --> På fjernlager, l
 - CS MEGASTORE: 6.426 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) MSI MPG 321URX QD-OLED-skærm 31,5 240 Hz
 - CS MEGASTORE: 6.426 DKK + envio 0 DKK [UNKNOWN] - MSI MPG 321URX QD-OLED-skærm 31,5 240 Hz
-- CDON DK: 6.714 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gaming PC-skærm - MSI - 31,5" - UHD - 240Hz - QD-OLED-panel - 0,03ms - Højdejusterbar - MP
+- CDON DK: 6.595 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gaming PC-skærm - MSI - 31,5" - UHD - 240Hz - QD-OLED-panel - 0,03ms - Højdejusterbar - MP
+- Proshop.dk: 6.704 DKK + envio 0 DKK [IN_STOCK] - 31.5" MSI MPG 321URX QD-OLED - 3840x2160 (4K) - 240Hz - QD-OLED
+- Proshop.dk: 6.704 DKK + envio 0 DKK [IN_STOCK] - 31.5" MSI MPG 321URX QD-OLED - 3840x2160 (4K) - 240Hz - QD-OLED
 - CDON: 6.714 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gaming PC-skærm - MSI - 31,5" - UHD - 240Hz - QD-OLED-panel - 0,03ms - Højdejusterbar - MP
 - happii.dk: 7.295 DKK + envio 33 DKK [IN_STOCK] - 31.5" MSI MPG 321URXDE - 3840x2160 (4K) - 240Hz - QD-OLED
 - Proshop.dk: 7.328 DKK + envio 0 DKK [BACKORDER] - 31.5" MSI MPG 321URXDE - 3840x2160 (4K) - 240Hz - QD-OLED
 - Proshop.dk: 7.328 DKK + envio 0 DKK [IN_STOCK] - 31.5" MSI MPG 321URXDE - 3840x2160 (4K) - 240Hz - QD-OLED
 - Proshop.dk: 7.328 DKK + envio 0 DKK [IN_STOCK] - 31.5" MSI MPG 321URXDE - 3840x2160 (4K) - 240Hz - QD-OLED
-- CDON DK: 7.486 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MSI MPG 321URX QD-OLED computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sort
-- CDON: 7.486 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MSI MPG 321URX QD-OLED computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sort
 
 ### Dell Alienware AW3225QF (31.6" curvo 1700R 4K 240Hz QD-OLED)  
 Comparador: https://www.pricerunner.dk/pl/25-3273608468/Skaerme/Dell-Alienware-AW3225QF-Sammenlign-Priser  
 Garantia burn-in: 3 anos incl. burn-in (Dell, Advanced Exchange). Aplicacion concreta en DK por compra en tercero: no verificada en documento danes.  
 Prisjagt sigue el producto desde 2024-03-15; historial accesible: ~3 meses.  
-- CompuMail: 6.301 DKK + envio 0 DKK [IN_STOCK] - Alienware AW3225QF 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På lager, levering hos 
+- CompuMail: 6.301 DKK + envio 0 DKK [IN_STOCK] - Alienware AW3225QF 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På vej ind, levering ho
 - CompuMail: 6.301 DKK + envio 0 DKK [UNKNOWN] - Alienware AW3225QF 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På lager, levering hos 
+- CS MEGASTORE: 6.337 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Alienware AW3225QF gamingskærm 32 4K 240 Hz QD-OLED, sort/hvid
 - CS MEGASTORE: 6.337 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Alienware AW3225QF gamingmonitor 32 4K 240 Hz QD-OLED
 - CS MEGASTORE: 6.337 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Alienware AW3225QF skærm 31,6 4K 240 Hz QD-OLED
-- CS MEGASTORE: 6.337 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Alienware AW3225QF gamingskærm 32 4K 240 Hz QD-OLED, sort/hvid
 - CS MEGASTORE: 6.337 DKK + envio 0 DKK [UNKNOWN] - Dell Alienware AW3225QF gamingskærm 32 4K 240 Hz QD-OLED, sort/hvid
 - Føniks Computer: 6.477 DKK + envio 0 DKK [IN_STOCK] - DELL AW3225QF Skærm - 32" - OLED - 4K Ultra HD - 240 Hz - 0.03 ms - Gaming
 - CDON: 6.595 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Alienware AW3225QF computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD QDOLED Sort, 
@@ -301,23 +334,6 @@ Prisjagt sigue el producto desde 2025-02-26; historial accesible: ~3 meses.
 - Gigapro: 13.629 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MSI MPG 322URX QD-OLED computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sort
 - CDON: 13.919 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MSI MPG 322URX QD-OLED computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sort
 
-### ASUS ROG Strix OLED XG32UCWMG (31.5" 4K 240Hz / FHD 480Hz Dual-Mode WOLED, TrueBlack Glossy)  
-Comparador: https://www.pricerunner.dk/pl/25-3440436889/Skaerme/ASUS-ROG-Strix-OLED-XG32UCWMG-32-Inch-4K-Monitor-Sammenlign-Priser  
-Garantia burn-in: 3 años de garantía ASUS OLED Care incluyendo burn-in.  
-Prisjagt sigue el producto desde 2025-08-14; historial accesible: ~3 meses.  
-- Elgiganten: 5.499 DKK + envio 59 DKK [IN_STOCK] (precio campana hasta 2026-11-30) - ASUS ROG Strix XG32UCWMG 32" 4K/WOLED/240Hz/0,03ms gaming skærm
-- Elgiganten: 5.499 DKK + envio 79 DKK [IN_STOCK] - ASUS ROG Strix XG32UCWMG 32" 4K/WOLED/240Hz/0,03ms gaming skærm
-- CS MEGASTORE: 5.697 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix XG32UCWMG - OLED-monitor - gaming - USB - 32 (31.5 til at se
-- CS MEGASTORE: 5.697 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix XG32UCWMG skærm 31,5 4K 240 Hz OLED, sort
-- Taurus Gaming: 5.749 DKK + envio 0 DKK [IN_STOCK] - ASUS 32" ROG Strix XG32UCWMG OLED 4K 240/480 Hz Dual Mode
-- CS MEGASTORE: 5.879 DKK + envio 0 DKK [UNKNOWN] - ASUS ROG Strix XG32UCWMG skærm 31,5 4K 240 Hz OLED, sort
-- Geekd: 5.939 DKK + envio 0 DKK [BACKORDER] - BLACK MONTH - ASUS ROG Strix OLED XG32UCWMG – skærm – Sort - Forventet levering: 10 hverda
-- CDON: 6.169 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWMG 80.01cm (16:9) UHD HDMI DP
-- CDON DK: 6.422 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix XG32UCWMG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD OLED So
-- happii.dk: 6.466 DKK + envio 33 DKK [IN_STOCK] - 32" ASUS ROG Strix XG32UCWMG - 3840x2160 (4K) - 240Hz - OLED - KVM switch
-- happii.dk: 6.466 DKK + envio 33 DKK [IN_STOCK] - 32" ASUS ROG Strix XG32UCWMG - 3840x2160 (4K) - 240Hz - OLED - KVM switch
-- Komplett.dk: 6.490 DKK + envio 0 DKK [IN_STOCK] - ASUS 32'' ROG Strix 4K gamingskærm XG32UCWMG
-
 ### Jura E6 Piano Black (P.E.P., Fine Foam Light, 11 recetas, J.O.E. app)  
 Comparador: https://www.pricerunner.dk/pl/82-3480551736/Kaffemaskiner/Jura-E6-ED-Dark-Inox-Sammenlign-Priser, https://www.pricerunner.dk/pl/82-3694408674/Kaffemaskiner/Jura-E6-%28ED%29-Espressomaskine-med-Startpakke-DK-Sprog-Piano-Black-Sammenlign-Priser  
 Garantia burn-in: 2 años garantía Jura DK  
@@ -335,11 +351,11 @@ Garantia burn-in: 2 años garantía De'Longhi DK
 - Bilka: 2.699 DKK + envio 189 DKK [IN_STOCK] (precio campana hasta 2026-11-26) - De'Longhi Magnifica Evo espressomaskine ECAM 290.61.B - sort
 - CompuMail: 2.740 DKK + envio 69 DKK [IN_STOCK] - De'Longhi Magnifica Evo ECAM290.61.B Automatisk kaffemaskine Sort --> På lager, levering h
 - avXperten: 2.755 DKK + envio 79 DKK [BACKORDER] - DeLonghi Magnifica Evo ECAM290.61.B Automatisk Kaffemaskine (15 bar)
-- CS MEGASTORE: 2.864 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B espressomaskine 1,8 L 15 bar, sort
-- CS MEGASTORE: 2.864 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
 - CS MEGASTORE: 2.864 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
 - CS MEGASTORE: 2.864 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B espressomaskine 1,8 L 15 bar, sort
 - CS MEGASTORE: 2.864 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
+- CS MEGASTORE: 2.864 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
+- CS MEGASTORE: 2.864 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B espressomaskine 1,8 L 15 bar, sort
 - CS MEGASTORE: 2.864 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
 - CS MEGASTORE: 2.864 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) De'Longhi Magnifica Evo ECAM290.61.B - Automatisk kaffemaskine med mælkesku
 - happii.dk: 2.872 DKK + envio 33 DKK [IN_STOCK] - DeLonghi DeLonghi Magnifica Evo
@@ -356,13 +372,6 @@ Comparador:
 Garantia burn-in: 2 años de garantía total MM-Vision con recogida y devolución gratuita.  
 - MM-Vision: 12.495 DKK + envio 0 DKK [IN_STOCK] - Game BF26 Special
 
-### ASUS ROG Strix G16 (2025) (16" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB)  
-Comparador: https://www.pricerunner.dk/pl/27-3446322756/Baerbar/ASUS-ROG-Strix-G16-G614-Ryzen-9-Laptop-Sammenlign-Priser  
-Garantia burn-in: 2 años de garantía ASUS DK / POWER.dk.  
-- Komplett.dk: 25.490 DKK + envio 0 DKK [BACKORDER] - ASUS ROG Strix G16 16'' FHD+ 165 Hz
-- Punkt1: 26.999 DKK + envio 48 DKK [IN_STOCK] - ASUS ROG Strix G16 (2025) G614PW-RV005W 16" bærbar pc
-- POWER: 26.999 DKK + envio 49 DKK [IN_STOCK] - ASUS ROG Strix G16 (2025) G614PW-RV005W 16" bærbar pc
-
 ### Acer Predator Helios Neo 16 AI (16" WQXGA | Core Ultra 9 290HX Plus | RTX 5080 16GB | 32GB | 1TB)  
 Comparador: https://www.pricerunner.dk/pl/27-3547202552/Baerbar/Acer-Predator-Helios-Neo-16-AI-PHN16-I71-16-WQXGA-Sammenlign-Priser  
 Garantia burn-in: 2 años de garantía Acer DK / CompuMail.  
@@ -378,22 +387,6 @@ Garantia burn-in: 3 anos de garantia MSI OLED Care incluyendo burn-in.
 - Amazon.de: 4.851 DKK + envio 0 DKK [IN_STOCK] - MSI MAG 321UPX QD-OLED 31,5" 4K UHD Gaming Monitor 240 Hz | 3840 x 2160, QD-OLED, 0,03 ms,
 - CDON DK: 11.184 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MSI MAG 321UPX QD-OLED skærm 1 stk., sort
 
-### Dell 32 Plus S3225QC (31.5" 4K 120Hz QD-OLED, USB-C 65W)  
-Comparador: https://www.pricerunner.dk/pl/25-3422356447/Skaerme/Dell-32-Plus-4K-QD-OLED-Monitor-S3225QC-Sammenlign-Priser  
-Garantia burn-in: 3 años de garantía Dell Advanced Exchange (incluye burn-in en gama OLED Dell).  
-- POWER: 3.999 DKK + envio 49 DKK [IN_STOCK] - Dell S3225QC 32" 4K QD-OLED skærm
-- Secure Data Center: 4.014 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - DELL Plus S3225QC computerskærm 80,3 cm (31.6") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort
-- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC skærm 32 4K 120 Hz QD-OLED, Sort, Sølv
-- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC-skærm, 32, 4K, 120 Hz, QD-OLED
-- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC-skærm, 32, 4K, 120 Hz, QD-OLED
-- CompuMail: 4.177 DKK + envio 0 DKK [BACKORDER] - Dell Plus S3225QC 32" 3840 x 2160 (4K) HDMI USB-C 120Hz Dockingskærm --> På fjernlager, le
-- PROconsult Data A/S: 4.249 DKK + envio 49 DKK [IN_STOCK] - Dell 32 Plus S3225QC 31.6" 4K/UHD QD-OLED Docking Monitor HDMI/USB-C
-- CompuMail: 4.270 DKK + envio 0 DKK [IN_STOCK] - Dell Plus S3225QC 32" 3840 x 2160 (4K) HDMI 120Hz --> På lager, levering hos dig 20-11-202
-- avXperten: 4.462 DKK + envio 79 DKK [IN_STOCK] - Dell S3225QC OLED PC Skærm - 32", 3840x2160, 120Hz
-- Gigapro: 4.509 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - DELL Plus S3225QC computerskærm 80,3 cm (31.6") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort
-- Laptops.dk: 4.597 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Dell Plus S3225QC - OLED-monitor - 4K - 32" - HDR - DELL-S3225QC
-- happii.dk: 4.611 DKK + envio 33 DKK [IN_STOCK] - 32" Dell Plus S3225QC - 3840x2160 (4K) - 120Hz - QD-OLED
-
 ### Samsung Odyssey OLED G8 G81SF (S32FG81x, 32" QD-OLED 4K 240Hz)  
 Comparador: https://www.pricerunner.dk/pl/25-3400211023/Skaerme/Samsung-Odyssey-G8-G81SF-32-Sammenlign-Priser  
 Garantia burn-in: No verificado.  
@@ -407,15 +400,15 @@ Prisjagt sigue el producto desde 2025-03-30; historial accesible: ~3 meses.
 - CompuMail: 5.744 DKK + envio 0 DKK [BACKORDER] - Samsung Odyssey OLED G8 S32FG812SU 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På fjer
 - CompuMail: 5.752 DKK + envio 0 DKK [UNKNOWN] - Samsung Odyssey OLED G8 S32FG812SU 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På fjer
 - CDON: 5.863 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - PC-skærm - SAMSUNG - Odyssey OLED G81SF - 32 tommer - 4K - Reaktionstid 0,03 ms
-- CS MEGASTORE: 5.999 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G8 S32FG812SU skærm 32 4K UHD 240 Hz, sølv
 - CS MEGASTORE: 5.999 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung G81SF skærm 32 4K UHD 240 Hz OLED, sølv
+- CS MEGASTORE: 5.999 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G8 S32FG812SU skærm 32 4K UHD 240 Hz, sølv
 - CS MEGASTORE: 5.999 DKK + envio 0 DKK [UNKNOWN] - Samsung Odyssey OLED G8 S32FG812SU skærm 32 4K UHD 240 Hz, sølv
 
 ### LG UltraGear OLED 32GX870B-B (31.5" 4K 240Hz / FHD 480Hz Dual-Mode WOLED, USB-C 90W)  
 Comparador: https://www.pricerunner.dk/pl/25-3547208528/Skaerme/LG-32GX870B-B-4K-Ultra-HD-OLED-Sammenlign-Priser  
 Garantia burn-in: 2 años garantía LG DK + política OLED estándar.  
 - Elgiganten: 7.190 DKK + envio 49 DKK [IN_STOCK] (precio campana hasta 2026-11-30) - LG UltraGear 32GX870B 32'' 4K/OLED/240Hz/0.03ms gaming-skærm
-- CompuMail: 9.573 DKK + envio 0 DKK [BACKORDER] - LG 32GX870B-B.AEU 32" OLED 3840 x 2160 (4K) HDMI DisplayPort 240 Hz --> På fjernlager, lev
+- CompuMail: 9.133 DKK + envio 0 DKK [BACKORDER] - LG 32GX870B-B.AEU 32" OLED 3840 x 2160 (4K) HDMI DisplayPort 240 Hz --> På fjernlager, lev
 - happii.dk: 9.645 DKK + envio 33 DKK [IN_STOCK] - 32" LG UltraGear 32GX870B-B 3840x2160 (4K) - 240Hz - OLED - 90W USB-C
 - Proshop.dk: 9.678 DKK + envio 0 DKK [IN_STOCK] - 32" LG UltraGear 32GX870B-B 3840x2160 (4K) - 240Hz - OLED - 90W USB-C
 - Merlin: 9.678 DKK + envio 0 DKK [IN_STOCK] - 32" LG UltraGear 32GX870B-B 3840x2160 (4K) - 240Hz - OLED - 90W USB-C
@@ -425,9 +418,8 @@ Garantia burn-in: 2 años garantía LG DK + política OLED estándar.
 Comparador: https://www.pricerunner.dk/pl/82-3329313775/Kaffemaskiner/Siemens-EQ700-TP715D01-Fuldautomatisk-Kaffemaskine-2-4-L-Sammenlign-Priser, https://www.pricerunner.dk/pl/82-3315919528/Kaffemaskiner/Siemens-EQ700-Inox-TQ715R03-Sammenlign-Priser  
 Garantia burn-in: 2 años garantía Siemens/Bosch DK (grupo BSH)  
 - Amazon.de: 6.910 DKK + envio 0 DKK [IN_STOCK] - Siemens Kaffeevollautomat EQ700 classic, großes farbiges TFT-Display, 36 Heiß- und Kaltget
-- avXperten: 6.949 DKK + envio 79 DKK [IN_STOCK] - Siemens EQ700 TP715D01 Espressomaskine - (2,4L) 1500W - Grå
-- CS MEGASTORE: 7.027 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Siemens EQ.700 classic TP715D01 fuldautomatisk espressomaskine 2,4 L, grå
 - CS MEGASTORE: 7.027 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Siemens EQ.700 TP715D01 fuldautomatisk espressomaskine 2,4 L 1500 W, grå
+- CS MEGASTORE: 7.027 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Siemens EQ.700 classic TP715D01 fuldautomatisk espressomaskine 2,4 L, grå
 - Proshop.dk: 7.399 DKK + envio 0 DKK [IN_STOCK] (precio campana hasta 2026-11-30) - Siemens EQ.700 integral TQ715R03
 - Coolshop: 8.395 DKK + envio 0 DKK [IN_STOCK] (precio campana hasta 2026-12-31) - Siemens – EQ700 TQ715R03 Fuldautomatisk Espressomaskine - Fri fragt og klar til levering -
 - Merlin: 19.999 DKK + envio 0 DKK [IN_STOCK] - Siemens EQ.700 integral TQ715R03
@@ -436,13 +428,13 @@ Garantia burn-in: 2 años garantía Siemens/Bosch DK (grupo BSH)
 ### Melitta Caffeo Barista T Smart F831 (Dual Bean, Barista Assistant, 21 recetas)  
 Comparador: https://www.pricerunner.dk/pl/82-3532312152/Kaffemaskiner/Melitta-Caffeo-Barista-T-Smart-F831-101-Automatisk-Kaffemaskine-Sammenlign-Priser  
 Garantia burn-in: 2 años garantía Melitta DK  
-- CS MEGASTORE: 6.507 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Melitta CAFFEO Barista T Smart F831-101 - Automatisk kaffemaskine med mælke
-- CS MEGASTORE: 6.507 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Melitta CAFFEO Barista T Smart F831-101 - Automatisk kaffemaskine med mælke
 - CS MEGASTORE: 6.507 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Melitta Barista T Smart F83/1-101 espressomaskine 15 bar, sølv
+- CS MEGASTORE: 6.507 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Melitta CAFFEO Barista T Smart F831-101 - Automatisk kaffemaskine med mælke
+- CS MEGASTORE: 6.507 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Melitta CAFFEO Barista T Smart F831-101 - Automatisk kaffemaskine med mælke
 - CDON DK: 6.507 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MELITA F831-101 Barista T Smart - Sølv (uden mælketank)
 - CDON DK: 6.998 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Melitta T Smart F831-101 espressomaskine
 - CDON DK: 7.504 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MELITTA Barista T Smart Bean-to-Ban kaffemaskine - Sølv (uden mælketank)
-- CDON DK: 8.088 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace; titulo no coincide (otra variante)) - Melitta Barista Smart T Espressomaskine 1,8 L
+- CDON DK: 8.071 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace; titulo no coincide (otra variante)) - Melitta Barista Smart T Espressomaskine 1,8 L
 
 ### MM-Vision Monster Gaming (Intel Core Ultra 5/7 / Asus RTX 5070 12GB / 16GB DDR5 / 1TB SSD)  
 Comparador:   
@@ -512,23 +504,23 @@ Garantia burn-in: 3 años de garantía del fabricante (Gigabyte/ASUS). Soporte n
 - Proshop.dk: 16.490 DKK + envio 0 DKK [BACKORDER] - GIGABYTE GeForce RTX 5080 GAMING OC - 16GB GDDR7 RAM - Grafikkort
 - Elgiganten: 16.499 DKK + envio 49 DKK [IN_STOCK] - Gigabyte GeForce RTX 5080 GAMING OC 16GB grafikkort
 - Proshop.dk: 16.590 DKK + envio 0 DKK [BACKORDER] - ASUS GeForce RTX 5080 ROG Astral OC - 16GB GDDR7 RAM - Grafikkort
-- CompuMail: 17.077 DKK + envio 0 DKK [BACKORDER] - Gigabyte NVIDIA GeForce RTX 5080 16GB GDDR7 SDRAM --> På fjernlager, levevering hos dig 26
+- CompuMail: 17.077 DKK + envio 0 DKK [BACKORDER] - Gigabyte NVIDIA GeForce RTX 5080 16GB GDDR7 SDRAM --> På fjernlager, levevering hos dig 27
 - CS MEGASTORE: 17.138 DKK + envio 19 DKK [IN_STOCK] - (ComputerSalg) Gigabyte GeForce RTX 5080 GAMING OC grafikkort 16 GB GDDR7
-- CompuMail: 17.359 DKK + envio 0 DKK [BACKORDER] - Gigabyte NVIDIA GeForce RTX 5080 16GB GDDR7 SDRAM --> På fjernlager, levevering hos dig 25
+- CompuMail: 17.359 DKK + envio 0 DKK [BACKORDER] - Gigabyte NVIDIA GeForce RTX 5080 16GB GDDR7 SDRAM --> På fjernlager, levevering hos dig 26
 - CS MEGASTORE: 17.580 DKK + envio 9 DKK [IN_STOCK] - (ComputerSalg) Gigabyte GeForce RTX 5080 WINDFORCE OC SFF 16G - Grafikkort - GeForce RTX 5
 
 ### NVIDIA GeForce RTX 5070 Ti 16GB GDDR7 (Blackwell, DP 2.1)  
 Comparador: https://www.pricerunner.dk/pl/37-3394158728/Grafikkort/Gigabyte-GeForce-RTX-5070-Ti-Gaming-OC-16G-Graphics-Card-Sammenlign-Priser, https://www.pricerunner.dk/pl/37-3451098859/Grafikkort/ASUS-ProArt-GeForce-RTX-5070-Ti-OC-Sammenlign-Priser, https://www.pricerunner.dk/pl/37-3472717017/Grafikkort/Palit-Microsystems-VGA-PCIE16-RTX5070TI-16GB-Grafikkort-Sammenlign-Priser, https://www.pricerunner.dk/pl/37-3396371308/Grafikkort/Gigabyte-GeForce-RTX-5070-Ti-Windforce-OC-Grafikkort-16-GB-Sammenlign-Priser  
 Garantia burn-in: 3 años de garantía oficial en Dinamarca (ASUS ProArt, Palit, Gigabyte).  
 - Punkt1: 9.649 DKK + envio 29 DKK [COLLECT_IN_STORE] - GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16 GB grafikkort
-- CDON DK: 9.790 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gigabyte GeForce RTX 5070 Ti GAMING OC 16 Gb grafikkort
+- CDON DK: 10.990 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gigabyte GeForce RTX 5070 Ti GAMING OC 16 Gb grafikkort
 - Labtech Data: 10.999 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gigabyte GeForce RTX 5070 Ti
 - Amazon.de: 11.050 DKK + envio 0 DKK [BACKORDER] - Gigabyte GeForce RTX 5070 Ti WINDFORCE OC SFF 16G Grafikkarte - 16GB GDDR7, 256 Bit, PCI-E
 - Proshop.dk: 11.290 DKK + envio 0 DKK [BACKORDER] - GIGABYTE GeForce RTX 5070 Ti WindForce 3 OC - 16GB GDDR7 RAM - Grafikkort
 - Elgiganten: 11.299 DKK + envio 49 DKK [IN_STOCK] - Gigabyte GeForce RTX 5070 Ti Windforce OC grafikkort
-- CompuMail: 11.602 DKK + envio 0 DKK [IN_STOCK] - Palit GamingPro-S GeForce RTX 5070 Ti 16GB --> På lager, levering hos dig 20-11-2026
 - Proshop.dk: 11.790 DKK + envio 0 DKK [BACKORDER] - GIGABYTE GeForce RTX 5070 Ti GAMING OC - 16GB GDDR7 RAM - Grafikkort
 - Proshop.dk: 11.890 DKK + envio 0 DKK [BACKORDER] - ASUS GeForce RTX 5070 Ti ProArt OC - 16GB GDDR7 RAM - Grafikkort
+- CompuMail: 12.097 DKK + envio 0 DKK [IN_STOCK] - Palit GamingPro-S GeForce RTX 5070 Ti 16GB --> På lager, levering hos dig 20-11-2026
 - CS MEGASTORE: 12.158 DKK + envio 9 DKK [IN_STOCK] - (ComputerSalg) Palit GeForce RTX 5070 Ti grafikkort 16 GB GDDR7 GamingPro-S
 - Geekd: 12.168 DKK + envio 0 DKK [IN_STOCK] - BLACK MONTH - Palit GamingPro-S GeForce RTX 5070 Ti 16GB Grafikkort - Forventet levering: 
 - avXperten: 12.229 DKK + envio 79 DKK [IN_STOCK] - Palit GamingPro-S GeForce RTX 5070 TI Grafikkort - 16GB GDDR7 RAM, 3 Blæsere, 256 bit
@@ -545,9 +537,9 @@ Garantia burn-in: 3 años de garantía fabricante (Gigabyte, ASUS).
 - Proshop.dk: 7.290 DKK + envio 0 DKK [IN_STOCK] - ASUS GeForce RTX 5070 DUAL OC - 12GB GDDR7 RAM - Grafikkort
 - Føniks Computer: 7.299 DKK + envio 0 DKK [IN_STOCK] - Gigabyte GeForce RTX 5070 Windforce OC Grafikkort - 12GB GDDR7 - PCIe 5.0 (Bulk)
 - Proshop.dk: 7.490 DKK + envio 0 DKK [IN_STOCK] - ASUS GeForce RTX 5070 Prime OC - 12GB GDDR7 RAM - Grafikkort
+- CS MEGASTORE: 7.751 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5070 12GB - OC Edition - grafikkort - GeForce RTX 507
+- CS MEGASTORE: 7.751 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5070 12GB - OC Edition - grafikkort - GeForce RTX 507
 - CS MEGASTORE: 7.751 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS RTX 5070 grafikkort Dual-RTX5070-O12G 12 GB GDDR7 OC Edition
-- CS MEGASTORE: 7.751 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5070 12GB - OC Edition - grafikkort - GeForce RTX 507
-- CS MEGASTORE: 7.751 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5070 12GB - OC Edition - grafikkort - GeForce RTX 507
 
 ### Philips 4300 Series EP4346/71 (LatteGo, 8 recetas, AquaClean)  
 Comparador: https://www.pricerunner.dk/pl/82-3395749891/Kaffemaskiner/Philips-Series-4300-EP4346-71-Sammenlign-Priser  
@@ -593,7 +585,7 @@ Garantia burn-in: 2-3 anos de garantia de fabricante con soporte DP 2.1.
 - CompuMail: 6.833 DKK + envio 0 DKK [BACKORDER] - Acer Nitro AMD Radeon RX 9070 16GB GDDR6 SDRAM --> På fjernlager, levevering hos dig 25-11
 - CS MEGASTORE: 6.870 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Acer Nitro Radeon RX 9070 OC grafikkort 16 GB GDDR6
 - Proshop.dk: 6.907 DKK + envio 0 DKK [BACKORDER] - Acer Radeon RX 9070 Nitro OC - 16GB GDDR6 RAM - Grafikkort
-- CompuMail: 7.213 DKK + envio 0 DKK [IN_STOCK] - Sapphire Pulse Radeon AMD Radeon RX 9070 16GB GDDR6 SDRAM --> På lager, levering hos dig 2
+- CompuMail: 7.214 DKK + envio 0 DKK [IN_STOCK] - Sapphire Pulse Radeon AMD Radeon RX 9070 16GB GDDR6 SDRAM --> På lager, levering hos dig 2
 - Proshop.dk: 7.250 DKK + envio 0 DKK [IN_STOCK] - Sapphire Radeon RX 9070 Pulse - 16GB GDDR6 RAM - Grafikkort
 - CompuMail: 7.462 DKK + envio 0 DKK [BACKORDER] - ASRock AMD Radeon RX 9070 16GB GDDR6 SDRAM --> På fjernlager, levevering hos dig 26-11-202
 - CS MEGASTORE: 7.498 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASRock Radeon RX 9070 Challenger grafikkort 16 GB GDDR6
@@ -608,11 +600,11 @@ Garantia burn-in: 3 años de garantía oficial en Dinamarca (ASUS Dual).
 - Elgiganten: 6.499 DKK + envio 49 DKK [IN_STOCK] - ASUS GeForce RTX 5060 Ti 16GB DUAL OC grafikkort
 - Proshop.dk: 6.690 DKK + envio 0 DKK [IN_STOCK] - ASUS GeForce RTX 5060 Ti DUAL OC - 16GB GDDR7 RAM - Grafikkort
 - Komplett.dk: 6.690 DKK + envio 0 DKK [IN_STOCK] - Asus Dual GeForce RTX 5060 Ti OC
-- CompuMail: 6.753 DKK + envio 0 DKK [BACKORDER] - ASUS Dual GeForce RTX 5060 Ti 16GB --> På fjernlager, levevering hos dig 25-11-2026
 - CS MEGASTORE: 6.790 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5060 Ti 16GB - OC Edition - grafikkort - GeForce RTX 
+- CS MEGASTORE: 6.790 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual-grafikkort RTX 5060 Ti 16 GB GDDR7 DUAL-RTX5060TI-O16G OC Edition
 - CS MEGASTORE: 6.790 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5060 Ti 16GB - OC Edition - grafikkort - GeForce RTX 
 - CS MEGASTORE: 6.790 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual GeForce RTX 5060 Ti grafikkort 16 GB GDDR7 OC
-- CS MEGASTORE: 6.790 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS Dual-grafikkort RTX 5060 Ti 16 GB GDDR7 DUAL-RTX5060TI-O16G OC Edition
+- CompuMail: 6.937 DKK + envio 0 DKK [BACKORDER] - ASUS Dual GeForce RTX 5060 Ti 16GB --> På fjernlager, levevering hos dig 25-11-2026
 - Geekd: 7.129 DKK + envio 0 DKK [BACKORDER] - BLACK MONTH - ASUS GeForce RTX 5060 TI 16GB DUAL OC Grafikkort - Forventet levering: 7 hve
 - Gigapro: 7.479 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS Dual -RTX5060TI-O16G NVIDIA GeForce RTX 5060 Ti 16 GB GDDR7
 - Boligcenter: 8.099 DKK + envio 69 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Grafikkort ASUS Dual GeForce RTX 5060 Ti OC - 16 GB GDDR7
@@ -647,7 +639,7 @@ Prisjagt sigue el producto desde 2024-05-07; historial accesible: ~3 meses.
 Comparador: https://www.pricerunner.dk/pl/25-3318784990/Skaerme/Samsung-Odyssey-G80SD-LS32DG800SUXEN-Sammenlign-Priser, https://www.pricerunner.dk/pl/25-3311330725/Skaerme/Samsung-Odyssey-OLED-G8-LS32DG802SUXEN-Sammenlign-Priser  
 Garantia burn-in: No verificado. Indicios (foros/ficha nordica) de cobertura de burn-in en 'uso normal'; no confirmado con documento oficial danes.  
 Prisjagt sigue el producto desde 2024-06-04; historial accesible: ~3 meses.  
-- CompuMail: 6.688 DKK + envio 0 DKK [IN_STOCK] - Samsung Odyssey OLED G8 S32DG800SU 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På fjer
+- CompuMail: 6.689 DKK + envio 0 DKK [BACKORDER] - Samsung Odyssey OLED G8 S32DG800SU 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På fjer
 - CompuMail: 6.689 DKK + envio 0 DKK [UNKNOWN] - Samsung Odyssey OLED G8 S32DG800SU 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På fjer
 - avXperten: 6.725 DKK + envio 79 DKK [IN_STOCK] - Samsung Odyssey G80SD OLED Gaming Skærm - 32", 3840x2160@240Hz, FreeSync Premium Pro
 - PROconsult Data A/S: 6.799 DKK + envio 49 DKK [IN_STOCK] - Samsung Odyssey OLED G8 G80SD 32" 4K UHD Smart Gaming Monitor 2xHDMI/DP
@@ -686,26 +678,11 @@ Garantia burn-in: 3 anos de garantia oficial con cobertura especifica para reten
 - CS MEGASTORE: 6.648 DKK + envio 59 DKK [IN_STOCK] - (ComputerSalg) AOC AGON PRO AG326UD gaming-skærm, 31,5, 4K, 165 Hz, QD-OLED
 - Gigapro: 6.729 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - AOC AGON PRO AG326UD computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sor
 - Proshop.dk: 6.730 DKK + envio 0 DKK [IN_STOCK] - 32" AOC AGON PRO AG326UD - 3840x2160 (4K) - 165Hz - QD-OLED
+- CDON DK: 7.049 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - AOC AGON PRO AG326UD computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sor
 - CDON DK: 7.049 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gaming PC-skærm - AOC - 31,5'' - UHD - 165Hz - QD-OLED - 0,03ms - HDMI 2.1 - Højdejusterba
 - vooma: 7.439 DKK + envio 49 DKK [IN_STOCK] - AOC AGON PRO AG326UD 32 3840 x 2160 (4K) HDMI DisplayPort 165Hz
 - PROconsult Data A/S: 7.699 DKK + envio 49 DKK [IN_STOCK] - AOC AGON Pro AG326UD 31.5" 4K/UHD OLED Gaming Monitor HDMI/DP
 - Boligcenter: 8.399 DKK + envio 69 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gaming-skærm AOC AGON PRO AG326UD - 31,5" 4K QD-OLED
-
-### ASUS ROG Strix OLED XG32UCWG (31.5" 4K 165Hz / FHD 330Hz Dual-Mode WOLED, TrueBlack Glossy)  
-Comparador: https://www.pricerunner.dk/pl/25-3423718536/Skaerme/ASUS-ROG-Strix-OLED-XG32UCWG-32-Zoll-4K-UHD-Gaming-Monitor-Sammenlign-Priser  
-Garantia burn-in: 3 años de garantía ASUS OLED Care incluyendo burn-in.  
-- avXperten: 5.249 DKK + envio 79 DKK [BACKORDER] (titulo no coincide (otra variante)) - Asus ROG Strix Gaming PC Skærm - 31.5", 4K UHD (OLED), 165Hz - Sort
-- CompuMail: 5.554 DKK + envio 0 DKK [IN_STOCK] - ASUS ROG Strix XG32UCWG 32" 3840 x 2160 (4K) HDMI DisplayPort USB-C 165Hz --> På lager, le
-- CS MEGASTORE: 5.577 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix OLED XG32UCWG gamingskærm 31,5 4K 165 Hz
-- CS MEGASTORE: 5.577 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix XG32UCWG OLED-skærm 31,5 4K 165 Hz, Sort
-- Geekd: 5.578 DKK + envio 0 DKK [IN_STOCK] - BLACK MONTH - ASUS ROG Strix OLED XG32UCWG – skærm – Sort - Forventet levering: 2 hverdage
-- Gigapro: 5.639 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sor
-- PROconsult Data A/S: 5.649 DKK + envio 49 DKK [IN_STOCK] - ASUS ROG Strix OLED XG32UCWG 31.5" 4K UHD Dual Mode Gaming Monitor 2xHDMI/DP/USB-C
-- Favoritten.dk: 5.687 DKK + envio 89 DKK [IN_STOCK] - ASUS ROG Strix OLED XG32UCWG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sor
-- Labtech Data: 5.947 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWG computer monitor 80 cm (31.5") 3840 x 2160 pixels 4K Ultra HD
-- Boligcenter: 6.099 DKK + envio 50 DKK [IN_STOCK] (tienda poco fiable/marketplace) - OLED-skærm ASUS ROG Strix XG32UCWG 32" 4K 165 Hz
-- CDON DK: 6.222 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sor
-- vooma: 6.269 DKK + envio 49 DKK [IN_STOCK] - ASUS ROG Strix XG32UCWG 32 3840 x 2160 (4K) HDMI DisplayPort USB-C 165Hz
 
 ### Gigabyte AORUS FO32U2 (31.5" QD-OLED 4K 240Hz)  
 Comparador: https://www.pricerunner.dk/pl/25-3292737654/Skaerme/Gigabyte-Aorus-FO32U2-Sammenlign-Priser  
@@ -751,12 +728,6 @@ Comparador:
 Garantia burn-in: 2 años de garantía oficial Lenovo DK.  
 - Legion Laptops: 48.990 DKK + envio 0 DKK [IN_STOCK] - Legion Pro 7i Gen 10 (16" Intel)
 
-### MSI Raider A18 HX A9WIG (18" 4K Mini LED 120Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 64GB | 2TB)  
-Comparador: https://www.pricerunner.dk/pl/27-3454613865/Baerbar/MSI-Raider-A18-HX-18-RTX-5080-Ryzen-9-64GB-2TB-Sammenlign-Priser  
-Garantia burn-in: 2 años de reklamationsret a través de POWER.dk.  
-- Punkt1: 28.999 DKK + envio 48 DKK [IN_STOCK] - MSI Raider A18 HX A9WIG-007NEU 18" bærbar pc
-- POWER: 28.999 DKK + envio 49 DKK [IN_STOCK] - MSI Raider A18 HX A9WIG-007NEU 18" bærbar pc
-
 ### GIGABYTE Aorus Master 16 (16" WQXGA OLED 240Hz | Core Ultra 9 275HX | RTX 5080 16GB | 32GB | 2TB)  
 Comparador: https://www.pricerunner.dk/pl/27-3555387611/Baerbar/Gigabyte-Aorus-Master-16-RTX-5080-Laptop-Sammenlign-Priser  
 Garantia burn-in: 2 años de garantía Proshop.dk.  
@@ -783,6 +754,22 @@ Garantia burn-in: Comprado en POWER.dk por 6.699 DKK (Prismatch si baja de 6.699
 Comparador:   
 Garantia burn-in: 2 años de garantía Proshop Dinamarca.  
 - Proshop.dk: 14.199 DKK + envio 0 DKK [BACKORDER] - DUTZO Gaming Wildfire
+
+### AMD Radeon RX 9070 XT 16GB (RDNA 4, Ray Tracing V2, DP 2.1)  
+Comparador: https://www.pricerunner.dk/pl/37-3396383505/Grafikkort/ASUS-PRIME-RX-9070-XT-OC-Grafikkort-Sammenlign-Priser, https://www.pricerunner.dk/pl/37-3396383352/Grafikkort/Powercolor-Reaper-RX9070XT-16G-A-Sammenlign-Priser, https://www.pricerunner.dk/pl/37-3396994287/Grafikkort/Gigabyte-Radeon-9070-XT-Gaming-OC-16G-Grafikkort-Sammenlign-Priser, https://www.pricerunner.dk/pl/37-3396385541/Grafikkort/Sapphire-Pulse-Radeon-RX-9070-XT-Gaming-16GB-GDDR6-PCI-Express-Graphics-Card-Sammenlign-Priser  
+Garantia burn-in: 2-3 años de garantía fabricante (PowerColor, ASUS Prime).  
+- Amazon.de: 7.265 DKK + envio 0 DKK [IN_STOCK] - Gigabyte Radeon RX 9070 XT Gaming OC 16G Grafikkarte - 16 GB GDDR6, 256 Bit, PCI-E 5.0, 30
+- Amazon.de: 7.339 DKK + envio 0 DKK [IN_STOCK] - Sapphire Pulse AMD Radeon™ RX 9070 XT Gaming 16GB DUAL HDMI/DUAL DP
+- Amazon.de: 7.466 DKK + envio 0 DKK [IN_STOCK] - ASUS Prime Radeon RX 9070 XT OC Edition 16GB GDDR6 Gaming-Grafikkarte | PCIe 5.0, 256-Bit,
+- CompuMail: 7.741 DKK + envio 0 DKK [IN_STOCK] - ASUS Prime Radeon RX 9070 XT OC Edition 16GB --> På vej ind, levering hos dig 22-11-2026
+- Proshop.dk: 7.777 DKK + envio 0 DKK [IN_STOCK] - ASUS Radeon RX 9070 XT Prime OC - 16GB GDDR6 RAM - Grafikkort
+- Merlin: 7.990 DKK + envio 0 DKK [IN_STOCK] - PowerColor Radeon RX 9070 XT Reaper - 16GB GDDR6 RAM - Grafikkort
+- Proshop.dk: 7.990 DKK + envio 0 DKK [IN_STOCK] - PowerColor Radeon RX 9070 XT Reaper - 16GB GDDR6 RAM - Grafikkort
+- happii.dk: 7.990 DKK + envio 33 DKK [IN_STOCK] - PowerColor Radeon RX 9070 XT Reaper - 16GB GDDR6 RAM - Grafikkort
+- Føniks Computer: 7.999 DKK + envio 0 DKK [IN_STOCK] - Gigabyte Radeon RX 9070 XT OC Gaming - 16GB GDDR6 - PCIe 5.0
+- CS MEGASTORE: 8.148 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) PowerColor RX 9070 XT grafikkort 16 GB GDDR6 Reaper
+- CS MEGASTORE: 8.148 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) PowerColor Reaper Radeon RX 9070 XT - Grafikkort - Radeon RX 9070 XT - 16 G
+- CS MEGASTORE: 8.148 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) PowerColor Reaper Radeon RX 9070 XT - Grafikkort - Radeon RX 9070 XT - 16 G
 
 ### Razer Blade 16 (16" OLED 240Hz | Core Ultra 9 386H | RTX 5080 16GB | 32GB | 1TB)  
 Comparador:   
@@ -843,7 +830,15 @@ Garantia burn-in: 2 años de garantía Proshop DK con servicio técnico directo 
 ### Philips Evnia 32M2N8900 (31.5" 4K 240Hz, 3a gen QD-OLED)  
 Comparador: https://www.pricerunner.dk/pl/25-3322910311/Skaerme/Philips-Evnia-8000-32M2N8900-Sammenlign-Priser  
 Garantia burn-in: 3 anos de garantia oficial Philips incluyendo cobertura de burn-in OLED.  
-- CDON DK: 8.977 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Philips Evnia 8000 32M2N8900/00 computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD 
+- CDON DK: 9.241 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Philips Evnia 8000 32M2N8900/00 computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD 
+
+### MSI Raider A18 HX A9WIG (18" 4K Mini LED 120Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 64GB | 2TB)  
+Comparador: https://www.pricerunner.dk/pl/27-3454613865/Baerbar/MSI-Raider-A18-HX-18-RTX-5080-Ryzen-9-64GB-2TB-Sammenlign-Priser  
+Garantia burn-in: 2 años de reklamationsret a través de POWER.dk.  
+
+### ASUS ROG Strix G16 (2025) (16" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB)  
+Comparador: https://www.pricerunner.dk/pl/27-3446322756/Baerbar/ASUS-ROG-Strix-G16-G614-Ryzen-9-Laptop-Sammenlign-Priser  
+Garantia burn-in: 2 años de garantía ASUS DK / POWER.dk.  
 
 ### ASUS ROG Zephyrus G16 (16" OLED 240Hz | Core Ultra 9 386H | RTX 5080 16GB | 64GB | 1TB)  
 Comparador:   
@@ -852,12 +847,13 @@ Garantia burn-in: 2 años de garantía ASUS DK.
 ## Errores de consulta (no interpretados como cambios de precio/stock)
 - gpu-rtx-5070 / pricerunner.dk: estado PriceRunner sin producto ni ofertas
 - gpu-rx-9070 / pricerunner.dk: estado PriceRunner sin producto ni ofertas
+- laptop-msi-raider-a18-hx / pricerunner.dk: HTTP 202 (len=2019)
+- laptop-asus-rog-strix-g16-5080 / pricerunner.dk: HTTP 202 (len=2019)
 - laptop-asus-rog-zephyrus-g16-5080 / direct_store: HTTP 429
 - msi-mpg-322urx / direct_store: HTTP 429
 - asus-xg32ucwmg / direct_store: HTTP 429
 
 ## Alertas de esta ejecucion
-- [DEAL] [PC] [A] Proshop DUTZO Deluxe Blaze 16.499 DKK @ Proshop.dk
-- [DEAL] [Monitor] [B] MSI MPG 321URX QD-OLED 5.868 DKK @ avXperten
-- [DEAL] [Monitor] [B] Dell Alienware AW3225QF 6.301 DKK @ CompuMail
-- [DEAL] [Monitor] [A] ASUS ROG Strix OLED XG32UCDS 4.645 DKK @ CompuMail
+- [DEAL] [Monitor] [A] ASUS ROG Strix OLED XG32UCDS 3.999 DKK @ Proshop.dk
+- [DEAL] [Monitor] [A] Dell 32 Plus S3225QC 3.777 DKK @ Proshop.dk
+- [DEAL] [Monitor] [A] ASUS ROG Strix OLED XG32UCWG 4.888 DKK @ Proshop.dk
