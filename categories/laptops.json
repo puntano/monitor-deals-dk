@@ -298,6 +298,42 @@
       "review_summary": "Portátil premium CNC de Razer con Core Ultra 9 386H, RTX 5080 16GB y 32GB LPDDR5X-9600.",
       "pros": "Construcción unibody de aluminio CNC, muy compacta, OLED 240Hz",
       "cons": "Precio muy alto (~36.499 DKK), RAM LPDDR5X soldada"
+    },
+    {
+      "key": "laptop-acer-predator-helios-16-ai-5090",
+      "name": "Acer Predator Helios 16 AI (16\" OLED 240Hz | Core Ultra 9 275HX | RTX 5090 24GB | 32GB | 1TB)",
+      "category": "laptops",
+      "category_name": "Laptops RTX 5070 Ti+ (≥32GB)",
+      "match_tokens": [
+        "Helios 16 AI",
+        "NH.QW0ED.002",
+        "PH16-73"
+      ],
+      "exclude_tokens": [
+        "Helios 18",
+        "Neo",
+        "5070",
+        "5080"
+      ],
+      "pricerunner": [],
+      "direct_urls": [
+        "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/acer-predator-helios-16-ai-16-baerbar-pc/p-4030895/"
+      ],
+      "prisjagt": [],
+      "store_links": [
+        {
+          "name": "POWER.dk",
+          "url": "https://www.power.dk/gaming-og-underholdning/pc-og-tilbehoer/baerbar-gaming-pc/acer-predator-helios-16-ai-16-baerbar-pc/p-4030895/"
+        }
+      ],
+      "tier": "top",
+      "target_price": 33000,
+      "excellent_price": 30000,
+      "burnin_warranty": "2 años de reklamationsret a través de POWER.dk (verificar que sea unidad nueva sellada si queda poca existencia en tienda).",
+      "reviews": [],
+      "review_summary": "RTX 5090 24GB + Intel Core Ultra 9 275HX + 32GB RAM + 16\" OLED WQXGA 240Hz (100% DCI-P3/Adobe RGB) + 2x Thunderbolt 5 a precio de portátil RTX 5080 (~32.499 DKK en POWER.dk).",
+      "pros": "RTX 5090 24GB a ~12.500 DKK menos que la mediana de otras RTX 5090 en DK, OLED 240Hz, 2x Thunderbolt 5, Wi-Fi 7",
+      "cons": "Stock muy limitado (almacén central 0, solo stock en tienda / Click & Collect); comprobar que no sea unidad demo/outlet"
     }
   ]
 }
