@@ -1,6 +1,6 @@
-# Informe de ofertas - 2026-11-24 18:00 Romance Standard Time
+# Informe de ofertas - 2026-11-24 20:00 Romance Standard Time
 
-Fuentes OK: 76 | fallidas: 0 | alertas nuevas: 3
+Fuentes OK: 76 | fallidas: 0 | alertas nuevas: 0
 
 | Clase | Modelo | Mejor oferta fiable (total) | Tienda / stock | Mejor en stock | Objetivo | Min ~3m | Mediana ~3m | Motivo |
 |---|---|---|---|---|---|---|---|---|
@@ -16,7 +16,7 @@ Fuentes OK: 76 | fallidas: 0 | alertas nuevas: 3
 | B | ASUS ROG Strix G16 (2025) (16" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB) | 25.490 DKK | Komplett.dk / BACKORDER | 26.999 DKK (POWER) | 25.500 DKK | 25.490 DKK | 25.490 DKK | 25.490 DKK <= precio objetivo 25.500 DKK |
 | B | Acer Predator Helios Neo 16 AI (16" WQXGA | Core Ultra 9 290HX Plus | RTX 5080 16GB | 32GB | 1TB) | 26.990 DKK | Komplett.dk / BACKORDER | 32.842 DKK (CompuMail) | 29.000 DKK | 26.990 DKK | 26.990 DKK | 26.990 DKK <= precio objetivo 29.000 DKK |
 | B | MSI MAG 321UPX QD-OLED (31.5" 4K 240Hz QD-OLED) | 4.851 DKK | Amazon.de / IN_STOCK | 4.851 DKK (Amazon.de) | 5.200 DKK | 4.851 DKK | 4.851 DKK | 4.851 DKK <= precio objetivo 5.200 DKK |
-| B | Samsung Odyssey OLED G8 G81SF (S32FG81x, 32" QD-OLED 4K 240Hz) | 4.899 DKK | Føniks Computer / IN_STOCK | 4.899 DKK (Føniks Computer) | 5.300 DKK | 4.399 DKK | 5.499 DKK | 4.899 DKK <= precio excelente 5.000 DKK (limitado a B: sin reviews independientes verificadas del modelo exacto) |
+| B | Samsung Odyssey OLED G8 G81SF (S32FG81x, 32" QD-OLED 4K 240Hz) | n/d | POWER / BACKORDER | 4.899 DKK (Føniks Computer) | 5.300 DKK | 4.399 DKK | 5.499 DKK | 4.399 DKK <= precio excelente 5.000 DKK (limitado a B: sin reviews independientes verificadas del modelo exacto) |
 | C | Lenovo Legion Pro 7 Gen 10 (16" OLED 240Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 32GB | 1TB) | 36.314 DKK | Legion Laptops / IN_STOCK | 36.314 DKK (Legion Laptops) | 29.500 DKK | 30.262 DKK | 36.314 DKK | Precio habitual (mediana ~3 meses 36.314 DKK); objetivo 29.500 DKK |
 | C | Lenovo Legion Pro 7i Gen 10 (16" OLED 240Hz | Core Ultra 9 275HX/290HX | RTX 5080 16GB | 32-64GB | 1-2TB) | 48.990 DKK | Legion Laptops / IN_STOCK | 48.990 DKK (Legion Laptops) | 29.500 DKK | 48.990 DKK | 48.990 DKK | Precio habitual (mediana ~3 meses 48.990 DKK); objetivo 29.500 DKK |
 | C | GIGABYTE Aorus Master 16 (16" WQXGA OLED 240Hz | Core Ultra 9 275HX | RTX 5080 16GB | 32GB | 2TB) | 28.801 DKK | Proshop.dk / BACKORDER | - | 26.000 DKK | 28.005 DKK | 29.667 DKK | Precio habitual (mediana ~3 meses 29.667 DKK); objetivo 26.000 DKK |
@@ -25,7 +25,7 @@ Fuentes OK: 76 | fallidas: 0 | alertas nuevas: 3
 | C | Razer Blade 16 (16" OLED 240Hz | Core Ultra 9 386H | RTX 5080 16GB | 32GB | 1TB) | 36.499 DKK | Proshop.dk / IN_STOCK | 36.499 DKK (Proshop.dk) | 32.500 DKK | 36.499 DKK | 36.499 DKK | Precio habitual (mediana ~3 meses 36.499 DKK); objetivo 32.500 DKK |
 | C | ASUS ROG Swift OLED PG32UCDM / PG32UCDMZ (31.5" QD-OLED 4K 240Hz) | 6.911 DKK | CompuMail / IN_STOCK | 6.911 DKK (CompuMail) | 6.200 DKK | 4.899 DKK | 7.290 DKK | Precio habitual (mediana ~3 meses 7.290 DKK); objetivo 6.200 DKK |
 | C | Gigabyte AORUS FO32U2P (31.5" QD-OLED 4K 240Hz, DP 2.1 UHBR20) | 6.973 DKK | avXperten.dk / IN_STOCK | 6.973 DKK (avXperten.dk) | 6.300 DKK | 6.709 DKK | 6.775 DKK | Precio habitual (mediana ~3 meses 6.775 DKK); objetivo 6.300 DKK |
-| C | Samsung Odyssey OLED G8 G80SD (LS32DG800/802, 32" QD-OLED 4K 240Hz mate) | 6.299 DKK | CompuMail / BACKORDER | 6.569 DKK (CS MEGASTORE) | 5.800 DKK | 5.844 DKK | 6.501 DKK | Precio habitual (mediana ~3 meses 6.501 DKK); objetivo 5.800 DKK |
+| C | Samsung Odyssey OLED G8 G80SD (LS32DG800/802, 32" QD-OLED 4K 240Hz mate) | 6.533 DKK | CompuMail / BACKORDER | 6.569 DKK (CS MEGASTORE) | 5.800 DKK | 5.844 DKK | 6.501 DKK | Precio habitual (mediana ~3 meses 6.501 DKK); objetivo 5.800 DKK |
 | C | Samsung Odyssey G7 G70D (S32DG702, 32" IPS 4K 144Hz) - alternativa sin burn-in | 3.350 DKK | CompuMail / IN_STOCK | 3.350 DKK (CompuMail) | 3.200 DKK | 3.340 DKK | 3.390 DKK | Precio habitual (mediana ~3 meses 3.390 DKK); objetivo 3.200 DKK |
 | C | AOC AGON PRO AG326UD (31.5" 4K 165Hz QD-OLED) | 5.714 DKK | avXperten / IN_STOCK | 5.714 DKK (avXperten) | 5.300 DKK | 5.635 DKK | 5.909 DKK | Precio habitual (mediana ~3 meses 5.909 DKK); objetivo 5.300 DKK |
 | C | Gigabyte AORUS FO32U2 (31.5" QD-OLED 4K 240Hz) | 6.817 DKK | Proshop.dk / IN_STOCK | 6.817 DKK (Proshop.dk) | 5.600 DKK | 6.699 DKK | 6.699 DKK | Precio habitual (mediana ~3 meses 6.699 DKK); objetivo 5.600 DKK |
@@ -83,9 +83,9 @@ Garantia burn-in: 3 años de garantía Dell Advanced Exchange (incluye burn-in e
 - Proshop.dk: 3.777 DKK + envio 0 DKK [IN_STOCK] (precio campana hasta 2026-11-30) - 32" Dell Plus S3225QC - 3840x2160 (4K) - 120Hz - QD-OLED
 - POWER: 3.999 DKK + envio 49 DKK [IN_STOCK] - Dell S3225QC 32" 4K QD-OLED skærm
 - Secure Data Center: 4.014 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - DELL Plus S3225QC computerskærm 80,3 cm (31.6") 3840 x 2160 pixel 4K Ultra HD QD-OLED Sort
+- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC-skærm, 32, 4K, 120 Hz, QD-OLED
+- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC-skærm, 32, 4K, 120 Hz, QD-OLED
 - CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC skærm 32 4K 120 Hz QD-OLED, Sort, Sølv
-- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC-skærm, 32, 4K, 120 Hz, QD-OLED
-- CS MEGASTORE: 4.072 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Dell Plus S3225QC-skærm, 32, 4K, 120 Hz, QD-OLED
 - CompuMail: 4.130 DKK + envio 0 DKK [BACKORDER] - Dell Plus S3225QC 32" 3840 x 2160 (4K) HDMI USB-C 120Hz Dockingskærm --> På fjernlager, le
 - PROconsult Data A/S: 4.249 DKK + envio 49 DKK [IN_STOCK] - Dell 32 Plus S3225QC 31.6" 4K/UHD QD-OLED Docking Monitor HDMI/USB-C
 - CompuMail: 4.270 DKK + envio 0 DKK [IN_STOCK] - Dell Plus S3225QC 32" 3840 x 2160 (4K) HDMI 120Hz --> På lager, levering hos dig 25-11-202
@@ -97,8 +97,8 @@ Garantia burn-in: 3 años de garantía Dell Advanced Exchange (incluye burn-in e
 Comparador: https://www.pricerunner.dk/pl/25-3423718536/Skaerme/ASUS-ROG-Strix-OLED-XG32UCWG-32-Zoll-4K-UHD-Gaming-Monitor-Sammenlign-Priser  
 Garantia burn-in: 3 años de garantía ASUS OLED Care incluyendo burn-in.  
 - Proshop.dk: 4.888 DKK + envio 0 DKK [IN_STOCK] (precio campana hasta 2026-11-30) - 32" ASUS ROG Strix XG32UCWG - 3840x2160 (4K) - 165Hz - OLED - KVM switch
-- CS MEGASTORE: 5.226 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix OLED XG32UCWG gamingskærm 31,5 4K 165 Hz
 - CS MEGASTORE: 5.226 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix XG32UCWG OLED-skærm 31,5 4K 165 Hz, Sort
+- CS MEGASTORE: 5.226 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Strix OLED XG32UCWG gamingskærm 31,5 4K 165 Hz
 - CompuMail: 5.227 DKK + envio 0 DKK [IN_STOCK] - ASUS ROG Strix XG32UCWG 32" 3840 x 2160 (4K) HDMI DisplayPort USB-C 165Hz --> På lager, le
 - Geekd: 5.449 DKK + envio 0 DKK [IN_STOCK] - BLACK WEEK - ASUS ROG Strix OLED XG32UCWG – skærm – Sort - Forventet levering: 2 hverdage
 - Gigapro: 5.639 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Strix OLED XG32UCWG computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sor
@@ -122,13 +122,13 @@ Prisjagt sigue el producto desde 2024-02-20; historial accesible: ~3 meses.
 - CS MEGASTORE: 5.748 DKK + envio 0 DKK [UNKNOWN] - MSI MPG 321URX QD-OLED-skærm 31,5 240 Hz
 - CDON DK: 5.767 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MSI MPG 321URX QD-OLED computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sort
 - CDON: 5.767 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MSI MPG 321URX QD-OLED computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sort
+- CDON DK: 6.239 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gaming PC-skærm - MSI - 31,5" - UHD - 240Hz - QD-OLED-panel - 0,03ms - Højdejusterbar - MP
 - CDON DK: 6.688 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gaming PC-skærm - MSI - 31,5" - UHD - 240Hz - QD-OLED-panel - 0,03ms - Højdejusterbar - MP
 - CDON: 6.688 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gaming PC-skærm - MSI - 31,5" - UHD - 240Hz - QD-OLED-panel - 0,03ms - Højdejusterbar - MP
 - avXperten.dk: 6.825 DKK + envio 0 DKK [OUT_OF_STOCK] - MSI MPG 321URX Gaming PC Skærm - 31.5", 3840x2160, QD-OLED, 4K, 240Hz - Sort
 - Gigapro: 7.279 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - MSI MPG 321URX QD-OLED computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD Sort
 - happii.dk: 7.295 DKK + envio 33 DKK [IN_STOCK] - 31.5" MSI MPG 321URXDE - 3840x2160 (4K) - 240Hz - QD-OLED
 - Proshop.dk: 7.328 DKK + envio 0 DKK [BACKORDER] - 31.5" MSI MPG 321URXDE - 3840x2160 (4K) - 240Hz - QD-OLED
-- Proshop.dk: 7.328 DKK + envio 0 DKK [IN_STOCK] - 31.5" MSI MPG 321URXDE - 3840x2160 (4K) - 240Hz - QD-OLED
 - Proshop.dk: 7.328 DKK + envio 0 DKK [IN_STOCK] - 31.5" MSI MPG 321URXDE - 3840x2160 (4K) - 240Hz - QD-OLED
 
 ### Dell Alienware AW3225QF (31.6" curvo 1700R 4K 240Hz QD-OLED)  
@@ -157,8 +157,8 @@ Prisjagt sigue el producto desde 2024-07-09; historial accesible: ~3 meses.
 - GoBlue.dk: 6.623 DKK + envio 0 DKK [IN_STOCK] - ASUS ROG Swift OLED PG32UCDP - 32" - 240 Hz - Black
 - CompuMail: 6.693 DKK + envio 0 DKK [IN_STOCK] - ASUS ROG Swift OLED PG32UCDP 32" 3840 x 2160 (4K) HDMI DisplayPort USB-C 240Hz --> På lage
 - CompuMail: 6.693 DKK + envio 0 DKK [UNKNOWN] - ASUS ROG Swift OLED PG32UCDP 32" 3840 x 2160 (4K) HDMI DisplayPort USB-C 240Hz --> På lage
-- CS MEGASTORE: 6.825 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Swift OLED PG32UCDP skærm 32 4K 240 Hz og FHD 480 Hz
 - CS MEGASTORE: 6.825 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Swift OLED PG32UCDP skærm 31,5 4K 240 Hz
+- CS MEGASTORE: 6.825 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) ASUS ROG Swift OLED PG32UCDP skærm 32 4K 240 Hz og FHD 480 Hz
 - CS MEGASTORE: 6.825 DKK + envio 0 DKK [UNKNOWN] - ASUS ROG Swift OLED PG32UCDP skærm 31,5 4K 240 Hz
 - Gigapro: 7.219 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Swift PG32UCDP computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD OLED Sor
 - PROconsult Data A/S: 7.249 DKK + envio 49 DKK [IN_STOCK] - ASUS ROG Swift OLED PG32UCDP 31.5" 4K UHD Gaming Monitor 2xHDMI/DP/USB-C
@@ -169,11 +169,11 @@ Prisjagt sigue el producto desde 2024-07-09; historial accesible: ~3 meses.
 Comparador: https://www.pricerunner.dk/pl/25-3503044764/Skaerme/Samsung-32-Odyssey-OLED-G8-G80SH-UHD-Gaming-Monitor-Sammenlign-Priser  
 Garantia burn-in: Comprado en POWER.dk por 6.699 DKK (Prismatch si baja de 6.699 DKK en tienda DK en stock). Garantía Samsung DK + OLED Care.  
 - CompuMail: 6.675 DKK + envio 0 DKK [IN_STOCK] - Samsung Odyssey OLED G8 S32HG800SU 32" 3840 x 2160 (4K) HDMI DisplayPort USB-C 240Hz --> P
-- CS MEGASTORE: 6.711 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G8 LS32HG800SUXEN skærm 32 4K 240 Hz, sølv
 - CS MEGASTORE: 6.711 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G8 S32HG800SU skærm 32 240 Hz Sølv
+- CS MEGASTORE: 6.711 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G8 LS32HG800SUXEN skærm 32 4K 240 Hz, sølv
 - CDON DK: 7.070 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung ViewFinity G80SH 32 tommer 4K gaming monitor
 - Boligcenter: 7.099 DKK + envio 189 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gaming-skærm Samsung Odyssey OLED G8 G80SH 32" 4K - sølv
-- CDON DK: 7.185 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G80SH computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
+- CDON DK: 7.246 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G80SH computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
 - Gigapro: 7.289 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G80SH computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
 - Favoritten.dk: 7.352 DKK + envio 89 DKK [IN_STOCK] - Samsung G80SH computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
 - Boligcenter: 7.499 DKK + envio 129 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Gamingmonitor Samsung Odyssey OLED G8 S32HG800SU 32" 4K - sølv
@@ -208,6 +208,7 @@ Garantia burn-in: 3 anos de garantia MSI OLED Care incluyendo burn-in.
 Comparador: https://www.pricerunner.dk/pl/25-3400211023/Skaerme/Samsung-Odyssey-G8-G81SF-32-Sammenlign-Priser  
 Garantia burn-in: No verificado.  
 Prisjagt sigue el producto desde 2025-03-30; historial accesible: ~3 meses.  
+- POWER: 4.399 DKK + envio n/d [BACKORDER] (precio campana hasta 2026-11-30) - Samsung Odyssey OLED G8 G81SF 32" 4K UHD gamingskærm
 - POWER: 4.399 DKK + envio 0 DKK [OUT_OF_STOCK] - Samsung Odyssey OLED G8 G81SF 32" 4K UHD gamingskærm
 - CDON DK: 4.699 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung Odyssey OLED G8 (G81SF) 32" 4K UHD spilleskærm
 - CDON: 4.699 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung Odyssey OLED G8 (G81SF) 32" 4K UHD spilleskærm
@@ -219,7 +220,6 @@ Prisjagt sigue el producto desde 2025-03-30; historial accesible: ~3 meses.
 - CS MEGASTORE: 5.999 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G8 S32FG812SU skærm 32 4K UHD 240 Hz, sølv
 - CS MEGASTORE: 5.999 DKK + envio 0 DKK [UNKNOWN] - Samsung Odyssey OLED G8 S32FG812SU skærm 32 4K UHD 240 Hz, sølv
 - Gigapro: 6.289 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G81SF computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
-- Nordic-Gamers: 6.499 DKK + envio 0 DKK [OUT_OF_STOCK] - Samsung Odyssey OLED G8 G81SF 32" UHD Gamingskærm
 
 ### Lenovo Legion Pro 7 Gen 10 (16" OLED 240Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 32GB | 1TB)  
 Comparador:   
@@ -294,16 +294,16 @@ Garantia burn-in: No verificado. Indicios (foros/ficha nordica) de cobertura de 
 Prisjagt sigue el producto desde 2024-06-04; historial accesible: ~3 meses.  
 - CDON DK: 6.199 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G80SD computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
 - CDON: 6.199 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G80SD computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
-- CompuMail: 6.299 DKK + envio 0 DKK [BACKORDER] - Samsung Odyssey OLED G8 S32DG800SU 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På fjer
 - CompuMail: 6.299 DKK + envio 0 DKK [UNKNOWN] - Samsung Odyssey OLED G8 S32DG800SU 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På fjer
-- CDON DK: 6.416 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G80SD computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
 - CDON: 6.416 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G80SD computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
+- CompuMail: 6.533 DKK + envio 0 DKK [BACKORDER] - Samsung Odyssey OLED G8 S32DG800SU 32" 3840 x 2160 (4K) HDMI DisplayPort 240Hz --> På fjer
 - CS MEGASTORE: 6.569 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G8 S32DG800SU skærm 32 4K 240 Hz, sølv
 - CS MEGASTORE: 6.569 DKK + envio 0 DKK [UNKNOWN] - Samsung Odyssey OLED G8 S32DG800SU skærm 32 4K 240 Hz, sølv
 - avXperten.dk: 6.725 DKK + envio 0 DKK [IN_STOCK] - Samsung Odyssey G80SD OLED Gaming Skærm - 32", 3840x2160@240Hz, FreeSync Premium Pro
 - PROconsult Data A/S: 6.799 DKK + envio 49 DKK [IN_STOCK] - Samsung Odyssey OLED G8 G80SD 32" 4K UHD Smart Gaming Monitor 2xHDMI/DP
 - Gigapro: 6.799 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G80SD computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sølv
 - TechInn: 7.252 DKK + envio 0 DKK [IN_STOCK] - Samsung Odyssey Oled G8 G80sd 32´´ 4k Oled 240hz Gaming Monitor Flerfarvet One Size / EU P
+- Føniks Computer: 7.268 DKK + envio 0 DKK [IN_STOCK] - SAMSUNG Odyssey G80SD Skærm - 32" - OLED - 4K Ultra HD - 240 Hz - 0.03 ms - Consumer
 
 ### Samsung Odyssey G7 G70D (S32DG702, 32" IPS 4K 144Hz) - alternativa sin burn-in  
 Comparador: https://www.pricerunner.dk/pl/25-3378553018/Skaerme/Samsung-Odyssey-G7-S32DG702EU-Sammenlign-Priser  
@@ -360,7 +360,7 @@ Prisjagt sigue el producto desde 2026-05-20; historial accesible: ~3 meses.
 - CompuMail: 5.034 DKK + envio 0 DKK [IN_STOCK] - Samsung G73SH 32" OLED 3840 x 2160 (4K) HDMI DisplayPort 330 Hz --> På lager, levering hos
 - CompuMail: 5.034 DKK + envio 0 DKK [UNKNOWN] - Samsung G73SH 32" OLED 3840 x 2160 (4K) HDMI DisplayPort 330 Hz --> På lager, levering hos
 - CS MEGASTORE: 5.057 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) Samsung Odyssey OLED G7 S32HG732SU - G73SH Series - OLED-monitor - gaming -
-- CDON: 5.089 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G73SH computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sort
+- CDON: 5.068 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Samsung G73SH computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sort
 - Labtech Data: 5.232 DKK + envio 0 DKK [IN_STOCK] - Samsung G73SH computer monitor 81.3 cm (32") 3840 x 2160 pixels 4K Ultra HD OLED Black
 - TechInn: 5.346 DKK + envio 0 DKK [IN_STOCK] (titulo no coincide (otra variante)) - Samsung Odyssey G7 32´´ 4k Oled 165hz Gaming Monitor Flerfarvet One Size / EU Plug 220V
 - Føniks Computer: 5.380 DKK + envio 0 DKK [IN_STOCK] - SAMSUNG Odyssey G73SH Skærm - 32" - OLED - 4K Ultra HD - 330 Hz - 0.03 ms - Gaming
@@ -378,9 +378,9 @@ Comparador: https://www.pricerunner.dk/pl/25-3547208528/Skaerme/LG-32GX870B-B-4K
 Garantia burn-in: 2 años garantía LG DK + política OLED estándar.  
 - CompuMail: 9.016 DKK + envio 0 DKK [BACKORDER] - LG 32GX870B-B.AEU 32" OLED 3840 x 2160 (4K) HDMI DisplayPort 240 Hz --> På fjernlager, lev
 - CS MEGASTORE: 9.064 DKK + envio 0 DKK [IN_STOCK] - (ComputerSalg) LG UltraGear 32GX870B-B gamingmonitor 32 4K 240 Hz OLED
-- happii.dk: 9.790 DKK + envio 33 DKK [IN_STOCK] - 32" LG UltraGear 32GX870B-B 3840x2160 (4K) - 240Hz - OLED - 90W USB-C
-- Proshop.dk: 9.823 DKK + envio 0 DKK [IN_STOCK] - 32" LG UltraGear 32GX870B-B 3840x2160 (4K) - 240Hz - OLED - 90W USB-C
-- Merlin: 9.823 DKK + envio 0 DKK [IN_STOCK] - 32" LG UltraGear 32GX870B-B 3840x2160 (4K) - 240Hz - OLED - 90W USB-C
+- happii.dk: 9.645 DKK + envio 33 DKK [IN_STOCK] - 32" LG UltraGear 32GX870B-B 3840x2160 (4K) - 240Hz - OLED - 90W USB-C
+- Proshop.dk: 9.678 DKK + envio 0 DKK [IN_STOCK] - 32" LG UltraGear 32GX870B-B 3840x2160 (4K) - 240Hz - OLED - 90W USB-C
+- Merlin: 9.678 DKK + envio 0 DKK [IN_STOCK] - 32" LG UltraGear 32GX870B-B 3840x2160 (4K) - 240Hz - OLED - 90W USB-C
 - CDON DK: 10.032 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - LG 32GX870B-B.AEU computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sort
 - Gigapro: 10.189 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - LG 32GX870B-B.AEU computerskærm 81,3 cm (32") 3840 x 2160 pixel 4K Ultra HD OLED Sort
 - CDON DK: 10.358 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - LG UltraGear evo 32GX870B-B.AEU 31,5\" 4K OLED Dual Mode 240Hz/480Hz 0,03ms Gaming-skærm
@@ -392,7 +392,6 @@ Prisjagt sigue el producto desde 2022-04-02; historial accesible: ~3 meses.
 - avXperten.dk: 4.509 DKK + envio 0 DKK [OUT_OF_STOCK] - Samsung Odyssey NEO G7 S32BG750NP Pivot 32tm LED - 3840x2160/165Hz - VA, 1ms
 - CS MEGASTORE: 6.647 DKK + envio 0 DKK [BACKORDER] - (ComputerSalg) Samsung Odyssey Neo G7 S32BG750NP gamingmonitor 32 4K 165 Hz VA
 - PROconsult Data A/S: 6.649 DKK + envio 49 DKK [IN_STOCK] (titulo no coincide (otra variante)) - Samsung Odyssey Neo G7 32" 4K UHD Curved Gaming Monitor HDMI/DP
-- CompuMail: 6.649 DKK + envio 0 DKK [BACKORDER] - Samsung Odyssey Neo G7 S32BG750NP 32" VA 3840 x 2160 (4K) HDMI DisplayPort 165Hz --> På fj
 - CompuMail: 6.649 DKK + envio 0 DKK [UNKNOWN] - Samsung Odyssey Neo G7 S32BG750NP 32" VA 3840 x 2160 (4K) HDMI DisplayPort 165Hz --> På fj
 - POWER: 6.699 DKK + envio 48 DKK [COLLECT_IN_STORE] - Samsung Odyssey Neo G7 S32BG75 32" 4K UHD gaming-skærm
 - POWER: 6.699 DKK + envio 48 DKK [IN_STOCK] - Samsung Odyssey Neo G7 S32BG75 32" 4K UHD gaming-skærm
@@ -415,7 +414,7 @@ Prisjagt sigue el producto desde 2026-02-23; historial accesible: ~3 meses.
 - Proshop.dk: 11.052 DKK + envio 0 DKK [BACKORDER] - 32" ASUS ROG Swift PG32UCDM3
 - Proshop.dk: 11.052 DKK + envio 0 DKK [BACKORDER] - 32" ASUS ROG Swift PG32UCDM3
 - Gigapro: 11.829 DKK + envio 60 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Swift OLED PG32UCDM3 computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD QD
-- CDON DK: 12.125 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Swift OLED PG32UCDM3 computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD QD
+- CDON DK: 12.048 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Swift OLED PG32UCDM3 computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD QD
 - CDON: 12.125 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - ASUS ROG Swift OLED PG32UCDM3 computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD QD
 
 ### LG UltraGear 32GS95UE/UV-B (31.5" WOLED 4K 240Hz / FHD 480Hz)  
@@ -434,8 +433,3 @@ Garantia burn-in: 2 años de reklamationsret a través de POWER.dk.
 Comparador: https://www.pricerunner.dk/pl/25-3322910311/Skaerme/Philips-Evnia-8000-32M2N8900-Sammenlign-Priser  
 Garantia burn-in: 3 anos de garantia oficial Philips incluyendo cobertura de burn-in OLED.  
 - CDON DK: 8.755 DKK + envio 0 DKK [IN_STOCK] (tienda poco fiable/marketplace) - Philips Evnia 8000 32M2N8900/00 computerskærm 80 cm (31.5") 3840 x 2160 pixel 4K Ultra HD 
-
-## Alertas de esta ejecucion
-- [DEAL] [Monitor] [B] Dell Alienware AW3225QF 6.203 DKK @ CompuMail
-- [RADAR_DEAL] [Monitor] 🔥 -54% Samsung Odyssey OLED G8 G81SF 32" 4K UHD gamings (4.399 DKK)
-- [RADAR_DEAL] [Laptop] 💎 -42% vs mediana GPU: GIGABYTE GAMING A16 PRO DYHG5NECC4SH Intel (21.303 DKK)
