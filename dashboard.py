@@ -170,7 +170,8 @@ def generate_dashboard_html(output_paths=None):
     try:
         cat_deals_rows = con.execute("""
             SELECT category, product_id, name, price, old_price, drop_pct, path, is_tracked,
-                   COALESCE(source, 'pricerunner.dk'), COALESCE(specs, ''), COALESCE(in_stock, 1)
+                   COALESCE(source, 'pricerunner.dk'), COALESCE(specs, ''), COALESCE(in_stock, 1),
+                   COALESCE(deal_type, 'discount')
             FROM category_deals
             WHERE check_date=(SELECT MAX(check_date) FROM category_deals)
             ORDER BY drop_pct DESC, (old_price - price) DESC
@@ -178,9 +179,10 @@ def generate_dashboard_html(output_paths=None):
     except Exception:
         try:
             cat_deals_rows = [
-                (*r, "pricerunner.dk", "", 1)
+                (*r, "discount")
                 for r in con.execute("""
-                    SELECT category, product_id, name, price, old_price, drop_pct, path, is_tracked
+                    SELECT category, product_id, name, price, old_price, drop_pct, path, is_tracked,
+                           COALESCE(source, 'pricerunner.dk'), COALESCE(specs, ''), COALESCE(in_stock, 1)
                     FROM category_deals
                     WHERE check_date=(SELECT MAX(check_date) FROM category_deals)
                     ORDER BY drop_pct DESC, (old_price - price) DESC
@@ -202,6 +204,7 @@ def generate_dashboard_html(output_paths=None):
             "source": r[8],
             "specs": r[9],
             "in_stock": bool(r[10]),
+            "deal_type": r[11],
         }
         for r in cat_deals_rows
         if not enabled_set or r[0] in enabled_set
@@ -244,7 +247,7 @@ def generate_dashboard_html(output_paths=None):
 
     for cd in cat_deals_data:
         cd["ai_pick"] = ai_radar_map.get(str(cd["product_id"]))
-    cat_deals_data.sort(key=lambda x: (0 if x.get("ai_pick") else 1, -float(x.get("drop_pct") or 0)))
+    cat_deals_data.sort(key=lambda x: (0 if (x.get("ai_pick") and x["ai_pick"].get("is_real_deal", True)) else 1, -float(x.get("drop_pct") or 0)))
 
     con.close()
     
@@ -534,7 +537,7 @@ def generate_dashboard_html(output_paths=None):
           <h2 class="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
             <span>🔥</span> Radar Abierto Black Friday · PriceRunner DK, POWER.dk y Proshop.dk
           </h2>
-          <p class="text-xs text-slate-400 mt-0.5">Ofertas vivas fuera del listado fijo filtradas a tu perfil (Laptops Windows RTX 5070 Ti+ / &ge;32GB RAM y Monitores 32" 4K OLED, en stock).</p>
+          <p class="text-xs text-slate-400 mt-0.5">Descuentos de campaña <strong>y mejores precios reales por gama de GPU</strong> (frente a la mediana en DK aunque no tengan precio tachado) filtrados a Laptops Windows RTX 5070 Ti+ / &ge;32GB RAM y Monitores 32" 4K OLED.</p>
         </div>
         <span id="bf-radar-count" class="text-xs px-2.5 py-1 rounded-xl bg-rose-500/15 text-rose-300 border border-rose-500/30 font-semibold shrink-0">0 ofertas</span>
       </div>
@@ -767,14 +770,23 @@ def generate_dashboard_html(output_paths=None):
         const aiReasonHtml = (aiPick && aiPick.ai_reason)
           ? `<p class="text-[11px] text-amber-200/90 leading-snug bg-amber-500/10 border border-amber-500/25 rounded-lg px-2 py-1">🤖 ${{escHtml(aiPick.ai_reason)}}</p>`
           : '';
+        const isGpuValue = d.deal_type === 'gpu_value';
         const srcLabel = d.source === 'power.dk' ? 'POWER.dk' : (d.source === 'proshop.dk' ? 'Proshop.dk' : 'PriceRunner DK');
         const srcBadge = `<span class="text-[10px] px-2 py-0.5 rounded-lg bg-blue-500/15 text-blue-300 border border-blue-500/30 font-semibold">${{srcLabel}}</span>`;
         const specsHtml = d.specs
           ? `<p class="text-[11px] text-slate-400 leading-snug line-clamp-2">${{escHtml(d.specs)}}</p>`
           : '';
+        const dropPill = isGpuValue
+          ? `<span class="text-[11px] px-2 py-0.5 rounded-lg bg-cyan-500/15 text-cyan-300 border border-cyan-500/35 font-bold">💎 -${{Math.round(d.drop_pct)}}% vs Mediana GPU</span>`
+          : `<span class="text-[11px] px-2 py-0.5 rounded-lg bg-rose-500/15 text-rose-300 border border-rose-500/30 font-bold">🔥 -${{Math.round(d.drop_pct)}}% (-${{fmtDkk(saved)}})</span>`;
+        const refPriceHtml = isGpuValue
+          ? `<span class="text-[11px] text-cyan-300/80">Mediana GPU ~${{fmtDkk(d.old_price)}}</span>`
+          : `<span class="text-[11px] text-slate-500 line-through">${{fmtDkk(d.old_price)}}</span>`;
         const trackBadge = d.is_tracked
           ? '<span class="text-[10px] px-2 py-0.5 rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">✓ En tu seguimiento</span>'
-          : '<span class="text-[10px] px-2 py-0.5 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 font-semibold">✨ Hallazgo Black Weeks</span>';
+          : (isGpuValue
+              ? '<span class="text-[10px] px-2 py-0.5 rounded-lg bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 font-semibold">💎 Mejor Valor por GPU</span>'
+              : '<span class="text-[10px] px-2 py-0.5 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 font-semibold">✨ Hallazgo Black Weeks</span>');
         const prHref = (d.path && String(d.path).startsWith('http')) ? d.path : ('https://www.pricerunner.dk' + (d.path || ''));
         return `
           <div class="border rounded-xl p-3.5 flex flex-col justify-between gap-2.5 transition ${{cardCls}}">
@@ -784,7 +796,7 @@ def generate_dashboard_html(output_paths=None):
                   ${{getCategoryBadge(d.category)}}
                   ${{aiBadgeHtml}}
                 </div>
-                <span class="text-[11px] px-2 py-0.5 rounded-lg bg-rose-500/15 text-rose-300 border border-rose-500/30 font-bold">🔥 -${{Math.round(d.drop_pct)}}% (-${{fmtDkk(saved)}})</span>
+                ${{dropPill}}
               </div>
               <h3 class="text-xs font-bold text-slate-100 leading-snug line-clamp-2">${{escHtml(d.name)}}</h3>
               ${{specsHtml}}
@@ -794,7 +806,7 @@ def generate_dashboard_html(output_paths=None):
               <div>
                 <div class="flex items-baseline gap-2">
                   <span class="text-base font-black text-white">${{fmtDkk(d.price)}}</span>
-                  <span class="text-[11px] text-slate-500 line-through">${{fmtDkk(d.old_price)}}</span>
+                  ${{refPriceHtml}}
                 </div>
                 <div class="mt-1 flex flex-wrap items-center gap-1">${{srcBadge}} ${{trackBadge}}</div>
               </div>

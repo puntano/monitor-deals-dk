@@ -228,14 +228,15 @@ def _gather_context(con, cand, run_date):
     try:
         radar_rows = con.execute(
             """SELECT product_id, category, name, price, old_price, drop_pct, is_tracked,
-                      COALESCE(source, 'pricerunner.dk'), COALESCE(specs, '')
+                      COALESCE(source, 'pricerunner.dk'), COALESCE(specs, ''),
+                      COALESCE(deal_type, 'discount')
                FROM category_deals WHERE check_date=?
                ORDER BY drop_pct DESC, (old_price - price) DESC""",
             (cd_date,),
         ).fetchall()
     except Exception:
         radar_rows = [
-            (*r, "pricerunner.dk", "")
+            (*r, "pricerunner.dk", "", "discount")
             for r in con.execute(
                 """SELECT product_id, category, name, price, old_price, drop_pct, is_tracked
                    FROM category_deals WHERE check_date=?
@@ -256,6 +257,7 @@ def _gather_context(con, cand, run_date):
             "is_tracked": bool(r[6]),
             "source": r[7],
             "specs": r[8],
+            "deal_type": r[9],
         })
 
     return eff_date, tracked_summary, gpu_ref_prices, radar_deals
@@ -288,8 +290,9 @@ Analiza los datos reales del mercado hoy y devuelve un JSON estricto cumpliendo 
    - audit_note: 1 frase breve (max 140 caracteres).
 
 2. top_radar_picks:
-   - Selecciona entre 6 y 8 mejores ofertas reales de 'radar_deals' (equilibrando laptops y monitores disponibles en 'radar_deals') filtrando descuentos engañosos sobre MSRP inflado o specs incompatibles con el perfil del usuario.
-   - is_real_deal: true SOLO si cumple estrictamente el perfil del usuario (Windows, >=RTX 5070 Ti, >=32GB RAM en laptops; 32" 4K OLED en monitores) Y el descuento frente al mercado real danes merece alerta push inmediata al movil. Pon false si hay duda de RAM/GPU/MSRP inflado.
+   - Selecciona entre 6 y 8 mejores ofertas reales de 'radar_deals' (equilibrando laptops y monitores disponibles) filtrando descuentos engañosos sobre MSRP inflado o specs incompatibles con el perfil del usuario.
+   - Nota sobre 'deal_type': si deal_type == 'gpu_value', el producto NO tiene cartel de oferta en tienda, sino que su precio actual esta muy por debajo de la mediana real danesa para su misma GPU (old_price_dkk = mediana DK de esa GPU). Destaca especialmente gangas de valor real (ej. RTX 5090 por debajo de ~35k DKK o RTX 5080 bajo ~24k DKK).
+   - is_real_deal: true SOLO si cumple estrictamente el perfil del usuario (Windows, >=RTX 5070 Ti, >=32GB RAM en laptops; 32" 4K OLED en monitores) Y realmente es buena compra por precio/valor frente al mercado danes. Pon false si hay duda de RAM/GPU/MSRP inflado.
    - ai_badge: etiqueta corta (max 24 caracteres, ej. 'Chollo RTX 5080', 'Top OLED Black Friday').
    - ai_reason: 1 frase breve (max 130 caracteres) explicando por que merece la pena hoy.
 

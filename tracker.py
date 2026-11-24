@@ -256,6 +256,7 @@ CREATE TABLE IF NOT EXISTS category_deals(
   check_date TEXT, category TEXT, product_id TEXT, name TEXT,
   price REAL, old_price REAL, drop_pct REAL, path TEXT, is_tracked INTEGER,
   source TEXT DEFAULT 'pricerunner.dk', specs TEXT DEFAULT '', in_stock INTEGER DEFAULT 1,
+  deal_type TEXT DEFAULT 'discount',
   PRIMARY KEY(check_date, category, product_id));
 CREATE TABLE IF NOT EXISTS reviews_seen(
   url TEXT PRIMARY KEY, source TEXT, title TEXT, first_seen TEXT, baseline INTEGER, relevant INTEGER);
@@ -271,6 +272,7 @@ def db():
         "ALTER TABLE category_deals ADD COLUMN source TEXT DEFAULT 'pricerunner.dk'",
         "ALTER TABLE category_deals ADD COLUMN specs TEXT DEFAULT ''",
         "ALTER TABLE category_deals ADD COLUMN in_stock INTEGER DEFAULT 1",
+        "ALTER TABLE category_deals ADD COLUMN deal_type TEXT DEFAULT 'discount'",
     ):
         try:
             con.execute(ddl)
@@ -655,11 +657,14 @@ def process_model(ctx, model):
             ctx.err(key, "pricerunner.dk", url, e)
         time.sleep(CFG["request_delay_seconds"])
 
-    # ---- Ofertas directas de tiendas danesas (Proshop, MM-Vision, etc.)
+    # ---- Ofertas directas de tiendas danesas (Proshop, MM-Vision, POWER, etc.)
     for d_url in model.get("direct_urls", []):
         try:
-            html = http_get(d_url, min_len=4000)
-            d_offer = parse_direct_store(html, d_url)
+            if re.search(r"power\.dk/.*/p-(\d+)", d_url, re.I):
+                d_offer = _fetch_power_direct_offer(d_url)
+            else:
+                html = http_get(d_url, min_len=4000)
+                d_offer = parse_direct_store(html, d_url)
             if d_offer and d_offer.get("price"):
                 pr_ok = True
                 ctx.ok += 1
@@ -892,7 +897,7 @@ def evaluate_alerts(ctx):
         if not res["pr_ok"]:
             continue
         cat = m.get("category", "monitors")
-        cat_badge = {"gpus": "[GPU] ", "desktops": "[PC] ", "coffee": "[Café] ", "monitors": "[Monitor] "}.get(cat, f"[{cat}] ")
+        cat_badge = {"gpus": "[GPU] ", "desktops": "[PC] ", "coffee": "[Café] ", "monitors": "[Monitor] ", "laptops": "[Laptop] "}.get(cat, f"[{cat}] ")
         short_n = m["name"].split("(")[0].strip()
         # Oferta A/B (objetivo alcanzado / excelente)
         bi = res.get("best_in_stock")
@@ -948,18 +953,24 @@ def evaluate_alerts(ctx):
         }
     radar_rows = con.execute("""
         SELECT category, product_id, name, price, old_price, drop_pct, path,
-               COALESCE(source, 'pricerunner.dk'), COALESCE(specs, '')
+               COALESCE(source, 'pricerunner.dk'), COALESCE(specs, ''),
+               COALESCE(deal_type, 'discount')
         FROM category_deals
         WHERE check_date=? AND is_tracked=0 AND COALESCE(in_stock, 1)=1
         ORDER BY drop_pct DESC, (old_price - price) DESC
     """, (RUN_DATE,)).fetchall()
-    for cat, pid, name, price, old_price, drop_pct, path, src, specs in radar_rows:
+    for cat, pid, name, price, old_price, drop_pct, path, src, specs, dtype in radar_rows:
         pick = ai_radar.get(str(pid))
         saved = max(0.0, (old_price or price) - price)
         min_sav = 1000 if cat == "laptops" else 500
         min_fb_sav = 2000 if cat == "laptops" else 800
         qualifies = False
-        if pick is not None:
+        if dtype == "gpu_value":
+            if pick is not None and pick.get("is_real_deal", True) and drop_pct >= 15.0:
+                qualifies = True
+            elif not ctx.ai_insights and drop_pct >= 20.0:
+                qualifies = True
+        elif pick is not None:
             if pick.get("is_real_deal", True) and drop_pct >= 10.0 and saved >= min_sav:
                 qualifies = True
         elif not ctx.ai_insights and drop_pct >= 18.0 and saved >= min_fb_sav:
@@ -968,9 +979,14 @@ def evaluate_alerts(ctx):
             continue
         link = path if (path or "").startswith("http") else ("https://www.pricerunner.dk" + (path or ""))
         cat_lbl = "[Laptop]" if cat == "laptops" else "[Monitor]"
-        title = f"{cat_lbl} 🔥 -{drop_pct:.0f}% {name[:48]} ({fmt_dkk(price)})"
+        if dtype == "gpu_value":
+            title = f"{cat_lbl} 💎 -{drop_pct:.0f}% vs mediana GPU: {name[:42]} ({fmt_dkk(price)})"
+            price_line = f"💰 **{fmt_dkk(price)}** (mediana DK de su GPU ~{fmt_dkk(old_price)} · **-{drop_pct:.1f}%** / -{fmt_dkk(saved)})"
+        else:
+            title = f"{cat_lbl} 🔥 -{drop_pct:.0f}% {name[:48]} ({fmt_dkk(price)})"
+            price_line = f"💰 **{fmt_dkk(price)}** (antes {fmt_dkk(old_price)} · **-{drop_pct:.1f}%** / -{fmt_dkk(saved)})"
         lines = [
-            f"💰 **{fmt_dkk(price)}** (antes {fmt_dkk(old_price)} · **-{drop_pct:.1f}%** / -{fmt_dkk(saved)})",
+            price_line,
             f"🏪 Fuente: **{src}** · Stock disponible",
         ]
         if specs:
@@ -987,6 +1003,7 @@ def evaluate_alerts(ctx):
 # --------------------------------------------------------------------------- discovery & reviews
 CATEGORY_DEAL_FEEDS = [
     ("laptops", "/cl/27/Baerbar?attr_60480813=100018441,100018438,100018439&sort=PRICE_DROP"),
+    ("laptops", "/cl/27/Baerbar?attr_60480813=100018441,100018438,100018439&sort=PRICE_ASC"),
     ("laptops", "/cl/27/Baerbar?attr_60480813=100018441,100018438,100018439"),
     ("monitors", "/cl/25/Skaerme?attr_60394085=60394174&attr_60394205=60531614&sort=PRICE_DROP"),
     ("monitors", "/cl/25/Skaerme?attr_60394085=60394174&attr_60394205=60531614"),
@@ -997,6 +1014,43 @@ CATEGORY_DEAL_FEEDS = [
     ("coffee", "/cl/82/Kaffemaskiner?attr_BRAND=1032,46,2524,156798"),
     ("coffee", "/cl/82/Kaffemaskiner"),
 ]
+
+GPU_MIN_PRICE = {"RTX 5070 Ti": 12000, "RTX 5080": 16000, "RTX 5090": 24000}
+GPU_FALLBACK_MEDIAN = {"RTX 5070 Ti": 23000.0, "RTX 5080": 32000.0, "RTX 5090": 45000.0}
+
+
+def _fetch_power_direct_offer(url):
+    """Obtiene precio y stock en vivo de un producto POWER.dk (/p-ID/) usando su API JSON."""
+    m = re.search(r"power\.dk/.*/p-(\d+)", url, re.I)
+    if not m:
+        return None
+    pid = m.group(1)
+    api_url = f"https://www.power.dk/api/v2/productlists?q={pid}&size=5"
+    body = http_get(api_url, min_len=100)
+    data = json.loads(body)
+    for p in data.get("products") or []:
+        if str(p.get("productId")) == pid and p.get("price"):
+            price = float(p["price"])
+            prev = float(p["previousPrice"]) if p.get("previousPrice") else price
+            in_cart = bool(p.get("canAddToCart"))
+            central = int(p.get("stockCount") or 0)
+            stores = int(p.get("storesStockCount") or 0)
+            stock = "IN_STOCK" if in_cart else "OUT_OF_STOCK"
+            title = (p.get("title") or "POWER Laptop").strip()
+            if in_cart and central == 0 and stores > 0:
+                title += f" (solo stock en {stores} tienda{'s' if stores > 1 else ''})"
+            return {
+                "merchant": "POWER",
+                "title": title,
+                "price": price,
+                "regular": prev,
+                "campaign": price if prev > price else None,
+                "camp_end": None,
+                "shipping": 0.0,
+                "stock": stock,
+                "url": url,
+            }
+    return None
 
 
 def _extract_ram_gb(text):
@@ -1028,7 +1082,6 @@ def _laptop_matches_profile(name, desc="", gpu_pre_filtered=False):
         return ram >= 32
     if not gpu_pre_filtered:
         return False
-    # En PriceRunner (pre-filtrado por GPU) evitar 16 GB explicito si falta etiqueta RAM en descripcion corta
     if re.search(r"(?i)\b(?:8|16)\s*GB\b", name):
         return False
     return True
@@ -1056,15 +1109,59 @@ def _parse_dk_price(txt):
         return None
 
 
-def _upsert_radar_deal(con, cat, pid, name, price, old_price, drop_pct, path, is_tracked, source, specs, in_stock=1):
+def _detect_laptop_gpu_tier(name, desc=""):
+    """Devuelve 'RTX 5090', 'RTX 5080' o 'RTX 5070 Ti' solo si consta explicitamente."""
+    text = f"{name} {desc}".strip()
+    if re.search(r"(?i)rtx[\s™®]*5090\b", text):
+        return "RTX 5090"
+    if re.search(r"(?i)rtx[\s™®]*5080\b", text):
+        return "RTX 5080"
+    if re.search(r"(?i)rtx[\s™®]*5070\s*ti\b", text):
+        return "RTX 5070 Ti"
+    return None
+
+
+def _is_multi_ram_rollup(name, desc=""):
+    """Detecta fichas agrupadas de PriceRunner con multiples RAM (ej. '16 GB, 32 GB, 64 GB RAM')."""
+    text = f"{name} {desc}".strip()
+    if re.search(r"(?i)\b(?:8|16|24)\s*GB\s*,", text):
+        return True
+    rams = set(re.findall(r"(?i)\b(8|16|24|32|48|64|96|128)\s*GB(?=\s*(?:,|/\s*\d|GB|RAM\b))", text))
+    return len(rams) > 1
+
+
+def _upsert_radar_deal(con, cat, pid, name, price, old_price, drop_pct, path, is_tracked, source, specs, in_stock=1, deal_type="discount"):
     con.execute("""INSERT OR REPLACE INTO category_deals
-        (check_date, category, product_id, name, price, old_price, drop_pct, path, is_tracked, source, specs, in_stock)
-        VALUES(?,?,?,?,?,?,?,?,?,?,?,?)""",
+        (check_date, category, product_id, name, price, old_price, drop_pct, path, is_tracked, source, specs, in_stock, deal_type)
+        VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)""",
         (RUN_DATE, cat, str(pid), name[:180], round(price, 2), round(old_price, 2),
-         round(drop_pct, 1), path, int(is_tracked), source, (specs or "")[:160], int(in_stock)))
+         round(drop_pct, 1), path, int(is_tracked), source, (specs or "")[:160], int(in_stock), deal_type))
 
 
-def _discover_power(ctx, con, enabled_cats, tracked_power_ids):
+def _append_laptop_pool(laptop_pool, pid, title, price, url, is_tracked, source, specs):
+    if _is_multi_ram_rollup(title, specs):
+        return
+    if not _laptop_matches_profile(title, specs, gpu_pre_filtered=False):
+        return
+    gpu = _detect_laptop_gpu_tier(title, specs)
+    if not gpu or price < GPU_MIN_PRICE[gpu]:
+        return
+    ram = _extract_ram_gb(f"{title} {specs}")
+    if ram is None or ram < 32:
+        return
+    laptop_pool.append({
+        "pid": str(pid),
+        "name": title,
+        "price": float(price),
+        "path": url,
+        "is_tracked": bool(is_tracked),
+        "source": source,
+        "specs": specs,
+        "gpu": gpu,
+    })
+
+
+def _discover_power(ctx, con, enabled_cats, tracked_power_ids, laptop_pool=None, discount_pids=None):
     count = 0
     queries = []
     if "laptops" in enabled_cats:
@@ -1091,19 +1188,31 @@ def _discover_power(ctx, con, enabled_cats, tracked_power_ids):
                 price = p.get("price")
                 prev = p.get("previousPrice")
                 in_stock = bool(p.get("canAddToCart"))
-                if not in_stock or not price or not prev or prev <= price:
+                if not in_stock or not price:
+                    continue
+                raw_specs = re.sub(r"\s+", " ", str(p.get("salesArguments") or "")).strip()
+                central = int(p.get("stockCount") or 0)
+                stores = int(p.get("storesStockCount") or 0)
+                if cat == "laptops" and central == 0 and stores > 0:
+                    raw_specs = f"[Stock en {stores} tienda] {raw_specs}"
+                is_trk = pid in tracked_power_ids
+                full_url = f"https://www.power.dk{purl}"
+                rad_pid = f"power-{pid}"
+                if cat == "laptops" and laptop_pool is not None:
+                    _append_laptop_pool(laptop_pool, rad_pid, title, float(price), full_url, is_trk, "power.dk", raw_specs)
+                if not prev or prev <= price:
                     continue
                 drop_pct = (prev - price) / prev * 100.0
                 if drop_pct < 5.0 or (prev - price) < (400 if cat == "laptops" else 200):
                     continue
-                raw_specs = re.sub(r"\s+", " ", str(p.get("salesArguments") or "")).strip()
                 if cat == "laptops" and not _laptop_matches_profile(title, raw_specs, gpu_pre_filtered=False):
                     continue
                 if cat == "monitors" and not _monitor_matches_profile(title, raw_specs, require_4k=True):
                     continue
-                is_trk = pid in tracked_power_ids
-                _upsert_radar_deal(con, cat, f"power-{pid}", title, float(price), float(prev), drop_pct,
-                                   f"https://www.power.dk{purl}", is_trk, "power.dk", raw_specs, in_stock=1)
+                _upsert_radar_deal(con, cat, rad_pid, title, float(price), float(prev), drop_pct,
+                                   full_url, is_trk, "power.dk", raw_specs, in_stock=1, deal_type="discount")
+                if discount_pids is not None:
+                    discount_pids.add(rad_pid)
                 count += 1
         except Exception as e:
             ctx.err("discovery", "power.dk", url, e)
@@ -1111,7 +1220,7 @@ def _discover_power(ctx, con, enabled_cats, tracked_power_ids):
     return count
 
 
-def _discover_proshop(ctx, con, enabled_cats, tracked_proshop_ids):
+def _discover_proshop(ctx, con, enabled_cats, tracked_proshop_ids, laptop_pool=None, discount_pids=None):
     import html as html_mod
     count = 0
     queries = []
@@ -1151,7 +1260,16 @@ def _discover_proshop(ctx, con, enabled_cats, tracked_proshop_ids):
                         old_p = parsed_p
                     elif "site-currency-lg" in cls:
                         new_p = parsed_p
-                if not new_p or not old_p or old_p <= new_p:
+                if not new_p:
+                    continue
+                sku_m = re.search(r"/(\d{6,8})(?:$|\?)", href)
+                sku = sku_m.group(1) if sku_m else str(abs(hash(href)))
+                is_trk = sku in tracked_proshop_ids
+                full_url = f"https://www.proshop.dk{href}"
+                rad_pid = f"proshop-{sku}"
+                if cat == "laptops" and laptop_pool is not None:
+                    _append_laptop_pool(laptop_pool, rad_pid, name, new_p, full_url, is_trk, "proshop.dk", desc)
+                if not old_p or old_p <= new_p:
                     continue
                 drop_pct = (old_p - new_p) / old_p * 100.0
                 if drop_pct < 5.0 or (old_p - new_p) < (400 if cat == "laptops" else 200):
@@ -1160,16 +1278,60 @@ def _discover_proshop(ctx, con, enabled_cats, tracked_proshop_ids):
                     continue
                 if cat == "monitors" and not _monitor_matches_profile(name, desc, require_4k=True):
                     continue
-                sku_m = re.search(r"/(\d{6,8})(?:$|\?)", href)
-                sku = sku_m.group(1) if sku_m else str(abs(hash(href)))
-                is_trk = sku in tracked_proshop_ids
-                _upsert_radar_deal(con, cat, f"proshop-{sku}", name, new_p, old_p, drop_pct,
-                                   f"https://www.proshop.dk{href}", is_trk, "proshop.dk", desc, in_stock=1)
+                _upsert_radar_deal(con, cat, rad_pid, name, new_p, old_p, drop_pct,
+                                   full_url, is_trk, "proshop.dk", desc, in_stock=1, deal_type="discount")
+                if discount_pids is not None:
+                    discount_pids.add(rad_pid)
                 count += 1
         except Exception as e:
             ctx.err("discovery", "proshop.dk", url, e)
         time.sleep(CFG["request_delay_seconds"])
     return count
+
+
+def _evaluate_gpu_value_radar(con, laptop_pool, discount_pids):
+    """Detecta laptops Windows >= RTX 5070 Ti / >= 32GB baratos frente a la mediana real de su GPU aunque no tengan precio tachado."""
+    if not laptop_pool:
+        return 0
+    by_gpu = {}
+    seen_ids = set()
+    for it in laptop_pool:
+        if it["pid"] in seen_ids:
+            continue
+        seen_ids.add(it["pid"])
+        by_gpu.setdefault(it["gpu"], []).append(it)
+
+    added = 0
+    for gpu, items in by_gpu.items():
+        sample_map = {}
+        for it in items:
+            k = (norm(it["name"])[:24], round(it["price"], -2))
+            sample_map[k] = it["price"]
+        prices = list(sample_map.values())
+        median_price = statistics.median(prices) if len(prices) >= 3 else GPU_FALLBACK_MEDIAN[gpu]
+
+        items.sort(key=lambda x: x["price"])
+        seen_cards = set()
+        rank = 0
+        for it in items:
+            card_key = (norm(it["name"])[:28], it["source"])
+            if card_key in seen_cards:
+                continue
+            seen_cards.add(card_key)
+            rank += 1
+            if it["pid"] in discount_pids:
+                continue
+            vs_med_pct = (median_price - it["price"]) / median_price * 100.0
+            if vs_med_pct >= 15.0 or (rank <= 3 and vs_med_pct >= 8.0):
+                specs_txt = f"{gpu} · Mediana DK ~{fmt_dkk(median_price)} · {it['specs']}"
+                _upsert_radar_deal(
+                    con, "laptops", it["pid"], it["name"], it["price"], median_price,
+                    vs_med_pct, it["path"], it["is_tracked"], it["source"], specs_txt,
+                    in_stock=1, deal_type="gpu_value",
+                )
+                added += 1
+        log(f"GPU value radar [{gpu}]: {len(items)} modelos ({len(prices)} muestras unicas) | mediana ~{fmt_dkk(median_price)}")
+    return added
 
 
 def _extract_pr_category_products(html):
@@ -1213,6 +1375,8 @@ def discover(ctx, cand):
     deals_count = 0
 
     enabled_cats = set(CFG.get("enabled_categories") or [])
+    laptop_pool = []
+    discount_pids = set()
     for cat, feed_path in CATEGORY_DEAL_FEEDS:
         if enabled_cats and cat not in enabled_cats:
             continue
@@ -1243,11 +1407,20 @@ def discover(ctx, cand):
                 if p.get("outOfStock"):
                     continue
                 lp_raw = (p.get("lowestPrice") or {}).get("amount")
-                pd = p.get("priceDrop") or {}
-                if lp_raw is None or not isinstance(pd, dict) or not pd:
+                if lp_raw is None:
                     continue
                 try:
                     price = float(lp_raw)
+                except Exception:
+                    continue
+                is_trk = pid in tracked_pids
+                if cat == "laptops":
+                    _append_laptop_pool(laptop_pool, pid, name, price, path, is_trk, "pricerunner.dk", desc)
+
+                pd = p.get("priceDrop") or {}
+                if not isinstance(pd, dict) or not pd:
+                    continue
+                try:
                     old_price = float((pd.get("oldPrice") or {}).get("amount") or price)
                     drop_pct = float(pd.get("percent") or 0.0)
                 except Exception:
@@ -1259,16 +1432,19 @@ def discover(ctx, cand):
                     continue
                 if cat == "monitors" and not _monitor_matches_profile(name, desc):
                     continue
-                is_trk = pid in tracked_pids
                 _upsert_radar_deal(con, cat, pid, name, price, old_price, drop_pct, path, is_trk,
-                                   "pricerunner.dk", desc, in_stock=1)
+                                   "pricerunner.dk", desc, in_stock=1, deal_type="discount")
+                discount_pids.add(pid)
                 deals_count += 1
         except Exception as e:
             ctx.err("discovery", "pricerunner.dk", url, e)
         time.sleep(CFG["request_delay_seconds"])
 
-    deals_count += _discover_power(ctx, con, enabled_cats or {"laptops", "monitors"}, tracked_power_ids)
-    deals_count += _discover_proshop(ctx, con, enabled_cats or {"laptops", "monitors"}, tracked_proshop_ids)
+    active_set = enabled_cats or {"laptops", "monitors"}
+    deals_count += _discover_power(ctx, con, active_set, tracked_power_ids, laptop_pool=laptop_pool, discount_pids=discount_pids)
+    deals_count += _discover_proshop(ctx, con, active_set, tracked_proshop_ids, laptop_pool=laptop_pool, discount_pids=discount_pids)
+    if "laptops" in active_set:
+        deals_count += _evaluate_gpu_value_radar(con, laptop_pool, discount_pids)
 
     if new_items:
         msg = "✨ " + "\n".join(f"• {nm}" for _, nm, _ in new_items[:3])
