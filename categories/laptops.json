@@ -1,14 +1,14 @@
 {
   "category_id": "laptops",
-  "category_name": "Laptops RTX 5080 (≥32GB)",
+  "category_name": "Laptops RTX 5070 Ti+ (≥32GB)",
   "category_icon": "laptop",
-  "description": "Laptops gaming y estaciones portátiles en Dinamarca con NVIDIA GeForce RTX 5080 (16GB) y al menos 32GB de RAM DDR5/LPDDR5X",
+  "description": "Laptops Windows en Dinamarca con NVIDIA GeForce RTX 5070 Ti, 5080 o 5090 y mínimo 32GB de RAM",
   "models": [
     {
       "key": "laptop-lenovo-legion-pro-7-amd",
       "name": "Lenovo Legion Pro 7 Gen 10 (16\" OLED 240Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 32GB | 1TB)",
       "category": "laptops",
-      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "category_name": "Laptops RTX 5070 Ti+ (≥32GB)",
       "match_tokens": [
         "Legion Pro 7",
         "83RUCT",
@@ -44,7 +44,7 @@
       "key": "laptop-lenovo-legion-pro-7i-intel",
       "name": "Lenovo Legion Pro 7i Gen 10 (16\" OLED 240Hz | Core Ultra 9 275HX/290HX | RTX 5080 16GB | 32-64GB | 1-2TB)",
       "category": "laptops",
-      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "category_name": "Laptops RTX 5070 Ti+ (≥32GB)",
       "match_tokens": [
         "Legion Pro 7i",
         "16IAX10H",
@@ -80,7 +80,7 @@
       "key": "laptop-msi-raider-a18-hx",
       "name": "MSI Raider A18 HX A9WIG (18\" 4K Mini LED 120Hz | Ryzen 9 9955HX3D | RTX 5080 16GB | 64GB | 2TB)",
       "category": "laptops",
-      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "category_name": "Laptops RTX 5070 Ti+ (≥32GB)",
       "match_tokens": [
         "Raider A18 HX",
         "A9WIG-007NEU",
@@ -118,7 +118,7 @@
       "key": "laptop-asus-rog-strix-g16-5080",
       "name": "ASUS ROG Strix G16 (2025) (16\" IPS 165Hz | Ryzen 9 8940HX | RTX 5080 16GB | 32GB | 1TB)",
       "category": "laptops",
-      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "category_name": "Laptops RTX 5070 Ti+ (≥32GB)",
       "match_tokens": [
         "G614PW-RV005W",
         "Strix G16",
@@ -154,7 +154,7 @@
       "key": "laptop-gigabyte-aorus-master-16",
       "name": "GIGABYTE Aorus Master 16 (16\" WQXGA OLED 240Hz | Core Ultra 9 275HX | RTX 5080 16GB | 32GB | 2TB)",
       "category": "laptops",
-      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "category_name": "Laptops RTX 5070 Ti+ (≥32GB)",
       "match_tokens": [
         "Aorus Master 16",
         "BYHC5NEE65SP"
@@ -189,7 +189,7 @@
       "key": "laptop-acer-predator-helios-neo-16-ai",
       "name": "Acer Predator Helios Neo 16 AI (16\" WQXGA | Core Ultra 9 290HX Plus | RTX 5080 16GB | 32GB | 1TB)",
       "category": "laptops",
-      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "category_name": "Laptops RTX 5070 Ti+ (≥32GB)",
       "match_tokens": [
         "Helios Neo 16 AI",
         "PHN16-I71"
@@ -223,7 +223,7 @@
       "key": "laptop-asus-rog-zephyrus-g16-5080",
       "name": "ASUS ROG Zephyrus G16 (16\" OLED 240Hz | Core Ultra 9 386H | RTX 5080 16GB | 64GB | 1TB)",
       "category": "laptops",
-      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "category_name": "Laptops RTX 5070 Ti+ (≥32GB)",
       "match_tokens": [
         "GU606AW-TB004W",
         "Zephyrus G16"
@@ -263,7 +263,7 @@
       "key": "laptop-razer-blade-16-5080",
       "name": "Razer Blade 16 (16\" OLED 240Hz | Core Ultra 9 386H | RTX 5080 16GB | 32GB | 1TB)",
       "category": "laptops",
-      "category_name": "Laptops RTX 5080 (≥32GB)",
+      "category_name": "Laptops RTX 5070 Ti+ (≥32GB)",
       "match_tokens": [
         "Razer Blade 16",
         "Blade 16"
