@@ -43,10 +43,11 @@ AI_INSIGHTS_SCHEMA = {
                 "type": "object",
                 "properties": {
                     "product_id": {"type": "string"},
+                    "is_real_deal": {"type": "boolean"},
                     "ai_badge": {"type": "string"},
                     "ai_reason": {"type": "string"},
                 },
-                "required": ["product_id", "ai_badge", "ai_reason"],
+                "required": ["product_id", "is_real_deal", "ai_badge", "ai_reason"],
             },
         },
         "executive_briefing": {
@@ -223,8 +224,29 @@ def _gather_context(con, cand, run_date):
     ).fetchone()
     cd_date = (cd_date_row and cd_date_row[0]) or eff_date
     active_cats = {m.get("category", "monitors") for m in cand.get("models", [])}
-    radar_deals = [
-        {
+    radar_deals = []
+    try:
+        radar_rows = con.execute(
+            """SELECT product_id, category, name, price, old_price, drop_pct, is_tracked,
+                      COALESCE(source, 'pricerunner.dk'), COALESCE(specs, '')
+               FROM category_deals WHERE check_date=?
+               ORDER BY drop_pct DESC, (old_price - price) DESC""",
+            (cd_date,),
+        ).fetchall()
+    except Exception:
+        radar_rows = [
+            (*r, "pricerunner.dk", "")
+            for r in con.execute(
+                """SELECT product_id, category, name, price, old_price, drop_pct, is_tracked
+                   FROM category_deals WHERE check_date=?
+                   ORDER BY drop_pct DESC, (old_price - price) DESC""",
+                (cd_date,),
+            ).fetchall()
+        ]
+    for r in radar_rows:
+        if active_cats and r[1] not in active_cats:
+            continue
+        radar_deals.append({
             "product_id": r[0],
             "category": r[1],
             "name": r[2],
@@ -232,15 +254,9 @@ def _gather_context(con, cand, run_date):
             "old_price_dkk": round(r[4]),
             "drop_pct": r[5],
             "is_tracked": bool(r[6]),
-        }
-        for r in con.execute(
-            """SELECT product_id, category, name, price, old_price, drop_pct, is_tracked
-               FROM category_deals WHERE check_date=?
-               ORDER BY drop_pct DESC, (old_price - price) DESC""",
-            (cd_date,),
-        ).fetchall()
-        if not active_cats or r[1] in active_cats
-    ]
+            "source": r[7],
+            "specs": r[8],
+        })
 
     return eff_date, tracked_summary, gpu_ref_prices, radar_deals
 
@@ -260,21 +276,26 @@ def _build_prompt(eff_date, tracked_summary, gpu_ref_prices, radar_deals):
     return f"""Eres un analista experto en hardware en Dinamarca (precios en DKK con 25% moms incluido; tambien analizamos Amazon.de con envio/moms ya convertidos a DKK).
 Fecha de analisis: {eff_date}. Categorias activas: {json.dumps(active_cats)}. Responde siempre en espanol claro y conciso.
 
+PERFIL ESTRICTO DEL USUARIO (BLACK FRIDAY):
+- Laptops: SOLO Windows, GPU minima NVIDIA RTX 5070 Ti (acepta RTX 5070 Ti, RTX 5080 o RTX 5090), RAM minima 32 GB (NO 16GB, NO MacBook, NO RTX 5070 normal sin Ti, NO 5060/5050). Sin tope de precio si es una oferta real verificable.
+- Monitores: 32 pulgadas 4K OLED / QD-OLED / WOLED (nota especial: usuario compro Samsung Odyssey G8 G80SH a 6.699 DKK y vigila Prismatch si baja de ese precio).
+
 Analiza los datos reales del mercado hoy y devuelve un JSON estricto cumpliendo el esquema:
 
 1. deal_audits:
-   - Audita TODOS los modelos de 'tracked_models' que tengan 'grade' en ['A', 'B'] o categoria 'laptops', mas cualquier otro modelo donde veas posible discrepancia entre 'expected_name'/'key_specs' y 'top_offers[].title' (ej. 16GB vs 32GB/64GB RAM, GPU distinta como RTX 5070/5080/5090, pantalla/Hz, Demo/Outlet/Refurbished, o accesorio suelto).
+   - Audita TODOS los modelos de 'tracked_models' que tengan 'grade' en ['A', 'B'] o categoria 'laptops', mas cualquier otro modelo donde veas posible discrepancia entre 'expected_name'/'key_specs' y 'top_offers[].title' (ej. 16GB vs 32GB/64GB RAM, GPU distinta como RTX 5070 sin Ti vs 5070 Ti/5080, pantalla/Hz, Demo/Outlet/Refurbished, o accesorio suelto).
    - verdict: 'VERIFIED' si coincide correctamente con specs y tienda fiable; 'SPEC_WARNING' si hay duda o detalle menor a vigilar (ej. bajo pedido, variante ligera, nota importante de garantia); 'FALSE_POSITIVE' SOLO si el titulo de la mejor oferta claramente NO corresponde al modelo/specs esperados o es reacondicionado/demo/accesorio.
    - audit_note: 1 frase breve (max 140 caracteres).
 
 2. top_radar_picks:
-   - Selecciona entre 6 y 8 chollos reales de 'radar_deals' (equilibrando entre las categorias activas disponibles: {active_cats}) filtrando ruido, modelos viejos o rebajas engañosas sobre MSRP inflado.
-   - ai_badge: etiqueta corta (max 24 caracteres, ej. 'Chollo Real OLED', 'Top Laptop Black Friday').
+   - Selecciona entre 6 y 8 mejores ofertas reales de 'radar_deals' (equilibrando laptops y monitores disponibles en 'radar_deals') filtrando descuentos engañosos sobre MSRP inflado o specs incompatibles con el perfil del usuario.
+   - is_real_deal: true SOLO si cumple estrictamente el perfil del usuario (Windows, >=RTX 5070 Ti, >=32GB RAM en laptops; 32" 4K OLED en monitores) Y el descuento frente al mercado real danes merece alerta push inmediata al movil. Pon false si hay duda de RAM/GPU/MSRP inflado.
+   - ai_badge: etiqueta corta (max 24 caracteres, ej. 'Chollo RTX 5080', 'Top OLED Black Friday').
    - ai_reason: 1 frase breve (max 130 caracteres) explicando por que merece la pena hoy.
 
 3. executive_briefing:
    - headline: titular ejecutivo breve del dia (max 90 caracteres).
-   - market_summary: resumen practico en 2 frases (max 260 caracteres) sobre donde estan hoy las mejores oportunidades en Dinamarca y Amazon.de para las categorias activas.
+   - market_summary: resumen practico en 2 frases (max 260 caracteres) sobre donde estan hoy las mejores oportunidades en Dinamarca (PriceRunner, POWER, Proshop) y Amazon.de.
    - category_picks: exactamente {len(active_cats)} entradas, una para cada categoria activa en {active_cats}. Para cada categoria elige la mejor compra REALMENTE EN STOCK ('IN_STOCK') hoy de 'tracked_models' comparandola brevemente en 'rationale' (max 190 caracteres) contra la alternativa mas cercana. Si un modelo no tiene 'IN_STOCK', elige el mejor disponible de esa categoria aclarandolo.
 
 {desktop_instr}

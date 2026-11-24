@@ -21,7 +21,7 @@ CAT_DIR = os.path.join(BASE, "categories")
 DB_PATH = os.path.join(DATA, "history.db")
 
 CATEGORY_UI = {
-    "laptops": ("🧳", "Laptops RTX 5080 (≥32GB)", "laptops", "bg-cyan-900/60 text-cyan-200", "text-cyan-300"),
+    "laptops": ("🧳", "Laptops RTX 5070 Ti+ (≥32GB)", "laptops", "bg-cyan-900/60 text-cyan-200", "text-cyan-300"),
     "monitors": ("🖥️", "Monitores 4K 240Hz", "monitores", "bg-slate-900/60", "text-slate-200"),
     "gpus": ("🎮", "Tarjetas Gráficas (GPUs)", "GPUs", "bg-purple-900/60 text-purple-200", "text-purple-300"),
     "desktops": ("💻", "Equipos Completos (Desktops)", "PCs", "bg-emerald-900/60 text-emerald-200", "text-emerald-300"),
@@ -169,13 +169,25 @@ def generate_dashboard_html(output_paths=None):
     reviews = con.execute("SELECT url, source, title, first_seen FROM reviews_seen WHERE relevant=1 ORDER BY first_seen DESC LIMIT 6").fetchall()
     try:
         cat_deals_rows = con.execute("""
-            SELECT category, product_id, name, price, old_price, drop_pct, path, is_tracked
+            SELECT category, product_id, name, price, old_price, drop_pct, path, is_tracked,
+                   COALESCE(source, 'pricerunner.dk'), COALESCE(specs, ''), COALESCE(in_stock, 1)
             FROM category_deals
             WHERE check_date=(SELECT MAX(check_date) FROM category_deals)
             ORDER BY drop_pct DESC, (old_price - price) DESC
         """).fetchall()
     except Exception:
-        cat_deals_rows = []
+        try:
+            cat_deals_rows = [
+                (*r, "pricerunner.dk", "", 1)
+                for r in con.execute("""
+                    SELECT category, product_id, name, price, old_price, drop_pct, path, is_tracked
+                    FROM category_deals
+                    WHERE check_date=(SELECT MAX(check_date) FROM category_deals)
+                    ORDER BY drop_pct DESC, (old_price - price) DESC
+                """).fetchall()
+            ]
+        except Exception:
+            cat_deals_rows = []
     enabled_set = set(_load_enabled_categories())
     cat_deals_data = [
         {
@@ -187,6 +199,9 @@ def generate_dashboard_html(output_paths=None):
             "drop_pct": r[5],
             "path": r[6],
             "is_tracked": bool(r[7]),
+            "source": r[8],
+            "specs": r[9],
+            "in_stock": bool(r[10]),
         }
         for r in cat_deals_rows
         if not enabled_set or r[0] in enabled_set
@@ -374,7 +389,7 @@ def generate_dashboard_html(output_paths=None):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hardware Deals Danmark | Monitores 4K, GPUs & Desktops</title>
+  <title>Hardware Deals Danmark | Laptops RTX 5070 Ti+ & Monitores 4K OLED</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <style>
     body {{
@@ -423,7 +438,7 @@ def generate_dashboard_html(output_paths=None):
           </div>
           <div class="px-2.5 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 flex items-center gap-1.5 font-semibold">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            Automático 09:00 CPH
+            Black Week · Cada 2h (08–22h CPH)
           </div>
           <button onclick="triggerUpdate()" id="btn-update" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 active:scale-95 text-white font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer border border-blue-400/30">
             <svg id="update-spinner" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
@@ -512,6 +527,20 @@ def generate_dashboard_html(output_paths=None):
       <div id="ai-briefing-cards" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3"></div>
     </section>
 
+    <!-- RADAR ABIERTO BLACK FRIDAY (MULTI-TIENDA) -->
+    <div class="bg-slate-900/80 border border-rose-500/35 rounded-2xl p-5 shadow-lg space-y-3">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <h2 class="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
+            <span>🔥</span> Radar Abierto Black Friday · PriceRunner DK, POWER.dk y Proshop.dk
+          </h2>
+          <p class="text-xs text-slate-400 mt-0.5">Ofertas vivas fuera del listado fijo filtradas a tu perfil (Laptops Windows RTX 5070 Ti+ / &ge;32GB RAM y Monitores 32" 4K OLED, en stock).</p>
+        </div>
+        <span id="bf-radar-count" class="text-xs px-2.5 py-1 rounded-xl bg-rose-500/15 text-rose-300 border border-rose-500/30 font-semibold shrink-0">0 ofertas</span>
+      </div>
+      <div id="bf-radar-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+    </div>
+
     <!-- BARRA DE FILTROS Y BUSQUEDA -->
     <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-3">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
@@ -549,20 +578,6 @@ def generate_dashboard_html(output_paths=None):
     <!-- LISTADO DE TARJETAS DE HARDWARE -->
     <div id="hardware-container" class="space-y-4">
       <!-- Inyectado dinamicamente por JS -->
-    </div>
-
-    <!-- RADAR ABIERTO BLACK FRIDAY (TODA LA CATEGORIA) -->
-    <div class="bg-slate-900/80 border border-rose-500/30 rounded-2xl p-5 shadow-sm space-y-3 pt-4">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-        <div>
-          <h2 class="text-sm font-bold text-white flex items-center gap-2">
-            <span>🔥</span> Radar Abierto Black Friday · Rebajas Detectadas en Toda la Categoría (PriceRunner DK)
-          </h2>
-          <p class="text-xs text-slate-400 mt-0.5">Productos de todo el mercado danés con caída reciente de precio (&ge; 5% y &ge; 150 DKK), estén o no en tu lista fija.</p>
-        </div>
-        <span id="bf-radar-count" class="text-xs px-2.5 py-1 rounded-xl bg-rose-500/15 text-rose-300 border border-rose-500/30 font-semibold shrink-0">0 ofertas</span>
-      </div>
-      <div id="bf-radar-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"></div>
     </div>
 
     <!-- SECCION INFERIOR: DESCUBRIMIENTOS & REVIEWS -->
@@ -724,7 +739,7 @@ def generate_dashboard_html(output_paths=None):
 
       const deals = CATEGORY_DEALS.filter(d => {{
         if (currentCategory !== 'all' && d.category !== currentCategory) return false;
-        if (q && !(d.name || '').toLowerCase().includes(q)) return false;
+        if (q && !((d.name || '') + ' ' + (d.specs || '') + ' ' + (d.source || '')).toLowerCase().includes(q)) return false;
         return true;
       }});
 
@@ -734,22 +749,33 @@ def generate_dashboard_html(output_paths=None):
         return;
       }}
 
-      radarEl.innerHTML = deals.slice(0, 18).map(d => {{
+      radarEl.innerHTML = deals.slice(0, 24).map(d => {{
         const saved = Math.max(0, (d.old_price || 0) - (d.price || 0));
         const aiPick = d.ai_pick;
-        const cardCls = aiPick
+        const isGoodAi = aiPick && aiPick.is_real_deal !== false;
+        const isWarnAi = aiPick && aiPick.is_real_deal === false;
+        const cardCls = isGoodAi
           ? 'bg-gradient-to-b from-amber-500/10 via-slate-950/90 to-slate-950 border-amber-400/50 hover:border-amber-300'
-          : 'bg-slate-950/80 border-slate-800 hover:border-rose-500/40';
-        const aiBadgeHtml = aiPick
+          : (isWarnAi
+              ? 'bg-slate-950/75 border-amber-500/35 hover:border-amber-400/60'
+              : 'bg-slate-950/80 border-slate-800 hover:border-rose-500/40');
+        const aiBadgeHtml = isGoodAi
           ? `<span class="text-[10px] px-2 py-0.5 rounded-lg bg-indigo-500/25 text-indigo-200 border border-indigo-400/50 font-bold">✨ ${{escHtml(aiPick.ai_badge || 'Elegido por Gemini IA')}}</span>`
-          : '';
+          : (isWarnAi
+              ? `<span class="text-[10px] px-2 py-0.5 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/35 font-semibold">⚠️ ${{escHtml(aiPick.ai_badge || 'Revisar Specs')}}</span>`
+              : '');
         const aiReasonHtml = (aiPick && aiPick.ai_reason)
           ? `<p class="text-[11px] text-amber-200/90 leading-snug bg-amber-500/10 border border-amber-500/25 rounded-lg px-2 py-1">🤖 ${{escHtml(aiPick.ai_reason)}}</p>`
+          : '';
+        const srcLabel = d.source === 'power.dk' ? 'POWER.dk' : (d.source === 'proshop.dk' ? 'Proshop.dk' : 'PriceRunner DK');
+        const srcBadge = `<span class="text-[10px] px-2 py-0.5 rounded-lg bg-blue-500/15 text-blue-300 border border-blue-500/30 font-semibold">${{srcLabel}}</span>`;
+        const specsHtml = d.specs
+          ? `<p class="text-[11px] text-slate-400 leading-snug line-clamp-2">${{escHtml(d.specs)}}</p>`
           : '';
         const trackBadge = d.is_tracked
           ? '<span class="text-[10px] px-2 py-0.5 rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">✓ En tu seguimiento</span>'
           : '<span class="text-[10px] px-2 py-0.5 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 font-semibold">✨ Hallazgo Black Weeks</span>';
-        const prHref = 'https://www.pricerunner.dk' + (d.path || '');
+        const prHref = (d.path && String(d.path).startsWith('http')) ? d.path : ('https://www.pricerunner.dk' + (d.path || ''));
         return `
           <div class="border rounded-xl p-3.5 flex flex-col justify-between gap-2.5 transition ${{cardCls}}">
             <div class="space-y-1.5">
@@ -761,6 +787,7 @@ def generate_dashboard_html(output_paths=None):
                 <span class="text-[11px] px-2 py-0.5 rounded-lg bg-rose-500/15 text-rose-300 border border-rose-500/30 font-bold">🔥 -${{Math.round(d.drop_pct)}}% (-${{fmtDkk(saved)}})</span>
               </div>
               <h3 class="text-xs font-bold text-slate-100 leading-snug line-clamp-2">${{escHtml(d.name)}}</h3>
+              ${{specsHtml}}
               ${{aiReasonHtml}}
             </div>
             <div class="flex items-end justify-between gap-2 pt-1 border-t border-slate-800/80">
@@ -769,7 +796,7 @@ def generate_dashboard_html(output_paths=None):
                   <span class="text-base font-black text-white">${{fmtDkk(d.price)}}</span>
                   <span class="text-[11px] text-slate-500 line-through">${{fmtDkk(d.old_price)}}</span>
                 </div>
-                <div class="mt-1">${{trackBadge}}</div>
+                <div class="mt-1 flex flex-wrap items-center gap-1">${{srcBadge}} ${{trackBadge}}</div>
               </div>
               <a href="${{prHref}}" target="_blank" class="px-2.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-semibold shrink-0 transition">Ver oferta →</a>
             </div>
@@ -824,7 +851,7 @@ def generate_dashboard_html(output_paths=None):
         case 'desktops':
           return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-semibold flex items-center gap-1"><span>💻</span> Desktop Prebuilt DK</span>';
         case 'laptops':
-          return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-semibold flex items-center gap-1"><span>🧳</span> Laptop RTX 5080 (≥32GB)</span>';
+          return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-semibold flex items-center gap-1"><span>🧳</span> Laptop RTX 5070 Ti+ (≥32GB)</span>';
         case 'coffee':
           return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-amber-500/10 text-amber-300 border border-amber-500/30 font-semibold flex items-center gap-1"><span>☕</span> Cafetera Superautomática</span>';
         default:
