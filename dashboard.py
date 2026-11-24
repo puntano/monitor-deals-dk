@@ -20,12 +20,32 @@ REPORTS = os.path.join(BASE, "reports")
 CAT_DIR = os.path.join(BASE, "categories")
 DB_PATH = os.path.join(DATA, "history.db")
 
+CATEGORY_UI = {
+    "laptops": ("🧳", "Laptops RTX 5080 (≥32GB)", "laptops", "bg-cyan-900/60 text-cyan-200", "text-cyan-300"),
+    "monitors": ("🖥️", "Monitores 4K 240Hz", "monitores", "bg-slate-900/60", "text-slate-200"),
+    "gpus": ("🎮", "Tarjetas Gráficas (GPUs)", "GPUs", "bg-purple-900/60 text-purple-200", "text-purple-300"),
+    "desktops": ("💻", "Equipos Completos (Desktops)", "PCs", "bg-emerald-900/60 text-emerald-200", "text-emerald-300"),
+    "coffee": ("☕", "Cafeteras Superautomáticas", "cafeteras", "bg-amber-900/60 text-amber-200", "text-amber-300"),
+}
+
+
+def _load_enabled_categories():
+    try:
+        with open(os.path.join(BASE, "config.json"), encoding="utf-8") as f:
+            enabled = json.load(f).get("enabled_categories") or []
+            return [c for c in enabled if c]
+    except Exception:
+        return []
+
+
 def fmt_dkk(v):
     if v is None:
         return "n/d"
     return f"{v:,.0f}".replace(",", ".") + " DKK"
 
 def load_all_candidates():
+    enabled_list = _load_enabled_categories()
+    enabled_set = set(enabled_list)
     if os.path.isdir(CAT_DIR):
         cat_files = glob.glob(os.path.join(CAT_DIR, "*.json"))
         if cat_files:
@@ -33,15 +53,18 @@ def load_all_candidates():
                 "categories": {},
                 "models": []
             }
+            loaded_cats = {}
             for cf in sorted(cat_files):
                 try:
                     with open(cf, encoding="utf-8") as f:
                         cdata = json.load(f)
                         cid = cdata.get("category_id") or os.path.splitext(os.path.basename(cf))[0]
+                        if enabled_set and cid not in enabled_set:
+                            continue
                         cname = cdata.get("category_name") or cid.capitalize()
                         cicon = cdata.get("category_icon", "cube")
                         cdesc = cdata.get("description", "")
-                        combined["categories"][cid] = {
+                        loaded_cats[cid] = {
                             "id": cid,
                             "name": cname,
                             "icon": cicon,
@@ -54,6 +77,8 @@ def load_all_candidates():
                             combined["models"].append(m)
                 except Exception as e:
                     print(f"Error cargando {cf}: {e}")
+            ordered_ids = [cid for cid in enabled_list if cid in loaded_cats] + [cid for cid in loaded_cats if cid not in enabled_list]
+            combined["categories"] = {cid: loaded_cats[cid] for cid in ordered_ids}
             return combined
 
     # Fallback candidates.json
@@ -151,6 +176,7 @@ def generate_dashboard_html(output_paths=None):
         """).fetchall()
     except Exception:
         cat_deals_rows = []
+    enabled_set = set(_load_enabled_categories())
     cat_deals_data = [
         {
             "category": r[0],
@@ -163,6 +189,7 @@ def generate_dashboard_html(output_paths=None):
             "is_tracked": bool(r[7]),
         }
         for r in cat_deals_rows
+        if not enabled_set or r[0] in enabled_set
     ]
 
     # 5b. Insights generados por Google AI Studio (Gemini 3.8 Flash)
@@ -194,6 +221,11 @@ def generate_dashboard_html(output_paths=None):
         if isinstance(p, dict) and p.get("product_id")
     }
     ai_briefing = ai_payload.get("executive_briefing") or None
+    if ai_briefing and enabled_set and isinstance(ai_briefing.get("category_picks"), list):
+        ai_briefing["category_picks"] = [
+            p for p in ai_briefing["category_picks"]
+            if p.get("category") in enabled_set
+        ]
 
     for cd in cat_deals_data:
         cd["ai_pick"] = ai_radar_map.get(str(cd["product_id"]))
@@ -288,9 +320,37 @@ def generate_dashboard_html(output_paths=None):
     count_monitors = sum(1 for m in models_data if m["category"] == "monitors")
     count_gpus = sum(1 for m in models_data if m["category"] == "gpus")
     count_desktops = sum(1 for m in models_data if m["category"] == "desktops")
+    count_laptops = sum(1 for m in models_data if m["category"] == "laptops")
     count_coffee = sum(1 for m in models_data if m["category"] == "coffee")
     total_active_offers = sum(len(m["offers"]) for m in models_data)
     best_deal = next((m for m in models_data if m["grade"] in ("A", "B")), None)
+
+    active_cats_meta = []
+    for cid, cinfo in cand_info.get("categories", {}).items():
+        emoji, label, short_lbl, badge_cls, txt_cls = CATEGORY_UI.get(
+            cid, ("📦", cinfo.get("name", cid), cid, "bg-slate-900/60 text-slate-200", "text-slate-200")
+        )
+        cnt = sum(1 for m in models_data if m["category"] == cid)
+        active_cats_meta.append((cid, emoji, label, short_lbl, badge_cls, txt_cls, cnt))
+
+    if len(active_cats_meta) > 1:
+        subtitle_cats_html = ", ".join(
+            f'<strong class="{tcls}">{html.escape(lbl)}</strong>'
+            for _, _, lbl, _, _, tcls, _ in active_cats_meta[:-1]
+        ) + f' y <strong class="{active_cats_meta[-1][5]}">{html.escape(active_cats_meta[-1][2])}</strong>'
+    elif active_cats_meta:
+        subtitle_cats_html = f'<strong class="{active_cats_meta[0][5]}">{html.escape(active_cats_meta[0][2])}</strong>'
+    else:
+        subtitle_cats_html = '<strong class="text-slate-200">Hardware en Dinamarca</strong>'
+
+    tabs_html = "\n".join(
+        f'''        <button onclick="setCategory('{cid}')" id="tab-{cid}" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-slate-700/80 bg-slate-800/80 text-slate-300 hover:text-white transition flex items-center gap-2 shrink-0">
+          <span>{emoji} {html.escape(lbl)}</span>
+          <span class="text-[11px] px-1.5 py-0.2 rounded-full {bcls} font-semibold">{cnt}</span>
+        </button>'''
+        for cid, emoji, lbl, _, bcls, _, cnt in active_cats_meta
+    )
+    kpi_counts_str = " · ".join(f"{cnt} {slbl}" for _, _, _, slbl, _, _, cnt in active_cats_meta)
     
     # Formatear fecha
     try:
@@ -354,7 +414,7 @@ def generate_dashboard_html(output_paths=None):
             <h1 class="text-xl sm:text-2xl font-black text-white tracking-tight">Centro de Control de Hardware & Deals DK</h1>
           </div>
           <p class="text-xs sm:text-sm text-slate-400 mt-1">
-            Seguimiento de precios en tiempo real para <strong class="text-slate-200">Monitores 4K 240Hz</strong>, <strong class="text-purple-300">GPUs</strong>, <strong class="text-emerald-300">Desktops Prebuilt</strong> y <strong class="text-amber-300">Cafeteras Superautomáticas</strong> en Dinamarca.
+            Seguimiento de precios en tiempo real para {subtitle_cats_html} en Dinamarca.
           </p>
         </div>
         <div class="flex flex-wrap items-center gap-2 text-xs">
@@ -378,22 +438,7 @@ def generate_dashboard_html(output_paths=None):
           <span>✨ Todos los Deals</span>
           <span class="text-[11px] px-1.5 py-0.2 rounded-full bg-slate-900/60 font-semibold" id="count-badge-all">{total_models}</span>
         </button>
-        <button onclick="setCategory('monitors')" id="tab-monitors" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-slate-700/80 bg-slate-800/80 text-slate-300 hover:text-white transition flex items-center gap-2 shrink-0">
-          <span>🖥️ Monitores 4K 240Hz</span>
-          <span class="text-[11px] px-1.5 py-0.2 rounded-full bg-slate-900/60 font-semibold">{count_monitors}</span>
-        </button>
-        <button onclick="setCategory('gpus')" id="tab-gpus" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-slate-700/80 bg-slate-800/80 text-slate-300 hover:text-white transition flex items-center gap-2 shrink-0">
-          <span>🎮 Tarjetas Gráficas (GPUs)</span>
-          <span class="text-[11px] px-1.5 py-0.2 rounded-full bg-purple-900/60 text-purple-200 font-semibold">{count_gpus}</span>
-        </button>
-        <button onclick="setCategory('desktops')" id="tab-desktops" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-slate-700/80 bg-slate-800/80 text-slate-300 hover:text-white transition flex items-center gap-2 shrink-0">
-          <span>💻 Equipos Completos (Desktops)</span>
-          <span class="text-[11px] px-1.5 py-0.2 rounded-full bg-emerald-900/60 text-emerald-200 font-semibold">{count_desktops}</span>
-        </button>
-        <button onclick="setCategory('coffee')" id="tab-coffee" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-slate-700/80 bg-slate-800/80 text-slate-300 hover:text-white transition flex items-center gap-2 shrink-0">
-          <span>☕ Cafeteras Superautomáticas</span>
-          <span class="text-[11px] px-1.5 py-0.2 rounded-full bg-amber-900/60 text-amber-200 font-semibold">{count_coffee}</span>
-        </button>
+{tabs_html}
       </div>
     </header>
 
@@ -423,7 +468,7 @@ def generate_dashboard_html(output_paths=None):
           <span class="text-3xl font-black text-white" id="stat-total">{total_models}</span>
           <span class="text-xs text-slate-400">hardware verificado</span>
         </div>
-        <p class="text-xs text-slate-400 mt-1">{count_monitors} monitores · {count_gpus} GPUs · {count_desktops} PCs · {count_coffee} cafeteras</p>
+        <p class="text-xs text-slate-400 mt-1">{kpi_counts_str}</p>
       </div>
 
       <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-sm">
@@ -778,6 +823,8 @@ def generate_dashboard_html(output_paths=None):
           return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-purple-500/10 text-purple-300 border border-purple-500/30 font-semibold flex items-center gap-1"><span>🎮</span> GPU Gaming & IA</span>';
         case 'desktops':
           return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-semibold flex items-center gap-1"><span>💻</span> Desktop Prebuilt DK</span>';
+        case 'laptops':
+          return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-semibold flex items-center gap-1"><span>🧳</span> Laptop RTX 5080 (≥32GB)</span>';
         case 'coffee':
           return '<span class="text-xs px-2.5 py-0.5 rounded-xl bg-amber-500/10 text-amber-300 border border-amber-500/30 font-semibold flex items-center gap-1"><span>☕</span> Cafetera Superautomática</span>';
         default:

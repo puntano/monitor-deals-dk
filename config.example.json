@@ -1,6 +1,10 @@
 {
   "end_date": "2027-01-31",
   "timezone": "Europe/Copenhagen",
+  "enabled_categories": [
+    "laptops",
+    "monitors"
+  ],
   "ntfy": {
     "enabled": true,
     "server": "https://ntfy.sh",

@@ -114,6 +114,7 @@ def sync_categories_from_sandbox():
 
 def load_candidates():
     sync_categories_from_sandbox()
+    enabled = set(CFG.get("enabled_categories") or [])
     cat_dir = os.path.join(BASE, "categories")
     if os.path.isdir(cat_dir):
         cat_files = glob.glob(os.path.join(cat_dir, "*.json"))
@@ -128,6 +129,8 @@ def load_candidates():
                     with open(cf, encoding="utf-8") as f:
                         cdata = json.load(f)
                         cat_id = cdata.get("category_id") or os.path.splitext(os.path.basename(cf))[0]
+                        if enabled and cat_id not in enabled:
+                            continue
                         cat_name = cdata.get("category_name") or cat_id.capitalize()
                         for m in cdata.get("models", []):
                             m.setdefault("category", cat_id)
@@ -928,6 +931,9 @@ def evaluate_alerts(ctx):
 
 # --------------------------------------------------------------------------- discovery & reviews
 CATEGORY_DEAL_FEEDS = [
+    ("laptops", "/cl/27/Baerbar?sort=PRICE_DROP"),
+    ("laptops", "/cl/27/Baerbar"),
+    ("monitors", "/cl/25/Skaerme?attr_60394085=60394174&attr_60394205=60531614&sort=PRICE_DROP"),
     ("monitors", "/cl/25/Skaerme?attr_60394085=60394174&attr_60394205=60531614"),
     ("monitors", "/cl/25/Skaerme?attr_60394085=60394174"),
     ("gpus", "/cl/37/Grafikkort?attr_60534931=100018433,100018426,100018432,100019366"),
@@ -970,7 +976,10 @@ def discover(ctx, cand):
     seen_disc = set(tracked_pids)
     deals_count = 0
 
+    enabled_cats = set(CFG.get("enabled_categories") or [])
     for cat, feed_path in CATEGORY_DEAL_FEEDS:
+        if enabled_cats and cat not in enabled_cats:
+            continue
         url = "https://www.pricerunner.dk" + feed_path
         try:
             html = http_get(url, min_len=15000)
@@ -1006,7 +1015,12 @@ def discover(ctx, cand):
                     continue
                 if drop_pct < 5.0 or (old_price - price) < 150 or price < 800:
                     continue
-                if cat == "monitors" and re.search(r"\b(24|25)\b", name):
+                if cat == "monitors":
+                    if re.search(r"\b(24|25)\b", name):
+                        continue
+                    if re.search(r'(?:signage|videovæg|videovaeg|viewboard|smart\s*board|interaktiv|skiltning|\b(?:43|55|65|75|85|98|110)(?:"|-inch|\s*tommer|\b))', name, re.I):
+                        continue
+                if cat == "laptops" and price < 4500:
                     continue
                 is_trk = int(pid in tracked_pids)
                 con.execute("""INSERT OR REPLACE INTO category_deals

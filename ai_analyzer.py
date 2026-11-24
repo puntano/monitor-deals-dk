@@ -61,7 +61,7 @@ AI_INSIGHTS_SCHEMA = {
                         "properties": {
                             "category": {
                                 "type": "string",
-                                "enum": ["monitors", "gpus", "desktops", "coffee"],
+                                "enum": ["monitors", "laptops", "gpus", "desktops", "coffee"],
                             },
                             "best_buy_key": {"type": "string"},
                             "best_buy_name": {"type": "string"},
@@ -222,6 +222,7 @@ def _gather_context(con, cand, run_date):
         "SELECT MAX(check_date) FROM category_deals WHERE check_date <= ?", (run_date,)
     ).fetchone()
     cd_date = (cd_date_row and cd_date_row[0]) or eff_date
+    active_cats = {m.get("category", "monitors") for m in cand.get("models", [])}
     radar_deals = [
         {
             "product_id": r[0],
@@ -238,38 +239,45 @@ def _gather_context(con, cand, run_date):
                ORDER BY drop_pct DESC, (old_price - price) DESC""",
             (cd_date,),
         ).fetchall()
+        if not active_cats or r[1] in active_cats
     ]
 
     return eff_date, tracked_summary, gpu_ref_prices, radar_deals
 
 
 def _build_prompt(eff_date, tracked_summary, gpu_ref_prices, radar_deals):
-    return f"""Eres un analista experto en hardware en Dinamarca (precios en DKK con 25% moms incluido; tambien analizamos Amazon.de con envio/moms ya convertidos a DKK).
-Fecha de analisis: {eff_date}. Responde siempre en espanol claro y conciso.
-
-Analiza los datos reales del mercado hoy y devuelve un JSON estricto cumpliendo el esquema:
-
-1. deal_audits:
-   - Audita TODOS los modelos de 'tracked_models' que tengan 'grade' en ['A', 'B'] o categoria 'desktops', mas cualquier otro modelo donde veas posible discrepancia entre 'expected_name'/'key_specs' y 'top_offers[].title' (ej. 16GB vs 32GB RAM, Demo/Outlet/Refurbished, GPU distinta como RX 9070 sin XT o Ti vs normal, accesorio/cable suelto).
-   - verdict: 'VERIFIED' si coincide correctamente con specs y tienda fiable; 'SPEC_WARNING' si hay duda o detalle menor a vigilar (ej. bajo pedido, variante ligera, nota importante de garantia); 'FALSE_POSITIVE' SOLO si el titulo de la mejor oferta claramente NO corresponde al modelo/specs esperados o es reacondicionado/demo/accesorio.
-   - audit_note: 1 frase breve (max 140 caracteres).
-
-2. top_radar_picks:
-   - Selecciona entre 6 y 8 chollos reales de 'radar_deals' (equilibrando entre las categorias disponibles) filtrando ruido, modelos viejos o rebajas engañosas sobre MSRP inflado.
-   - ai_badge: etiqueta corta (max 24 caracteres, ej. 'Chollo Real OLED', 'Top Calidad/Precio').
-   - ai_reason: 1 frase breve (max 130 caracteres) explicando por que merece la pena hoy.
-
-3. executive_briefing:
-   - headline: titular ejecutivo breve del dia (max 90 caracteres).
-   - market_summary: resumen practico en 2 frases (max 260 caracteres) sobre donde estan hoy las mejores oportunidades en Dinamarca y Amazon.de.
-   - category_picks: exactamente 4 entradas, una para cada categoria ('monitors', 'gpus', 'desktops', 'coffee'). Para cada categoria elige la mejor compra REALMENTE EN STOCK ('IN_STOCK') hoy de 'tracked_models' comparandola brevemente en 'rationale' (max 190 caracteres) contra la alternativa mas cercana. Si un modelo no tiene 'IN_STOCK', elige el mejor disponible de esa categoria aclarandolo.
-
-4. desktop_valuations:
+    active_cats = list(dict.fromkeys(m["category"] for m in tracked_summary))
+    desktop_instr = (
+        """4. desktop_valuations:
    - Evalua TODOS los modelos con category == 'desktops' que tengan 'best_dkk' no nulo.
    - Estima 'diy_estimate_dkk' usando los precios actuales en Dinamarca de 'gpu_ref_prices' para la GPU correspondiente mas precios realistas de mercado danes (con 25% moms) para CPU, placa base, 16GB/32GB DDR5, NVMe SSD, PSU, refrigeracion y caja.
    - Calcula 'delta_dkk' = round(best_dkk - diy_estimate_dkk). (Negativo = mas barato que por piezas; positivo = sobreprecio de montaje/tienda).
    - verdict: 'BARGAIN' si delta_dkk <= 500, 'FAIR' si 500 < delta_dkk <= 1800, 'OVERPRICED' si delta_dkk > 1800.
-   - breakdown: desglose ultra breve de componentes estimados (max 145 caracteres).
+   - breakdown: desglose ultra breve de componentes estimados (max 145 caracteres)."""
+        if "desktops" in active_cats
+        else "4. desktop_valuations:\n   - No hay computadoras desktop activas en este seguimiento; devuelve desktop_valuations como arreglo vacio []."
+    )
+    return f"""Eres un analista experto en hardware en Dinamarca (precios en DKK con 25% moms incluido; tambien analizamos Amazon.de con envio/moms ya convertidos a DKK).
+Fecha de analisis: {eff_date}. Categorias activas: {json.dumps(active_cats)}. Responde siempre en espanol claro y conciso.
+
+Analiza los datos reales del mercado hoy y devuelve un JSON estricto cumpliendo el esquema:
+
+1. deal_audits:
+   - Audita TODOS los modelos de 'tracked_models' que tengan 'grade' en ['A', 'B'] o categoria 'laptops', mas cualquier otro modelo donde veas posible discrepancia entre 'expected_name'/'key_specs' y 'top_offers[].title' (ej. 16GB vs 32GB/64GB RAM, GPU distinta como RTX 5070/5080/5090, pantalla/Hz, Demo/Outlet/Refurbished, o accesorio suelto).
+   - verdict: 'VERIFIED' si coincide correctamente con specs y tienda fiable; 'SPEC_WARNING' si hay duda o detalle menor a vigilar (ej. bajo pedido, variante ligera, nota importante de garantia); 'FALSE_POSITIVE' SOLO si el titulo de la mejor oferta claramente NO corresponde al modelo/specs esperados o es reacondicionado/demo/accesorio.
+   - audit_note: 1 frase breve (max 140 caracteres).
+
+2. top_radar_picks:
+   - Selecciona entre 6 y 8 chollos reales de 'radar_deals' (equilibrando entre las categorias activas disponibles: {active_cats}) filtrando ruido, modelos viejos o rebajas engañosas sobre MSRP inflado.
+   - ai_badge: etiqueta corta (max 24 caracteres, ej. 'Chollo Real OLED', 'Top Laptop Black Friday').
+   - ai_reason: 1 frase breve (max 130 caracteres) explicando por que merece la pena hoy.
+
+3. executive_briefing:
+   - headline: titular ejecutivo breve del dia (max 90 caracteres).
+   - market_summary: resumen practico en 2 frases (max 260 caracteres) sobre donde estan hoy las mejores oportunidades en Dinamarca y Amazon.de para las categorias activas.
+   - category_picks: exactamente {len(active_cats)} entradas, una para cada categoria activa en {active_cats}. Para cada categoria elige la mejor compra REALMENTE EN STOCK ('IN_STOCK') hoy de 'tracked_models' comparandola brevemente en 'rationale' (max 190 caracteres) contra la alternativa mas cercana. Si un modelo no tiene 'IN_STOCK', elige el mejor disponible de esa categoria aclarandolo.
+
+{desktop_instr}
 
 === gpu_ref_prices ===
 {json.dumps(gpu_ref_prices, ensure_ascii=False)}
