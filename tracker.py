@@ -944,60 +944,61 @@ def evaluate_alerts(ctx):
                             msg, priority=3, click=o["product_url"], require_drop=False)
 
     # Alertas automaticas del Radar Abierto Black Friday (fuera de lista fija, en stock)
-    ai_radar = {}
-    if ctx.ai_insights:
-        ai_radar = {
-            str(p.get("product_id")): p
-            for p in (ctx.ai_insights.get("top_radar_picks") or [])
-            if isinstance(p, dict) and p.get("product_id")
-        }
-    radar_rows = con.execute("""
-        SELECT category, product_id, name, price, old_price, drop_pct, path,
-               COALESCE(source, 'pricerunner.dk'), COALESCE(specs, ''),
-               COALESCE(deal_type, 'discount')
-        FROM category_deals
-        WHERE check_date=? AND is_tracked=0 AND COALESCE(in_stock, 1)=1
-        ORDER BY drop_pct DESC, (old_price - price) DESC
-    """, (RUN_DATE,)).fetchall()
-    for cat, pid, name, price, old_price, drop_pct, path, src, specs, dtype in radar_rows:
-        pick = ai_radar.get(str(pid))
-        saved = max(0.0, (old_price or price) - price)
-        min_sav = 1000 if cat == "laptops" else 500
-        min_fb_sav = 2000 if cat == "laptops" else 800
-        qualifies = False
-        if dtype == "gpu_value":
-            if pick is not None and pick.get("is_real_deal", True) and drop_pct >= 15.0:
+    if CFG.get("radar_alerts_enabled", True):
+        ai_radar = {}
+        if ctx.ai_insights:
+            ai_radar = {
+                str(p.get("product_id")): p
+                for p in (ctx.ai_insights.get("top_radar_picks") or [])
+                if isinstance(p, dict) and p.get("product_id")
+            }
+        radar_rows = con.execute("""
+            SELECT category, product_id, name, price, old_price, drop_pct, path,
+                   COALESCE(source, 'pricerunner.dk'), COALESCE(specs, ''),
+                   COALESCE(deal_type, 'discount')
+            FROM category_deals
+            WHERE check_date=? AND is_tracked=0 AND COALESCE(in_stock, 1)=1
+            ORDER BY drop_pct DESC, (old_price - price) DESC
+        """, (RUN_DATE,)).fetchall()
+        for cat, pid, name, price, old_price, drop_pct, path, src, specs, dtype in radar_rows:
+            pick = ai_radar.get(str(pid))
+            saved = max(0.0, (old_price or price) - price)
+            min_sav = 1000 if cat == "laptops" else 500
+            min_fb_sav = 2000 if cat == "laptops" else 800
+            qualifies = False
+            if dtype == "gpu_value":
+                if pick is not None and pick.get("is_real_deal", True) and drop_pct >= 15.0:
+                    qualifies = True
+                elif not ctx.ai_insights and drop_pct >= 20.0:
+                    qualifies = True
+            elif pick is not None:
+                if pick.get("is_real_deal", True) and drop_pct >= 10.0 and saved >= min_sav:
+                    qualifies = True
+            elif not ctx.ai_insights and drop_pct >= 18.0 and saved >= min_fb_sav:
                 qualifies = True
-            elif not ctx.ai_insights and drop_pct >= 20.0:
-                qualifies = True
-        elif pick is not None:
-            if pick.get("is_real_deal", True) and drop_pct >= 10.0 and saved >= min_sav:
-                qualifies = True
-        elif not ctx.ai_insights and drop_pct >= 18.0 and saved >= min_fb_sav:
-            qualifies = True
-        if not qualifies:
-            continue
-        link = path if (path or "").startswith("http") else ("https://www.pricerunner.dk" + (path or ""))
-        cat_lbl = "[Laptop]" if cat == "laptops" else "[Monitor]"
-        if dtype == "gpu_value":
-            title = f"{cat_lbl} 💎 -{drop_pct:.0f}% vs mediana GPU: {name[:42]} ({fmt_dkk(price)})"
-            price_line = f"💰 **{fmt_dkk(price)}** (mediana DK de su GPU ~{fmt_dkk(old_price)} · **-{drop_pct:.1f}%** / -{fmt_dkk(saved)})"
-        else:
-            title = f"{cat_lbl} 🔥 -{drop_pct:.0f}% {name[:48]} ({fmt_dkk(price)})"
-            price_line = f"💰 **{fmt_dkk(price)}** (antes {fmt_dkk(old_price)} · **-{drop_pct:.1f}%** / -{fmt_dkk(saved)})"
-        lines = [
-            price_line,
-            f"🏪 Fuente: **{src}** · Stock disponible",
-        ]
-        if specs:
-            lines.append(f"⚙️ {specs[:130]}")
-        if pick and pick.get("ai_reason"):
-            lines.append(f"🤖 {pick['ai_reason']}")
-        lines.append(f"🔗 Enlace: {link}")
-        if CFG.get("vercel_url"):
-            lines.append(f"📊 Dashboard: {CFG['vercel_url']}")
-        maybe_alert(ctx, f"radar|{cat}|{pid}", "RADAR_DEAL", None, price, title,
-                    "\n".join(lines), priority=4, click=link)
+            if not qualifies:
+                continue
+            link = path if (path or "").startswith("http") else ("https://www.pricerunner.dk" + (path or ""))
+            cat_lbl = "[Laptop]" if cat == "laptops" else "[Monitor]"
+            if dtype == "gpu_value":
+                title = f"{cat_lbl} 💎 -{drop_pct:.0f}% vs mediana GPU: {name[:42]} ({fmt_dkk(price)})"
+                price_line = f"💰 **{fmt_dkk(price)}** (mediana DK de su GPU ~{fmt_dkk(old_price)} · **-{drop_pct:.1f}%** / -{fmt_dkk(saved)})"
+            else:
+                title = f"{cat_lbl} 🔥 -{drop_pct:.0f}% {name[:48]} ({fmt_dkk(price)})"
+                price_line = f"💰 **{fmt_dkk(price)}** (antes {fmt_dkk(old_price)} · **-{drop_pct:.1f}%** / -{fmt_dkk(saved)})"
+            lines = [
+                price_line,
+                f"🏪 Fuente: **{src}** · Stock disponible",
+            ]
+            if specs:
+                lines.append(f"⚙️ {specs[:130]}")
+            if pick and pick.get("ai_reason"):
+                lines.append(f"🤖 {pick['ai_reason']}")
+            lines.append(f"🔗 Enlace: {link}")
+            if CFG.get("vercel_url"):
+                lines.append(f"📊 Dashboard: {CFG['vercel_url']}")
+            maybe_alert(ctx, f"radar|{cat}|{pid}", "RADAR_DEAL", None, price, title,
+                        "\n".join(lines), priority=4, click=link)
 
 
 # --------------------------------------------------------------------------- discovery & reviews
@@ -1446,7 +1447,7 @@ def discover(ctx, cand):
     if "laptops" in active_set:
         deals_count += _evaluate_gpu_value_radar(con, laptop_pool, discount_pids)
 
-    if new_items:
+    if new_items and CFG.get("radar_alerts_enabled", True):
         msg = "✨ " + "\n".join(f"• {nm}" for _, nm, _ in new_items[:3])
         maybe_alert(ctx, "new|" + ",".join(sorted(i[0] for i in new_items)), "NEW_MODEL", None, None,
                     f"{len(new_items)} monitor(es) 32\" OLED nuevo(s) en DK", msg, priority=3,

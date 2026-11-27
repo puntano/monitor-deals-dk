@@ -1,6 +1,7 @@
 {
   "end_date": "2027-01-31",
   "timezone": "Europe/Copenhagen",
+  "radar_alerts_enabled": false,
   "enabled_categories": [
     "laptops",
     "monitors"
